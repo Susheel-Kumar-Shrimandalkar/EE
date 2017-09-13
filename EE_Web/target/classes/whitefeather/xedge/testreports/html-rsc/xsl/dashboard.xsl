@@ -355,9 +355,9 @@
 							<p>Filter By :
 								<form>
 <!-- 									<input type="radio" name="filter" value="group" checked="checked"><i class="fa fa-users"></i>Group</input> -->
-									<input type="radio" name="filter" value="class"><i class="fa fa-book"></i>Test Class</input>
+									<input type="radio" name="filter" value="class"><i class="fa fa-book"></i>System Component / Feature</input>
 <!-- 									<input type="radio" name="filter" value="verdict"><i class="fa fa-balance-scale"></i>Verdict</input> -->
-									<input type="radio" name="filter" value="config"><i class="fa fa-wrench"></i>Failed Configuration Methods</input>
+<!-- 									<input type="radio" name="filter" value="config"><i class="fa fa-wrench"></i>Failed Configuration Methods</input> -->
 								</form>
 							</p>
 							<select id="selGrp" class="form-control" name="action">
@@ -509,7 +509,7 @@
 <xsl:template name="footer">
 	<!-- Footer section start -->
 	<footer>
-		<p>Design by 'startingwithseleniumwebdriver' team</p>
+		<p>Connect with shekharb@theextraaedge.com for more information.</p>
 	</footer>
 	<!-- Footer section end -->
 </xsl:template>

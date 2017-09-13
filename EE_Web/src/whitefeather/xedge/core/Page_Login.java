@@ -89,7 +89,7 @@ public class Page_Login extends HelperHand
 		element = driver.findElement(properties.selectLocator("staging_loginpage_rmbrMeLbl"));
 		return element;
 	}
-	public static WebElement displayForgorPasswordLink() throws Exception
+	public static WebElement displayForgotPasswordLink() throws Exception
 	{
 		element = driver.findElement(properties.selectLocator("staging_loginpage_forgotpassword"));
 		return element;

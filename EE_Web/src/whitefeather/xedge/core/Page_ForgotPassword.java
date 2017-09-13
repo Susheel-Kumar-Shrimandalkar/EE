@@ -33,11 +33,80 @@ public class Page_ForgotPassword extends HelperHand
 	public static WebElement displayRecoveryMessage()
 	{
 		try {
-			element = driver.findElement(properties.selectLocator("forgotPassword_RecoveryLabel"));
+			element = driver.findElement(properties.selectLocator("forgotPassword_RecoveryMessage"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return element;
 	}
 	
+	public static WebElement displayEmailInputBox()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("forgotPassword_emailInput"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public static WebElement displayResetPasswordLinkSuccessMessage()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("forgotPassword_ResetPasswordSuccessMessage"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public static WebElement displayResetPasswordLinkFailureMessage()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("forgotPassword_ResetPasswordFailureMessage"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public static WebElement displaySubmitButton()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("forgotPassword_SubmitButton"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public static WebElement displayForgotPasswordButton()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("forgotPassword_ForgotPasswordButton"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public static WebElement displayLoginButton()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("forgotPassword_LoginButtonOnPasswordRecovery"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public static WebElement displayLoginLink()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("forgotPassword_LogInLink"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
 }
