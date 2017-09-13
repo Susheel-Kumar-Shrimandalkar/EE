@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>F:\Users\Shekhar.DESKTOP-TMQM6DS\EE-WorkSpace\EE_Web\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">18 methods, 1 failed,   17 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyUsernamePlaceholder">verifyUsernamePlaceholder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddActivity" hash-for-method="addActivity">addActivity</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithDefaultValues" hash-for-method="addNewLeadWithDefaultValues">addNewLeadWithDefaultValues</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.OpenAddLeadRHSPanel" hash-for-method="clickAddLeadPlusIcon">clickAddLeadPlusIcon</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="clickLoginButton">clickLoginButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="enterLoginId(counselorshekhar@gmail.com)">enterLoginId(counselorshekhar@gmail.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="enterLoginPassword(test)">enterLoginPassword(test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="openLoginPage(https://extraaedge-stagingwebsite-qa.azurewebsites.net/)">openLoginPage(https://extraaedge-stagingwebsite-qa.azurewebsites.net/)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Refresh_Page" hash-for-method="refreshWebPage">refreshWebPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyClientAccountLogo">verifyClientAccountLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyLoginButton">verifyLoginButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyLoginPageBackground">verifyLoginPageBackground</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyPasswordInputField">verifyPasswordInputField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyPasswordLabel">verifyPasswordLabel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyPasswordPlaceholder">verifyPasswordPlaceholder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyPasswordWrapper">verifyPasswordWrapper</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyUsernameInputField">verifyUsernameInputField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Login" hash-for-method="verifyUsernameLabel">verifyUsernameLabel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.Login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUsernamePlaceholder">
+                  </a> <!-- verifyUsernamePlaceholder -->
+                  <span class="method-name">verifyUsernamePlaceholder</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at whitefeather.xedge.testcases.Login.verifyUsernamePlaceholder(Login.java:88)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.AddNewLeadWithDefaultValues</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addNewLeadWithDefaultValues">
+                  </a> <!-- addNewLeadWithDefaultValues -->
+                  <span class="method-name">addNewLeadWithDefaultValues</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.Login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickLoginButton">
+                  </a> <!-- clickLoginButton -->
+                  <span class="method-name">clickLoginButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterLoginId(counselorshekhar@gmail.com)">
+                  </a> <!-- enterLoginId(counselorshekhar@gmail.com) -->
+                  <span class="method-name">enterLoginId</span>
+                  <span class="parameters">(counselorshekhar@gmail.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterLoginPassword(test)">
+                  </a> <!-- enterLoginPassword(test) -->
+                  <span class="method-name">enterLoginPassword</span>
+                  <span class="parameters">(test)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openLoginPage(https://extraaedge-stagingwebsite-qa.azurewebsites.net/)">
+                  </a> <!-- openLoginPage(https://extraaedge-stagingwebsite-qa.azurewebsites.net/) -->
+                  <span class="method-name">openLoginPage</span>
+                  <span class="parameters">(https://extraaedge-stagingwebsite-qa.azurewebsites.net/)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyClientAccountLogo">
+                  </a> <!-- verifyClientAccountLogo -->
+                  <span class="method-name">verifyClientAccountLogo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginButton">
+                  </a> <!-- verifyLoginButton -->
+                  <span class="method-name">verifyLoginButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginPageBackground">
+                  </a> <!-- verifyLoginPageBackground -->
+                  <span class="method-name">verifyLoginPageBackground</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordInputField">
+                  </a> <!-- verifyPasswordInputField -->
+                  <span class="method-name">verifyPasswordInputField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordLabel">
+                  </a> <!-- verifyPasswordLabel -->
+                  <span class="method-name">verifyPasswordLabel</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordPlaceholder">
+                  </a> <!-- verifyPasswordPlaceholder -->
+                  <span class="method-name">verifyPasswordPlaceholder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordWrapper">
+                  </a> <!-- verifyPasswordWrapper -->
+                  <span class="method-name">verifyPasswordWrapper</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUsernameInputField">
+                  </a> <!-- verifyUsernameInputField -->
+                  <span class="method-name">verifyUsernameInputField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUsernameLabel">
+                  </a> <!-- verifyUsernameLabel -->
+                  <span class="method-name">verifyUsernameLabel</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.Refresh_Page</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="refreshWebPage">
+                  </a> <!-- refreshWebPage -->
+                  <span class="method-name">refreshWebPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.AddActivity</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addActivity">
+                  </a> <!-- addActivity -->
+                  <span class="method-name">addActivity</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.OpenAddLeadRHSPanel</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickAddLeadPlusIcon">
+                  </a> <!-- clickAddLeadPlusIcon -->
+                  <span class="method-name">clickAddLeadPlusIcon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">F:\Users\Shekhar.DESKTOP-TMQM6DS\EE-WorkSpace\EE_Web\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;whitefeather.xedge.testreports.listener.RealTimeTestResultListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;Staging QA Test Validations&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;parameter name=&quot;loginPageUrl&quot; value=&quot;https://extraaedge-stagingwebsite-qa.azurewebsites.net/&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;whitefeather.xedge.testcases.Login&quot;&gt;
+        &lt;parameter name=&quot;_password&quot; value=&quot;test&quot;/&gt;
+        &lt;parameter name=&quot;_username&quot; value=&quot;counselorshekhar@gmail.com&quot;/&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;openLoginPage&quot;/&gt;
+          &lt;include name=&quot;verifyLoginPageBackground&quot;/&gt;
+          &lt;include name=&quot;verifyClientAccountLogo&quot;/&gt;
+          &lt;include name=&quot;verifyUsernameLabel&quot;/&gt;
+          &lt;include name=&quot;verifyUsernamePlaceholder&quot;/&gt;
+          &lt;include name=&quot;verifyPasswordLabel&quot;/&gt;
+          &lt;include name=&quot;verifyPasswordPlaceholder&quot;/&gt;
+          &lt;include name=&quot;verifyUsernameInputField&quot;/&gt;
+          &lt;include name=&quot;verifyPasswordInputField&quot;/&gt;
+          &lt;include name=&quot;verifyPasswordWrapper&quot;/&gt;
+          &lt;include name=&quot;enterLoginId&quot;/&gt;
+          &lt;include name=&quot;enterLoginPassword&quot;/&gt;
+          &lt;include name=&quot;verifyLoginButton&quot;/&gt;
+          &lt;include name=&quot;clickLoginButton&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.Login --&gt;
+      &lt;class name=&quot;whitefeather.xedge.testcases.Refresh_Page&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;refreshWebPage&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.Refresh_Page --&gt;
+      &lt;class name=&quot;whitefeather.xedge.testcases.OpenAddLeadRHSPanel&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;clickAddLeadPlusIcon&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.OpenAddLeadRHSPanel --&gt;
+      &lt;class name=&quot;whitefeather.xedge.testcases.AddNewLeadWithDefaultValues&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;addNewLeadWithDefaultValues&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.AddNewLeadWithDefaultValues --&gt;
+      &lt;class name=&quot;whitefeather.xedge.testcases.AddActivity&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;addActivity&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.AddActivity --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Staging QA Test Validations --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Staging QA Test Validations (5 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(18);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'openLoginPage')
+data.setCell(0, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(0, 3, 9436);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'addActivity')
+data.setCell(1, 2, 'whitefeather.xedge.testcases.AddActivity')
+data.setCell(1, 3, 5881);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'refreshWebPage')
+data.setCell(2, 2, 'whitefeather.xedge.testcases.Refresh_Page')
+data.setCell(2, 3, 3887);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'clickLoginButton')
+data.setCell(3, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(3, 3, 3421);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'addNewLeadWithDefaultValues')
+data.setCell(4, 2, 'whitefeather.xedge.testcases.AddNewLeadWithDefaultValues')
+data.setCell(4, 3, 2782);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyLoginPageBackground')
+data.setCell(5, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(5, 3, 1090);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'clickAddLeadPlusIcon')
+data.setCell(6, 2, 'whitefeather.xedge.testcases.OpenAddLeadRHSPanel')
+data.setCell(6, 3, 893);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'enterLoginId')
+data.setCell(7, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(7, 3, 324);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyUsernamePlaceholder')
+data.setCell(8, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(8, 3, 203);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyPasswordLabel')
+data.setCell(9, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(9, 3, 167);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'enterLoginPassword')
+data.setCell(10, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(10, 3, 166);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyLoginButton')
+data.setCell(11, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(11, 3, 142);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyPasswordWrapper')
+data.setCell(12, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(12, 3, 138);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyClientAccountLogo')
+data.setCell(13, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(13, 3, 85);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyPasswordPlaceholder')
+data.setCell(14, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(14, 3, 82);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyUsernameLabel')
+data.setCell(15, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(15, 3, 69);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyUsernameInputField')
+data.setCell(16, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(16, 3, 47);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyPasswordInputField')
+data.setCell(17, 2, 'whitefeather.xedge.testcases.Login')
+data.setCell(17, 3, 47);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUsernameLabel</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Username' label is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">addNewLeadWithDefaultValues</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has entered email address successfully</span>
+                <span class="reporter-method-output">User has entered mobile number successfully</span>
+                <span class="reporter-method-output">User has clicked Add Lead button on RHS panel.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUsernameInputField</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Username' input field is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordLabel</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Password' label is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">addActivity</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Activity Type is provided successfully</span>
+                <span class="reporter-method-output">Activity is added successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyLoginPageBackground</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Background Image on Login Page is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyLoginButton</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Login Button is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">refreshWebPage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Web page is refreshed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterLoginId(counselorshekhar@gmail.com)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Username is entered successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">clickAddLeadPlusIcon</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has clicked Add Lead icon.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">clickLoginButton</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has clicked Login button and landed on correct homepage.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordInputField</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Password' input field is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordWrapper</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Password wrapper is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordPlaceholder</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Password' placeholder is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterLoginPassword(test)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Password is entered successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">openLoginPage(https://extraaedge-stagingwebsite-qa.azurewebsites.net/)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Chrome Browser is opened</span>
+                <span class="reporter-method-output">Browser is maximized.</span>
+                <span class="reporter-method-output">User has opened correct login page.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyClientAccountLogo</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Client Company Logo is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUsernamePlaceholder</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Username' placeholder is not displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">whitefeather.xedge.testcases.Login</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">selectBrowser(Chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">openLoginPage(https://extraaedge-stagingwebsite-qa.azurewebsites.net/)</span>
+                <span class="method-start">17 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginPageBackground</span>
+                <span class="method-start">10408 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyClientAccountLogo</span>
+                <span class="method-start">11613 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyUsernameLabel</span>
+                <span class="method-start">11798 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyUsernamePlaceholder</span>
+                <span class="method-start">11983 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordLabel</span>
+                <span class="method-start">12341 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordPlaceholder</span>
+                <span class="method-start">12600 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyUsernameInputField</span>
+                <span class="method-start">12758 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordInputField</span>
+                <span class="method-start">12889 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordWrapper</span>
+                <span class="method-start">13021 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterLoginId(counselorshekhar@gmail.com)</span>
+                <span class="method-start">13300 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterLoginPassword(test)</span>
+                <span class="method-start">13719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginButton</span>
+                <span class="method-start">13970 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickLoginButton</span>
+                <span class="method-start">14182 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">whitefeather.xedge.testcases.Refresh_Page</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">refreshWebPage</span>
+                <span class="method-start">17658 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">whitefeather.xedge.testcases.OpenAddLeadRHSPanel</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">clickAddLeadPlusIcon</span>
+                <span class="method-start">21604 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">whitefeather.xedge.testcases.AddNewLeadWithDefaultValues</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addNewLeadWithDefaultValues</span>
+                <span class="method-start">22586 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">whitefeather.xedge.testcases.AddActivity</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addActivity</span>
+                <span class="method-start">25434 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
