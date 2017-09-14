@@ -127,7 +127,7 @@
 						});
 						$('#selCls option').remove();
 						$('#selGrp option').remove();
-						$('#selCls').append('<option selected="selected">--Select Test Class Name--</option>');
+						$('#selCls').append('<option selected="selected">--Select Test Case--</option>');
 						$('#selGrp').append('<option selected="selected">--Select Test Group Name--</option>');
 						$.each(testClasses,function(index){
 							$('#selCls').append('<option value="'+testClassValue[index]+'">'+testClasses[index]+'</option>');
@@ -420,7 +420,7 @@
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" />
 												</xsl:for-each>
 											</p>
-											<p><strong>Context Group Name: </strong>
+											<!-- <p><strong>Context Group Name: </strong>
 												<xsl:for-each select="contextGroups/contextGroup">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" /> 
 												</xsl:for-each>
@@ -429,7 +429,7 @@
 												<xsl:for-each select="methodGroups/methodGroup">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" /> 
 												</xsl:for-each>
-											</p>
+											</p> -->
 											<p><strong>Start time: </strong> <xsl:value-of select="$start" /></p>
 											<p><strong>End time: </strong> <xsl:value-of select="$end" /></p>
 											<p><strong>Duration: </strong> <i id="dura{$index}"><script>getHMS('<xsl:value-of select="$duration" />','dura<xsl:value-of select="position()" />')</script></i></p>
@@ -479,7 +479,7 @@
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" />
 												</xsl:for-each>
 											</p>
-											<p><strong>Context Group Name: </strong>
+										<!-- 	<p><strong>Context Group Name: </strong>
 												<xsl:for-each select="contextGroups/contextGroup">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" /> 
 												</xsl:for-each>
@@ -488,7 +488,7 @@
 												<xsl:for-each select="methodGroups/methodGroup">
 													<xsl:value-of select="position()" />. <xsl:value-of select="text()" /> 
 												</xsl:for-each>
-											</p>
+											</p> -->
 											<p><strong>Start time: </strong> <xsl:value-of select="$start" /></p>
 											<p><strong>End time: </strong> <xsl:value-of select="$end" /></p>
 											<p><strong>Duration: </strong> <i id="cdura{$index}"><script>getHMS('<xsl:value-of select="$duration" />','cdura<xsl:value-of select="position()" />')</script></i></p>

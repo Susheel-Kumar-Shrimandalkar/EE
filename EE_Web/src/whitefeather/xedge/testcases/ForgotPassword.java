@@ -15,7 +15,12 @@ public class ForgotPassword extends HelperHand
 	{
 		try {
 			Page_Login.displayForgotPasswordLink().click();
+			Reporter.log("User has clicked Forgot Password Link on Login window.", true);
+			Assert.assertTrue(Page_ForgotPassword.displayRecoveryLabel().isDisplayed(), "User has opened Forgot Password window.");
+//			System.out.println("Check: "+Reporter.getCurrentTestResult());
 		} catch (Exception e) {
+			Assert.fail();
+			Reporter.log("User has failed to open Forgot Password window.", true);
 			e.printStackTrace();
 		}
 	}

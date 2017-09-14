@@ -17,91 +17,91 @@ public class Page_Login extends HelperHand
 	public static boolean displayBackgroundImageLoginPage() throws Exception
 	{
 		ConfigMethods.waitForPageToLoad();
-		_condition = driver.findElement(properties.selectLocator("staging_loginpage_backgroundImage")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("Loginpage_backgroundImage")).isDisplayed();
 //		_condition=false;//temporary declaration for demo purpose
 		return _condition;
 	}
 	
 	public static boolean displayClientAccountLogo() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_loginpage_accountlogo")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_Accountlogo")).isDisplayed();
 		return _condition;
 	}
 	public static boolean displayUsernameLabel() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_loginpage_usernameLabel")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_UsernameLabel")).isDisplayed();
 		return _condition;
 	}
 	public static boolean displayUsernameInputBox() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_username_inputfield")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_Username_inputfield")).isDisplayed();
 		return _condition;
 	}
 	public static boolean displayUsernamePlaceholder() throws Exception
 	{
-		driver.findElement(properties.selectLocator("staging_username_inputfield")).clear();;
-		_condition = driver.findElement(properties.selectLocator("staging_loginpage_usernamePlaceholder")).isDisplayed();
+		driver.findElement(properties.selectLocator("LoginWindow_UsernamePlaceholder")).clear();;
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_UsernamePlaceholder")).isDisplayed();
 		return _condition;
 	}
 	public static WebElement enterValidUsername() throws Exception
 	{
-		element = driver.findElement(properties.selectLocator("staging_username_inputfield"));
+		element = driver.findElement(properties.selectLocator("LoginWindow_Username_inputfield"));
 		return element;
 	}
 	public static boolean displayPasswordLabel() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_loginpage_passwordLabel")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_PasswordLabel")).isDisplayed();
 		return _condition;
 	}
 	public static boolean displayPasswordInputBox() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_password_inputfield")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_Password_inputfield")).isDisplayed();
 		return _condition;
 	}
 	public static boolean displayPasswordPlaceholder() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_loginpage_passwordPlaceholder")).isDisplayed();;
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_PasswordPlaceholder")).isDisplayed();;
 		return _condition;
 	}
 	public static boolean displayPasswordWrapper() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_password_wrapper")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_Password_wrapper")).isDisplayed();
 		return _condition;
 	}
 	public static WebElement clickPasswordWrapper() throws Exception
 	{
-		element = driver.findElement(properties.selectLocator("staging_password_wrapper"));
+		element = driver.findElement(properties.selectLocator("LoginWindow_Password_wrapper"));
 		return element;
 	}
 	public static WebElement enterValidPassword() throws Exception
 	{
-		element = driver.findElement(properties.selectLocator("staging_password_inputfield"));
+		element = driver.findElement(properties.selectLocator("LoginWindow_Password_inputfield"));
 		return element;
 	}
 	
 	public static boolean displayRememberMeLabel() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_loginpage_rmbrMeLbl")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_RememberMeCheckBox")).isDisplayed();
 		return _condition;
 	}
 	public static WebElement clickRememberMeCheckBox() throws Exception
 	{
-		element = driver.findElement(properties.selectLocator("staging_loginpage_rmbrMeLbl"));
+		element = driver.findElement(properties.selectLocator("LoginWindow_RememberMeCheckBox"));
 		return element;
 	}
 	public static WebElement displayForgotPasswordLink() throws Exception
 	{
-		element = driver.findElement(properties.selectLocator("staging_loginpage_forgotpassword"));
+		element = driver.findElement(properties.selectLocator("LoginWindow_ForgotPasswordLink"));
 		return element;
 	}
 	public static boolean displayLoginButton() throws Exception
 	{
-		_condition = driver.findElement(properties.selectLocator("staging_loginButton_xpath")).isDisplayed();
+		_condition = driver.findElement(properties.selectLocator("LoginWindow_LoginButton")).isDisplayed();
 		return _condition;
 	}
 	public static WebElement clickOnLoginButton() throws Exception
 	{
-		element = driver.findElement(properties.selectLocator("staging_loginButton_xpath"));
+		element = driver.findElement(properties.selectLocator("LoginWindow_LoginButton"));
 		return element;
 	}
 	public static  String getLoginPageURL()

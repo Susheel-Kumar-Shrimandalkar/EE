@@ -31,11 +31,12 @@ public class OpenLoginPage extends HelperHand
 		driver.manage().window().maximize();
 		Reporter.log("Browser is maximized.",true);
 		driver.get(loginPageUrl);
-		Thread.sleep(1000);
 		try {
+			Thread.sleep(1000);
 			Assert.assertEquals(properties.getLoginPlatformUrl(),driver.getCurrentUrl(), "Login Page URL is incorrect.");
 				Reporter.log("User has opened correct login page.",true);
 		} catch (AssertionError e) {
+			Assert.fail();
 			Reporter.log("User has opened incorrect login page.",true);
 		}
 	}

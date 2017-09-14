@@ -3,7 +3,7 @@ package whitefeather.xedge.appconfig;
 public class Constants {
 	
 	public static final String LOCATORS=".\\src\\whitefeather\\xedge\\appconfig\\Locators.properties";
-	public static final String URLs=".\\src\\whitefeather\\xedge\\appconfig\\WebPageAndAPIURLs.properties";
+	public static final String URLs=".\\src\\whitefeather\\xedge\\appconfig\\URLs.properties";
 	public static final String USERDATA=".\\src\\whitefeather\\xedge\\appconfig\\UserData.properties";
 	public static final String PlatformURL = "http://extraaedgev2.azurewebsites.net/";
 	public static final String homePageURL = "https://extraaedgev2.azurewebsites.net/dashboard";

@@ -96,7 +96,7 @@
 						});
 						$('#selCls option').remove();
 						$('#selGrp option').remove();
-						$('#selCls').append('<option selected="selected">--Select Test Class Name--</option>');
+						$('#selCls').append('<option selected="selected">--Select Test Case--</option>');
 						$('#selGrp').append('<option selected="selected">--Select Test Group Name--</option>');
 						$.each(testClasses,function(index){
 							$('#selCls').append('<option value="'+testClassValue[index]+'">'+testClasses[index]+'</option>');
@@ -180,7 +180,7 @@
 <div class="container gap-below gap-top">
 <div class="progress">
 <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress-bar progress-bar-info">
-<script>getProgress('104.16666666666667')</script>
+<script>getProgress('102.94117647058823')</script>
 </div>
 </div>
 </div>
@@ -190,7 +190,7 @@
 <i class="large fa fa-check"></i>
 <div class="stats">
 <h5 id="passPer">
-<script>getPercent('100','passPer')</script><span>%</span>
+<script>getPercent('102.94117647058823','passPer')</script><span>%</span>
 </h5>
 <div class="grow">
 <p>Pass</p>
@@ -203,7 +203,7 @@
 <i class="large fa fa-times"></i>
 <div class="stats">
 <h5 id="failPer">
-<script>getPercent('4.166666666666667','failPer')</script><span>%</span>
+<script>getPercent('0','failPer')</script><span>%</span>
 </h5>
 <div class="grow grow1">
 <p>Fail</p>
@@ -249,7 +249,7 @@
 						],
 						datasets: [
 						{
-							data: ['24', '1', '0'],
+							data: ['35', '0', '0'],
 							backgroundColor: [
 								"#8bc34a",
 								"#f44336",
@@ -277,7 +277,7 @@
 <div class="col-md-6 gap-below highlight">
 <div class="r3_counter_box green">
 <p class="title left">Executable Test Methods</p>
-<p class="number right">24</p>
+<p class="number right">34</p>
 </div>
 </div>
 <div class="col-md-6 highlight">
@@ -290,7 +290,7 @@
 <div class="r3_counter_box red">
 <p class="title left">Suite Execution Time</p>
 <p id="totTm" class="number right">
-<script>getHMS('34053','totTm')</script>
+<script>getHMS('35801','totTm')</script>
 </p>
 </div>
 </div>
@@ -307,13 +307,13 @@
 <input value="class" name="filter" type="radio"><i class="fa fa-book"></i>System Component / Feature</input>
 </form>
 </p>
-<select name="action" class="form-control" id="selGrp"></select><select style="display:none;" name="action" class="form-control" id="selCls"><option value="@29331">whitefeather.xedge.core.OpenLoginPage</option><option value="@20064">whitefeather.xedge.testcases.ForgotPassword</option><option value="@20064">whitefeather.xedge.testcases.ForgotPassword</option><option value="@20064">whitefeather.xedge.testcases.ForgotPassword</option><option value="@20064">whitefeather.xedge.testcases.ForgotPassword</option><option value="@20064">whitefeather.xedge.testcases.ForgotPassword</option><option value="@20064">whitefeather.xedge.testcases.ForgotPassword</option><option value="@20064">whitefeather.xedge.testcases.ForgotPassword</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@13397">whitefeather.xedge.testcases.Login</option><option value="@16511">whitefeather.xedge.testcases.Refresh_Page</option><option value="@10170">whitefeather.xedge.testcases.OpenAddLeadRHSPanel</option><option value="@15839">whitefeather.xedge.testcases.AddNewLeadWithDefaultValues</option><option value="@26713">whitefeather.xedge.testcases.AddActivity</option></select><select style="display:none;" name="action" class="form-control" id="selVerd"><option>-- Select Verdict --</option><option value="PASS">Pass</option><option value="FAIL">Fail</option><option value="SKIP">Skip</option></select>
+<select name="action" class="form-control" id="selGrp"></select><select style="display:none;" name="action" class="form-control" id="selCls"><option value="@21895">whitefeather.xedge.testcases.OpenLoginPage</option><option value="@12487">whitefeather.xedge.testcases.ForgotPassword</option><option value="@12487">whitefeather.xedge.testcases.ForgotPassword</option><option value="@12487">whitefeather.xedge.testcases.ForgotPassword</option><option value="@12487">whitefeather.xedge.testcases.ForgotPassword</option><option value="@12487">whitefeather.xedge.testcases.ForgotPassword</option><option value="@12487">whitefeather.xedge.testcases.ForgotPassword</option><option value="@12487">whitefeather.xedge.testcases.ForgotPassword</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@15867">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@28378">whitefeather.xedge.testcases.Refresh_Page</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@23712">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@27323">whitefeather.xedge.testcases.OpenAddLeadRHSPanel</option><option value="@27309">whitefeather.xedge.testcases.AddNewLeadWithDefaultValues</option><option value="@10672">whitefeather.xedge.testcases.AddActivity</option></select><select style="display:none;" name="action" class="form-control" id="selVerd"><option>-- Select Verdict --</option><option value="PASS">Pass</option><option value="FAIL">Fail</option><option value="SKIP">Skip</option></select>
 </div>
 <div class="alert alert-info">
 <strong>Showing <i id="show"></i> results</strong>
 </div>
 <div aria-multiselectable="true" role="tablist" id="Accordion" class="panel-group accordian-top-margin">
-<div style="display:none;" title="PASS" id="@29331" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@21895" class="panel accordian-panel-heading">
 <div id="heading1" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse1" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>openLoginPage</label><i class="pass fa fa-check"></i></a>
@@ -324,26 +324,20 @@
 <p>
 <strong>Name: </strong>openLoginPage</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.core.OpenLoginPage</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.OpenLoginPage</p>
 <p>
 <strong>Parameters: </strong>1. https://extraaedge-stagingwebsite-qa.azurewebsites.net/</p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:31</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:42</p>
 <p>
-<strong>Start time: </strong>18:56:16</p>
-<p>
-<strong>End time: </strong>18:56:25</p>
-<p>
-<strong>Duration: </strong><i id="dura1"><script>getHMS('9762','dura1')</script></i>
+<strong>Duration: </strong><i id="dura1"><script>getHMS('10782','dura1')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@20064" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@12487" class="panel accordian-panel-heading">
 <div id="heading2" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse2" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>openForgotPasswordWindow</label><i class="pass fa fa-check"></i></a>
@@ -359,22 +353,16 @@
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:43</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:43</p>
 <p>
-<strong>Start time: </strong>18:56:26</p>
-<p>
-<strong>End time: </strong>18:56:26</p>
-<p>
-<strong>Duration: </strong><i id="dura2"><script>getHMS('186','dura2')</script></i>
+<strong>Duration: </strong><i id="dura2"><script>getHMS('252','dura2')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@20064" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@12487" class="panel accordian-panel-heading">
 <div id="heading3" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse3" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCompanyLogo</label><i class="pass fa fa-check"></i></a>
@@ -390,22 +378,16 @@
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:43</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:43</p>
 <p>
-<strong>Start time: </strong>18:56:26</p>
-<p>
-<strong>End time: </strong>18:56:27</p>
-<p>
-<strong>Duration: </strong><i id="dura3"><script>getHMS('77','dura3')</script></i>
+<strong>Duration: </strong><i id="dura3"><script>getHMS('68','dura3')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@20064" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@12487" class="panel accordian-panel-heading">
 <div id="heading4" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse4" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRecoveryLabel</label><i class="pass fa fa-check"></i></a>
@@ -421,22 +403,16 @@
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:43</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:43</p>
 <p>
-<strong>Start time: </strong>18:56:27</p>
-<p>
-<strong>End time: </strong>18:56:27</p>
-<p>
-<strong>Duration: </strong><i id="dura4"><script>getHMS('63','dura4')</script></i>
+<strong>Duration: </strong><i id="dura4"><script>getHMS('22','dura4')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@20064" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@12487" class="panel accordian-panel-heading">
 <div id="heading5" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse5" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRecoveryMessage</label><i class="pass fa fa-check"></i></a>
@@ -452,22 +428,16 @@
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:44</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:44</p>
 <p>
-<strong>Start time: </strong>18:56:27</p>
-<p>
-<strong>End time: </strong>18:56:27</p>
-<p>
-<strong>Duration: </strong><i id="dura5"><script>getHMS('53','dura5')</script></i>
+<strong>Duration: </strong><i id="dura5"><script>getHMS('69','dura5')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@20064" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@12487" class="panel accordian-panel-heading">
 <div id="heading6" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse6" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyEmailInputBox</label><i class="pass fa fa-check"></i></a>
@@ -483,22 +453,16 @@
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:44</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:44</p>
 <p>
-<strong>Start time: </strong>18:56:27</p>
-<p>
-<strong>End time: </strong>18:56:27</p>
-<p>
-<strong>Duration: </strong><i id="dura6"><script>getHMS('78','dura6')</script></i>
+<strong>Duration: </strong><i id="dura6"><script>getHMS('67','dura6')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@20064" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@12487" class="panel accordian-panel-heading">
 <div id="heading7" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse7" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyLoginLink</label><i class="pass fa fa-check"></i></a>
@@ -514,22 +478,16 @@
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:44</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:44</p>
 <p>
-<strong>Start time: </strong>18:56:27</p>
-<p>
-<strong>End time: </strong>18:56:27</p>
-<p>
-<strong>Duration: </strong><i id="dura7"><script>getHMS('69','dura7')</script></i>
+<strong>Duration: </strong><i id="dura7"><script>getHMS('90','dura7')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@20064" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@12487" class="panel accordian-panel-heading">
 <div id="heading8" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse8" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>enterRecoveryEmail</label><i class="pass fa fa-check"></i></a>
@@ -544,22 +502,16 @@
 <p>
 <strong>Parameters: </strong>1. counselorshekhar@gmail.com</p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:44</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:50</p>
 <p>
-<strong>Start time: </strong>18:56:27</p>
-<p>
-<strong>End time: </strong>18:56:33</p>
-<p>
-<strong>Duration: </strong><i id="dura8"><script>getHMS('5786','dura8')</script></i>
+<strong>Duration: </strong><i id="dura8"><script>getHMS('5761','dura8')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading9" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse9" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyLoginPageBackground</label><i class="pass fa fa-check"></i></a>
@@ -570,27 +522,21 @@
 <p>
 <strong>Name: </strong>verifyLoginPageBackground</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:50</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:51</p>
 <p>
-<strong>Start time: </strong>18:56:33</p>
-<p>
-<strong>End time: </strong>18:56:34</p>
-<p>
-<strong>Duration: </strong><i id="dura9"><script>getHMS('1077','dura9')</script></i>
+<strong>Duration: </strong><i id="dura9"><script>getHMS('1062','dura9')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading10" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse10" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyClientAccountLogo</label><i class="pass fa fa-check"></i></a>
@@ -601,27 +547,21 @@
 <p>
 <strong>Name: </strong>verifyClientAccountLogo</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:51</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:51</p>
 <p>
-<strong>Start time: </strong>18:56:34</p>
-<p>
-<strong>End time: </strong>18:56:34</p>
-<p>
-<strong>Duration: </strong><i id="dura10"><script>getHMS('40','dura10')</script></i>
+<strong>Duration: </strong><i id="dura10"><script>getHMS('47','dura10')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading11" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse11" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUsernameLabel</label><i class="pass fa fa-check"></i></a>
@@ -632,30 +572,24 @@
 <p>
 <strong>Name: </strong>verifyUsernameLabel</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:51</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:51</p>
 <p>
-<strong>Start time: </strong>18:56:34</p>
-<p>
-<strong>End time: </strong>18:56:34</p>
-<p>
-<strong>Duration: </strong><i id="dura11"><script>getHMS('84','dura11')</script></i>
+<strong>Duration: </strong><i id="dura11"><script>getHMS('99','dura11')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="FAIL" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading12" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
-<a aria-controls="collapseOne" aria-expanded="true" href="#collapse12" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUsernamePlaceholder</label><i class="pass fa fa-times"></i></a>
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse12" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUsernamePlaceholder</label><i class="pass fa fa-check"></i></a>
 </h4>
 </div>
 <div aria-labelledby="heading12" role="tabpanel" class="panel-collapse collapse" id="collapse12">
@@ -663,58 +597,21 @@
 <p>
 <strong>Name: </strong>verifyUsernamePlaceholder</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:51</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:52</p>
 <p>
-<strong>Start time: </strong>18:56:35</p>
-<p>
-<strong>End time: </strong>18:56:35</p>
-<p>
-<strong>Duration: </strong><i id="dura12"><script>getHMS('141','dura12')</script></i>
-</p>
-<p class="breaker">
-<strong>Reason: </strong>null
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.fail(Assert.java:101)
-whitefeather.xedge.testcases.Login.verifyUsernamePlaceholder(Login.java:88)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-java.lang.reflect.Method.invoke(Unknown Source)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-org.testng.TestRunner.privateRun(TestRunner.java:756)
-org.testng.TestRunner.run(TestRunner.java:610)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-org.testng.SuiteRunner.run(SuiteRunner.java:289)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-org.testng.TestNG.runSuites(TestNG.java:1133)
-org.testng.TestNG.run(TestNG.java:1104)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+<strong>Duration: </strong><i id="dura12"><script>getHMS('194','dura12')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading13" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse13" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyPasswordLabel</label><i class="pass fa fa-check"></i></a>
@@ -725,27 +622,21 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>verifyPasswordLabel</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:52</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:52</p>
 <p>
-<strong>Start time: </strong>18:56:35</p>
-<p>
-<strong>End time: </strong>18:56:35</p>
-<p>
-<strong>Duration: </strong><i id="dura13"><script>getHMS('97','dura13')</script></i>
+<strong>Duration: </strong><i id="dura13"><script>getHMS('125','dura13')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading14" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse14" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyPasswordPlaceholder</label><i class="pass fa fa-check"></i></a>
@@ -756,27 +647,21 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>verifyPasswordPlaceholder</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:52</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:52</p>
 <p>
-<strong>Start time: </strong>18:56:35</p>
-<p>
-<strong>End time: </strong>18:56:35</p>
-<p>
-<strong>Duration: </strong><i id="dura14"><script>getHMS('262','dura14')</script></i>
+<strong>Duration: </strong><i id="dura14"><script>getHMS('154','dura14')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading15" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse15" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUsernameInputField</label><i class="pass fa fa-check"></i></a>
@@ -787,27 +672,21 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>verifyUsernameInputField</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:52</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:52</p>
 <p>
-<strong>Start time: </strong>18:56:35</p>
-<p>
-<strong>End time: </strong>18:56:35</p>
-<p>
-<strong>Duration: </strong><i id="dura15"><script>getHMS('74','dura15')</script></i>
+<strong>Duration: </strong><i id="dura15"><script>getHMS('84','dura15')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading16" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse16" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyPasswordInputField</label><i class="pass fa fa-check"></i></a>
@@ -818,27 +697,21 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>verifyPasswordInputField</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:52</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:52</p>
 <p>
-<strong>Start time: </strong>18:56:35</p>
-<p>
-<strong>End time: </strong>18:56:35</p>
-<p>
-<strong>Duration: </strong><i id="dura16"><script>getHMS('56','dura16')</script></i>
+<strong>Duration: </strong><i id="dura16"><script>getHMS('74','dura16')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading17" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse17" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyPasswordWrapper</label><i class="pass fa fa-check"></i></a>
@@ -849,27 +722,21 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>verifyPasswordWrapper</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:52</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:52</p>
 <p>
-<strong>Start time: </strong>18:56:36</p>
-<p>
-<strong>End time: </strong>18:56:36</p>
-<p>
-<strong>Duration: </strong><i id="dura17"><script>getHMS('116','dura17')</script></i>
+<strong>Duration: </strong><i id="dura17"><script>getHMS('111','dura17')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading18" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse18" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>enterLoginId</label><i class="pass fa fa-check"></i></a>
@@ -880,26 +747,20 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>enterLoginId</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>1. counselorshekhar@gmail.com</p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:53</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:53</p>
 <p>
-<strong>Start time: </strong>18:56:36</p>
-<p>
-<strong>End time: </strong>18:56:36</p>
-<p>
-<strong>Duration: </strong><i id="dura18"><script>getHMS('308','dura18')</script></i>
+<strong>Duration: </strong><i id="dura18"><script>getHMS('373','dura18')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading19" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse19" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>enterLoginPassword</label><i class="pass fa fa-check"></i></a>
@@ -910,26 +771,20 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>enterLoginPassword</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>1. test</p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:53</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:53</p>
 <p>
-<strong>Start time: </strong>18:56:36</p>
-<p>
-<strong>End time: </strong>18:56:36</p>
-<p>
-<strong>Duration: </strong><i id="dura19"><script>getHMS('212','dura19')</script></i>
+<strong>Duration: </strong><i id="dura19"><script>getHMS('149','dura19')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading20" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse20" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyLoginButton</label><i class="pass fa fa-check"></i></a>
@@ -940,27 +795,21 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>verifyLoginButton</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:53</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:53</p>
 <p>
-<strong>Start time: </strong>18:56:36</p>
-<p>
-<strong>End time: </strong>18:56:36</p>
-<p>
-<strong>Duration: </strong><i id="dura20"><script>getHMS('103','dura20')</script></i>
+<strong>Duration: </strong><i id="dura20"><script>getHMS('107','dura20')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@13397" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@15867" class="panel accordian-panel-heading">
 <div id="heading21" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse21" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>clickLoginButton</label><i class="pass fa fa-check"></i></a>
@@ -971,27 +820,21 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <p>
 <strong>Name: </strong>clickLoginButton</p>
 <p>
-<strong>Instance: </strong>whitefeather.xedge.testcases.Login</p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
 <p>
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:53</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:32:57</p>
 <p>
-<strong>Start time: </strong>18:56:36</p>
-<p>
-<strong>End time: </strong>18:56:40</p>
-<p>
-<strong>Duration: </strong><i id="dura21"><script>getHMS('3405','dura21')</script></i>
+<strong>Duration: </strong><i id="dura21"><script>getHMS('3373','dura21')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@16511" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@28378" class="panel accordian-panel-heading">
 <div id="heading22" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
 <a aria-controls="collapseOne" aria-expanded="true" href="#collapse22" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>refreshWebPage</label><i class="pass fa fa-check"></i></a>
@@ -1007,28 +850,272 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:32:57</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:33:00</p>
 <p>
-<strong>Start time: </strong>18:56:40</p>
-<p>
-<strong>End time: </strong>18:56:43</p>
-<p>
-<strong>Duration: </strong><i id="dura22"><script>getHMS('2771','dura22')</script></i>
+<strong>Duration: </strong><i id="dura22"><script>getHMS('2962','dura22')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@10170" class="panel accordian-panel-heading">
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
 <div id="heading23" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
-<a aria-controls="collapseOne" aria-expanded="true" href="#collapse23" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>clickAddLeadPlusIcon</label><i class="pass fa fa-check"></i></a>
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse23" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCompanyLogoInHeader</label><i class="pass fa fa-check"></i></a>
 </h4>
 </div>
 <div aria-labelledby="heading23" role="tabpanel" class="panel-collapse collapse" id="collapse23">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCompanyLogoInHeader</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:00</p>
+<p>
+<strong>End time: </strong>17:33:00</p>
+<p>
+<strong>Duration: </strong><i id="dura23"><script>getHMS('410','dura23')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading24" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse24" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyGoButtonInGlobalSearchBar</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading24" role="tabpanel" class="panel-collapse collapse" id="collapse24">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyGoButtonInGlobalSearchBar</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:00</p>
+<p>
+<strong>End time: </strong>17:33:00</p>
+<p>
+<strong>Duration: </strong><i id="dura24"><script>getHMS('113','dura24')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading25" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse25" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyOutStandingActivityIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading25" role="tabpanel" class="panel-collapse collapse" id="collapse25">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyOutStandingActivityIcon</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:00</p>
+<p>
+<strong>End time: </strong>17:33:01</p>
+<p>
+<strong>Duration: </strong><i id="dura25"><script>getHMS('124','dura25')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading26" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse26" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyOutStandingActivityCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading26" role="tabpanel" class="panel-collapse collapse" id="collapse26">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyOutStandingActivityCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:01</p>
+<p>
+<strong>End time: </strong>17:33:01</p>
+<p>
+<strong>Duration: </strong><i id="dura26"><script>getHMS('96','dura26')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading27" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse27" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCounselorName</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading27" role="tabpanel" class="panel-collapse collapse" id="collapse27">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCounselorName</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:01</p>
+<p>
+<strong>End time: </strong>17:33:01</p>
+<p>
+<strong>Duration: </strong><i id="dura27"><script>getHMS('128','dura27')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading28" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse28" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCounselorPhoto</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading28" role="tabpanel" class="panel-collapse collapse" id="collapse28">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCounselorPhoto</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:01</p>
+<p>
+<strong>End time: </strong>17:33:01</p>
+<p>
+<strong>Duration: </strong><i id="dura28"><script>getHMS('86','dura28')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading29" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse29" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifySignOutLink</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading29" role="tabpanel" class="panel-collapse collapse" id="collapse29">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifySignOutLink</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:01</p>
+<p>
+<strong>End time: </strong>17:33:01</p>
+<p>
+<strong>Duration: </strong><i id="dura29"><script>getHMS('91','dura29')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading30" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse30" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyBulkUploadIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading30" role="tabpanel" class="panel-collapse collapse" id="collapse30">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyBulkUploadIcon</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:01</p>
+<p>
+<strong>End time: </strong>17:33:01</p>
+<p>
+<strong>Duration: </strong><i id="dura30"><script>getHMS('124','dura30')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading31" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse31" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyAddLeadPlusIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading31" role="tabpanel" class="panel-collapse collapse" id="collapse31">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyAddLeadPlusIcon</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:01</p>
+<p>
+<strong>End time: </strong>17:33:02</p>
+<p>
+<strong>Duration: </strong><i id="dura31"><script>getHMS('98','dura31')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@23712" class="panel accordian-panel-heading">
+<div id="heading32" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse32" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyJoyRideButton</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading32" role="tabpanel" class="panel-collapse collapse" id="collapse32">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyJoyRideButton</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>17:33:02</p>
+<p>
+<strong>End time: </strong>17:33:02</p>
+<p>
+<strong>Duration: </strong><i id="dura32"><script>getHMS('86','dura32')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@27323" class="panel accordian-panel-heading">
+<div id="heading33" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse33" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>clickAddLeadPlusIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading33" role="tabpanel" class="panel-collapse collapse" id="collapse33">
 <div class="panel-body panel_text panel-body-new">
 <p>
 <strong>Name: </strong>clickAddLeadPlusIcon</p>
@@ -1038,28 +1125,22 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:33:02</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:33:02</p>
 <p>
-<strong>Start time: </strong>18:56:43</p>
-<p>
-<strong>End time: </strong>18:56:43</p>
-<p>
-<strong>Duration: </strong><i id="dura23"><script>getHMS('708','dura23')</script></i>
+<strong>Duration: </strong><i id="dura33"><script>getHMS('437','dura33')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@15839" class="panel accordian-panel-heading">
-<div id="heading24" role="tab" class="panel-heading">
+<div style="display:none;" title="PASS" id="@27309" class="panel accordian-panel-heading">
+<div id="heading34" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
-<a aria-controls="collapseOne" aria-expanded="true" href="#collapse24" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>addNewLeadWithDefaultValues</label><i class="pass fa fa-check"></i></a>
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse34" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>addNewLeadWithDefaultValues</label><i class="pass fa fa-check"></i></a>
 </h4>
 </div>
-<div aria-labelledby="heading24" role="tabpanel" class="panel-collapse collapse" id="collapse24">
+<div aria-labelledby="heading34" role="tabpanel" class="panel-collapse collapse" id="collapse34">
 <div class="panel-body panel_text panel-body-new">
 <p>
 <strong>Name: </strong>addNewLeadWithDefaultValues</p>
@@ -1069,28 +1150,22 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:33:02</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:33:05</p>
 <p>
-<strong>Start time: </strong>18:56:43</p>
-<p>
-<strong>End time: </strong>18:56:46</p>
-<p>
-<strong>Duration: </strong><i id="dura24"><script>getHMS('2724','dura24')</script></i>
+<strong>Duration: </strong><i id="dura34"><script>getHMS('2514','dura34')</script></i>
 </p>
 </div>
 </div>
 </div>
-<div style="display:none;" title="PASS" id="@26713" class="panel accordian-panel-heading">
-<div id="heading25" role="tab" class="panel-heading">
+<div style="display:none;" title="PASS" id="@10672" class="panel accordian-panel-heading">
+<div id="heading35" role="tab" class="panel-heading">
 <h4 class="nw-page-title">
-<a aria-controls="collapseOne" aria-expanded="true" href="#collapse25" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>addActivity</label><i class="pass fa fa-check"></i></a>
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse35" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>addActivity</label><i class="pass fa fa-check"></i></a>
 </h4>
 </div>
-<div aria-labelledby="heading25" role="tabpanel" class="panel-collapse collapse" id="collapse25">
+<div aria-labelledby="heading35" role="tabpanel" class="panel-collapse collapse" id="collapse35">
 <div class="panel-body panel_text panel-body-new">
 <p>
 <strong>Name: </strong>addActivity</p>
@@ -1100,17 +1175,11 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 <strong>Parameters: </strong>
 </p>
 <p>
-<strong>Context Group Name: </strong>
-</p>
+<strong>Start time: </strong>17:33:05</p>
 <p>
-<strong>Method Group Name: </strong>
-</p>
+<strong>End time: </strong>17:33:10</p>
 <p>
-<strong>Start time: </strong>18:56:46</p>
-<p>
-<strong>End time: </strong>18:56:52</p>
-<p>
-<strong>Duration: </strong><i id="dura25"><script>getHMS('5801','dura25')</script></i>
+<strong>Duration: </strong><i id="dura35"><script>getHMS('5469','dura35')</script></i>
 </p>
 </div>
 </div>
