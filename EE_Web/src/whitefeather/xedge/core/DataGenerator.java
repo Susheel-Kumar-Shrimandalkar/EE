@@ -5,10 +5,12 @@ import java.security.SecureRandom;
 
 public class DataGenerator {
 	
+	public static String prospectEmail="";
 	private static SecureRandom randomEmail = new SecureRandom();
 	public static String randomEmailGenerator()
 	{
-		return new BigInteger(50, randomEmail).toString(32)+"@domain.in";
+		prospectEmail = new BigInteger(50, randomEmail).toString(32)+"@domain.in";;
+		return prospectEmail;
 	}
 	
 	public static long randomMobileNumberGenerator()

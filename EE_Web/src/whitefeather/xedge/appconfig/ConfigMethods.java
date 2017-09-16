@@ -1,6 +1,11 @@
 package whitefeather.xedge.appconfig;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -46,5 +51,10 @@ public class ConfigMethods extends RootDriver
         ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));*/
       }
 	
-	
+	 public static void getscreenshot() throws Exception 
+     {
+             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+          //The below method will save the screen shot in d drive with name "screenshot.png"
+             FileUtils.copyFile(scrFile, new File(".\\src\\whitefeather\\xedge\\testreports\\screenshot.png"));
+     }
 }

@@ -156,11 +156,11 @@ public class ObjectMapping
 	
 	public String getLoginPlatformUrl( )
 	{
-		return properties.getProperty("login_page_qastaging");
+		return properties.getProperty("base_url");
 	}
 	
 	public String getHomePageUrlAfterLogin( )
 	{
-		return properties.getProperty("homePage_afterLogin");
+		return properties.getProperty("homePage_afterLogin1");
 	}
 }

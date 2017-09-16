@@ -6,24 +6,24 @@
   </listeners>
   <test name="Staging QA Test Validations(failed)">
     <parameter name="browser" value="Chrome"/>
-    <parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/>
+    <parameter name="loginPageUrl" value="https://extraaedgev2.azurewebsites.net/"/>
     <classes>
-      <class name="whitefeather.xedge.core.OpenLoginPage">
+      <class name="whitefeather.xedge.testcases.OpenLoginPage">
         <parameter name="_username" value="counselorshekhar@gmail.com"/>
         <parameter name="_password" value="test"/>
         <parameter name="recoveryEmail" value="counselorshekhar@gmail.com"/>
         <methods>
           <include name="selectBrowser"/>
         </methods>
-      </class> <!-- whitefeather.xedge.core.OpenLoginPage -->
-      <class name="whitefeather.xedge.testcases.Login">
+      </class> <!-- whitefeather.xedge.testcases.OpenLoginPage -->
+      <class name="whitefeather.xedge.testcases.GlobalSearch">
         <parameter name="_username" value="counselorshekhar@gmail.com"/>
         <parameter name="_password" value="test"/>
         <parameter name="recoveryEmail" value="counselorshekhar@gmail.com"/>
         <methods>
-          <include name="verifyUsernamePlaceholder"/>
+          <include name="performGlobalSearch"/>
         </methods>
-      </class> <!-- whitefeather.xedge.testcases.Login -->
+      </class> <!-- whitefeather.xedge.testcases.GlobalSearch -->
     </classes>
   </test> <!-- Staging QA Test Validations(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -19,10 +19,19 @@ public class Page_AddActivity extends HelperHand
 		}
 		return element;
 	}
-	public static WebElement clickAddActivityButton()
+	public static WebElement displayAddActivityButton()
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("addActivtyButton"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	public static WebElement displayAddActivityCommentBox()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("AddActivityCommentBox"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

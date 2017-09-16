@@ -1,10 +1,14 @@
 package whitefeather.xedge.facilitator;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import whitefeather.xedge.appconfig.ConfigMethods;
 
@@ -12,7 +16,7 @@ import whitefeather.xedge.appconfig.ConfigMethods;
 public class HelperHand
 {
 	protected static  WebDriver driver = RootDriver.driver;
-	public boolean visibleFlag;
+	public static boolean visibleFlag;
 
 	public void setUpTestSuit(String browser) 
 	{
@@ -34,6 +38,12 @@ public class HelperHand
 		return date;
 	}
 	
+	 public static void getscreenshot() throws Exception 
+     {
+             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+          //The below method will save the screen shot in d drive with name "screenshot.png"
+             FileUtils.copyFile(scrFile, new File(".\\src\\whitefeather\\xedge\\testreports\\screenshot.png"));
+     }
 	
 }
 
