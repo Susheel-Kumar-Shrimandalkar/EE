@@ -171,7 +171,9 @@ public class PerformLoginAction extends HelperHand
 			Thread.sleep(3000);
 			Assert.assertEquals(driver.getCurrentUrl(), properties.getHomePageUrlAfterLogin(),  "User landed on correct page on Login.");
 			Reporter.log("User has clicked Login button and landed on correct homepage.",true);
-		} catch (AssertionError | Exception e) {
+		} catch (AssertionError | Exception e) 
+		{
+			Assert.fail();
 			Reporter.log("User has clicked Login button but not landed on incorrect homepage.",true);
 			e.printStackTrace();
 		}

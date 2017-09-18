@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="44" passed="42">
+<testng-results skipped="0" failed="1" ignored="1" total="45" passed="43">
   <reporter-output>
     <line>
       <![CDATA[Chrome Browser is opened]]>
@@ -116,24 +116,6 @@
       <![CDATA[User has entered mobile number successfully]]>
     </line>
     <line>
-      <![CDATA[SelectActivityType dropdown is provided successfully]]>
-    </line>
-    <line>
-      <![CDATA[Activity Type is provided successfully]]>
-    </line>
-    <line>
-      <![CDATA[User has entered email address successfully]]>
-    </line>
-    <line>
-      <![CDATA[Add Activity Comment box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Activity Comment is added successfully]]>
-    </line>
-    <line>
-      <![CDATA[User has entered email address successfully]]>
-    </line>
-    <line>
       <![CDATA[User has clicked Add Lead button on RHS panel.]]>
     </line>
     <line>
@@ -149,15 +131,24 @@
       <![CDATA[Global Search Go button is displayed.]]>
     </line>
     <line>
-      <![CDATA[Screenshot is taken and stored at specified location successfully.]]>
+      <![CDATA[Web page is refreshed.]]>
+    </line>
+    <line>
+      <![CDATA[Recent New Tab Count displayed is correct.]]>
+    </line>
+    <line>
+      <![CDATA[Recent New Tab and Count are displayed.]]>
+    </line>
+    <line>
+      <![CDATA[Recent New Tab Count displayed is correct.]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="43053" started-at="2017-09-16T13:26:17Z" finished-at="2017-09-16T13:27:00Z">
+  <suite name="Suite" duration-ms="54922" started-at="2017-09-18T15:00:56Z" finished-at="2017-09-18T15:01:51Z">
     <groups>
     </groups>
-    <test name="Staging QA Test Validations" duration-ms="43053" started-at="2017-09-16T13:26:17Z" finished-at="2017-09-16T13:27:00Z">
+    <test name="Staging QA Test Validations" duration-ms="54922" started-at="2017-09-18T15:00:56Z" finished-at="2017-09-18T15:01:51Z">
       <class name="whitefeather.xedge.testcases.OpenAddLeadRHSPanel">
-        <test-method status="PASS" signature="clickAddLeadPlusIcon()[pri:0, instance:whitefeather.xedge.testcases.OpenAddLeadRHSPanel@204f30ec]" name="clickAddLeadPlusIcon" duration-ms="352" started-at="2017-09-16T18:56:45Z" finished-at="2017-09-16T18:56:46Z">
+        <test-method status="PASS" signature="clickAddLeadPlusIcon()[pri:0, instance:whitefeather.xedge.testcases.OpenAddLeadRHSPanel@239963d8]" name="clickAddLeadPlusIcon" duration-ms="400" started-at="2017-09-18T20:31:27Z" finished-at="2017-09-18T20:31:28Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Add Lead icon.]]>
@@ -166,70 +157,70 @@
         </test-method> <!-- clickAddLeadPlusIcon -->
       </class> <!-- whitefeather.xedge.testcases.OpenAddLeadRHSPanel -->
       <class name="whitefeather.xedge.testcases.PerformLoginAction">
-        <test-method status="PASS" signature="verifyLoginPageBackground()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyLoginPageBackground" duration-ms="1091" started-at="2017-09-16T18:56:35Z" finished-at="2017-09-16T18:56:36Z">
+        <test-method status="PASS" signature="verifyLoginPageBackground()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyLoginPageBackground" duration-ms="1111" started-at="2017-09-18T20:31:15Z" finished-at="2017-09-18T20:31:16Z">
           <reporter-output>
             <line>
               <![CDATA[Background Image on Login Page is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyLoginPageBackground -->
-        <test-method status="PASS" signature="verifyClientAccountLogo()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyClientAccountLogo" duration-ms="33" started-at="2017-09-16T18:56:36Z" finished-at="2017-09-16T18:56:36Z">
+        <test-method status="PASS" signature="verifyClientAccountLogo()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyClientAccountLogo" duration-ms="44" started-at="2017-09-18T20:31:16Z" finished-at="2017-09-18T20:31:16Z">
           <reporter-output>
             <line>
               <![CDATA[Client Company Logo is displayed.]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyClientAccountLogo -->
-        <test-method status="PASS" signature="verifyUsernameLabel()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyUsernameLabel" duration-ms="78" started-at="2017-09-16T18:56:36Z" finished-at="2017-09-16T18:56:36Z">
+        <test-method status="PASS" signature="verifyUsernameLabel()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyUsernameLabel" duration-ms="69" started-at="2017-09-18T20:31:16Z" finished-at="2017-09-18T20:31:16Z">
           <reporter-output>
             <line>
               <![CDATA['Username' label is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyUsernameLabel -->
-        <test-method status="PASS" signature="verifyUsernamePlaceholder()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyUsernamePlaceholder" duration-ms="145" started-at="2017-09-16T18:56:36Z" finished-at="2017-09-16T18:56:36Z">
+        <test-method status="PASS" signature="verifyUsernamePlaceholder()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyUsernamePlaceholder" duration-ms="169" started-at="2017-09-18T20:31:17Z" finished-at="2017-09-18T20:31:17Z">
           <reporter-output>
             <line>
               <![CDATA['Username' placeholder is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyUsernamePlaceholder -->
-        <test-method status="PASS" signature="verifyPasswordLabel()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyPasswordLabel" duration-ms="109" started-at="2017-09-16T18:56:36Z" finished-at="2017-09-16T18:56:37Z">
+        <test-method status="PASS" signature="verifyPasswordLabel()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyPasswordLabel" duration-ms="100" started-at="2017-09-18T20:31:17Z" finished-at="2017-09-18T20:31:17Z">
           <reporter-output>
             <line>
               <![CDATA['Password' label is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyPasswordLabel -->
-        <test-method status="PASS" signature="verifyPasswordPlaceholder()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyPasswordPlaceholder" duration-ms="78" started-at="2017-09-16T18:56:37Z" finished-at="2017-09-16T18:56:37Z">
+        <test-method status="PASS" signature="verifyPasswordPlaceholder()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyPasswordPlaceholder" duration-ms="135" started-at="2017-09-18T20:31:17Z" finished-at="2017-09-18T20:31:17Z">
           <reporter-output>
             <line>
               <![CDATA['Password' placeholder is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyPasswordPlaceholder -->
-        <test-method status="PASS" signature="verifyUsernameInputField()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyUsernameInputField" duration-ms="47" started-at="2017-09-16T18:56:37Z" finished-at="2017-09-16T18:56:37Z">
+        <test-method status="PASS" signature="verifyUsernameInputField()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyUsernameInputField" duration-ms="40" started-at="2017-09-18T20:31:17Z" finished-at="2017-09-18T20:31:17Z">
           <reporter-output>
             <line>
               <![CDATA['Username' input field is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyUsernameInputField -->
-        <test-method status="PASS" signature="verifyPasswordInputField()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyPasswordInputField" duration-ms="99" started-at="2017-09-16T18:56:37Z" finished-at="2017-09-16T18:56:37Z">
+        <test-method status="PASS" signature="verifyPasswordInputField()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyPasswordInputField" duration-ms="72" started-at="2017-09-18T20:31:17Z" finished-at="2017-09-18T20:31:17Z">
           <reporter-output>
             <line>
               <![CDATA['Password' input field is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyPasswordInputField -->
-        <test-method status="PASS" signature="verifyPasswordWrapper()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyPasswordWrapper" duration-ms="91" started-at="2017-09-16T18:56:37Z" finished-at="2017-09-16T18:56:37Z">
+        <test-method status="PASS" signature="verifyPasswordWrapper()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyPasswordWrapper" duration-ms="98" started-at="2017-09-18T20:31:17Z" finished-at="2017-09-18T20:31:17Z">
           <reporter-output>
             <line>
               <![CDATA[Password wrapper is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyPasswordWrapper -->
-        <test-method status="PASS" signature="enterLoginId(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="enterLoginId" duration-ms="381" started-at="2017-09-16T18:56:37Z" finished-at="2017-09-16T18:56:38Z">
+        <test-method status="PASS" signature="enterLoginId(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="enterLoginId" duration-ms="371" started-at="2017-09-18T20:31:18Z" finished-at="2017-09-18T20:31:18Z">
           <params>
             <param index="0">
               <value>
@@ -243,7 +234,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- enterLoginId -->
-        <test-method status="PASS" signature="enterLoginPassword(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="enterLoginPassword" duration-ms="147" started-at="2017-09-16T18:56:38Z" finished-at="2017-09-16T18:56:38Z">
+        <test-method status="PASS" signature="enterLoginPassword(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="enterLoginPassword" duration-ms="167" started-at="2017-09-18T20:31:18Z" finished-at="2017-09-18T20:31:18Z">
           <params>
             <param index="0">
               <value>
@@ -257,14 +248,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- enterLoginPassword -->
-        <test-method status="PASS" signature="verifyLoginButton()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="verifyLoginButton" duration-ms="97" started-at="2017-09-16T18:56:38Z" finished-at="2017-09-16T18:56:38Z">
+        <test-method status="PASS" signature="verifyLoginButton()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="verifyLoginButton" duration-ms="90" started-at="2017-09-18T20:31:18Z" finished-at="2017-09-18T20:31:18Z">
           <reporter-output>
             <line>
               <![CDATA[Login Button is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyLoginButton -->
-        <test-method status="PASS" signature="clickLoginButton()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@1a968a59]" name="clickLoginButton" duration-ms="3377" started-at="2017-09-16T18:56:38Z" finished-at="2017-09-16T18:56:41Z">
+        <test-method status="PASS" signature="clickLoginButton()[pri:0, instance:whitefeather.xedge.testcases.PerformLoginAction@464bee09]" name="clickLoginButton" duration-ms="3439" started-at="2017-09-18T20:31:18Z" finished-at="2017-09-18T20:31:22Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Login button and landed on correct homepage.]]>
@@ -272,80 +263,71 @@
           </reporter-output>
         </test-method> <!-- clickLoginButton -->
       </class> <!-- whitefeather.xedge.testcases.PerformLoginAction -->
-      <class name="whitefeather.xedge.testcases.Refresh_Page">
-        <test-method status="PASS" signature="refreshWebPage()[pri:0, instance:whitefeather.xedge.testcases.Refresh_Page@4667ae56]" name="refreshWebPage" duration-ms="2267" started-at="2017-09-16T18:56:41Z" finished-at="2017-09-16T18:56:44Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Web page is refreshed.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- refreshWebPage -->
-      </class> <!-- whitefeather.xedge.testcases.Refresh_Page -->
       <class name="whitefeather.xedge.testcases.VerifyGlobalIcons">
-        <test-method status="PASS" signature="verifyCompanyLogoInHeader()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyCompanyLogoInHeader" duration-ms="256" started-at="2017-09-16T18:56:44Z" finished-at="2017-09-16T18:56:44Z">
+        <test-method status="PASS" signature="verifyCompanyLogoInHeader()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyCompanyLogoInHeader" duration-ms="349" started-at="2017-09-18T20:31:26Z" finished-at="2017-09-18T20:31:26Z">
           <reporter-output>
             <line>
               <![CDATA[Company Logo in header is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyCompanyLogoInHeader -->
-        <test-method status="PASS" signature="verifyGoButtonInGlobalSearchBar()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyGoButtonInGlobalSearchBar" duration-ms="94" started-at="2017-09-16T18:56:44Z" finished-at="2017-09-16T18:56:44Z">
+        <test-method status="PASS" signature="verifyGoButtonInGlobalSearchBar()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyGoButtonInGlobalSearchBar" duration-ms="94" started-at="2017-09-18T20:31:26Z" finished-at="2017-09-18T20:31:26Z">
           <reporter-output>
             <line>
               <![CDATA[Go Button in header is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyGoButtonInGlobalSearchBar -->
-        <test-method status="PASS" signature="verifyOutStandingActivityIcon()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyOutStandingActivityIcon" duration-ms="93" started-at="2017-09-16T18:56:44Z" finished-at="2017-09-16T18:56:44Z">
+        <test-method status="PASS" signature="verifyOutStandingActivityIcon()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyOutStandingActivityIcon" duration-ms="108" started-at="2017-09-18T20:31:26Z" finished-at="2017-09-18T20:31:26Z">
           <reporter-output>
             <line>
               <![CDATA[OutStanding Activity Icon in header is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyOutStandingActivityIcon -->
-        <test-method status="PASS" signature="verifyOutStandingActivityCount()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyOutStandingActivityCount" duration-ms="109" started-at="2017-09-16T18:56:44Z" finished-at="2017-09-16T18:56:44Z">
+        <test-method status="PASS" signature="verifyOutStandingActivityCount()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyOutStandingActivityCount" duration-ms="117" started-at="2017-09-18T20:31:26Z" finished-at="2017-09-18T20:31:26Z">
           <reporter-output>
             <line>
               <![CDATA[OutStanding Activity Count in header is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyOutStandingActivityCount -->
-        <test-method status="PASS" signature="verifyCounselorName()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyCounselorName" duration-ms="94" started-at="2017-09-16T18:56:44Z" finished-at="2017-09-16T18:56:45Z">
+        <test-method status="PASS" signature="verifyCounselorName()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyCounselorName" duration-ms="77" started-at="2017-09-18T20:31:26Z" finished-at="2017-09-18T20:31:27Z">
           <reporter-output>
             <line>
               <![CDATA[Counselor Name in header is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyCounselorName -->
-        <test-method status="PASS" signature="verifyCounselorPhoto()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyCounselorPhoto" duration-ms="79" started-at="2017-09-16T18:56:45Z" finished-at="2017-09-16T18:56:45Z">
+        <test-method status="PASS" signature="verifyCounselorPhoto()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyCounselorPhoto" duration-ms="108" started-at="2017-09-18T20:31:27Z" finished-at="2017-09-18T20:31:27Z">
           <reporter-output>
             <line>
               <![CDATA[Counselor Photo in header is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyCounselorPhoto -->
-        <test-method status="PASS" signature="verifySignOutLink()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifySignOutLink" duration-ms="109" started-at="2017-09-16T18:56:45Z" finished-at="2017-09-16T18:56:45Z">
+        <test-method status="PASS" signature="verifySignOutLink()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifySignOutLink" duration-ms="73" started-at="2017-09-18T20:31:27Z" finished-at="2017-09-18T20:31:27Z">
           <reporter-output>
             <line>
               <![CDATA[Sign Out link in header is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifySignOutLink -->
-        <test-method status="PASS" signature="verifyBulkUploadIcon()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyBulkUploadIcon" duration-ms="78" started-at="2017-09-16T18:56:45Z" finished-at="2017-09-16T18:56:45Z">
+        <test-method status="PASS" signature="verifyBulkUploadIcon()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyBulkUploadIcon" duration-ms="86" started-at="2017-09-18T20:31:27Z" finished-at="2017-09-18T20:31:27Z">
           <reporter-output>
             <line>
               <![CDATA[Bulk Upload icon is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyBulkUploadIcon -->
-        <test-method status="PASS" signature="verifyAddLeadPlusIcon()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyAddLeadPlusIcon" duration-ms="94" started-at="2017-09-16T18:56:45Z" finished-at="2017-09-16T18:56:45Z">
+        <test-method status="PASS" signature="verifyAddLeadPlusIcon()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyAddLeadPlusIcon" duration-ms="69" started-at="2017-09-18T20:31:27Z" finished-at="2017-09-18T20:31:27Z">
           <reporter-output>
             <line>
               <![CDATA[Add LeadPlus icon is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyAddLeadPlusIcon -->
-        <test-method status="PASS" signature="verifyJoyRideButton()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@77cd7a0]" name="verifyJoyRideButton" duration-ms="109" started-at="2017-09-16T18:56:45Z" finished-at="2017-09-16T18:56:45Z">
+        <test-method status="PASS" signature="verifyJoyRideButton()[pri:0, instance:whitefeather.xedge.testcases.VerifyGlobalIcons@13deb50e]" name="verifyJoyRideButton" duration-ms="85" started-at="2017-09-18T20:31:27Z" finished-at="2017-09-18T20:31:27Z">
           <reporter-output>
             <line>
               <![CDATA[JoyRide button is displayed]]>
@@ -354,47 +336,21 @@
         </test-method> <!-- verifyJoyRideButton -->
       </class> <!-- whitefeather.xedge.testcases.VerifyGlobalIcons -->
       <class name="whitefeather.xedge.testcases.AddNewLeadDefaultValues_1">
-        <test-method status="PASS" signature="enterProspectEmailID()[pri:0, instance:whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@e25b2fe]" name="enterProspectEmailID" duration-ms="720" started-at="2017-09-16T18:56:46Z" finished-at="2017-09-16T18:56:47Z">
+        <test-method status="PASS" signature="enterProspectEmailID()[pri:0, instance:whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@3abbfa04]" name="enterProspectEmailID" duration-ms="852" started-at="2017-09-18T20:31:28Z" finished-at="2017-09-18T20:31:29Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered email address successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterProspectEmailID -->
-        <test-method status="PASS" signature="enterProspectMobileNo()[pri:0, instance:whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@e25b2fe]" name="enterProspectMobileNo" duration-ms="552" started-at="2017-09-16T18:56:47Z" finished-at="2017-09-16T18:56:47Z">
+        <test-method status="PASS" signature="enterProspectMobileNo()[pri:0, instance:whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@3abbfa04]" name="enterProspectMobileNo" duration-ms="411" started-at="2017-09-18T20:31:29Z" finished-at="2017-09-18T20:31:29Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered mobile number successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterProspectMobileNo -->
-        <test-method status="PASS" signature="selectActivityType()[pri:0, instance:whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@e25b2fe]" name="selectActivityType" duration-ms="4298" started-at="2017-09-16T18:56:47Z" finished-at="2017-09-16T18:56:51Z">
-          <reporter-output>
-            <line>
-              <![CDATA[SelectActivityType dropdown is provided successfully]]>
-            </line>
-            <line>
-              <![CDATA[Activity Type is provided successfully]]>
-            </line>
-            <line>
-              <![CDATA[User has entered email address successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- selectActivityType -->
-        <test-method status="PASS" signature="addActivityComment()[pri:0, instance:whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@e25b2fe]" name="addActivityComment" duration-ms="2034" started-at="2017-09-16T18:56:51Z" finished-at="2017-09-16T18:56:54Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Add Activity Comment box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Activity Comment is added successfully]]>
-            </line>
-            <line>
-              <![CDATA[User has entered email address successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- addActivityComment -->
-        <test-method status="PASS" signature="clickAddLeadButton()[pri:0, instance:whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@e25b2fe]" name="clickAddLeadButton" duration-ms="1592" started-at="2017-09-16T18:56:54Z" finished-at="2017-09-16T18:56:55Z">
+        <test-method status="PASS" signature="clickAddLeadButton()[pri:0, instance:whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@3abbfa04]" name="clickAddLeadButton" duration-ms="1607" started-at="2017-09-18T20:31:29Z" finished-at="2017-09-18T20:31:31Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Add Lead button on RHS panel.]]>
@@ -402,50 +358,85 @@
           </reporter-output>
         </test-method> <!-- clickAddLeadButton -->
       </class> <!-- whitefeather.xedge.testcases.AddNewLeadDefaultValues_1 -->
+      <class name="whitefeather.xedge.testcases.Refresh_Page">
+        <test-method status="PASS" signature="refreshWebPage()[pri:0, instance:whitefeather.xedge.testcases.Refresh_Page@f6c48ac]" name="refreshWebPage" duration-ms="3711" started-at="2017-09-18T20:31:22Z" finished-at="2017-09-18T20:31:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Web page is refreshed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- refreshWebPage -->
+      </class> <!-- whitefeather.xedge.testcases.Refresh_Page -->
+      <class name="whitefeather.xedge.testcases.UpcomingTasks">
+        <test-method status="PASS" signature="verifyDashboardURL()[pri:0, instance:whitefeather.xedge.testcases.UpcomingTasks@31ef45e3]" name="verifyDashboardURL" duration-ms="3662" started-at="2017-09-18T20:31:46Z" finished-at="2017-09-18T20:31:49Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Web page is refreshed.]]>
+            </line>
+            <line>
+              <![CDATA[Recent New Tab Count displayed is correct.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyDashboardURL -->
+        <test-method status="PASS" signature="verifyRecentNewTabIsDisplayed()[pri:0, instance:whitefeather.xedge.testcases.UpcomingTasks@31ef45e3]" name="verifyRecentNewTabIsDisplayed" duration-ms="101" started-at="2017-09-18T20:31:49Z" finished-at="2017-09-18T20:31:49Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Recent New Tab and Count are displayed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyRecentNewTabIsDisplayed -->
+        <test-method status="PASS" signature="verifyRecentNewTabCount()[pri:0, instance:whitefeather.xedge.testcases.UpcomingTasks@31ef45e3]" name="verifyRecentNewTabCount" duration-ms="1502" started-at="2017-09-18T20:31:50Z" finished-at="2017-09-18T20:31:51Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Recent New Tab Count displayed is correct.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyRecentNewTabCount -->
+      </class> <!-- whitefeather.xedge.testcases.UpcomingTasks -->
       <class name="whitefeather.xedge.testcases.ForgotPassword">
-        <test-method status="PASS" signature="openForgotPasswordWindow()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@548e7350]" name="openForgotPasswordWindow" duration-ms="228" started-at="2017-09-16T18:56:28Z" finished-at="2017-09-16T18:56:28Z">
+        <test-method status="PASS" signature="openForgotPasswordWindow()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@6eebc39e]" name="openForgotPasswordWindow" duration-ms="246" started-at="2017-09-18T20:31:08Z" finished-at="2017-09-18T20:31:08Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Forgot Password Link on Login window.]]>
             </line>
           </reporter-output>
         </test-method> <!-- openForgotPasswordWindow -->
-        <test-method status="PASS" signature="verifyCompanyLogo()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@548e7350]" name="verifyCompanyLogo" duration-ms="66" started-at="2017-09-16T18:56:28Z" finished-at="2017-09-16T18:56:28Z">
+        <test-method status="PASS" signature="verifyCompanyLogo()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@6eebc39e]" name="verifyCompanyLogo" duration-ms="53" started-at="2017-09-18T20:31:08Z" finished-at="2017-09-18T20:31:09Z">
           <reporter-output>
             <line>
               <![CDATA[Company Logo on Forgot Password is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyCompanyLogo -->
-        <test-method status="PASS" signature="verifyRecoveryLabel()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@548e7350]" name="verifyRecoveryLabel" duration-ms="32" started-at="2017-09-16T18:56:28Z" finished-at="2017-09-16T18:56:28Z">
+        <test-method status="PASS" signature="verifyRecoveryLabel()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@6eebc39e]" name="verifyRecoveryLabel" duration-ms="47" started-at="2017-09-18T20:31:09Z" finished-at="2017-09-18T20:31:09Z">
           <reporter-output>
             <line>
               <![CDATA[Recovery Label on Forgot Password is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyRecoveryLabel -->
-        <test-method status="PASS" signature="verifyRecoveryMessage()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@548e7350]" name="verifyRecoveryMessage" duration-ms="78" started-at="2017-09-16T18:56:28Z" finished-at="2017-09-16T18:56:28Z">
+        <test-method status="PASS" signature="verifyRecoveryMessage()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@6eebc39e]" name="verifyRecoveryMessage" duration-ms="69" started-at="2017-09-18T20:31:09Z" finished-at="2017-09-18T20:31:09Z">
           <reporter-output>
             <line>
               <![CDATA[Recovery Message on Forgot Password is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyRecoveryMessage -->
-        <test-method status="PASS" signature="verifyEmailInputBox()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@548e7350]" name="verifyEmailInputBox" duration-ms="62" started-at="2017-09-16T18:56:29Z" finished-at="2017-09-16T18:56:29Z">
+        <test-method status="PASS" signature="verifyEmailInputBox()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@6eebc39e]" name="verifyEmailInputBox" duration-ms="62" started-at="2017-09-18T20:31:09Z" finished-at="2017-09-18T20:31:09Z">
           <reporter-output>
             <line>
               <![CDATA[Email Input Box on Forgot Password is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyEmailInputBox -->
-        <test-method status="PASS" signature="verifyLoginLink()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@548e7350]" name="verifyLoginLink" duration-ms="62" started-at="2017-09-16T18:56:29Z" finished-at="2017-09-16T18:56:29Z">
+        <test-method status="PASS" signature="verifyLoginLink()[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@6eebc39e]" name="verifyLoginLink" duration-ms="100" started-at="2017-09-18T20:31:09Z" finished-at="2017-09-18T20:31:09Z">
           <reporter-output>
             <line>
               <![CDATA[Login Link on Forgot Password is displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyLoginLink -->
-        <test-method status="PASS" signature="enterRecoveryEmail(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@548e7350]" name="enterRecoveryEmail" duration-ms="5804" started-at="2017-09-16T18:56:29Z" finished-at="2017-09-16T18:56:35Z">
+        <test-method status="PASS" signature="enterRecoveryEmail(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.ForgotPassword@6eebc39e]" name="enterRecoveryEmail" duration-ms="5748" started-at="2017-09-18T20:31:09Z" finished-at="2017-09-18T20:31:15Z">
           <params>
             <param index="0">
               <value>
@@ -463,69 +454,36 @@
           </reporter-output>
         </test-method> <!-- enterRecoveryEmail -->
       </class> <!-- whitefeather.xedge.testcases.ForgotPassword -->
-      <class name="whitefeather.xedge.testcases.OpenLoginPage">
-        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenLoginPage@5442a311]" name="selectBrowser" is-config="true" duration-ms="31" started-at="2017-09-16T18:56:17Z" finished-at="2017-09-16T18:56:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectBrowser -->
-        <test-method status="PASS" signature="openLoginPage(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenLoginPage@5442a311]" name="openLoginPage" duration-ms="9878" started-at="2017-09-16T18:56:17Z" finished-at="2017-09-16T18:56:27Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://extraaedgev2.azurewebsites.net/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Chrome Browser is opened]]>
-            </line>
-            <line>
-              <![CDATA[Browser is maximized.]]>
-            </line>
-            <line>
-              <![CDATA[User has opened correct login page.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- openLoginPage -->
-      </class> <!-- whitefeather.xedge.testcases.OpenLoginPage -->
       <class name="whitefeather.xedge.testcases.GlobalSearch">
-        <test-method status="PASS" signature="verifyGlobalSearchBar()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@754ba872]" name="verifyGlobalSearchBar" duration-ms="109" started-at="2017-09-16T18:56:55Z" finished-at="2017-09-16T18:56:55Z">
+        <test-method status="PASS" signature="verifyGlobalSearchBar()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@57fffcd7]" name="verifyGlobalSearchBar" duration-ms="84" started-at="2017-09-18T20:31:31Z" finished-at="2017-09-18T20:31:31Z">
           <reporter-output>
             <line>
               <![CDATA[Global Search Bar is displayed.]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyGlobalSearchBar -->
-        <test-method status="PASS" signature="verifyGlobalSearchPlaceholder()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@754ba872]" name="verifyGlobalSearchPlaceholder" duration-ms="125" started-at="2017-09-16T18:56:55Z" finished-at="2017-09-16T18:56:55Z">
+        <test-method status="PASS" signature="verifyGlobalSearchPlaceholder()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@57fffcd7]" name="verifyGlobalSearchPlaceholder" duration-ms="68" started-at="2017-09-18T20:31:31Z" finished-at="2017-09-18T20:31:31Z">
           <reporter-output>
             <line>
               <![CDATA[Global Search placeholder is displayed.]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyGlobalSearchPlaceholder -->
-        <test-method status="PASS" signature="verifyLenseIcon()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@754ba872]" name="verifyLenseIcon" duration-ms="94" started-at="2017-09-16T18:56:56Z" finished-at="2017-09-16T18:56:56Z">
+        <test-method status="PASS" signature="verifyLenseIcon()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@57fffcd7]" name="verifyLenseIcon" duration-ms="114" started-at="2017-09-18T20:31:31Z" finished-at="2017-09-18T20:31:31Z">
           <reporter-output>
             <line>
               <![CDATA[Global Search Lense Icon is displayed.]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyLenseIcon -->
-        <test-method status="PASS" signature="verifyGoButton()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@754ba872]" name="verifyGoButton" duration-ms="31" started-at="2017-09-16T18:56:56Z" finished-at="2017-09-16T18:56:56Z">
+        <test-method status="PASS" signature="verifyGoButton()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@57fffcd7]" name="verifyGoButton" duration-ms="40" started-at="2017-09-18T20:31:31Z" finished-at="2017-09-18T20:31:31Z">
           <reporter-output>
             <line>
               <![CDATA[Global Search Go button is displayed.]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyGoButton -->
-        <test-method status="FAIL" signature="performGlobalSearch()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@754ba872]" name="performGlobalSearch" duration-ms="4442" started-at="2017-09-16T18:56:56Z" finished-at="2017-09-16T18:57:00Z">
+        <test-method status="FAIL" signature="performGlobalSearch()[pri:0, instance:whitefeather.xedge.testcases.GlobalSearch@57fffcd7]" name="performGlobalSearch" duration-ms="14285" started-at="2017-09-18T20:31:31Z" finished-at="2017-09-18T20:31:46Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -534,7 +492,7 @@
               <![CDATA[java.lang.AssertionError: null
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.GlobalSearch.performGlobalSearch(GlobalSearch.java:88)
+	at whitefeather.xedge.testcases.GlobalSearch.performGlobalSearch(GlobalSearch.java:114)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -564,12 +522,42 @@
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
-            <line>
-              <![CDATA[Screenshot is taken and stored at specified location successfully.]]>
-            </line>
           </reporter-output>
         </test-method> <!-- performGlobalSearch -->
       </class> <!-- whitefeather.xedge.testcases.GlobalSearch -->
+      <class name="whitefeather.xedge.testcases.OpenLoginPage">
+        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenLoginPage@4dfa3a9d]" name="selectBrowser" is-config="true" duration-ms="16" started-at="2017-09-18T20:30:56Z" finished-at="2017-09-18T20:30:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectBrowser -->
+        <test-method status="PASS" signature="openLoginPage(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenLoginPage@4dfa3a9d]" name="openLoginPage" duration-ms="11267" started-at="2017-09-18T20:30:56Z" finished-at="2017-09-18T20:31:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://extraaedge-stagingwebsite-qa.azurewebsites.net/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Chrome Browser is opened]]>
+            </line>
+            <line>
+              <![CDATA[Browser is maximized.]]>
+            </line>
+            <line>
+              <![CDATA[User has opened correct login page.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+      </class> <!-- whitefeather.xedge.testcases.OpenLoginPage -->
     </test> <!-- Staging QA Test Validations -->
   </suite> <!-- Suite -->
 </testng-results>

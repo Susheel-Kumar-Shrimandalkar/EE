@@ -3,9 +3,13 @@ package whitefeather.xedge.facilitator;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -17,6 +21,7 @@ public class HelperHand
 {
 	protected static  WebDriver driver = RootDriver.driver;
 	public static boolean visibleFlag;
+	public static String helperString="";
 
 	public void setUpTestSuit(String browser) 
 	{
@@ -38,11 +43,31 @@ public class HelperHand
 		return date;
 	}
 	
-	 public static void getscreenshot() throws Exception 
+	public static String CreateReportDirectory() 
+	{
+		String directory = ".\\src\\whitefeather\\xedge\\testreports\\Screenshots\\"+getDate();
+		Path path = Paths.get(directory);
+		if(!Files.exists(path))
+		{
+			try {
+				Files.createDirectories(path);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+//		System.out.println(directory);
+		return directory.replace("\\", "\\\\");
+	}
+	
+	public static String getTime()
+	{
+		return LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH_mm_ss"));
+	}
+	
+	 public static void getscreenshot(String fileName) throws Exception 
      {
              File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-          //The below method will save the screen shot in d drive with name "screenshot.png"
-             FileUtils.copyFile(scrFile, new File(".\\src\\whitefeather\\xedge\\testreports\\screenshot.png"));
+             FileUtils.copyFile(scrFile, new File(CreateReportDirectory(),fileName+getDate()+"_"+getTime()+".png"));
      }
 	
 }

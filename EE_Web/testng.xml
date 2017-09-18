@@ -6,8 +6,8 @@
 	</listeners>
 	<test name="Staging QA Test Validations">
   		<parameter name="browser" value="Chrome"/>
-<!-- 		<parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/> -->
-		<parameter name="loginPageUrl" value="https://extraaedgev2.azurewebsites.net/"/>
+		<parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/>
+<!-- 		<parameter name="loginPageUrl" value="https://extraaedgev2.azurewebsites.net/"/> -->
 		<classes>
 			<class name="whitefeather.xedge.testcases.OpenLoginPage">
 			<methods><include name="openLoginPage"></include></methods></class>
@@ -68,8 +68,8 @@
 			<methods>
 			<include name="enterProspectEmailID"/>
 			<include name="enterProspectMobileNo"/>
-			<include name="selectActivityType"/>
-			<include name="addActivityComment"/>
+			<!-- <include name="selectActivityType"/>
+			<include name="addActivityComment"/> -->
 			<include name="clickAddLeadButton"/>
 			</methods></class>
 			
@@ -85,11 +85,16 @@
 			<include name="performGlobalSearch"/>
 			</methods></class>
 			
-			<!-- <class name="whitefeather.xedge.testcases.AddNewLeadWithDefaultValues">
-			<methods><include name="addNewLeadWithDefaultValues"></include></methods></class> -->
+			<class name="whitefeather.xedge.testcases.Refresh_Page" >
+			<methods><include name="refreshWebPage"></include></methods></class>
 			
-			<!-- <class name="whitefeather.xedge.testcases.AddActivity">
-			<methods><include name="addActivity"></include></methods></class> -->
+			<class name="whitefeather.xedge.testcases.UpcomingTasks">
+			<methods>
+			<include name="verifyDashboardURL"/>
+			<include name="verifyRecentNewTabIsDisplayed"/>
+			<include name="verifyRecentNewTabCount"/>
+			</methods></class>
+			
 		</classes>
 	</test>
 	

@@ -13,7 +13,8 @@ import whitefeather.xedge.appconfig.ObjectMapping;
 
 public class APIDataProvider 
 {
-	public static ObjectMapping properties = new ObjectMapping(Constants.LOCATORS);
+//	public static ObjectMapping properties = new ObjectMapping(Constants.LOCATORS);URLs
+	public static ObjectMapping properties = new ObjectMapping(Constants.URLs);
 	
 	public static void main(String[] args) throws IOException 
 	{

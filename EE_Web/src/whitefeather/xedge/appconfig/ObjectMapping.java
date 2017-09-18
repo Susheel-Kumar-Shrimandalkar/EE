@@ -81,34 +81,34 @@ public class ObjectMapping
 	
 	public String getAPILoginURL()
 	{
-		return properties.getProperty("staging_apilogin_url");
+		return properties.getProperty("APILogin");
 	}
 	public String getAPILoginClientId()
 	{
-		return "clientId="+properties.getProperty("staging_login_clientId");
+		return "clientId="+properties.getProperty("APILogin_ClientId");
 	}
 	public String getAPILoginUsername()
 	{
-		return "username="+properties.getProperty("staging_login_username");
+		return "username="+properties.getProperty("APILogin_Username");
 	}
 	public String getAPILoginPassword()
 	{
-		return "password="+properties.getProperty("staging_login_password");
+		return "password="+properties.getProperty("APILogin_Password");
 	}
 	public String getAPILoginCredentials()
 	{
-		String cred= "clientId="+properties.getProperty("staging_login_clientId")
-		+"username="+properties.getProperty("staging_login_username")
-		+"password="+properties.getProperty("staging_login_password").trim().toString().replaceAll("\\s+", "");;
+		String cred= "clientId="+properties.getProperty("APILogin_ClientId")
+		+"username="+properties.getProperty("APILogin_Username")
+		+"password="+properties.getProperty("APILogin_Password").trim().toString().replaceAll("\\s+", "");;
 		return cred;
 	}
 	public String getAPILoginDetails()
 	{
-		return properties.getProperty("staging_login_credentials");
+		return properties.getProperty("APILogin_Credentials");
 	}
 	public String getDashboardCountAPIStaging()
 	{
-		return (String)properties.getProperty("staging_dashboard_countAPI");
+		return (String)properties.getProperty("Dashboard_countAPI");
 	}
 
 	/*public String getBCCEmailAddresses() 
@@ -161,6 +161,10 @@ public class ObjectMapping
 	
 	public String getHomePageUrlAfterLogin( )
 	{
-		return properties.getProperty("homePage_afterLogin1");
+		return properties.getProperty("HomePage_afterLogin");
+	}
+	public String getDashboardPageURL( )
+	{
+		return properties.getProperty("Dashboard_URL");
 	}
 }

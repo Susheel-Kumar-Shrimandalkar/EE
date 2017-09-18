@@ -49,4 +49,25 @@ public class Page_GlobalSearch extends HelperHand
 		}
 		return element;
 	}
+	
+	public static WebElement displayNoResultMessage()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("NoResultMessage_GlobalSearch"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public static WebElement displayNullResultMessage()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("NullResultMessage_GlobalSearch"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
 }

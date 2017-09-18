@@ -227,7 +227,7 @@
 	<xsl:variable name="skippedPercent" select="(($skippedMethods * 100) div $executableMethod)" />
 	<xsl:variable name="totalSuite" select="count(/testResults/suites/suiteNames/suiteName)" />
 	<xsl:variable name="parallel" select="/testResults/suites/parallel/text()" />
-	<!--<xsl:variable name="testing" select="count(/testResults/testresult[methodStatus = 'PASS'][methodThreadCount = '1'])" /> -->
+	<xsl:variable name="testing" select="count(/testResults/testresult[methodStatus = 'PASS'][methodThreadCount = '1'])" />
 	
 	<div class="container-fluid">
 		<div class="container gap-below gap-top">

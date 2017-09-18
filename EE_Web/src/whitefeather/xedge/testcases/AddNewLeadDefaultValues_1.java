@@ -3,10 +3,8 @@ package whitefeather.xedge.testcases;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import whitefeather.xedge.core.CloseIconRHSPanels;
 import whitefeather.xedge.core.DataGenerator;
-import whitefeather.xedge.core.Page_AddActivity;
 import whitefeather.xedge.core.Page_AddNewLeadWithDefaultValues;
 
 public class AddNewLeadDefaultValues_1 
@@ -36,7 +34,7 @@ public class AddNewLeadDefaultValues_1
 			Reporter.log("User has failed to enter mobile number.",true);
 		}
 	}
-	
+	/*
 	@Test
 	public static void selectActivityType()
 	{
@@ -62,7 +60,7 @@ public class AddNewLeadDefaultValues_1
 			Reporter.log("User has failed to enter email address.",true);
 		}
 	} 
-	
+	*/
 	@Test
 	public static void clickAddLeadButton() throws InterruptedException
 	{
