@@ -15,6 +15,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import whitefeather.xedge.appconfig.ConfigMethods;
+import whitefeather.xedge.appservices.EmailerService;
+import whitefeather.xedge.core.DataGenerator;
 
 
 public class HelperHand
@@ -22,6 +24,7 @@ public class HelperHand
 	protected static  WebDriver driver = RootDriver.driver;
 	public static boolean visibleFlag;
 	public static String helperString="";
+	public static String leadEmail = DataGenerator.randomEmailGenerator();
 
 	public void setUpTestSuit(String browser) 
 	{
@@ -32,8 +35,8 @@ public class HelperHand
 	public void setDownTestSuit() throws IOException, InterruptedException 
 	{
 		// close the browser
-		driver.close();
-		
+		driver.quit();
+		EmailerService.SendTestReport();
 	}
 	
 	public static String getDate()
@@ -55,7 +58,6 @@ public class HelperHand
 				e.printStackTrace();
 			}
 		}
-//		System.out.println(directory);
 		return directory.replace("\\", "\\\\");
 	}
 	

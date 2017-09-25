@@ -92,10 +92,11 @@ public class EmailerService
 //	         messageBodyPart = new MimeBodyPart();
 	         
 //	         String filename = ".//test-output//emailable-report.html";
-	         String filename = "aa";//Constants.TESTREPORT_CONTAINER+DataProvider.testReportFileNameGenerator();
+	         GenerateZip.generateZipReport();
+	         String filename = Constants.ZIPDESTLOCATION;
 	         DataSource source = new FileDataSource(filename);
 	         messageBodyPart.setDataHandler(new DataHandler(source));
-	         messageBodyPart.setFileName("Test Report.xlsx");
+	         messageBodyPart.setFileName("TestReport.zip");
 	         
 	         multipart.addBodyPart(messageBodyPart);
 	         BodyPart htmlBodyPart = new MimeBodyPart();
@@ -108,14 +109,17 @@ public class EmailerService
 
 	         //Send message
 	         Transport.send(message);
-	         Reporter.log("Test report has been sent to intended recepeints successfully",true);
+//	         Reporter.log("Test report has been sent to intended recepeints successfully",true);
 	      } 
 	      catch (MessagingException e) 
 	      {
-	    	  Reporter.log("Sending Test report to intended recepients is failed.",true);
+//	    	  Reporter.log("Sending Test report to intended recepients is failed.",true);
 	         throw new RuntimeException(e);
 	      }
 	  }
 
+	public static void main(String[] args) throws FileNotFoundException {
+		SendTestReport();
+	}
 }
 

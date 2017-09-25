@@ -5,6 +5,8 @@ public class Constants {
 	public static final String LOCATORS=".\\src\\whitefeather\\xedge\\appconfig\\Locators.properties";
 	public static final String URLs=".\\src\\whitefeather\\xedge\\appconfig\\URLs.properties";
 	public static final String USERDATA=".\\src\\whitefeather\\xedge\\appconfig\\UserData.properties";
+	public static final String ZIPDESTLOCATION="F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testreports\\TestReport.zip";
+	public static final String ZIPSRCLOCATION="F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\RealtimeReport";
 	public static final String PlatformURL = "http://extraaedgev2.azurewebsites.net/";
 	public static final String homePageURL = "https://extraaedgev2.azurewebsites.net/dashboard";
 	

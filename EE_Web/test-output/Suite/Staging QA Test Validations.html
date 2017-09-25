@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Staging QA Test Validations</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>44/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Sep 22 19:06:35 IST 2017</td>
+<td>Started on:</td><td>Mon Sep 25 18:59:17 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>31 seconds (31506 ms)</td>
+<tr><td>Total time:</td><td>56 seconds (56275 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,6 +68,114 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='whitefeather.xedge.testcases.EndTesting.endTestSuite()'><b>endTestSuite</b><br>Test class: whitefeather.xedge.testcases.EndTesting<br/>
+<a href="#Output-380234542" onClick='toggleBox("Output-380234542", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-380234542" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-380234542">
+Sending Test report to intended recepients is failed.<br/>
+</div>
+</td>
+<td><div><pre>java.lang.RuntimeException: javax.mail.AuthenticationFailedException: 534-5.7.14 &lt;https://accounts.google.com/signin/continue?sarp=1&amp;scc=1&amp;plt=AKgnsbtJ
+534-5.7.14 X1A9M-xnZid3ULrdx6Fw3gxQtKRJHKfJ5k6-EuebAD--99T4Fvk94F5n9Gif-3yk5n-Xqg
+534-5.7.14 DEhyPdIpSC3mpgGd5X7WAktulrc9FtyEtfsDzmFDeyopmE9vHQVDhYV3EeMmfo_Rk03ikp
+534-5.7.14 7SYJQ0u4u3Fpl_9gVOq-bqve3rcuXWElhE7e__uQCR9dxsOS6tqbuK5TJhdbslPmM1V1EB
+534-5.7.14 kwq9LSbquI4U6mofL2euR94D7r43I&gt; Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 i63sm13604785pfk.34 - gsmtp
+
+	at whitefeather.xedge.appservices.EmailerService.SendTestReport(EmailerService.java:116)
+	at whitefeather.xedge.facilitator.HelperHand.setDownTestSuit(HelperHand.java:39)
+	at whitefeather.xedge.testcases.EndTesting.endTestSuite(EndTesting.java:16)
+Caused by: javax.mail.AuthenticationFailedException: 534-5.7.14 &lt;https://accounts.google.com/signin/continue?sarp=1&amp;scc=1&amp;plt=AKgnsbtJ
+534-5.7.14 X1A9M-xnZid3ULrdx6Fw3gxQtKRJHKfJ5k6-EuebAD--99T4Fvk94F5n9Gif-3yk5n-Xqg
+534-5.7.14 DEhyPdIpSC3mpgGd5X7WAktulrc9FtyEtfsDzmFDeyopmE9vHQVDhYV3EeMmfo_Rk03ikp
+534-5.7.14 7SYJQ0u4u3Fpl_9gVOq-bqve3rcuXWElhE7e__uQCR9dxsOS6tqbuK5TJhdbslPmM1V1EB
+534-5.7.14 kwq9LSbquI4U6mofL2euR94D7r43I&gt; Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 i63sm13604785pfk.34 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:823)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:756)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:673)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at whitefeather.xedge.appservices.EmailerService.SendTestReport(EmailerService.java:110)
+	... 27 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace380234542", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace380234542'><pre>java.lang.RuntimeException: javax.mail.AuthenticationFailedException: 534-5.7.14 &lt;https://accounts.google.com/signin/continue?sarp=1&amp;scc=1&amp;plt=AKgnsbtJ
+534-5.7.14 X1A9M-xnZid3ULrdx6Fw3gxQtKRJHKfJ5k6-EuebAD--99T4Fvk94F5n9Gif-3yk5n-Xqg
+534-5.7.14 DEhyPdIpSC3mpgGd5X7WAktulrc9FtyEtfsDzmFDeyopmE9vHQVDhYV3EeMmfo_Rk03ikp
+534-5.7.14 7SYJQ0u4u3Fpl_9gVOq-bqve3rcuXWElhE7e__uQCR9dxsOS6tqbuK5TJhdbslPmM1V1EB
+534-5.7.14 kwq9LSbquI4U6mofL2euR94D7r43I&gt; Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 i63sm13604785pfk.34 - gsmtp
+
+	at whitefeather.xedge.appservices.EmailerService.SendTestReport(EmailerService.java:116)
+	at whitefeather.xedge.facilitator.HelperHand.setDownTestSuit(HelperHand.java:39)
+	at whitefeather.xedge.testcases.EndTesting.endTestSuite(EndTesting.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: javax.mail.AuthenticationFailedException: 534-5.7.14 &lt;https://accounts.google.com/signin/continue?sarp=1&amp;scc=1&amp;plt=AKgnsbtJ
+534-5.7.14 X1A9M-xnZid3ULrdx6Fw3gxQtKRJHKfJ5k6-EuebAD--99T4Fvk94F5n9Gif-3yk5n-Xqg
+534-5.7.14 DEhyPdIpSC3mpgGd5X7WAktulrc9FtyEtfsDzmFDeyopmE9vHQVDhYV3EeMmfo_Rk03ikp
+534-5.7.14 7SYJQ0u4u3Fpl_9gVOq-bqve3rcuXWElhE7e__uQCR9dxsOS6tqbuK5TJhdbslPmM1V1EB
+534-5.7.14 kwq9LSbquI4U6mofL2euR94D7r43I&gt; Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 i63sm13604785pfk.34 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:823)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:756)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:673)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at whitefeather.xedge.appservices.EmailerService.SendTestReport(EmailerService.java:110)
+	... 27 more
+</pre></div></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.EndTesting@f6c48ac</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -75,14 +183,58 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='whitefeather.xedge.testcases.GlobalSearch.performGlobalSearch1()'><b>performGlobalSearch1</b><br>Test class: whitefeather.xedge.testcases.GlobalSearch</td>
-<td><div><pre>java.lang.AssertionError: null
-	at whitefeather.xedge.testcases.GlobalSearch.performGlobalSearch1(GlobalSearch.java:139)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace593768538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace593768538'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.GlobalSearch.performGlobalSearch1(GlobalSearch.java:139)
+<td title='whitefeather.xedge.testcases.EndTesting.endTestSuite()'><b>endTestSuite</b><br>Test class: whitefeather.xedge.testcases.EndTesting<br/>
+<a href="#Output-1565096593" onClick='toggleBox("Output-1565096593", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1565096593" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1565096593">
+Sending Test report to intended recepients is failed.<br/>
+</div>
+</td>
+<td><div><pre>java.lang.RuntimeException: javax.mail.AuthenticationFailedException: 534-5.7.14 &lt;https://accounts.google.com/signin/continue?sarp=1&amp;scc=1&amp;plt=AKgnsbvt
+534-5.7.14 KO63Ak8tWyoA_jwZMNuOJBpVhoZRXhmP_4zUNWGk0CmNTniky0vIpIp4h2nSsFk3eQTWNw
+534-5.7.14 gVuJZYytBK_3fmcd4AQopnWcVtj5MSP-DhHnJSjW9IihoZwvIXB0ICTL2IdR4qLD9NMICp
+534-5.7.14 kptxwUMll5_RwjCPlQz3wSWYCIe22_lfFl5oWD1WlIz43O0-rln-J5jrzMgWzHnIoMXYbK
+534-5.7.14 GOba1OXMJVGW8NTrzlbNMTkgCcYak&gt; Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 d18sm10829700pfk.11 - gsmtp
+
+	at whitefeather.xedge.appservices.EmailerService.SendTestReport(EmailerService.java:116)
+	at whitefeather.xedge.facilitator.HelperHand.setDownTestSuit(HelperHand.java:39)
+	at whitefeather.xedge.testcases.EndTesting.endTestSuite(EndTesting.java:16)
+Caused by: javax.mail.AuthenticationFailedException: 534-5.7.14 &lt;https://accounts.google.com/signin/continue?sarp=1&amp;scc=1&amp;plt=AKgnsbvt
+534-5.7.14 KO63Ak8tWyoA_jwZMNuOJBpVhoZRXhmP_4zUNWGk0CmNTniky0vIpIp4h2nSsFk3eQTWNw
+534-5.7.14 gVuJZYytBK_3fmcd4AQopnWcVtj5MSP-DhHnJSjW9IihoZwvIXB0ICTL2IdR4qLD9NMICp
+534-5.7.14 kptxwUMll5_RwjCPlQz3wSWYCIe22_lfFl5oWD1WlIz43O0-rln-J5jrzMgWzHnIoMXYbK
+534-5.7.14 GOba1OXMJVGW8NTrzlbNMTkgCcYak&gt; Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 d18sm10829700pfk.11 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:823)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:756)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:673)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at whitefeather.xedge.appservices.EmailerService.SendTestReport(EmailerService.java:110)
+	... 27 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1565096593", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1565096593'><pre>java.lang.RuntimeException: javax.mail.AuthenticationFailedException: 534-5.7.14 &lt;https://accounts.google.com/signin/continue?sarp=1&amp;scc=1&amp;plt=AKgnsbvt
+534-5.7.14 KO63Ak8tWyoA_jwZMNuOJBpVhoZRXhmP_4zUNWGk0CmNTniky0vIpIp4h2nSsFk3eQTWNw
+534-5.7.14 gVuJZYytBK_3fmcd4AQopnWcVtj5MSP-DhHnJSjW9IihoZwvIXB0ICTL2IdR4qLD9NMICp
+534-5.7.14 kptxwUMll5_RwjCPlQz3wSWYCIe22_lfFl5oWD1WlIz43O0-rln-J5jrzMgWzHnIoMXYbK
+534-5.7.14 GOba1OXMJVGW8NTrzlbNMTkgCcYak&gt; Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 d18sm10829700pfk.11 - gsmtp
+
+	at whitefeather.xedge.appservices.EmailerService.SendTestReport(EmailerService.java:116)
+	at whitefeather.xedge.facilitator.HelperHand.setDownTestSuit(HelperHand.java:39)
+	at whitefeather.xedge.testcases.EndTesting.endTestSuite(EndTesting.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -108,9 +260,28 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: javax.mail.AuthenticationFailedException: 534-5.7.14 &lt;https://accounts.google.com/signin/continue?sarp=1&amp;scc=1&amp;plt=AKgnsbvt
+534-5.7.14 KO63Ak8tWyoA_jwZMNuOJBpVhoZRXhmP_4zUNWGk0CmNTniky0vIpIp4h2nSsFk3eQTWNw
+534-5.7.14 gVuJZYytBK_3fmcd4AQopnWcVtj5MSP-DhHnJSjW9IihoZwvIXB0ICTL2IdR4qLD9NMICp
+534-5.7.14 kptxwUMll5_RwjCPlQz3wSWYCIe22_lfFl5oWD1WlIz43O0-rln-J5jrzMgWzHnIoMXYbK
+534-5.7.14 GOba1OXMJVGW8NTrzlbNMTkgCcYak&gt; Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 d18sm10829700pfk.11 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:823)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:756)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:673)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at whitefeather.xedge.appservices.EmailerService.SendTestReport(EmailerService.java:110)
+	... 27 more
 </pre></div></td>
-<td>11</td>
-<td>whitefeather.xedge.testcases.GlobalSearch@53b32d7</td></tr>
+<td>6</td>
+<td>whitefeather.xedge.testcases.EndTesting@f6c48ac</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -120,163 +291,538 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='whitefeather.xedge.testcases.PerformLoginAction.clickLoginButton()'><b>clickLoginButton</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-712627377" onClick='toggleBox("Output-712627377", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.AddNewLeadDefaultValues_1.clickAddLeadButton()'><b>clickAddLeadButton</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadDefaultValues_1<br/>
+<a href="#Output-2086945474" onClick='toggleBox("Output-2086945474", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-712627377" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-712627377">
+<a href="#Output-2086945474" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2086945474">
+User has clicked Add Lead button on RHS panel.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@4dfa3a9d</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.OpenAddLeadRHSPanel.clickAddLeadPlusIcon()'><b>clickAddLeadPlusIcon</b><br>Test class: whitefeather.xedge.testcases.OpenAddLeadRHSPanel<br/>
+<a href="#Output-691096777" onClick='toggleBox("Output-691096777", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-691096777" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-691096777">
+User has clicked Add Lead icon.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.OpenAddLeadRHSPanel@146ba0ac</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.PerformLoginAction.clickLoginButton()'><b>clickLoginButton</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
+<a href="#Output-1934692470" onClick='toggleBox("Output-1934692470", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1934692470" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1934692470">
 User has clicked Login button and landed on correct homepage.<br/>
 </div>
 </td>
 <td></td>
 <td>3</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@57baeedf</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.enterLoginId()'><b>enterLoginId</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br>Parameters: counselorshekhar@gmail.com<br/>
-<a href="#Output-247162961" onClick='toggleBox("Output-247162961", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1059300256" onClick='toggleBox("Output-1059300256", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-247162961" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-247162961">
+<a href="#Output-1059300256" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1059300256">
 Username is entered successfully.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@57baeedf</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.enterLoginPassword()'><b>enterLoginPassword</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br>Parameters: test<br/>
-<a href="#Output-1088417975" onClick='toggleBox("Output-1088417975", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1395262169" onClick='toggleBox("Output-1395262169", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1088417975" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1088417975">
+<a href="#Output-1395262169" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1395262169">
 Password is entered successfully.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@57baeedf</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.AddNewLeadDefaultValues_1.enterProspectEmailID()'><b>enterProspectEmailID</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadDefaultValues_1<br/>
+<a href="#Output-1199833406" onClick='toggleBox("Output-1199833406", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1199833406" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1199833406">
+User has entered email address successfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@4dfa3a9d</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.AddNewLeadDefaultValues_1.enterProspectMobileNo()'><b>enterProspectMobileNo</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadDefaultValues_1<br/>
+<a href="#Output-142261320" onClick='toggleBox("Output-142261320", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-142261320" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-142261320">
+User has entered mobile number successfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1@4dfa3a9d</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.ForgotPassword.enterRecoveryEmail()'><b>enterRecoveryEmail</b><br>Test class: whitefeather.xedge.testcases.ForgotPassword<br>Parameters: counselorshekhar@gmail.com<br/>
+<a href="#Output-2018220300" onClick='toggleBox("Output-2018220300", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2018220300" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2018220300">
+Web page is refreshed.<br/>
+Reset Password Link is successfully sent to provided email address<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>whitefeather.xedge.testcases.ForgotPassword@77cd7a0</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.ForgotPassword.openForgotPasswordWindow()'><b>openForgotPasswordWindow</b><br>Test class: whitefeather.xedge.testcases.ForgotPassword<br/>
+<a href="#Output-807322507" onClick='toggleBox("Output-807322507", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-807322507" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-807322507">
+User has clicked Forgot Password Link on Login window.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.ForgotPassword@77cd7a0</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.OpenLoginPage.openLoginPage()'><b>openLoginPage</b><br>Test class: whitefeather.xedge.testcases.OpenLoginPage<br>Parameters: https://extraaedge-stagingwebsite-qa.azurewebsites.net/<br/>
-<a href="#Output-238762799" onClick='toggleBox("Output-238762799", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1481818223" onClick='toggleBox("Output-1481818223", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-238762799" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-238762799">
+<a href="#Output-1481818223" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1481818223">
 Chrome Browser is opened<br/>
 Browser is maximized.<br/>
 User has opened correct login page.<br/>
 </div>
 </td>
 <td></td>
-<td>9</td>
-<td>whitefeather.xedge.testcases.OpenLoginPage@42e26948</td></tr>
+<td>10</td>
+<td>whitefeather.xedge.testcases.OpenLoginPage@4667ae56</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.GlobalSearch.performGlobalSearch()'><b>performGlobalSearch</b><br>Test class: whitefeather.xedge.testcases.GlobalSearch<br/>
+<a href="#Output-1992525817" onClick='toggleBox("Output-1992525817", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1992525817" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1992525817">
+Specified user details are successfully located in the system.<br/>
+Screenshot is taken and stored at specified location successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>whitefeather.xedge.testcases.GlobalSearch@6eebc39e</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.Refresh_Page.refreshWebPage()'><b>refreshWebPage</b><br>Test class: whitefeather.xedge.testcases.Refresh_Page<br/>
-<a href="#Output-334593716" onClick='toggleBox("Output-334593716", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2061226112" onClick='toggleBox("Output-2061226112", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-334593716" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-334593716">
+<a href="#Output-2061226112" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2061226112">
 Web page is refreshed.<br/>
 </div>
 </td>
 <td></td>
+<td>2</td>
+<td>whitefeather.xedge.testcases.Refresh_Page@e25b2fe</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyAddLeadPlusIcon()'><b>verifyAddLeadPlusIcon</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-1095203437" onClick='toggleBox("Output-1095203437", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1095203437" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1095203437">
+Add LeadPlus icon is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyBulkUploadIcon()'><b>verifyBulkUploadIcon</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-1164241227" onClick='toggleBox("Output-1164241227", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1164241227" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1164241227">
+Bulk Upload icon is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.PerformLoginAction.verifyClientAccountLogo()'><b>verifyClientAccountLogo</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
+<a href="#Output-864221358" onClick='toggleBox("Output-864221358", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-864221358" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-864221358">
+Client Company Logo is displayed.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.ForgotPassword.verifyCompanyLogo()'><b>verifyCompanyLogo</b><br>Test class: whitefeather.xedge.testcases.ForgotPassword<br/>
+<a href="#Output-671596011" onClick='toggleBox("Output-671596011", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-671596011" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-671596011">
+Company Logo on Forgot Password is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.ForgotPassword@77cd7a0</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyCompanyLogoInHeader()'><b>verifyCompanyLogoInHeader</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-1045985568" onClick='toggleBox("Output-1045985568", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1045985568" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1045985568">
+Company Logo in header is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyCounselorName()'><b>verifyCounselorName</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-763610533" onClick='toggleBox("Output-763610533", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-763610533" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-763610533">
+Counselor Name in header is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyCounselorPhoto()'><b>verifyCounselorPhoto</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-1238994373" onClick='toggleBox("Output-1238994373", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1238994373" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1238994373">
+Counselor Photo in header is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.UpcomingTasks.verifyDashboardURL()'><b>verifyDashboardURL</b><br>Test class: whitefeather.xedge.testcases.UpcomingTasks<br/>
+<a href="#Output-1069571746" onClick='toggleBox("Output-1069571746", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1069571746" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1069571746">
+Web page is refreshed.<br/>
+Recent New Tab Count displayed is correct.<br/>
+</div>
+</td>
+<td></td>
 <td>3</td>
-<td>whitefeather.xedge.testcases.Refresh_Page@343f4d3d</td></tr>
+<td>whitefeather.xedge.testcases.UpcomingTasks@464bee09</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.ForgotPassword.verifyEmailInputBox()'><b>verifyEmailInputBox</b><br>Test class: whitefeather.xedge.testcases.ForgotPassword<br/>
+<a href="#Output-553759818" onClick='toggleBox("Output-553759818", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-553759818" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-553759818">
+Email Input Box on Forgot Password is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.ForgotPassword@77cd7a0</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.GlobalSearch.verifyGlobalSearchBar()'><b>verifyGlobalSearchBar</b><br>Test class: whitefeather.xedge.testcases.GlobalSearch<br/>
-<a href="#Output-1765900922" onClick='toggleBox("Output-1765900922", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-31906520" onClick='toggleBox("Output-31906520", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1765900922" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1765900922">
+<a href="#Output-31906520" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-31906520">
 Global Search Bar is displayed.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.GlobalSearch@53b32d7</td></tr>
+<td>whitefeather.xedge.testcases.GlobalSearch@6eebc39e</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.GlobalSearch.verifyGlobalSearchPlaceholder()'><b>verifyGlobalSearchPlaceholder</b><br>Test class: whitefeather.xedge.testcases.GlobalSearch<br/>
-<a href="#Output-547923534" onClick='toggleBox("Output-547923534", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-706604026" onClick='toggleBox("Output-706604026", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-547923534" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-547923534">
+<a href="#Output-706604026" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-706604026">
 Global Search placeholder is displayed.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.GlobalSearch@53b32d7</td></tr>
+<td>whitefeather.xedge.testcases.GlobalSearch@6eebc39e</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.GlobalSearch.verifyGoButton()'><b>verifyGoButton</b><br>Test class: whitefeather.xedge.testcases.GlobalSearch<br/>
-<a href="#Output-1057307776" onClick='toggleBox("Output-1057307776", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-936261188" onClick='toggleBox("Output-936261188", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1057307776" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1057307776">
+<a href="#Output-936261188" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-936261188">
 Global Search Go button is displayed.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.GlobalSearch@53b32d7</td></tr>
+<td>whitefeather.xedge.testcases.GlobalSearch@6eebc39e</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.GlobalSearch.verifyLenseIcon()'><b>verifyLenseIcon</b><br>Test class: whitefeather.xedge.testcases.GlobalSearch<br/>
-<a href="#Output-235370598" onClick='toggleBox("Output-235370598", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyGoButtonInGlobalSearchBar()'><b>verifyGoButtonInGlobalSearchBar</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-707506411" onClick='toggleBox("Output-707506411", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-235370598" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-235370598">
-Global Search Lense Icon is displayed.<br/>
+<a href="#Output-707506411" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-707506411">
+Go Button in header is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.GlobalSearch@53b32d7</td></tr>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyJoyRideButton()'><b>verifyJoyRideButton</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-1296654536" onClick='toggleBox("Output-1296654536", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1296654536" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1296654536">
+JoyRide button is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.GlobalSearch.verifyLenseIcon()'><b>verifyLenseIcon</b><br>Test class: whitefeather.xedge.testcases.GlobalSearch<br/>
+<a href="#Output-1865982601" onClick='toggleBox("Output-1865982601", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1865982601" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1865982601">
+Global Search Lense Icon is displayed.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>whitefeather.xedge.testcases.GlobalSearch@6eebc39e</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyLoginButton()'><b>verifyLoginButton</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1016856028" onClick='toggleBox("Output-1016856028", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1260487756" onClick='toggleBox("Output-1260487756", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1016856028" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1016856028">
+<a href="#Output-1260487756" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1260487756">
 Login Button is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@57baeedf</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.ForgotPassword.verifyLoginLink()'><b>verifyLoginLink</b><br>Test class: whitefeather.xedge.testcases.ForgotPassword<br/>
+<a href="#Output-975033189" onClick='toggleBox("Output-975033189", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-975033189" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-975033189">
+Login Link on Forgot Password is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.ForgotPassword@77cd7a0</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.PerformLoginAction.verifyLoginPageBackground()'><b>verifyLoginPageBackground</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
+<a href="#Output-1055601039" onClick='toggleBox("Output-1055601039", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1055601039" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1055601039">
+Background Image on Login Page is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyOutStandingActivityCount()'><b>verifyOutStandingActivityCount</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-1340051218" onClick='toggleBox("Output-1340051218", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1340051218" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1340051218">
+OutStanding Activity Count in header is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifyOutStandingActivityIcon()'><b>verifyOutStandingActivityIcon</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-331748029" onClick='toggleBox("Output-331748029", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-331748029" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-331748029">
+OutStanding Activity Icon in header is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyPasswordInputField()'><b>verifyPasswordInputField</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1449772539" onClick='toggleBox("Output-1449772539", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1532554556" onClick='toggleBox("Output-1532554556", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1449772539" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1449772539">
+<a href="#Output-1532554556" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1532554556">
 'Password' input field is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@57baeedf</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.PerformLoginAction.verifyPasswordLabel()'><b>verifyPasswordLabel</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
+<a href="#Output-505231702" onClick='toggleBox("Output-505231702", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-505231702" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-505231702">
+'Password' label is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.PerformLoginAction.verifyPasswordPlaceholder()'><b>verifyPasswordPlaceholder</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
+<a href="#Output-1467515503" onClick='toggleBox("Output-1467515503", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1467515503" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1467515503">
+'Password' placeholder is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyPasswordWrapper()'><b>verifyPasswordWrapper</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-33563464" onClick='toggleBox("Output-33563464", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1108706191" onClick='toggleBox("Output-1108706191", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-33563464" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-33563464">
+<a href="#Output-1108706191" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1108706191">
 Password wrapper is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@57baeedf</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.UpcomingTasks.verifyRecentNewTabCount()'><b>verifyRecentNewTabCount</b><br>Test class: whitefeather.xedge.testcases.UpcomingTasks<br/>
+<a href="#Output-1930401429" onClick='toggleBox("Output-1930401429", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1930401429" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1930401429">
+Recent New Tab Count displayed is correct.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>whitefeather.xedge.testcases.UpcomingTasks@464bee09</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.UpcomingTasks.verifyRecentNewTabIsDisplayed()'><b>verifyRecentNewTabIsDisplayed</b><br>Test class: whitefeather.xedge.testcases.UpcomingTasks<br/>
+<a href="#Output-1254827280" onClick='toggleBox("Output-1254827280", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1254827280" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1254827280">
+Recent New Tab and Count are displayed.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.UpcomingTasks@464bee09</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.ForgotPassword.verifyRecoveryLabel()'><b>verifyRecoveryLabel</b><br>Test class: whitefeather.xedge.testcases.ForgotPassword<br/>
+<a href="#Output-1338905451" onClick='toggleBox("Output-1338905451", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1338905451" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1338905451">
+Recovery Label on Forgot Password is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.ForgotPassword@77cd7a0</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.ForgotPassword.verifyRecoveryMessage()'><b>verifyRecoveryMessage</b><br>Test class: whitefeather.xedge.testcases.ForgotPassword<br/>
+<a href="#Output-1033348658" onClick='toggleBox("Output-1033348658", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1033348658" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1033348658">
+Recovery Message on Forgot Password is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.ForgotPassword@77cd7a0</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.VerifyGlobalIcons.verifySignOutLink()'><b>verifySignOutLink</b><br>Test class: whitefeather.xedge.testcases.VerifyGlobalIcons<br/>
+<a href="#Output-1047515321" onClick='toggleBox("Output-1047515321", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1047515321" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1047515321">
+Sign Out link in header is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.VerifyGlobalIcons@754ba872</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyUsernameInputField()'><b>verifyUsernameInputField</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-909132503" onClick='toggleBox("Output-909132503", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1907241392" onClick='toggleBox("Output-1907241392", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-909132503" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-909132503">
+<a href="#Output-1907241392" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1907241392">
 'Username' input field is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@57baeedf</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.PerformLoginAction.verifyUsernameLabel()'><b>verifyUsernameLabel</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
+<a href="#Output-95369743" onClick='toggleBox("Output-95369743", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-95369743" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-95369743">
+'Username' label is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.PerformLoginAction.verifyUsernamePlaceholder()'><b>verifyUsernamePlaceholder</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
+<a href="#Output-1805443519" onClick='toggleBox("Output-1805443519", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1805443519" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1805443519">
+'Username' placeholder is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.PerformLoginAction@204f30ec</td></tr>
 </table><p>
 </body>
 </html>

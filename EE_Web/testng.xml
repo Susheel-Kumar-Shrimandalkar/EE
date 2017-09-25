@@ -12,7 +12,7 @@
 			<class name="whitefeather.xedge.testcases.OpenLoginPage">
 			<methods><include name="openLoginPage"></include></methods></class>
 			
-			<!-- <class name="whitefeather.xedge.testcases.ForgotPassword">
+			<class name="whitefeather.xedge.testcases.ForgotPassword">
 			<methods>
 			<include name="openForgotPasswordWindow"/>
 			<include name="verifyCompanyLogo"/>
@@ -22,16 +22,16 @@
 			<include name="verifyLoginLink"/>
 			<parameter name="recoveryEmail" value="counselorshekhar@gmail.com"/>
 			<include name="enterRecoveryEmail"/>
-			</methods></class> -->
+			</methods></class>
 			
 			<class name="whitefeather.xedge.testcases.PerformLoginAction" >
 			<methods>
-			<!-- <include name="verifyLoginPageBackground"/>
+			<include name="verifyLoginPageBackground"/>
 			<include name="verifyClientAccountLogo"/>
 			<include name="verifyUsernameLabel"/>
 			<include name="verifyUsernamePlaceholder"/>
 			<include name="verifyPasswordLabel"/>
-			<include name="verifyPasswordPlaceholder"/> -->
+			<include name="verifyPasswordPlaceholder"/>
 			<include name="verifyUsernameInputField"/>
 			<include name="verifyPasswordInputField"/>
 			<include name="verifyPasswordWrapper"/>
@@ -47,7 +47,7 @@
 			<class name="whitefeather.xedge.testcases.Refresh_Page" >
 			<methods><include name="refreshWebPage"></include></methods></class>
 			
-			<!-- <class name="whitefeather.xedge.testcases.VerifyGlobalIcons" >
+			<class name="whitefeather.xedge.testcases.VerifyGlobalIcons" >
 			<methods>
 			<include name="verifyCompanyLogoInHeader"/>
 			<include name="verifyGoButtonInGlobalSearchBar"/>
@@ -59,7 +59,7 @@
 			<include name="verifyBulkUploadIcon"/>
 			<include name="verifyAddLeadPlusIcon"/>
 			<include name="verifyJoyRideButton"/>
-			</methods></class> -->
+			</methods></class>
 			
 			<class name="whitefeather.xedge.testcases.OpenAddLeadRHSPanel">
 			<methods><include name="clickAddLeadPlusIcon"></include></methods></class>
@@ -82,18 +82,21 @@
 			<include name="verifyGlobalSearchPlaceholder"/>
 			<include name="verifyLenseIcon"/>
 			<include name="verifyGoButton"/>
-			<include name="performGlobalSearch1"/>
+			<include name="performGlobalSearch"/>
 			</methods></class>
 			
 			<!-- <class name="whitefeather.xedge.testcases.Refresh_Page" >
 			<methods><include name="refreshWebPage"></include></methods></class> -->
 			
-			<!-- <class name="whitefeather.xedge.testcases.UpcomingTasks">
+			<class name="whitefeather.xedge.testcases.UpcomingTasks">
 			<methods>
 			<include name="verifyDashboardURL"/>
 			<include name="verifyRecentNewTabIsDisplayed"/>
 			<include name="verifyRecentNewTabCount"/>
-			</methods></class> -->
+			</methods></class>
+			
+			<class name="whitefeather.xedge.testcases.EndTesting" >
+			<methods><include name="endTestSuite"></include></methods></class>
 			
 		</classes>
 	</test>

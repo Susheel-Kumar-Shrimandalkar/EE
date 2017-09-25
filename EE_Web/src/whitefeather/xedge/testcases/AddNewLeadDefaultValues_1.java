@@ -6,14 +6,15 @@ import org.testng.annotations.Test;
 import whitefeather.xedge.core.CloseIconRHSPanels;
 import whitefeather.xedge.core.DataGenerator;
 import whitefeather.xedge.core.Page_AddNewLeadWithDefaultValues;
+import whitefeather.xedge.facilitator.HelperHand;
 
-public class AddNewLeadDefaultValues_1 
+public class AddNewLeadDefaultValues_1 extends HelperHand
 {
 	@Test
 	public static void enterProspectEmailID()
 	{
 		try {
-			Page_AddNewLeadWithDefaultValues.enterProspectEmailAddress().sendKeys(DataGenerator.randomEmailGenerator());
+			Page_AddNewLeadWithDefaultValues.enterProspectEmailAddress().sendKeys(leadEmail);
 			//Handle Email Already Exist Message Scenario later
 			Reporter.log("User has entered email address successfully",true);
 		} catch (Exception e) {

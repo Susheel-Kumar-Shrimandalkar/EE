@@ -1,123 +1,74 @@
 package whitefeather.xedge.core;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-
 import whitefeather.xedge.appconfig.Constants;
 import whitefeather.xedge.appconfig.ObjectMapping;
 import whitefeather.xedge.facilitator.HelperHand;
-import whitefeather.xedge.testcases.Refresh_Page;
 
 public class Page_GlobalSearch extends HelperHand
 {
 	public static WebElement element;
-	public static String elementText="",validator="",noResult="",nullResult="";
-	public static ObjectMapping properties = new ObjectMapping(Constants.LOCATORS);	
-	public static final String prospectEmailCase = (DataGenerator.prospectEmail).toString();
+	public static String elementText;
+	public static ObjectMapping properties = new ObjectMapping(Constants.LOCATORS);
+	private static int switchCounter;
+	private static String caseValues[] = new String[3];
 	
-	public static boolean displayGlobalSearchBar()
+	public static boolean displayGlobalSearchBar() throws Exception
 	{
 		try {
 			visibleFlag = driver.findElement(properties.selectLocator("GLobal_SeachBar")).isDisplayed();
-		} catch (Exception e) {
+		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return visibleFlag;
 	}
 
-	public static WebElement displayLenseIcon()
+	public static WebElement displayLenseIcon() throws Exception
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("LenseIcon_GlobalSearchBar"));
-		} catch (Exception e) {
+		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return element;
 	}
-	public static WebElement displayGoButton()
+	public static WebElement displayGoButton() throws Exception
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("Go_button_globalSearchBar"));
-		} catch (Exception e) {
+		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return element;
 	}
-	public static WebElement displayPlaceHolder()
+	public static WebElement displayPlaceHolder() throws Exception
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("Placeholder_GlobalSearchBar"));
-		} catch (Exception e) {
+		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return element;
 	}
 	
-	public static WebElement displayResultPageText()
+	public static WebElement displayResultPageText() throws Exception
 	{
 		try {
-//			element = driver.findElement(properties.selectLocator("SearchResult_TextLabel"));
 			Thread.sleep(2000);
 			element = driver.findElement(properties.selectLocator("SearchValidator_HTMLElement"));
-		} catch (Exception e) {
+		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return element;
 	}
 	
-	/*public static WebElement displayNoResultMessage()
-	{
-		try {
-			element = driver.findElement(properties.selectLocator("NoResultMessage_GlobalSearch"));
-			if(element.isDisplayed())
-			{
-				noResult = element.getText();
-			}
-			else
-			{
-				noResult = element.getText();
-			}
-			
-		} catch (NoSuchElementException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return element;
-	}
-	
-	public static WebElement displayNullResultMessage()
-	{
-		try {
-			element = driver.findElement(properties.selectLocator("NullResultMessage_GlobalSearch"));
-			if(element.isDisplayed())
-			{
-				nullResult = element.getText();
-			}
-			else
-			{
-				nullResult = element.getText();
-			}
-			
-		} catch (NoSuchElementException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return element;
-	}*/
-	
-	public static WebElement displaySuccessResult()
+	public static WebElement displaySuccessResult() throws Exception
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("GlobalSearch_SuccessResult"));
-		} catch (Exception e) {
+		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return element;
@@ -126,67 +77,68 @@ public class Page_GlobalSearch extends HelperHand
 	{
 		try {
 			elementText = ele.getText();
-		} catch (NoSuchElementException e) {
+		} catch (org.openqa.selenium.NoSuchElementException e) {
 		}
 		return elementText;
 	}
 
-	
-	public static WebElement knowErrorMessage() throws InterruptedException
+	public static WebElement getSearchedString()
 	{
-		
-			if(displayResultPageText().getText().contains("Oops"))
-			{
-				Thread.sleep(2000);
-				noResult = displayResultPageText().getText();
-				visibleFlag = false;
-			}
-			else
-			{
-				Thread.sleep(2000);
-				nullResult = displayResultPageText().getText();
-				visibleFlag = false;
-			}
-			if(!displayResultPageText().isDisplayed())
-			{
-				Thread.sleep(2000);
-				visibleFlag = true;
-			}
-			
+		try {
+			element = driver.findElement(By.xpath(".//span[contains(text(),'"+leadEmail+"')]"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
 		return element;
 	}
 	
-	
+	public static WebElement knowErrorMessage() throws Exception
+	{
+		Thread.sleep(2000);
+				if(getSearchedString().getText().contains(leadEmail))
+				{
+					try {
+						switchCounter=0;
+						caseValues[switchCounter] =getSearchedString().getText();
+						visibleFlag = true;
+					} catch (org.openqa.selenium.NoSuchElementException e) {
+						e.printStackTrace();
+					}
+				}
+				else if(displayResultPageText().getText().contains("Oops"))
+				{
+					try {
+						switchCounter=1;
+						caseValues[switchCounter] = displayResultPageText().getText();
+						visibleFlag = false;
+					} catch (org.openqa.selenium.NoSuchElementException e) {
+						e.printStackTrace();
+					}
+				}
+				else
+				{
+					try {
+						switchCounter=2;
+						caseValues[switchCounter] = displayResultPageText().getText();
+						visibleFlag = true;
+					} catch (org.openqa.selenium.NoSuchElementException e) {
+						e.printStackTrace();
+					}
+				}
+		return element;
+	}
 	
 	public static boolean validateGlobalSearch(String validatorString) throws Exception
 	{		
-		String errormsg="";
-//		 String prospectEmailCase = (DataGenerator.prospectEmail).toString();
-		 // prospectEmailCase.toString();
-		errormsg = validatorString;			
+		helperString = Thread.currentThread().getStackTrace()[1].getMethodName(); 	
 		try 
 		{	
-			if(noResult.contains("Oops"))
-			{
-				errormsg = noResult;	
-			}
-			else if(nullResult.contains("enter"))
-			{
-				errormsg = nullResult;
-			}
-			else if(visibleFlag)
-			{
-				errormsg = DataGenerator.prospectEmail;
-			}
-			
-			switch (errormsg) 
-			{
-			
-			case "Oops! No data found! Please try again.":
-
+		switch (switchCounter) 
+			{		
+			case 1:
 				try 
 				{
-//					System.out.println("No Result Found.");
+					System.out.println(caseValues[switchCounter]);
 					HelperHand.getscreenshot(helperString); 
 					Reporter.log("Screenshot is taken and stored at specified location successfully.", true); 
 					Reporter.log("No results found for provided string.", true); 
@@ -195,11 +147,11 @@ public class Page_GlobalSearch extends HelperHand
 					e.printStackTrace();
 				}
 				break;
-			case "Please Enter Value":	
+			case 2:	
 
 				try 
 				{
-//					System.out.println("No string is provided.");
+					System.out.println(caseValues[switchCounter]);
 					HelperHand.getscreenshot(helperString); 
 					Reporter.log("Screenshot is taken and stored at specified location successfully.", true); 
 					Reporter.log("User has not provided any string to search.", true); 
@@ -208,11 +160,10 @@ public class Page_GlobalSearch extends HelperHand
 					e.printStackTrace();
 				}
 				break;
-			
-			case "":
+				
+			default:
 				try {
-					System.out.println(prospectEmailCase);
-//					System.out.println("Result Found.");
+					System.out.println("Result Found "+caseValues[switchCounter]);
 					Reporter.log("Specified user details are successfully located in the system.", true); 
 					HelperHand.getscreenshot(helperString);				 
 					Reporter.log("Screenshot is taken and stored at specified location successfully.", true);
@@ -220,17 +171,8 @@ public class Page_GlobalSearch extends HelperHand
 					e.printStackTrace();
 				}
 				break;
-				
-			default:
-
-				try {
-					System.out.println("No global search test case has matched the criteria.");
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				break;
 			}
-		} catch (NoSuchElementException e) 
+		} catch (org.openqa.selenium.NoSuchElementException e) 
 		{
 			System.out.println(e);
 		}

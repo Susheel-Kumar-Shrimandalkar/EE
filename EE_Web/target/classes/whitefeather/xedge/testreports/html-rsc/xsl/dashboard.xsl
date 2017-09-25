@@ -4,7 +4,7 @@
 
 
 <!-- Parameters -->
-<xsl:param name="pageTitle" select="'Real Time Report'" />
+<xsl:param name="pageTitle" select="'ExtraaEdge Tech Solutions Pvt. Ltd., Pune'" />
 <xsl:param name="reportHeading" select="'Test Results'" />
 
 <xsl:template match="testResults">
