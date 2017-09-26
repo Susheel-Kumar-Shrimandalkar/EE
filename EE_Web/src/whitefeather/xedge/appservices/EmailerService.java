@@ -32,13 +32,18 @@ public class EmailerService
 		
 	      // Host Name of the Server. ExtraaEdge Server uses Gmail Servers and hence Gmail host
 	      String host = "smtp.gmail.com";
+	      
 	      Properties props = new Properties();
+	      
 	      //Allow to authenticate Email Account
 	      props.put("mail.smtp.auth", "true");
+	      
 	      //Enable Transport Layer Security
 	      props.put("mail.smtp.starttls.enable", "true");
+	      
 	      //Set Host Email Server
 	      props.put("mail.smtp.host", host);
+	      
 	      //Provide Port Number for Host set
 	      props.put("mail.smtp.port","587");
 	      
@@ -81,22 +86,26 @@ public class EmailerService
 	         // Create the message part
 	         MimeBodyPart messageBodyPart = new MimeBodyPart();
 
+	         /*
 	         // Now set the actual message
-/*	         messageBodyPart.setText("Hi, \nThis is system generated Email. Sample demonstration of Emailing the Test Report."
+	         messageBodyPart.setText("Hi, \nThis is system generated Email. Sample demonstration of Emailing the Test Report."
 	         		+ "\nPlease find below the attached report of recent "
-	         		+ "deployment. To view the report, download and open it in suitable browser.");	*/         
+	         		+ "deployment. To view the report, download and open it in suitable browser.");	        
 	         // Set text message part
-//	       		  multipart.addBodyPart(messageBodyPart);
+	       		  multipart.addBodyPart(messageBodyPart);
 
 	         // Part two is attachment
-//	         messageBodyPart = new MimeBodyPart();
+	         messageBodyPart = new MimeBodyPart();
 	         
-//	         String filename = ".//test-output//emailable-report.html";
+	         String filename = ".//test-output//emailable-report.html";
 	         GenerateZip.generateZipReport();
 	         String filename = Constants.ZIPDESTLOCATION;
+	         */
+	         
+	         String filename = ".//test-output//emailable-report.html";
 	         DataSource source = new FileDataSource(filename);
 	         messageBodyPart.setDataHandler(new DataHandler(source));
-	         messageBodyPart.setFileName("TestReport.zip");
+	         messageBodyPart.setFileName("TestReport.html");
 	         
 	         multipart.addBodyPart(messageBodyPart);
 	         BodyPart htmlBodyPart = new MimeBodyPart();
@@ -109,17 +118,19 @@ public class EmailerService
 
 	         //Send message
 	         Transport.send(message);
-//	         Reporter.log("Test report has been sent to intended recepeints successfully",true);
+	         Reporter.log("Test report has been sent to intended recepeints successfully",true);
 	      } 
 	      catch (MessagingException e) 
 	      {
-//	    	  Reporter.log("Sending Test report to intended recepients is failed.",true);
+	    	  Reporter.log("Sending Test report to intended recepients is failed.",true);
 	         throw new RuntimeException(e);
 	      }
 	  }
 
-	public static void main(String[] args) throws FileNotFoundException {
+/*	public static void main(String[] args) throws FileNotFoundException {
 		SendTestReport();
 	}
+*/
+
 }
 

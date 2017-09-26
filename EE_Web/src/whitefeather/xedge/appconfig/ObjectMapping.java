@@ -106,9 +106,13 @@ public class ObjectMapping
 	{
 		return properties.getProperty("APILogin_Credentials");
 	}
-	public String getDashboardCountAPIStaging()
+	public String getDashboardCountAPIQAStaging()
 	{
-		return (String)properties.getProperty("Dashboard_countAPI");
+		return (String)properties.getProperty("Dashboard_CountAPI");
+	}
+	public String getLeadListCountAPIQAStaging()
+	{
+		return (String)properties.getProperty("LeadList_CountAPI");
 	}
 
 	/*public String getBCCEmailAddresses() 
@@ -166,5 +170,9 @@ public class ObjectMapping
 	public String getDashboardPageURL( )
 	{
 		return properties.getProperty("Dashboard_URL");
+	}
+	public String getLeadListPageURL( )
+	{
+		return properties.getProperty("LeadList_URL");
 	}
 }

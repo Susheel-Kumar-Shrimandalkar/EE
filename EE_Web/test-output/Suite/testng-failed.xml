@@ -8,23 +8,20 @@
     <parameter name="browser" value="Chrome"/>
     <parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/>
     <classes>
-      <class name="whitefeather.xedge.testcases.EndTesting">
-        <parameter name="_username" value="counselorshekhar@gmail.com"/>
-        <parameter name="_password" value="test"/>
-        <parameter name="recoveryEmail" value="counselorshekhar@gmail.com"/>
-        <methods>
-          <include name="endTestSuite"/>
-          <include name="endTestSuite"/>
-        </methods>
-      </class> <!-- whitefeather.xedge.testcases.EndTesting -->
       <class name="whitefeather.xedge.testcases.OpenLoginPage">
-        <parameter name="_username" value="counselorshekhar@gmail.com"/>
         <parameter name="_password" value="test"/>
-        <parameter name="recoveryEmail" value="counselorshekhar@gmail.com"/>
+        <parameter name="_username" value="counselorshekhar@gmail.com"/>
         <methods>
           <include name="selectBrowser"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.OpenLoginPage -->
+      <class name="whitefeather.xedge.testcases.LeadList">
+        <parameter name="_password" value="test"/>
+        <parameter name="_username" value="counselorshekhar@gmail.com"/>
+        <methods>
+          <include name="downloadLeadsData"/>
+        </methods>
+      </class> <!-- whitefeather.xedge.testcases.LeadList -->
     </classes>
   </test> <!-- Staging QA Test Validations(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -8,7 +8,7 @@ public class FileNameConstants {
 	 * Folder name constants
 	 */
 
-	public static final String ROOT_FOLDER = "RealtimeReport";
+	public static final String ROOT_FOLDER = "Test Automation Report (EETSPL Pune)";
 
 	public static final String SUITE_FOLDER_PREFIX = "Test Report";
 

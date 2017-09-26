@@ -1,0 +1,2397 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ExtraaEdge Tech Solutions Pvt. Ltd., Pune</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="css/new-style.css">
+<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+<script src="js/Chart2.0.js"></script><script src="js/jquery-1.10.2.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/moment.js"></script>
+</head>
+<body class="bdy-clr">
+<div class="navbar navbar-fixed-top container-fluid head-colr">
+<script language="JavaScript">
+				$(document).ready(function(){
+					$('.refresh').click(function(){
+						document.location.reload(true);
+					});
+					$('.pa_italic').click(function(){
+						$(this).children('span').toggle();
+					});
+					$('input[name="filter"]').on("change",function(){
+						$('.accordian-panel-heading').hide();
+						if($(this).val() == "group"){
+							$('#selGrp').show();
+							$('#selGrp option:first-child').prop({ selected : true});
+							$('#selCls').hide();
+							$('#selVerd').hide();
+							$('.accordian-panel-heading').each(function(){
+								if($(this).attr('id') == 'config'){
+									$(this).hide();
+								}
+							});
+						}else if($(this).val() == "verdict"){
+							$('#selVerd').show();
+							$('#selVerd option:first-child').prop({ selected : true});
+							$('#selGrp').hide();
+							$('#selCls').hide();
+							$('.accordian-panel-heading').each(function(){
+								if($(this).attr('id') == 'config'){
+									$(this).hide();
+								}
+							});
+						}else if($(this).val() == "class"){
+							$('#selGrp').hide();
+							$('#selCls').show();
+							$('#selVerd').hide();
+							$('.accordian-panel-heading').each(function(){
+								if($(this).attr('id') == 'config'){
+									$(this).hide();
+								}
+							});
+							$('#selCls option:first-child').prop({ selected : true});
+						}else{
+							$('#selGrp').hide();
+							$('#selCls').hide();
+							$('#selVerd').hide();
+							$('.accordian-panel-heading').each(function(){
+								if($(this).attr('id') == 'config'){
+									$(this).show();
+								}else{
+									$(this).hide();
+								}
+							});
+						}
+					});
+					var testClasses = [];
+					var testClassValue = [];
+					var testGroups = [];
+						$('#selCls option').each(function(k,v){
+							var currentClassName = $(this).text();
+							var currentOptionVal = $(this).val();
+							var currentClassVal = currentOptionVal.split('@');
+							var matched = false;
+							for(var i=0; i<testClasses.length; i++){
+								if(currentClassName == testClasses[i]){
+									matched = true;
+								}
+							}
+							if(!matched){
+								testClasses.push(currentClassName);
+								testClassValue.push(currentClassVal[1]);
+							}
+						});
+						$('#selGrp option').each(function(k,v){
+							var currentGrpName = $(this).text();
+							var matched = false;
+							for(var i=0; i<testGroups.length; i++){
+								if(currentGrpName == testGroups[i]){
+									matched = true;
+								}
+							}
+							if(!matched){
+								testGroups.push(currentGrpName);
+							}
+						});
+						$('#selCls option').remove();
+						$('#selGrp option').remove();
+						$('#selCls').append('<option selected="selected">--Select Test Case--</option>');
+						$('#selGrp').append('<option selected="selected">--Select Test Group Name--</option>');
+						$.each(testClasses,function(index){
+							$('#selCls').append('<option value="'+testClassValue[index]+'">'+testClasses[index]+'</option>');
+						});
+						$.each(testGroups,function(k,v){
+							$('#selGrp').append('<option>'+v+'</option>');
+						});
+						$('#selVerd').on("change",function(){
+							var selectedVerdict = $(this).find("option:selected").val();
+							$('.accordian-panel-heading').each(function(){
+								var title = $(this).attr('title');
+								if(selectedVerdict == title){
+									$(this).show();
+								}else{
+									$(this).hide();
+								}
+							});
+						});
+						$('#selCls').on("change", function(){
+							var selectedClassName = $(this).find("option:selected").val();
+							$('.accordian-panel-heading').each(function(k,v){
+								var idCls = $(this).attr('id').split('@');
+								if(selectedClassName == idCls[1]){
+									$(this).show();
+								}else{
+									$(this).hide();
+								}
+							});
+						});
+						$('#selGrp').on("change", function(){
+							var selGroup = $(this).find("option:selected").text();
+							var selectedGroup = selGroup.replace(new RegExp(' ','g'),'-');
+							$('.accordian-panel-heading').each(function(k,v){
+								var splitedID = $(this).attr('id').split('@');
+								var groupArray = splitedID[0].split('_');
+								if(groupArray.length > 0){
+									var matched = false;
+									for(var i=0; i<groupArray.length; i++){
+										if(selectedGroup == groupArray[i]){
+											matched = true;
+										}
+									}
+									if(matched){
+										$(this).show();
+									}else{
+										$(this).hide();
+									}
+								}
+							});
+						});
+						setInterval(function(){
+							var displayedResult = $('.accordian-panel-heading:visible').size();
+							$('#show').html(displayedResult);
+						},100);
+				});
+				function getHMS(ms,id){
+					var tms = parseInt(ms);
+					var tm = moment.duration(tms);
+					var message = tm.hours()+"h "+tm.minutes()+"m "+tm.seconds()+"s";
+					$('#'+id).html(message);
+				}
+				function getPercent(decimal,id){
+					var deci = Math.round(decimal);
+					$('#'+id).html(deci);
+				}
+				function getProgress(decimal){
+					var deci = Math.round(decimal);
+					$('div[role="progressbar"]').html(deci+' % Complete');
+					$('div[role="progressbar"]').attr('aria-valuenow',deci);
+					$('div[role="progressbar"]').width(deci+'%');
+				}
+			</script>
+<div class="col-md-9">
+<h2 class="header-title">Test Results for Suite</h2>
+</div>
+<div class="col-md-3 gap-top-small">
+<span title="Refresh" class="refresh btn btn-success"><i class="fa fa-refresh"></i> Refresh</span>
+</div>
+</div>
+<div class="container-fluid">
+<div class="container gap-below gap-top">
+<div class="progress">
+<div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress-bar progress-bar-info">
+<script>getProgress('102.46913580246914')</script>
+</div>
+</div>
+</div>
+<div class="container gap-below">
+<div class="col-md-4 gap-small-bottom">
+<div class="r3_counter_box">
+<i class="large fa fa-check"></i>
+<div class="stats">
+<h5 id="passPer">
+<script>getPercent('102.46913580246914','passPer')</script><span>%</span>
+</h5>
+<div class="grow">
+<p>Pass</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 gap-small-bottom">
+<div class="r3_counter_box">
+<i class="large fa fa-times"></i>
+<div class="stats">
+<h5 id="failPer">
+<script>getPercent('0','failPer')</script><span>%</span>
+</h5>
+<div class="grow grow1">
+<p>Fail</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="r3_counter_box">
+<i class="large fa fa-forward"></i>
+<div class="stats">
+<h5 id="skipPer">
+<script>getPercent('0','skipPer')</script><span>%</span>
+</h5>
+<div class="grow grow2">
+<p>Skip</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container gap-below">
+<div class="col-md-6 gap-small-bottom">
+<div class="r3_counter_box graphical">
+<div class="white-box-title">
+						Result
+					</div>
+<div style="width:70%;" id="canvas-holder">
+<canvas height="150" width="300" id="chart-area"></canvas>
+</div>
+</div>
+</div>
+<script>
+			window.onload = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				var myChart = new Chart(ctx, {
+				    type: 'pie',
+				    data: {
+						labels: [
+							"PASS",
+							"FAIL",
+							"SKIP"
+						],
+						datasets: [
+						{
+							data: ['83', '0', '0'],
+							backgroundColor: [
+								"#8bc34a",
+								"#f44336",
+								"#ffca28"
+							],
+							hoverBackgroundColor: [
+								"#8bc75b",
+								"#f44448",
+								"#FFCE66"
+							]
+						}]
+					}
+				});
+				}
+			</script>
+<div class="col-md-6">
+<div class="col-md-6 gap-below highlight">
+<div class="r3_counter_box blue">
+<p class="title left">Suite</p>
+<p class="number right">
+							1
+						</p>
+</div>
+</div>
+<div class="col-md-6 gap-below highlight">
+<div class="r3_counter_box green">
+<p class="title left">Executable Test Methods</p>
+<p class="number right">81</p>
+</div>
+</div>
+<div class="col-md-6 highlight">
+<div class="r3_counter_box purple">
+<p class="title left">Running Parallel</p>
+<p class="number right">none</p>
+</div>
+</div>
+<div class="col-md-6 highlight">
+<div class="r3_counter_box red">
+<p class="title left">Suite Execution Time</p>
+<p id="totTm" class="number right">
+<script>getHMS('107057','totTm')</script>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="container gap-below">
+<div class="col-md-12">
+<div class="r3_counter_box inner-gap">
+<h3>Details</h3>
+<div class="tab-content" id="myTabContent">
+<div class="filter-area gap-below">
+<p>Filter By :
+								<form>
+<input value="class" name="filter" type="radio"><i class="fa fa-book"></i>System Component / Feature</input>
+</form>
+</p>
+<select name="action" class="form-control" id="selGrp"></select><select style="display:none;" name="action" class="form-control" id="selCls"><option value="@29225">whitefeather.xedge.testcases.OpenLoginPage</option><option value="@25650">whitefeather.xedge.testcases.ForgotPassword</option><option value="@25650">whitefeather.xedge.testcases.ForgotPassword</option><option value="@25650">whitefeather.xedge.testcases.ForgotPassword</option><option value="@25650">whitefeather.xedge.testcases.ForgotPassword</option><option value="@25650">whitefeather.xedge.testcases.ForgotPassword</option><option value="@25650">whitefeather.xedge.testcases.ForgotPassword</option><option value="@25650">whitefeather.xedge.testcases.ForgotPassword</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@19831">whitefeather.xedge.testcases.PerformLoginAction</option><option value="@10752">whitefeather.xedge.testcases.Refresh_Page</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@11092">whitefeather.xedge.testcases.VerifyGlobalIcons</option><option value="@14855">whitefeather.xedge.testcases.OpenAddLeadRHSPanel</option><option value="@26323">whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</option><option value="@26323">whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</option><option value="@26323">whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</option><option value="@19637">whitefeather.xedge.testcases.GlobalSearch</option><option value="@19637">whitefeather.xedge.testcases.GlobalSearch</option><option value="@19637">whitefeather.xedge.testcases.GlobalSearch</option><option value="@19637">whitefeather.xedge.testcases.GlobalSearch</option><option value="@19637">whitefeather.xedge.testcases.GlobalSearch</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@25345">whitefeather.xedge.testcases.UpcomingTasks</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@16698">whitefeather.xedge.testcases.LeadList</option><option value="@28725">whitefeather.xedge.testcases.EndTesting</option></select><select style="display:none;" name="action" class="form-control" id="selVerd"><option>-- Select Verdict --</option><option value="PASS">Pass</option><option value="FAIL">Fail</option><option value="SKIP">Skip</option></select>
+</div>
+<div class="alert alert-info">
+<strong>Showing <i id="show"></i> results</strong>
+</div>
+<div aria-multiselectable="true" role="tablist" id="Accordion" class="panel-group accordian-top-margin">
+<div style="display:none;" title="PASS" id="@29225" class="panel accordian-panel-heading">
+<div id="heading1" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse1" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>openLoginPage</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading1" role="tabpanel" class="panel-collapse collapse" id="collapse1">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>openLoginPage</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.OpenLoginPage</p>
+<p>
+<strong>Parameters: </strong>1. https://extraaedge-stagingwebsite-qa.azurewebsites.net/</p>
+<p>
+<strong>Start time: </strong>19:04:19</p>
+<p>
+<strong>End time: </strong>19:05:12</p>
+<p>
+<strong>Duration: </strong><i id="dura1"><script>getHMS('52709','dura1')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25650" class="panel accordian-panel-heading">
+<div id="heading2" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse2" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>openForgotPasswordWindow</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading2" role="tabpanel" class="panel-collapse collapse" id="collapse2">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>openForgotPasswordWindow</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.ForgotPassword</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:12</p>
+<p>
+<strong>End time: </strong>19:05:13</p>
+<p>
+<strong>Duration: </strong><i id="dura2"><script>getHMS('243','dura2')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25650" class="panel accordian-panel-heading">
+<div id="heading3" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse3" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCompanyLogo</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading3" role="tabpanel" class="panel-collapse collapse" id="collapse3">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCompanyLogo</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.ForgotPassword</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:13</p>
+<p>
+<strong>End time: </strong>19:05:13</p>
+<p>
+<strong>Duration: </strong><i id="dura3"><script>getHMS('51','dura3')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25650" class="panel accordian-panel-heading">
+<div id="heading4" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse4" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRecoveryLabel</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading4" role="tabpanel" class="panel-collapse collapse" id="collapse4">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyRecoveryLabel</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.ForgotPassword</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:13</p>
+<p>
+<strong>End time: </strong>19:05:13</p>
+<p>
+<strong>Duration: </strong><i id="dura4"><script>getHMS('38','dura4')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25650" class="panel accordian-panel-heading">
+<div id="heading5" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse5" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRecoveryMessage</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading5" role="tabpanel" class="panel-collapse collapse" id="collapse5">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyRecoveryMessage</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.ForgotPassword</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:13</p>
+<p>
+<strong>End time: </strong>19:05:13</p>
+<p>
+<strong>Duration: </strong><i id="dura5"><script>getHMS('78','dura5')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25650" class="panel accordian-panel-heading">
+<div id="heading6" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse6" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyEmailInputBox</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading6" role="tabpanel" class="panel-collapse collapse" id="collapse6">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyEmailInputBox</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.ForgotPassword</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:13</p>
+<p>
+<strong>End time: </strong>19:05:13</p>
+<p>
+<strong>Duration: </strong><i id="dura6"><script>getHMS('85','dura6')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25650" class="panel accordian-panel-heading">
+<div id="heading7" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse7" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyLoginLink</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading7" role="tabpanel" class="panel-collapse collapse" id="collapse7">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyLoginLink</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.ForgotPassword</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:13</p>
+<p>
+<strong>End time: </strong>19:05:13</p>
+<p>
+<strong>Duration: </strong><i id="dura7"><script>getHMS('80','dura7')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25650" class="panel accordian-panel-heading">
+<div id="heading8" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse8" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>enterRecoveryEmail</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading8" role="tabpanel" class="panel-collapse collapse" id="collapse8">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>enterRecoveryEmail</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.ForgotPassword</p>
+<p>
+<strong>Parameters: </strong>1. counselorshekhar@gmail.com</p>
+<p>
+<strong>Start time: </strong>19:05:14</p>
+<p>
+<strong>End time: </strong>19:05:19</p>
+<p>
+<strong>Duration: </strong><i id="dura8"><script>getHMS('5683','dura8')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading9" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse9" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyLoginPageBackground</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading9" role="tabpanel" class="panel-collapse collapse" id="collapse9">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyLoginPageBackground</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:19</p>
+<p>
+<strong>End time: </strong>19:05:20</p>
+<p>
+<strong>Duration: </strong><i id="dura9"><script>getHMS('1068','dura9')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading10" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse10" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyClientAccountLogo</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading10" role="tabpanel" class="panel-collapse collapse" id="collapse10">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyClientAccountLogo</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:20</p>
+<p>
+<strong>End time: </strong>19:05:20</p>
+<p>
+<strong>Duration: </strong><i id="dura10"><script>getHMS('42','dura10')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading11" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse11" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUsernameLabel</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading11" role="tabpanel" class="panel-collapse collapse" id="collapse11">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyUsernameLabel</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:21</p>
+<p>
+<strong>End time: </strong>19:05:21</p>
+<p>
+<strong>Duration: </strong><i id="dura11"><script>getHMS('85','dura11')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading12" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse12" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUsernamePlaceholder</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading12" role="tabpanel" class="panel-collapse collapse" id="collapse12">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyUsernamePlaceholder</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:21</p>
+<p>
+<strong>End time: </strong>19:05:21</p>
+<p>
+<strong>Duration: </strong><i id="dura12"><script>getHMS('122','dura12')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading13" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse13" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyPasswordLabel</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading13" role="tabpanel" class="panel-collapse collapse" id="collapse13">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyPasswordLabel</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:21</p>
+<p>
+<strong>End time: </strong>19:05:21</p>
+<p>
+<strong>Duration: </strong><i id="dura13"><script>getHMS('78','dura13')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading14" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse14" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyPasswordPlaceholder</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading14" role="tabpanel" class="panel-collapse collapse" id="collapse14">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyPasswordPlaceholder</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:21</p>
+<p>
+<strong>End time: </strong>19:05:21</p>
+<p>
+<strong>Duration: </strong><i id="dura14"><script>getHMS('103','dura14')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading15" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse15" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUsernameInputField</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading15" role="tabpanel" class="panel-collapse collapse" id="collapse15">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyUsernameInputField</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:21</p>
+<p>
+<strong>End time: </strong>19:05:21</p>
+<p>
+<strong>Duration: </strong><i id="dura15"><script>getHMS('47','dura15')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading16" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse16" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyPasswordInputField</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading16" role="tabpanel" class="panel-collapse collapse" id="collapse16">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyPasswordInputField</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:21</p>
+<p>
+<strong>End time: </strong>19:05:21</p>
+<p>
+<strong>Duration: </strong><i id="dura16"><script>getHMS('68','dura16')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading17" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse17" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyPasswordWrapper</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading17" role="tabpanel" class="panel-collapse collapse" id="collapse17">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyPasswordWrapper</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:21</p>
+<p>
+<strong>End time: </strong>19:05:21</p>
+<p>
+<strong>Duration: </strong><i id="dura17"><script>getHMS('71','dura17')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading18" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse18" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>enterLoginId</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading18" role="tabpanel" class="panel-collapse collapse" id="collapse18">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>enterLoginId</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>1. counselorshekhar@gmail.com</p>
+<p>
+<strong>Start time: </strong>19:05:22</p>
+<p>
+<strong>End time: </strong>19:05:22</p>
+<p>
+<strong>Duration: </strong><i id="dura18"><script>getHMS('423','dura18')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading19" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse19" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>enterLoginPassword</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading19" role="tabpanel" class="panel-collapse collapse" id="collapse19">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>enterLoginPassword</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>1. test</p>
+<p>
+<strong>Start time: </strong>19:05:22</p>
+<p>
+<strong>End time: </strong>19:05:22</p>
+<p>
+<strong>Duration: </strong><i id="dura19"><script>getHMS('145','dura19')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading20" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse20" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyLoginButton</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading20" role="tabpanel" class="panel-collapse collapse" id="collapse20">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyLoginButton</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:22</p>
+<p>
+<strong>End time: </strong>19:05:22</p>
+<p>
+<strong>Duration: </strong><i id="dura20"><script>getHMS('99','dura20')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19831" class="panel accordian-panel-heading">
+<div id="heading21" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse21" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>clickLoginButton</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading21" role="tabpanel" class="panel-collapse collapse" id="collapse21">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>clickLoginButton</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.PerformLoginAction</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:22</p>
+<p>
+<strong>End time: </strong>19:05:26</p>
+<p>
+<strong>Duration: </strong><i id="dura21"><script>getHMS('3427','dura21')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@10752" class="panel accordian-panel-heading">
+<div id="heading22" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse22" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>refreshWebPage</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading22" role="tabpanel" class="panel-collapse collapse" id="collapse22">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>refreshWebPage</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.Refresh_Page</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:26</p>
+<p>
+<strong>End time: </strong>19:05:29</p>
+<p>
+<strong>Duration: </strong><i id="dura22"><script>getHMS('2890','dura22')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading23" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse23" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCompanyLogoInHeader</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading23" role="tabpanel" class="panel-collapse collapse" id="collapse23">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCompanyLogoInHeader</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:29</p>
+<p>
+<strong>End time: </strong>19:05:29</p>
+<p>
+<strong>Duration: </strong><i id="dura23"><script>getHMS('348','dura23')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading24" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse24" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyGoButtonInGlobalSearchBar</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading24" role="tabpanel" class="panel-collapse collapse" id="collapse24">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyGoButtonInGlobalSearchBar</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:29</p>
+<p>
+<strong>End time: </strong>19:05:29</p>
+<p>
+<strong>Duration: </strong><i id="dura24"><script>getHMS('78','dura24')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading25" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse25" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyOutStandingActivityIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading25" role="tabpanel" class="panel-collapse collapse" id="collapse25">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyOutStandingActivityIcon</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:29</p>
+<p>
+<strong>End time: </strong>19:05:29</p>
+<p>
+<strong>Duration: </strong><i id="dura25"><script>getHMS('69','dura25')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading26" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse26" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyOutStandingActivityCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading26" role="tabpanel" class="panel-collapse collapse" id="collapse26">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyOutStandingActivityCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:30</p>
+<p>
+<strong>End time: </strong>19:05:30</p>
+<p>
+<strong>Duration: </strong><i id="dura26"><script>getHMS('78','dura26')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading27" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse27" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCounselorName</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading27" role="tabpanel" class="panel-collapse collapse" id="collapse27">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCounselorName</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:30</p>
+<p>
+<strong>End time: </strong>19:05:30</p>
+<p>
+<strong>Duration: </strong><i id="dura27"><script>getHMS('114','dura27')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading28" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse28" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCounselorPhoto</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading28" role="tabpanel" class="panel-collapse collapse" id="collapse28">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCounselorPhoto</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:30</p>
+<p>
+<strong>End time: </strong>19:05:30</p>
+<p>
+<strong>Duration: </strong><i id="dura28"><script>getHMS('77','dura28')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading29" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse29" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifySignOutLink</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading29" role="tabpanel" class="panel-collapse collapse" id="collapse29">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifySignOutLink</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:30</p>
+<p>
+<strong>End time: </strong>19:05:30</p>
+<p>
+<strong>Duration: </strong><i id="dura29"><script>getHMS('65','dura29')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading30" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse30" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyBulkUploadIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading30" role="tabpanel" class="panel-collapse collapse" id="collapse30">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyBulkUploadIcon</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:30</p>
+<p>
+<strong>End time: </strong>19:05:30</p>
+<p>
+<strong>Duration: </strong><i id="dura30"><script>getHMS('51','dura30')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading31" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse31" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyAddLeadPlusIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading31" role="tabpanel" class="panel-collapse collapse" id="collapse31">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyAddLeadPlusIcon</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:30</p>
+<p>
+<strong>End time: </strong>19:05:30</p>
+<p>
+<strong>Duration: </strong><i id="dura31"><script>getHMS('51','dura31')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@11092" class="panel accordian-panel-heading">
+<div id="heading32" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse32" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyJoyRideButton</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading32" role="tabpanel" class="panel-collapse collapse" id="collapse32">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyJoyRideButton</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.VerifyGlobalIcons</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:30</p>
+<p>
+<strong>End time: </strong>19:05:30</p>
+<p>
+<strong>Duration: </strong><i id="dura32"><script>getHMS('69','dura32')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@14855" class="panel accordian-panel-heading">
+<div id="heading33" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse33" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>clickAddLeadPlusIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading33" role="tabpanel" class="panel-collapse collapse" id="collapse33">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>clickAddLeadPlusIcon</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.OpenAddLeadRHSPanel</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:30</p>
+<p>
+<strong>End time: </strong>19:05:31</p>
+<p>
+<strong>Duration: </strong><i id="dura33"><script>getHMS('317','dura33')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@26323" class="panel accordian-panel-heading">
+<div id="heading34" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse34" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>enterProspectEmailID</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading34" role="tabpanel" class="panel-collapse collapse" id="collapse34">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>enterProspectEmailID</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:31</p>
+<p>
+<strong>End time: </strong>19:05:32</p>
+<p>
+<strong>Duration: </strong><i id="dura34"><script>getHMS('820','dura34')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@26323" class="panel accordian-panel-heading">
+<div id="heading35" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse35" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>enterProspectMobileNo</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading35" role="tabpanel" class="panel-collapse collapse" id="collapse35">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>enterProspectMobileNo</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:32</p>
+<p>
+<strong>End time: </strong>19:05:32</p>
+<p>
+<strong>Duration: </strong><i id="dura35"><script>getHMS('513','dura35')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@26323" class="panel accordian-panel-heading">
+<div id="heading36" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse36" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>clickAddLeadButton</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading36" role="tabpanel" class="panel-collapse collapse" id="collapse36">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>clickAddLeadButton</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:32</p>
+<p>
+<strong>End time: </strong>19:05:34</p>
+<p>
+<strong>Duration: </strong><i id="dura36"><script>getHMS('1592','dura36')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19637" class="panel accordian-panel-heading">
+<div id="heading37" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse37" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyGlobalSearchBar</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading37" role="tabpanel" class="panel-collapse collapse" id="collapse37">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyGlobalSearchBar</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.GlobalSearch</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:34</p>
+<p>
+<strong>End time: </strong>19:05:34</p>
+<p>
+<strong>Duration: </strong><i id="dura37"><script>getHMS('92','dura37')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19637" class="panel accordian-panel-heading">
+<div id="heading38" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse38" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyGlobalSearchPlaceholder</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading38" role="tabpanel" class="panel-collapse collapse" id="collapse38">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyGlobalSearchPlaceholder</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.GlobalSearch</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:34</p>
+<p>
+<strong>End time: </strong>19:05:34</p>
+<p>
+<strong>Duration: </strong><i id="dura38"><script>getHMS('94','dura38')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19637" class="panel accordian-panel-heading">
+<div id="heading39" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse39" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyLenseIcon</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading39" role="tabpanel" class="panel-collapse collapse" id="collapse39">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyLenseIcon</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.GlobalSearch</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:34</p>
+<p>
+<strong>End time: </strong>19:05:34</p>
+<p>
+<strong>Duration: </strong><i id="dura39"><script>getHMS('106','dura39')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19637" class="panel accordian-panel-heading">
+<div id="heading40" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse40" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyGoButton</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading40" role="tabpanel" class="panel-collapse collapse" id="collapse40">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyGoButton</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.GlobalSearch</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:34</p>
+<p>
+<strong>End time: </strong>19:05:35</p>
+<p>
+<strong>Duration: </strong><i id="dura40"><script>getHMS('1127','dura40')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@19637" class="panel accordian-panel-heading">
+<div id="heading41" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse41" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>performGlobalSearch</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading41" role="tabpanel" class="panel-collapse collapse" id="collapse41">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>performGlobalSearch</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.GlobalSearch</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:35</p>
+<p>
+<strong>End time: </strong>19:05:41</p>
+<p>
+<strong>Duration: </strong><i id="dura41"><script>getHMS('5290','dura41')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading42" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse42" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyDashboardURL</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading42" role="tabpanel" class="panel-collapse collapse" id="collapse42">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyDashboardURL</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:41</p>
+<p>
+<strong>End time: </strong>19:05:48</p>
+<p>
+<strong>Duration: </strong><i id="dura42"><script>getHMS('6749','dura42')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading43" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse43" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRecentNewTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading43" role="tabpanel" class="panel-collapse collapse" id="collapse43">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyRecentNewTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:48</p>
+<p>
+<strong>End time: </strong>19:05:48</p>
+<p>
+<strong>Duration: </strong><i id="dura43"><script>getHMS('169','dura43')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading44" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse44" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRecentNewTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading44" role="tabpanel" class="panel-collapse collapse" id="collapse44">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyRecentNewTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:48</p>
+<p>
+<strong>End time: </strong>19:05:49</p>
+<p>
+<strong>Duration: </strong><i id="dura44"><script>getHMS('871','dura44')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading45" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse45" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRecentOnlineTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading45" role="tabpanel" class="panel-collapse collapse" id="collapse45">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyRecentOnlineTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:49</p>
+<p>
+<strong>End time: </strong>19:05:49</p>
+<p>
+<strong>Duration: </strong><i id="dura45"><script>getHMS('69','dura45')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading46" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse46" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRecentOnlineTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading46" role="tabpanel" class="panel-collapse collapse" id="collapse46">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyRecentOnlineTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:49</p>
+<p>
+<strong>End time: </strong>19:05:49</p>
+<p>
+<strong>Duration: </strong><i id="dura46"><script>getHMS('380','dura46')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading47" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse47" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUpcomingFollowupTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading47" role="tabpanel" class="panel-collapse collapse" id="collapse47">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyUpcomingFollowupTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:49</p>
+<p>
+<strong>End time: </strong>19:05:49</p>
+<p>
+<strong>Duration: </strong><i id="dura47"><script>getHMS('95','dura47')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading48" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse48" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUpcomingFollowupTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading48" role="tabpanel" class="panel-collapse collapse" id="collapse48">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyUpcomingFollowupTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:49</p>
+<p>
+<strong>End time: </strong>19:05:50</p>
+<p>
+<strong>Duration: </strong><i id="dura48"><script>getHMS('273','dura48')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading49" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse49" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUpcomingWalkinsTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading49" role="tabpanel" class="panel-collapse collapse" id="collapse49">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyUpcomingWalkinsTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:50</p>
+<p>
+<strong>End time: </strong>19:05:50</p>
+<p>
+<strong>Duration: </strong><i id="dura49"><script>getHMS('68','dura49')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading50" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse50" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyUpcomingWalkinsTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading50" role="tabpanel" class="panel-collapse collapse" id="collapse50">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyUpcomingWalkinsTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:50</p>
+<p>
+<strong>End time: </strong>19:05:50</p>
+<p>
+<strong>Duration: </strong><i id="dura50"><script>getHMS('385','dura50')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading51" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse51" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyHighPriorityTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading51" role="tabpanel" class="panel-collapse collapse" id="collapse51">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyHighPriorityTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:50</p>
+<p>
+<strong>End time: </strong>19:05:50</p>
+<p>
+<strong>Duration: </strong><i id="dura51"><script>getHMS('85','dura51')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@25345" class="panel accordian-panel-heading">
+<div id="heading52" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse52" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyHighPriorityTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading52" role="tabpanel" class="panel-collapse collapse" id="collapse52">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyHighPriorityTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.UpcomingTasks</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:50</p>
+<p>
+<strong>End time: </strong>19:05:51</p>
+<p>
+<strong>Duration: </strong><i id="dura52"><script>getHMS('308','dura52')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading53" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse53" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyLeadListPageURL</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading53" role="tabpanel" class="panel-collapse collapse" id="collapse53">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyLeadListPageURL</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:51</p>
+<p>
+<strong>End time: </strong>19:05:54</p>
+<p>
+<strong>Duration: </strong><i id="dura53"><script>getHMS('3308','dura53')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading54" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse54" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyAllTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading54" role="tabpanel" class="panel-collapse collapse" id="collapse54">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyAllTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:54</p>
+<p>
+<strong>End time: </strong>19:05:54</p>
+<p>
+<strong>Duration: </strong><i id="dura54"><script>getHMS('230','dura54')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading55" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse55" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyAllTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading55" role="tabpanel" class="panel-collapse collapse" id="collapse55">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyAllTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:54</p>
+<p>
+<strong>End time: </strong>19:05:55</p>
+<p>
+<strong>Duration: </strong><i id="dura55"><script>getHMS('306','dura55')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading56" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse56" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyNewTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading56" role="tabpanel" class="panel-collapse collapse" id="collapse56">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyNewTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:55</p>
+<p>
+<strong>End time: </strong>19:05:55</p>
+<p>
+<strong>Duration: </strong><i id="dura56"><script>getHMS('69','dura56')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading57" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse57" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyNewTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading57" role="tabpanel" class="panel-collapse collapse" id="collapse57">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyNewTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:55</p>
+<p>
+<strong>End time: </strong>19:05:55</p>
+<p>
+<strong>Duration: </strong><i id="dura57"><script>getHMS('285','dura57')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading58" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse58" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCallbackTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading58" role="tabpanel" class="panel-collapse collapse" id="collapse58">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCallbackTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:55</p>
+<p>
+<strong>End time: </strong>19:05:55</p>
+<p>
+<strong>Duration: </strong><i id="dura58"><script>getHMS('100','dura58')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading59" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse59" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCallbackTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading59" role="tabpanel" class="panel-collapse collapse" id="collapse59">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCallbackTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:55</p>
+<p>
+<strong>End time: </strong>19:05:56</p>
+<p>
+<strong>Duration: </strong><i id="dura59"><script>getHMS('354','dura59')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading60" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse60" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyWalkinTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading60" role="tabpanel" class="panel-collapse collapse" id="collapse60">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyWalkinTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:56</p>
+<p>
+<strong>End time: </strong>19:05:56</p>
+<p>
+<strong>Duration: </strong><i id="dura60"><script>getHMS('60','dura60')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading61" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse61" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyWalkinTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading61" role="tabpanel" class="panel-collapse collapse" id="collapse61">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyWalkinTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:56</p>
+<p>
+<strong>End time: </strong>19:05:56</p>
+<p>
+<strong>Duration: </strong><i id="dura61"><script>getHMS('264','dura61')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading62" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse62" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyEnrolledTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading62" role="tabpanel" class="panel-collapse collapse" id="collapse62">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyEnrolledTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:56</p>
+<p>
+<strong>End time: </strong>19:05:56</p>
+<p>
+<strong>Duration: </strong><i id="dura62"><script>getHMS('49','dura62')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading63" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse63" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyEnrolledTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading63" role="tabpanel" class="panel-collapse collapse" id="collapse63">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyEnrolledTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:56</p>
+<p>
+<strong>End time: </strong>19:05:57</p>
+<p>
+<strong>Duration: </strong><i id="dura63"><script>getHMS('301','dura63')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading64" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse64" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyClosedTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading64" role="tabpanel" class="panel-collapse collapse" id="collapse64">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyClosedTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:57</p>
+<p>
+<strong>End time: </strong>19:05:57</p>
+<p>
+<strong>Duration: </strong><i id="dura64"><script>getHMS('69','dura64')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading65" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse65" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyClosedTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading65" role="tabpanel" class="panel-collapse collapse" id="collapse65">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyClosedTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:57</p>
+<p>
+<strong>End time: </strong>19:05:57</p>
+<p>
+<strong>Duration: </strong><i id="dura65"><script>getHMS('300','dura65')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading66" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse66" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyOnlineTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading66" role="tabpanel" class="panel-collapse collapse" id="collapse66">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyOnlineTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:57</p>
+<p>
+<strong>End time: </strong>19:05:57</p>
+<p>
+<strong>Duration: </strong><i id="dura66"><script>getHMS('85','dura66')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading67" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse67" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyOnlineTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading67" role="tabpanel" class="panel-collapse collapse" id="collapse67">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyOnlineTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:57</p>
+<p>
+<strong>End time: </strong>19:05:58</p>
+<p>
+<strong>Duration: </strong><i id="dura67"><script>getHMS('276','dura67')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading68" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse68" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyReferredFromMeTabIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading68" role="tabpanel" class="panel-collapse collapse" id="collapse68">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyReferredFromMeTabIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:58</p>
+<p>
+<strong>End time: </strong>19:05:58</p>
+<p>
+<strong>Duration: </strong><i id="dura68"><script>getHMS('78','dura68')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading69" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse69" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyReferredFromMeTabCount</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading69" role="tabpanel" class="panel-collapse collapse" id="collapse69">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyReferredFromMeTabCount</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:58</p>
+<p>
+<strong>End time: </strong>19:05:58</p>
+<p>
+<strong>Duration: </strong><i id="dura69"><script>getHMS('285','dura69')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading70" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse70" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyCampaignIconIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading70" role="tabpanel" class="panel-collapse collapse" id="collapse70">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyCampaignIconIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:58</p>
+<p>
+<strong>End time: </strong>19:05:58</p>
+<p>
+<strong>Duration: </strong><i id="dura70"><script>getHMS('69','dura70')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading71" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse71" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>addNewCampaign</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading71" role="tabpanel" class="panel-collapse collapse" id="collapse71">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>addNewCampaign</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:58</p>
+<p>
+<strong>End time: </strong>19:05:59</p>
+<p>
+<strong>Duration: </strong><i id="dura71"><script>getHMS('515','dura71')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading72" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse72" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyReferAllLeadsIconIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading72" role="tabpanel" class="panel-collapse collapse" id="collapse72">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyReferAllLeadsIconIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:59</p>
+<p>
+<strong>End time: </strong>19:05:59</p>
+<p>
+<strong>Duration: </strong><i id="dura72"><script>getHMS('69','dura72')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading73" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse73" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>referAllLeads</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading73" role="tabpanel" class="panel-collapse collapse" id="collapse73">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>referAllLeads</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:59</p>
+<p>
+<strong>End time: </strong>19:05:59</p>
+<p>
+<strong>Duration: </strong><i id="dura73"><script>getHMS('321','dura73')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading74" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse74" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifySendSMSToAllLeadsIconIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading74" role="tabpanel" class="panel-collapse collapse" id="collapse74">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifySendSMSToAllLeadsIconIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:59</p>
+<p>
+<strong>End time: </strong>19:05:59</p>
+<p>
+<strong>Duration: </strong><i id="dura74"><script>getHMS('56','dura74')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading75" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse75" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>sendSMSToAllLeads</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading75" role="tabpanel" class="panel-collapse collapse" id="collapse75">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>sendSMSToAllLeads</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:05:59</p>
+<p>
+<strong>End time: </strong>19:06:00</p>
+<p>
+<strong>Duration: </strong><i id="dura75"><script>getHMS('310','dura75')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading76" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse76" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifySendEmailToAllLeadsIconIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading76" role="tabpanel" class="panel-collapse collapse" id="collapse76">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifySendEmailToAllLeadsIconIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:06:00</p>
+<p>
+<strong>End time: </strong>19:06:00</p>
+<p>
+<strong>Duration: </strong><i id="dura76"><script>getHMS('74','dura76')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading77" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse77" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>sendEmailToAllLeads</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading77" role="tabpanel" class="panel-collapse collapse" id="collapse77">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>sendEmailToAllLeads</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:06:00</p>
+<p>
+<strong>End time: </strong>19:06:00</p>
+<p>
+<strong>Duration: </strong><i id="dura77"><script>getHMS('545','dura77')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading78" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse78" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyRefreshLeadDataIconIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading78" role="tabpanel" class="panel-collapse collapse" id="collapse78">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyRefreshLeadDataIconIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:06:01</p>
+<p>
+<strong>End time: </strong>19:06:01</p>
+<p>
+<strong>Duration: </strong><i id="dura78"><script>getHMS('109','dura78')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading79" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse79" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyDownloadDataIconIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading79" role="tabpanel" class="panel-collapse collapse" id="collapse79">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyDownloadDataIconIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:06:01</p>
+<p>
+<strong>End time: </strong>19:06:01</p>
+<p>
+<strong>Duration: </strong><i id="dura79"><script>getHMS('74','dura79')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading80" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse80" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>downloadLeadsData</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading80" role="tabpanel" class="panel-collapse collapse" id="collapse80">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>downloadLeadsData</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:06:01</p>
+<p>
+<strong>End time: </strong>19:06:01</p>
+<p>
+<strong>Duration: </strong><i id="dura80"><script>getHMS('436','dura80')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading81" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse81" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>verifyFilterLeadsIconIsDisplayed</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading81" role="tabpanel" class="panel-collapse collapse" id="collapse81">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>verifyFilterLeadsIconIsDisplayed</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:06:01</p>
+<p>
+<strong>End time: </strong>19:06:02</p>
+<p>
+<strong>Duration: </strong><i id="dura81"><script>getHMS('565','dura81')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@16698" class="panel accordian-panel-heading">
+<div id="heading82" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse82" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>filterLeadsData</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading82" role="tabpanel" class="panel-collapse collapse" id="collapse82">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>filterLeadsData</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.LeadList</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:06:02</p>
+<p>
+<strong>End time: </strong>19:06:03</p>
+<p>
+<strong>Duration: </strong><i id="dura82"><script>getHMS('889','dura82')</script></i>
+</p>
+</div>
+</div>
+</div>
+<div style="display:none;" title="PASS" id="@28725" class="panel accordian-panel-heading">
+<div id="heading83" role="tab" class="panel-heading">
+<h4 class="nw-page-title">
+<a aria-controls="collapseOne" aria-expanded="true" href="#collapse83" data-parent="#Accordion" data-toggle="collapse" role="button" class="pa_italic"><span class="fa fa-chevron-down"></span><span class="fa fa-chevron-up"></span><label>endTestSuite</label><i class="pass fa fa-check"></i></a>
+</h4>
+</div>
+<div aria-labelledby="heading83" role="tabpanel" class="panel-collapse collapse" id="collapse83">
+<div class="panel-body panel_text panel-body-new">
+<p>
+<strong>Name: </strong>endTestSuite</p>
+<p>
+<strong>Instance: </strong>whitefeather.xedge.testcases.EndTesting</p>
+<p>
+<strong>Parameters: </strong>
+</p>
+<p>
+<strong>Start time: </strong>19:06:03</p>
+<p>
+<strong>End time: </strong>19:06:11</p>
+<p>
+<strong>Duration: </strong><i id="dura83"><script>getHMS('8568','dura83')</script></i>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<p>Connect with shekharb@theextraaedge.com for more information.</p>
+</footer>
+</body>
+</html>
