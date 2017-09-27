@@ -47,6 +47,18 @@
 			<class name="whitefeather.xedge.testcases.Refresh_Page" >
 			<methods><include name="refreshWebPage"></include></methods></class>
 			
+			<!-- <class name="whitefeather.xedge.testcases.OpenAddLeadRHSPanel">
+			<methods><include name="clickAddLeadPlusIcon"></include></methods></class>
+			
+			<class name="whitefeather.xedge.testcases.AddNewLeadDefaultValues_1">
+			<methods>
+			<include name="enterProspectEmailID"/>
+			<include name="enterProspectMobileNo"/>
+			<include name="selectActivityType"/>
+			<include name="addActivityComment"/>
+			<include name="clickAddLeadButton"/>
+			</methods></class> -->
+			
 			<class name="whitefeather.xedge.testcases.VerifyGlobalIcons" >
 			<methods>
 			<include name="verifyCompanyLogoInHeader"/>
@@ -61,15 +73,43 @@
 			<include name="verifyJoyRideButton"/>
 			</methods></class>
 			
+			<class name="whitefeather.xedge.testcases.Refresh_Page" >
+			<methods><include name="refreshWebPage"></include></methods></class>
+			
 			<class name="whitefeather.xedge.testcases.OpenAddLeadRHSPanel">
 			<methods><include name="clickAddLeadPlusIcon"></include></methods></class>
 			
-			<class name="whitefeather.xedge.testcases.AddNewLeadDefaultValues_1">
+			<class name="whitefeather.xedge.testcases.AddNewLeadWithAllValues">
 			<methods>
-			<include name="enterProspectEmailID"/>
-			<include name="enterProspectMobileNo"/>
-			<include name="selectActivityType"/>
-			<include name="addActivityComment"/>
+			<include name="enterFirstName"/>
+			<include name="enterLastName"/>
+			<include name="enterEmailAddress"/>
+			<include name="enterMobileNumber"/>
+			<include name="enterHighestQualification"/>
+			<include name="selectSeason"/>
+			<include name="selectSource"/>
+			<include name="selectChannel"/>
+			<include name="selectPriority"/>
+			<include name="selectStatus"/>
+			<include name="selectReason"/>
+			<include name="selectReferredTo"/>
+			<include name="selectEntity1"/>
+			<include name="selectEntity2"/>
+			<include name="selectEntity3"/>
+			<include name="selectEntity4"/>
+			<include name="selectBestCall"/>
+			<include name="selectLeadQualified"/>
+			<include name="selectLeadContactable"/>
+			<include name="selectMobileVerified"/>
+			<include name="selectField1"/>
+			<include name="selectField2"/>
+			<include name="selectField3"/>
+			<include name="selectField4"/>
+			<include name="selectField5"/>
+			<include name="selectCountry"/>
+			<include name="selectState"/>
+			<include name="selectCity"/>
+			<include name="enterLeadComment"/>
 			<include name="clickAddLeadButton"/>
 			</methods></class>
 			

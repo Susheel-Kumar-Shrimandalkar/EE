@@ -4,9 +4,13 @@ import java.io.File;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import whitefeather.xedge.facilitator.RootDriver;
@@ -31,6 +35,21 @@ public class ConfigMethods extends RootDriver
 	}
 
 	
+	public static void selectValueFromDropDown(WebElement element, WebDriver idriver)
+	{
+		//Check the number of values present in the drop down and then select - to be done later
+		//Implement logic for mouse hover (select element by hovering cursor) later
+		Actions builder = new Actions(idriver);
+		element.click();
+		Action seriesOfActions = builder
+	              .moveToElement(element)
+	              .click()
+	              .sendKeys(Keys.DOWN)
+	              .sendKeys(Keys.DOWN)//Number of Down Key Press = Position of value from drop down
+	              .sendKeys(Keys.RETURN)
+	              .build();
+		seriesOfActions.perform();
+	}
 	public static void waitForPageToLoad() 
 	{
         ExpectedCondition<Boolean> expectation = new

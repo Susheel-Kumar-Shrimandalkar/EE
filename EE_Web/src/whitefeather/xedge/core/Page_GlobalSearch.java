@@ -85,7 +85,7 @@ public class Page_GlobalSearch extends HelperHand
 	public static WebElement getSearchedString()
 	{
 		try {
-			element = driver.findElement(By.xpath(".//span[contains(text(),'"+leadEmail+"')]"));
+			element = driver.findElement(By.xpath(".//span[contains(text(),'"+prospectEmail+"')]"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -95,7 +95,7 @@ public class Page_GlobalSearch extends HelperHand
 	public static WebElement knowErrorMessage() throws Exception
 	{
 		Thread.sleep(2000);
-				if(getSearchedString().getText().contains(leadEmail))
+				if(getSearchedString().getText().contains(prospectEmail))
 				{
 					try {
 						switchCounter=0;

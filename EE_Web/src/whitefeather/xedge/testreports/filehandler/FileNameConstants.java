@@ -1,6 +1,6 @@
 package whitefeather.xedge.testreports.filehandler;
 
-import whitefeather.xedge.facilitator.HelperHand;
+import whitefeather.xedge.core.DataGenerator;
 
 public class FileNameConstants {
 
@@ -75,7 +75,7 @@ public class FileNameConstants {
 			+ "<div class='col-md-3'>" + "</div>" + "<div class='col-md-6 center hazy gap-top'>"
 			+ "<div class='txt'></div>" 
 			+ "<h2> <b><font size=\"6\", color=\"red\"><center>Front End Test Report for<br>Deployment "
-			+HelperHand.getDate()+"</center></font></b></h2><br>"
+			+DataGenerator.getDate()+"</center></font></b></h2><br>"
 			+ "<h3><b>ExtraaEdge Technology Solutions, Pune</b> </h3>";
 
 	public static final String INDEX_BODY_POST = "</div>" + "<div class='col-md-3'>" + "</div>" + "</div>" + "</body>"

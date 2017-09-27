@@ -14,7 +14,7 @@ public class AddNewLeadDefaultValues_1 extends HelperHand
 	public static void enterProspectEmailID()
 	{
 		try {
-			Page_AddNewLeadWithDefaultValues.enterProspectEmailAddress().sendKeys(leadEmail);
+			Page_AddNewLeadWithDefaultValues.enterProspectEmailAddress().sendKeys(prospectEmail);
 			//Handle Email Already Exist Message Scenario later
 			Reporter.log("User has entered email address successfully",true);
 		} catch (Exception e) {
@@ -27,7 +27,7 @@ public class AddNewLeadDefaultValues_1 extends HelperHand
 	public static void enterProspectMobileNo()
 	{
 		try {
-			Page_AddNewLeadWithDefaultValues.enterProspectMobileNumber().sendKeys(Long.toString(DataGenerator.randomMobileNumberGenerator()));
+			Page_AddNewLeadWithDefaultValues.enterProspectMobileNumber().sendKeys(prospectMobile);
 			//Handle Mobile Already Exist Message Scenario later
 			Reporter.log("User has entered mobile number successfully",true);
 		} catch (Exception e) {
@@ -69,10 +69,13 @@ public class AddNewLeadDefaultValues_1 extends HelperHand
 		try {
 			Thread.sleep(1000);
 			Page_AddNewLeadWithDefaultValues.clickAddLeadButtonOnRHSPanel().click();
-			if(CloseIconRHSPanels.displayCloseIcon().isDisplayed())
+			Thread.sleep(3000);
+			CloseIconRHSPanels.displayCloseIcon().click();
+			Refresh_Page.refreshWebPage();
+			/*if(CloseIconRHSPanels.displayCloseIcon().isDisplayed())
 			{
 				CloseIconRHSPanels.displayCloseIcon().click();
-			}
+			}*/
 			Reporter.log("User has clicked Add Lead button on RHS panel.",true);
 		} catch (Exception e) {
 			e.printStackTrace();

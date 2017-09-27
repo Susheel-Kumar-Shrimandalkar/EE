@@ -14,7 +14,7 @@ public class Page_AddNewLeadWithDefaultValues extends HelperHand
 	public static WebElement enterProspectEmailAddress()
 	{
 			try {
-				element = driver.findElement(properties.selectLocator("addLead_emailBox"));
+				element = driver.findElement(properties.selectLocator("AddLead_email"));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -24,7 +24,7 @@ public class Page_AddNewLeadWithDefaultValues extends HelperHand
 	public static WebElement enterProspectMobileNumber()
 	{
 			try {
-				element = driver.findElement(properties.selectLocator("addLead_mobileNumber"));
+				element = driver.findElement(properties.selectLocator("AddLead_mobileNumber"));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -34,7 +34,7 @@ public class Page_AddNewLeadWithDefaultValues extends HelperHand
 	public static WebElement clickAddLeadButtonOnRHSPanel()
 	{
 			try {
-				element = driver.findElement(properties.selectLocator("addLead_RHSPanel_AddLeadButton"));
+				element = driver.findElement(properties.selectLocator("AddLead_AddLeadButton"));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testResults>
     <testResult>
-        <id>@29225</id>
+        <id>@18555</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.OpenLoginPage</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.OpenLoginPage</instance>
         <contextGroups/>
         <methodName>openLoginPage</methodName>
@@ -16,16 +16,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:04:19</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:12</methodExecutionEndTime>
-        <methodExecutionTotalTime>52709</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:48:23</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:15</methodExecutionEndTime>
+        <methodExecutionTotalTime>52193</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25650</id>
+        <id>@18022</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.ForgotPassword</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.ForgotPassword</instance>
         <contextGroups/>
         <methodName>openForgotPasswordWindow</methodName>
@@ -34,16 +34,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:12</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:13</methodExecutionEndTime>
-        <methodExecutionTotalTime>243</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:16</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:16</methodExecutionEndTime>
+        <methodExecutionTotalTime>328</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25650</id>
+        <id>@18022</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.ForgotPassword</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.ForgotPassword</instance>
         <contextGroups/>
         <methodName>verifyCompanyLogo</methodName>
@@ -52,16 +52,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:13</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:13</methodExecutionEndTime>
-        <methodExecutionTotalTime>51</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:16</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:17</methodExecutionEndTime>
+        <methodExecutionTotalTime>77</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25650</id>
+        <id>@18022</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.ForgotPassword</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.ForgotPassword</instance>
         <contextGroups/>
         <methodName>verifyRecoveryLabel</methodName>
@@ -70,16 +70,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:13</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:13</methodExecutionEndTime>
-        <methodExecutionTotalTime>38</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:17</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:17</methodExecutionEndTime>
+        <methodExecutionTotalTime>47</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25650</id>
+        <id>@18022</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.ForgotPassword</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.ForgotPassword</instance>
         <contextGroups/>
         <methodName>verifyRecoveryMessage</methodName>
@@ -88,16 +88,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:13</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:13</methodExecutionEndTime>
-        <methodExecutionTotalTime>78</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:17</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:17</methodExecutionEndTime>
+        <methodExecutionTotalTime>85</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25650</id>
+        <id>@18022</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.ForgotPassword</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.ForgotPassword</instance>
         <contextGroups/>
         <methodName>verifyEmailInputBox</methodName>
@@ -106,16 +106,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:13</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:13</methodExecutionEndTime>
-        <methodExecutionTotalTime>85</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:17</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:17</methodExecutionEndTime>
+        <methodExecutionTotalTime>162</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25650</id>
+        <id>@18022</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.ForgotPassword</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.ForgotPassword</instance>
         <contextGroups/>
         <methodName>verifyLoginLink</methodName>
@@ -124,16 +124,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:13</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:13</methodExecutionEndTime>
-        <methodExecutionTotalTime>80</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:17</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:17</methodExecutionEndTime>
+        <methodExecutionTotalTime>100</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25650</id>
+        <id>@18022</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.ForgotPassword</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.ForgotPassword</instance>
         <contextGroups/>
         <methodName>enterRecoveryEmail</methodName>
@@ -145,16 +145,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:14</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:19</methodExecutionEndTime>
-        <methodExecutionTotalTime>5683</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:18</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:24</methodExecutionEndTime>
+        <methodExecutionTotalTime>6111</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyLoginPageBackground</methodName>
@@ -163,16 +163,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:19</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:20</methodExecutionEndTime>
-        <methodExecutionTotalTime>1068</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:24</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:25</methodExecutionEndTime>
+        <methodExecutionTotalTime>1088</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyClientAccountLogo</methodName>
@@ -181,16 +181,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:20</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:20</methodExecutionEndTime>
-        <methodExecutionTotalTime>42</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:25</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:25</methodExecutionEndTime>
+        <methodExecutionTotalTime>63</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyUsernameLabel</methodName>
@@ -199,16 +199,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:21</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:21</methodExecutionEndTime>
-        <methodExecutionTotalTime>85</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:25</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:25</methodExecutionEndTime>
+        <methodExecutionTotalTime>116</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyUsernamePlaceholder</methodName>
@@ -217,16 +217,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:21</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:21</methodExecutionEndTime>
-        <methodExecutionTotalTime>122</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:25</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:26</methodExecutionEndTime>
+        <methodExecutionTotalTime>238</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyPasswordLabel</methodName>
@@ -235,16 +235,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:21</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:21</methodExecutionEndTime>
-        <methodExecutionTotalTime>78</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:26</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:26</methodExecutionEndTime>
+        <methodExecutionTotalTime>229</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyPasswordPlaceholder</methodName>
@@ -253,16 +253,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:21</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:21</methodExecutionEndTime>
-        <methodExecutionTotalTime>103</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:26</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:26</methodExecutionEndTime>
+        <methodExecutionTotalTime>154</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyUsernameInputField</methodName>
@@ -271,16 +271,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:21</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:21</methodExecutionEndTime>
-        <methodExecutionTotalTime>47</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:26</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:26</methodExecutionEndTime>
+        <methodExecutionTotalTime>120</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyPasswordInputField</methodName>
@@ -289,16 +289,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:21</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:21</methodExecutionEndTime>
-        <methodExecutionTotalTime>68</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:27</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:27</methodExecutionEndTime>
+        <methodExecutionTotalTime>113</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyPasswordWrapper</methodName>
@@ -307,16 +307,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:21</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:21</methodExecutionEndTime>
-        <methodExecutionTotalTime>71</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:27</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:27</methodExecutionEndTime>
+        <methodExecutionTotalTime>210</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>enterLoginId</methodName>
@@ -328,16 +328,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:22</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:22</methodExecutionEndTime>
-        <methodExecutionTotalTime>423</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:27</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:27</methodExecutionEndTime>
+        <methodExecutionTotalTime>407</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>enterLoginPassword</methodName>
@@ -349,16 +349,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:22</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:22</methodExecutionEndTime>
-        <methodExecutionTotalTime>145</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:28</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:28</methodExecutionEndTime>
+        <methodExecutionTotalTime>182</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>verifyLoginButton</methodName>
@@ -367,16 +367,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:22</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:22</methodExecutionEndTime>
-        <methodExecutionTotalTime>99</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:28</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:28</methodExecutionEndTime>
+        <methodExecutionTotalTime>166</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19831</id>
+        <id>@11975</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.PerformLoginAction</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.PerformLoginAction</instance>
         <contextGroups/>
         <methodName>clickLoginButton</methodName>
@@ -385,16 +385,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:22</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:26</methodExecutionEndTime>
-        <methodExecutionTotalTime>3427</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:28</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:32</methodExecutionEndTime>
+        <methodExecutionTotalTime>3501</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@10752</id>
+        <id>@21710</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.Refresh_Page</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.Refresh_Page</instance>
         <contextGroups/>
         <methodName>refreshWebPage</methodName>
@@ -403,16 +403,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:26</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:29</methodExecutionEndTime>
-        <methodExecutionTotalTime>2890</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:32</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:35</methodExecutionEndTime>
+        <methodExecutionTotalTime>3818</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyCompanyLogoInHeader</methodName>
@@ -421,16 +421,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:29</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:29</methodExecutionEndTime>
-        <methodExecutionTotalTime>348</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:36</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:36</methodExecutionEndTime>
+        <methodExecutionTotalTime>411</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyGoButtonInGlobalSearchBar</methodName>
@@ -439,16 +439,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:29</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:29</methodExecutionEndTime>
-        <methodExecutionTotalTime>78</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:36</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:36</methodExecutionEndTime>
+        <methodExecutionTotalTime>124</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyOutStandingActivityIcon</methodName>
@@ -457,16 +457,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:29</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:29</methodExecutionEndTime>
-        <methodExecutionTotalTime>69</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:36</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:37</methodExecutionEndTime>
+        <methodExecutionTotalTime>191</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyOutStandingActivityCount</methodName>
@@ -475,16 +475,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:30</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:30</methodExecutionEndTime>
-        <methodExecutionTotalTime>78</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:37</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:37</methodExecutionEndTime>
+        <methodExecutionTotalTime>119</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyCounselorName</methodName>
@@ -493,16 +493,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:30</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:30</methodExecutionEndTime>
-        <methodExecutionTotalTime>114</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:37</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:37</methodExecutionEndTime>
+        <methodExecutionTotalTime>101</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyCounselorPhoto</methodName>
@@ -511,16 +511,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:30</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:30</methodExecutionEndTime>
-        <methodExecutionTotalTime>77</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:37</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:37</methodExecutionEndTime>
+        <methodExecutionTotalTime>153</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifySignOutLink</methodName>
@@ -529,16 +529,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:30</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:30</methodExecutionEndTime>
-        <methodExecutionTotalTime>65</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:37</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:37</methodExecutionEndTime>
+        <methodExecutionTotalTime>138</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyBulkUploadIcon</methodName>
@@ -547,16 +547,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:30</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:30</methodExecutionEndTime>
-        <methodExecutionTotalTime>51</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:37</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:38</methodExecutionEndTime>
+        <methodExecutionTotalTime>116</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyAddLeadPlusIcon</methodName>
@@ -565,16 +565,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:30</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:30</methodExecutionEndTime>
-        <methodExecutionTotalTime>51</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:38</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:38</methodExecutionEndTime>
+        <methodExecutionTotalTime>132</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@11092</id>
+        <id>@27655</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.VerifyGlobalIcons</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.VerifyGlobalIcons</instance>
         <contextGroups/>
         <methodName>verifyJoyRideButton</methodName>
@@ -583,16 +583,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:30</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:30</methodExecutionEndTime>
-        <methodExecutionTotalTime>69</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:38</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:41</methodExecutionEndTime>
+        <methodExecutionTotalTime>2896</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@14855</id>
+        <id>@24872</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.OpenAddLeadRHSPanel</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.OpenAddLeadRHSPanel</instance>
         <contextGroups/>
         <methodName>clickAddLeadPlusIcon</methodName>
@@ -601,53 +601,539 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:30</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:31</methodExecutionEndTime>
-        <methodExecutionTotalTime>317</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:41</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:43</methodExecutionEndTime>
+        <methodExecutionTotalTime>2610</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@26323</id>
+        <id>@26439</id>
         <suiteName>Suite</suiteName>
-        <className>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
-        <instance>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</instance>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
         <contextGroups/>
-        <methodName>enterProspectEmailID</methodName>
+        <methodName>enterFirstName</methodName>
         <methodGroups/>
         <methodInvocationTotalCount>1</methodInvocationTotalCount>
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:31</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:32</methodExecutionEndTime>
-        <methodExecutionTotalTime>820</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:44</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:45</methodExecutionEndTime>
+        <methodExecutionTotalTime>1832</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@26323</id>
+        <id>@26439</id>
         <suiteName>Suite</suiteName>
-        <className>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
-        <instance>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</instance>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
         <contextGroups/>
-        <methodName>enterProspectMobileNo</methodName>
+        <methodName>enterLastName</methodName>
         <methodGroups/>
         <methodInvocationTotalCount>1</methodInvocationTotalCount>
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:32</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:32</methodExecutionEndTime>
-        <methodExecutionTotalTime>513</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:49:45</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:47</methodExecutionEndTime>
+        <methodExecutionTotalTime>1473</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@26323</id>
+        <id>@26439</id>
         <suiteName>Suite</suiteName>
-        <className>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
-        <instance>whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</instance>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>enterEmailAddress</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:47</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:49</methodExecutionEndTime>
+        <methodExecutionTotalTime>2299</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>enterMobileNumber</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:49</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:51</methodExecutionEndTime>
+        <methodExecutionTotalTime>1742</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>enterHighestQualification</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:51</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:54</methodExecutionEndTime>
+        <methodExecutionTotalTime>2463</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectSeason</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:54</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:54</methodExecutionEndTime>
+        <methodExecutionTotalTime>623</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectSource</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:54</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:55</methodExecutionEndTime>
+        <methodExecutionTotalTime>511</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectChannel</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:55</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:55</methodExecutionEndTime>
+        <methodExecutionTotalTime>446</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectPriority</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:55</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:56</methodExecutionEndTime>
+        <methodExecutionTotalTime>472</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectStatus</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:56</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:57</methodExecutionEndTime>
+        <methodExecutionTotalTime>563</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectReason</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:57</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:57</methodExecutionEndTime>
+        <methodExecutionTotalTime>601</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectReferredTo</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:57</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:58</methodExecutionEndTime>
+        <methodExecutionTotalTime>670</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectEntity1</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:58</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:59</methodExecutionEndTime>
+        <methodExecutionTotalTime>574</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectEntity2</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:59</methodExecutionStartTime>
+        <methodExecutionEndTime>20:49:59</methodExecutionEndTime>
+        <methodExecutionTotalTime>546</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectEntity3</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:49:59</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:00</methodExecutionEndTime>
+        <methodExecutionTotalTime>472</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectEntity4</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:00</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:01</methodExecutionEndTime>
+        <methodExecutionTotalTime>713</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectBestCall</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:01</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:01</methodExecutionEndTime>
+        <methodExecutionTotalTime>672</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectLeadQualified</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:01</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:02</methodExecutionEndTime>
+        <methodExecutionTotalTime>655</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectLeadContactable</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:02</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:03</methodExecutionEndTime>
+        <methodExecutionTotalTime>783</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectMobileVerified</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:03</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:04</methodExecutionEndTime>
+        <methodExecutionTotalTime>805</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectField1</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:04</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:05</methodExecutionEndTime>
+        <methodExecutionTotalTime>643</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectField2</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:05</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:05</methodExecutionEndTime>
+        <methodExecutionTotalTime>670</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectField3</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:05</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:06</methodExecutionEndTime>
+        <methodExecutionTotalTime>678</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectField4</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:06</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:07</methodExecutionEndTime>
+        <methodExecutionTotalTime>708</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectField5</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:07</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:07</methodExecutionEndTime>
+        <methodExecutionTotalTime>574</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectCountry</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:07</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:08</methodExecutionEndTime>
+        <methodExecutionTotalTime>512</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectState</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:08</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:09</methodExecutionEndTime>
+        <methodExecutionTotalTime>500</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>selectCity</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:09</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:09</methodExecutionEndTime>
+        <methodExecutionTotalTime>512</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
+        <contextGroups/>
+        <methodName>enterLeadComment</methodName>
+        <methodGroups/>
+        <methodInvocationTotalCount>1</methodInvocationTotalCount>
+        <methodThreadCount>0</methodThreadCount>
+        <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
+        <methodStatus>PASS</methodStatus>
+        <methodExecutionStartTime>20:50:09</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:31</methodExecutionEndTime>
+        <methodExecutionTotalTime>21455</methodExecutionTotalTime>
+        <annotation>Test_Method</annotation>
+    </testResult>
+    <testResult>
+        <id>@26439</id>
+        <suiteName>Suite</suiteName>
+        <className>whitefeather.xedge.testcases.AddNewLeadWithAllValues</className>
+        <context>org.testng.TestRunner@39b43d60</context>
+        <instance>whitefeather.xedge.testcases.AddNewLeadWithAllValues</instance>
         <contextGroups/>
         <methodName>clickAddLeadButton</methodName>
         <methodGroups/>
@@ -655,16 +1141,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:32</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:34</methodExecutionEndTime>
-        <methodExecutionTotalTime>1592</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:31</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:31</methodExecutionEndTime>
+        <methodExecutionTotalTime>245</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19637</id>
+        <id>@10555</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.GlobalSearch</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.GlobalSearch</instance>
         <contextGroups/>
         <methodName>verifyGlobalSearchBar</methodName>
@@ -673,16 +1159,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:34</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:34</methodExecutionEndTime>
-        <methodExecutionTotalTime>92</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:31</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:31</methodExecutionEndTime>
+        <methodExecutionTotalTime>119</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19637</id>
+        <id>@10555</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.GlobalSearch</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.GlobalSearch</instance>
         <contextGroups/>
         <methodName>verifyGlobalSearchPlaceholder</methodName>
@@ -691,16 +1177,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:34</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:34</methodExecutionEndTime>
-        <methodExecutionTotalTime>94</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:31</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:31</methodExecutionEndTime>
+        <methodExecutionTotalTime>102</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19637</id>
+        <id>@10555</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.GlobalSearch</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.GlobalSearch</instance>
         <contextGroups/>
         <methodName>verifyLenseIcon</methodName>
@@ -709,16 +1195,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:34</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:34</methodExecutionEndTime>
-        <methodExecutionTotalTime>106</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:31</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:31</methodExecutionEndTime>
+        <methodExecutionTotalTime>100</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19637</id>
+        <id>@10555</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.GlobalSearch</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.GlobalSearch</instance>
         <contextGroups/>
         <methodName>verifyGoButton</methodName>
@@ -727,16 +1213,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:34</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:35</methodExecutionEndTime>
-        <methodExecutionTotalTime>1127</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:31</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:32</methodExecutionEndTime>
+        <methodExecutionTotalTime>69</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@19637</id>
+        <id>@10555</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.GlobalSearch</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.GlobalSearch</instance>
         <contextGroups/>
         <methodName>performGlobalSearch</methodName>
@@ -744,17 +1230,47 @@
         <methodInvocationTotalCount>1</methodInvocationTotalCount>
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
-        <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:35</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:41</methodExecutionEndTime>
-        <methodExecutionTotalTime>5290</methodExecutionTotalTime>
+        <methodStatus>FAIL</methodStatus>
+        <methodExecutionStartTime>20:50:32</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:42</methodExecutionEndTime>
+        <methodExecutionTotalTime>10628</methodExecutionTotalTime>
+        <methodErrorCause>null
+org.testng.Assert.fail(Assert.java:94)
+org.testng.Assert.fail(Assert.java:101)
+whitefeather.xedge.testcases.GlobalSearch.performGlobalSearch(GlobalSearch.java:80)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+java.lang.reflect.Method.invoke(Unknown Source)
+org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+org.testng.TestRunner.privateRun(TestRunner.java:756)
+org.testng.TestRunner.run(TestRunner.java:610)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+org.testng.SuiteRunner.run(SuiteRunner.java:289)
+org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+org.testng.TestNG.runSuites(TestNG.java:1133)
+org.testng.TestNG.run(TestNG.java:1104)
+org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</methodErrorCause>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyDashboardURL</methodName>
@@ -763,16 +1279,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:41</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:48</methodExecutionEndTime>
-        <methodExecutionTotalTime>6749</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:42</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:50</methodExecutionEndTime>
+        <methodExecutionTotalTime>7609</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyRecentNewTabIsDisplayed</methodName>
@@ -781,16 +1297,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:48</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:48</methodExecutionEndTime>
-        <methodExecutionTotalTime>169</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:50</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:50</methodExecutionEndTime>
+        <methodExecutionTotalTime>197</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyRecentNewTabCount</methodName>
@@ -799,16 +1315,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:48</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:49</methodExecutionEndTime>
-        <methodExecutionTotalTime>871</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:50</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:51</methodExecutionEndTime>
+        <methodExecutionTotalTime>686</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyRecentOnlineTabIsDisplayed</methodName>
@@ -817,16 +1333,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:49</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:49</methodExecutionEndTime>
-        <methodExecutionTotalTime>69</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:51</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:51</methodExecutionEndTime>
+        <methodExecutionTotalTime>103</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyRecentOnlineTabCount</methodName>
@@ -835,16 +1351,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:49</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:49</methodExecutionEndTime>
-        <methodExecutionTotalTime>380</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:51</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:52</methodExecutionEndTime>
+        <methodExecutionTotalTime>396</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyUpcomingFollowupTabIsDisplayed</methodName>
@@ -853,16 +1369,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:49</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:49</methodExecutionEndTime>
-        <methodExecutionTotalTime>95</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:52</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:52</methodExecutionEndTime>
+        <methodExecutionTotalTime>115</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyUpcomingFollowupTabCount</methodName>
@@ -871,16 +1387,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:49</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:50</methodExecutionEndTime>
-        <methodExecutionTotalTime>273</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:52</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:52</methodExecutionEndTime>
+        <methodExecutionTotalTime>308</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyUpcomingWalkinsTabIsDisplayed</methodName>
@@ -889,16 +1405,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:50</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:50</methodExecutionEndTime>
-        <methodExecutionTotalTime>68</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:52</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:52</methodExecutionEndTime>
+        <methodExecutionTotalTime>234</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyUpcomingWalkinsTabCount</methodName>
@@ -907,16 +1423,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:50</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:50</methodExecutionEndTime>
-        <methodExecutionTotalTime>385</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:53</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:53</methodExecutionEndTime>
+        <methodExecutionTotalTime>373</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyHighPriorityTabIsDisplayed</methodName>
@@ -925,16 +1441,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:50</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:50</methodExecutionEndTime>
-        <methodExecutionTotalTime>85</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:53</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:53</methodExecutionEndTime>
+        <methodExecutionTotalTime>82</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@25345</id>
+        <id>@25626</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.UpcomingTasks</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.UpcomingTasks</instance>
         <contextGroups/>
         <methodName>verifyHighPriorityTabCount</methodName>
@@ -943,16 +1459,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:50</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:51</methodExecutionEndTime>
-        <methodExecutionTotalTime>308</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:53</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:53</methodExecutionEndTime>
+        <methodExecutionTotalTime>269</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyLeadListPageURL</methodName>
@@ -961,16 +1477,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:51</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:54</methodExecutionEndTime>
-        <methodExecutionTotalTime>3308</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:53</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:57</methodExecutionEndTime>
+        <methodExecutionTotalTime>3303</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyAllTabIsDisplayed</methodName>
@@ -979,16 +1495,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:54</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:54</methodExecutionEndTime>
-        <methodExecutionTotalTime>230</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:57</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:57</methodExecutionEndTime>
+        <methodExecutionTotalTime>263</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyAllTabCount</methodName>
@@ -997,16 +1513,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:54</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:55</methodExecutionEndTime>
-        <methodExecutionTotalTime>306</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:57</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:57</methodExecutionEndTime>
+        <methodExecutionTotalTime>283</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyNewTabIsDisplayed</methodName>
@@ -1015,16 +1531,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:55</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:55</methodExecutionEndTime>
-        <methodExecutionTotalTime>69</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:58</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:58</methodExecutionEndTime>
+        <methodExecutionTotalTime>140</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyNewTabCount</methodName>
@@ -1033,16 +1549,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:55</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:55</methodExecutionEndTime>
-        <methodExecutionTotalTime>285</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:58</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:58</methodExecutionEndTime>
+        <methodExecutionTotalTime>318</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyCallbackTabIsDisplayed</methodName>
@@ -1051,16 +1567,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:55</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:55</methodExecutionEndTime>
-        <methodExecutionTotalTime>100</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:58</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:58</methodExecutionEndTime>
+        <methodExecutionTotalTime>54</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyCallbackTabCount</methodName>
@@ -1069,16 +1585,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:55</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:56</methodExecutionEndTime>
-        <methodExecutionTotalTime>354</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:59</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:59</methodExecutionEndTime>
+        <methodExecutionTotalTime>237</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyWalkinTabIsDisplayed</methodName>
@@ -1087,16 +1603,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:56</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:56</methodExecutionEndTime>
-        <methodExecutionTotalTime>60</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:59</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:59</methodExecutionEndTime>
+        <methodExecutionTotalTime>69</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyWalkinTabCount</methodName>
@@ -1105,16 +1621,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:56</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:56</methodExecutionEndTime>
-        <methodExecutionTotalTime>264</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:59</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:59</methodExecutionEndTime>
+        <methodExecutionTotalTime>263</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyEnrolledTabIsDisplayed</methodName>
@@ -1123,16 +1639,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:56</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:56</methodExecutionEndTime>
-        <methodExecutionTotalTime>49</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:59</methodExecutionStartTime>
+        <methodExecutionEndTime>20:50:59</methodExecutionEndTime>
+        <methodExecutionTotalTime>85</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyEnrolledTabCount</methodName>
@@ -1141,16 +1657,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:56</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:57</methodExecutionEndTime>
-        <methodExecutionTotalTime>301</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:50:59</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:00</methodExecutionEndTime>
+        <methodExecutionTotalTime>310</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyClosedTabIsDisplayed</methodName>
@@ -1159,16 +1675,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:57</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:57</methodExecutionEndTime>
-        <methodExecutionTotalTime>69</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:00</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:00</methodExecutionEndTime>
+        <methodExecutionTotalTime>84</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyClosedTabCount</methodName>
@@ -1177,16 +1693,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:57</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:57</methodExecutionEndTime>
-        <methodExecutionTotalTime>300</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:00</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:00</methodExecutionEndTime>
+        <methodExecutionTotalTime>269</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyOnlineTabIsDisplayed</methodName>
@@ -1195,16 +1711,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:57</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:57</methodExecutionEndTime>
-        <methodExecutionTotalTime>85</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:00</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:00</methodExecutionEndTime>
+        <methodExecutionTotalTime>147</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyOnlineTabCount</methodName>
@@ -1213,16 +1729,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:57</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:58</methodExecutionEndTime>
-        <methodExecutionTotalTime>276</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:01</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:01</methodExecutionEndTime>
+        <methodExecutionTotalTime>326</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyReferredFromMeTabIsDisplayed</methodName>
@@ -1231,16 +1747,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:58</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:58</methodExecutionEndTime>
-        <methodExecutionTotalTime>78</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:01</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:01</methodExecutionEndTime>
+        <methodExecutionTotalTime>79</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyReferredFromMeTabCount</methodName>
@@ -1249,16 +1765,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:58</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:58</methodExecutionEndTime>
-        <methodExecutionTotalTime>285</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:01</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:01</methodExecutionEndTime>
+        <methodExecutionTotalTime>281</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyCampaignIconIsDisplayed</methodName>
@@ -1267,16 +1783,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:58</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:58</methodExecutionEndTime>
-        <methodExecutionTotalTime>69</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:02</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:02</methodExecutionEndTime>
+        <methodExecutionTotalTime>92</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>addNewCampaign</methodName>
@@ -1285,16 +1801,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:58</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:59</methodExecutionEndTime>
-        <methodExecutionTotalTime>515</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:02</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:02</methodExecutionEndTime>
+        <methodExecutionTotalTime>753</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyReferAllLeadsIconIsDisplayed</methodName>
@@ -1303,16 +1819,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:59</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:59</methodExecutionEndTime>
-        <methodExecutionTotalTime>69</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:02</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:03</methodExecutionEndTime>
+        <methodExecutionTotalTime>160</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>referAllLeads</methodName>
@@ -1321,16 +1837,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:59</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:59</methodExecutionEndTime>
-        <methodExecutionTotalTime>321</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:03</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:03</methodExecutionEndTime>
+        <methodExecutionTotalTime>608</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifySendSMSToAllLeadsIconIsDisplayed</methodName>
@@ -1339,16 +1855,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:59</methodExecutionStartTime>
-        <methodExecutionEndTime>19:05:59</methodExecutionEndTime>
-        <methodExecutionTotalTime>56</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:03</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:04</methodExecutionEndTime>
+        <methodExecutionTotalTime>122</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>sendSMSToAllLeads</methodName>
@@ -1357,16 +1873,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:05:59</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:00</methodExecutionEndTime>
-        <methodExecutionTotalTime>310</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:04</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:04</methodExecutionEndTime>
+        <methodExecutionTotalTime>609</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifySendEmailToAllLeadsIconIsDisplayed</methodName>
@@ -1375,16 +1891,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:06:00</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:00</methodExecutionEndTime>
-        <methodExecutionTotalTime>74</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:04</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:04</methodExecutionEndTime>
+        <methodExecutionTotalTime>87</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>sendEmailToAllLeads</methodName>
@@ -1393,16 +1909,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:06:00</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:00</methodExecutionEndTime>
-        <methodExecutionTotalTime>545</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:04</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:05</methodExecutionEndTime>
+        <methodExecutionTotalTime>533</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyRefreshLeadDataIconIsDisplayed</methodName>
@@ -1411,16 +1927,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:06:01</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:01</methodExecutionEndTime>
-        <methodExecutionTotalTime>109</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:05</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:05</methodExecutionEndTime>
+        <methodExecutionTotalTime>87</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyDownloadDataIconIsDisplayed</methodName>
@@ -1429,16 +1945,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:06:01</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:01</methodExecutionEndTime>
-        <methodExecutionTotalTime>74</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:05</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:05</methodExecutionEndTime>
+        <methodExecutionTotalTime>77</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>downloadLeadsData</methodName>
@@ -1447,16 +1963,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:06:01</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:01</methodExecutionEndTime>
-        <methodExecutionTotalTime>436</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:05</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:06</methodExecutionEndTime>
+        <methodExecutionTotalTime>664</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>verifyFilterLeadsIconIsDisplayed</methodName>
@@ -1465,16 +1981,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:06:01</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:02</methodExecutionEndTime>
-        <methodExecutionTotalTime>565</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:06</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:07</methodExecutionEndTime>
+        <methodExecutionTotalTime>600</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@16698</id>
+        <id>@14082</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.LeadList</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.LeadList</instance>
         <contextGroups/>
         <methodName>filterLeadsData</methodName>
@@ -1483,16 +1999,16 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:06:02</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:03</methodExecutionEndTime>
-        <methodExecutionTotalTime>889</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:07</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:08</methodExecutionEndTime>
+        <methodExecutionTotalTime>906</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <testResult>
-        <id>@28725</id>
+        <id>@15681</id>
         <suiteName>Suite</suiteName>
         <className>whitefeather.xedge.testcases.EndTesting</className>
-        <context>org.testng.TestRunner@3cfdd820</context>
+        <context>org.testng.TestRunner@39b43d60</context>
         <instance>whitefeather.xedge.testcases.EndTesting</instance>
         <contextGroups/>
         <methodName>endTestSuite</methodName>
@@ -1501,9 +2017,9 @@
         <methodThreadCount>0</methodThreadCount>
         <methodCurrentInvocationCount>1</methodCurrentInvocationCount>
         <methodStatus>PASS</methodStatus>
-        <methodExecutionStartTime>19:06:03</methodExecutionStartTime>
-        <methodExecutionEndTime>19:06:11</methodExecutionEndTime>
-        <methodExecutionTotalTime>8568</methodExecutionTotalTime>
+        <methodExecutionStartTime>20:51:08</methodExecutionStartTime>
+        <methodExecutionEndTime>20:51:15</methodExecutionEndTime>
+        <methodExecutionTotalTime>7492</methodExecutionTotalTime>
         <annotation>Test_Method</annotation>
     </testResult>
     <suites>
@@ -1521,10 +2037,91 @@
             <testMethod>clickAddLeadButton</testMethod>
         </testMethods>
         <testMethods dataProvider="1">
-            <testMethod>enterProspectEmailID</testMethod>
+            <testMethod>enterEmailAddress</testMethod>
         </testMethods>
         <testMethods dataProvider="1">
-            <testMethod>enterProspectMobileNo</testMethod>
+            <testMethod>enterFirstName</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>enterHighestQualification</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>enterLastName</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>enterLeadComment</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>enterMobileNumber</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectBestCall</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectChannel</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectCity</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectCountry</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectEntity1</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectEntity2</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectEntity3</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectEntity4</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectField1</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectField2</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectField3</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectField4</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectField5</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectLeadContactable</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectLeadQualified</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectMobileVerified</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectPriority</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectReason</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectReferredTo</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectSeason</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectSource</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectState</testMethod>
+        </testMethods>
+        <testMethods dataProvider="1">
+            <testMethod>selectStatus</testMethod>
         </testMethods>
         <testMethods dataProvider="1">
             <testMethod>endTestSuite</testMethod>

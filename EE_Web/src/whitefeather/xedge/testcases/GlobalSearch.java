@@ -70,7 +70,7 @@ public class GlobalSearch extends HelperHand
  		if(Page_GlobalSearch.displayPlaceHolder().isDisplayed()) 
  		{
  			//Throws exceptions for non existing and null results. To be handled later.
- 			Page_GlobalSearch.displayPlaceHolder().sendKeys(leadEmail);
+ 			Page_GlobalSearch.displayPlaceHolder().sendKeys(prospectEmail);
 			Page_GlobalSearch.displayGoButton().click();
  		}
  		try {	

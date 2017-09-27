@@ -5,8 +5,6 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
-import whitefeather.xedge.core.DataGenerator;
 import whitefeather.xedge.core.Page_AddActivity;
 import whitefeather.xedge.facilitator.HelperHand;
 
@@ -70,7 +68,7 @@ public class AddActivity extends HelperHand
 			Thread.sleep(1000);
 			if(verifyAddActivityCommentBoxIsDisplayed())
 			{
-				Page_AddActivity.displayAddActivityCommentBox().sendKeys("Comment for "+DataGenerator.prospectEmail);
+				Page_AddActivity.displayAddActivityCommentBox().sendKeys("Comment for "+prospectEmail);
 			}
 			Reporter.log("Activity Comment is added successfully", true);
 		} catch (Exception e) {

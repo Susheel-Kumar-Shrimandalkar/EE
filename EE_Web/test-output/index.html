@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">83 methods,   83 passed</span>
+                    <span class="method-stats">110 methods, 1 failed,   109 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.GlobalSearch" hash-for-method="performGlobalSearch">performGlobalSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,7 +121,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadDefaultValues_1" hash-for-method="clickAddLeadButton">clickAddLeadButton</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="clickAddLeadButton">clickAddLeadButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -132,6 +146,31 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="enterEmailAddress">enterEmailAddress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="enterFirstName">enterFirstName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="enterHighestQualification">enterHighestQualification</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="enterLastName">enterLastName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="enterLeadComment">enterLeadComment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.PerformLoginAction" hash-for-method="enterLoginId(counselorshekhar@gmail.com)">enterLoginId(counselorshekhar@gmail.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -142,12 +181,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadDefaultValues_1" hash-for-method="enterProspectEmailID">enterProspectEmailID</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadDefaultValues_1" hash-for-method="enterProspectMobileNo">enterProspectMobileNo</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="enterMobileNumber">enterMobileNumber</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -172,17 +206,127 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.GlobalSearch" hash-for-method="performGlobalSearch">performGlobalSearch</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.LeadList" hash-for-method="referAllLeads">referAllLeads</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.Refresh_Page" hash-for-method="refreshWebPage">refreshWebPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectBestCall">selectBestCall</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectChannel">selectChannel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectCity">selectCity</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectCountry">selectCountry</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectEntity1">selectEntity1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectEntity2">selectEntity2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectEntity3">selectEntity3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectEntity4">selectEntity4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectField1">selectField1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectField2">selectField2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectField3">selectField3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectField4">selectField4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectField5">selectField5</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectLeadContactable">selectLeadContactable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectLeadQualified">selectLeadQualified</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectMobileVerified">selectMobileVerified</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectPriority">selectPriority</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectReason">selectReason</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectReferredTo">selectReferredTo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectSeason">selectSeason</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectSource">selectSource</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectState">selectState</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.AddNewLeadWithAllValues" hash-for-method="selectStatus">selectStatus</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -527,84 +671,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">whitefeather.xedge.testcases.VerifyGlobalIcons</span>
+              <img src="failed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.GlobalSearch</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAddLeadPlusIcon">
-                  </a> <!-- verifyAddLeadPlusIcon -->
-                  <span class="method-name">verifyAddLeadPlusIcon</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyBulkUploadIcon">
-                  </a> <!-- verifyBulkUploadIcon -->
-                  <span class="method-name">verifyBulkUploadIcon</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCompanyLogoInHeader">
-                  </a> <!-- verifyCompanyLogoInHeader -->
-                  <span class="method-name">verifyCompanyLogoInHeader</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCounselorName">
-                  </a> <!-- verifyCounselorName -->
-                  <span class="method-name">verifyCounselorName</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCounselorPhoto">
-                  </a> <!-- verifyCounselorPhoto -->
-                  <span class="method-name">verifyCounselorPhoto</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyGoButtonInGlobalSearchBar">
-                  </a> <!-- verifyGoButtonInGlobalSearchBar -->
-                  <span class="method-name">verifyGoButtonInGlobalSearchBar</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyJoyRideButton">
-                  </a> <!-- verifyJoyRideButton -->
-                  <span class="method-name">verifyJoyRideButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyOutStandingActivityCount">
-                  </a> <!-- verifyOutStandingActivityCount -->
-                  <span class="method-name">verifyOutStandingActivityCount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyOutStandingActivityIcon">
-                  </a> <!-- verifyOutStandingActivityIcon -->
-                  <span class="method-name">verifyOutStandingActivityIcon</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySignOutLink">
-                  </a> <!-- verifySignOutLink -->
-                  <span class="method-name">verifySignOutLink</span>
+                  <a name="performGlobalSearch">
+                  </a> <!-- performGlobalSearch -->
+                  <span class="method-name">performGlobalSearch</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at whitefeather.xedge.testcases.GlobalSearch.performGlobalSearch(GlobalSearch.java:80)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -826,6 +911,84 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.VerifyGlobalIcons</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddLeadPlusIcon">
+                  </a> <!-- verifyAddLeadPlusIcon -->
+                  <span class="method-name">verifyAddLeadPlusIcon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBulkUploadIcon">
+                  </a> <!-- verifyBulkUploadIcon -->
+                  <span class="method-name">verifyBulkUploadIcon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCompanyLogoInHeader">
+                  </a> <!-- verifyCompanyLogoInHeader -->
+                  <span class="method-name">verifyCompanyLogoInHeader</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCounselorName">
+                  </a> <!-- verifyCounselorName -->
+                  <span class="method-name">verifyCounselorName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCounselorPhoto">
+                  </a> <!-- verifyCounselorPhoto -->
+                  <span class="method-name">verifyCounselorPhoto</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGoButtonInGlobalSearchBar">
+                  </a> <!-- verifyGoButtonInGlobalSearchBar -->
+                  <span class="method-name">verifyGoButtonInGlobalSearchBar</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyJoyRideButton">
+                  </a> <!-- verifyJoyRideButton -->
+                  <span class="method-name">verifyJoyRideButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOutStandingActivityCount">
+                  </a> <!-- verifyOutStandingActivityCount -->
+                  <span class="method-name">verifyOutStandingActivityCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOutStandingActivityIcon">
+                  </a> <!-- verifyOutStandingActivityIcon -->
+                  <span class="method-name">verifyOutStandingActivityIcon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySignOutLink">
+                  </a> <!-- verifySignOutLink -->
+                  <span class="method-name">verifySignOutLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">whitefeather.xedge.testcases.PerformLoginAction</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -1028,16 +1191,227 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">whitefeather.xedge.testcases.GlobalSearch</span>
+              <span class="class-name">whitefeather.xedge.testcases.AddNewLeadWithAllValues</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="performGlobalSearch">
-                  </a> <!-- performGlobalSearch -->
-                  <span class="method-name">performGlobalSearch</span>
+                  <a name="clickAddLeadButton">
+                  </a> <!-- clickAddLeadButton -->
+                  <span class="method-name">clickAddLeadButton</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterEmailAddress">
+                  </a> <!-- enterEmailAddress -->
+                  <span class="method-name">enterEmailAddress</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterFirstName">
+                  </a> <!-- enterFirstName -->
+                  <span class="method-name">enterFirstName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterHighestQualification">
+                  </a> <!-- enterHighestQualification -->
+                  <span class="method-name">enterHighestQualification</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterLastName">
+                  </a> <!-- enterLastName -->
+                  <span class="method-name">enterLastName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterLeadComment">
+                  </a> <!-- enterLeadComment -->
+                  <span class="method-name">enterLeadComment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterMobileNumber">
+                  </a> <!-- enterMobileNumber -->
+                  <span class="method-name">enterMobileNumber</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectBestCall">
+                  </a> <!-- selectBestCall -->
+                  <span class="method-name">selectBestCall</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectChannel">
+                  </a> <!-- selectChannel -->
+                  <span class="method-name">selectChannel</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectCity">
+                  </a> <!-- selectCity -->
+                  <span class="method-name">selectCity</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectCountry">
+                  </a> <!-- selectCountry -->
+                  <span class="method-name">selectCountry</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectEntity1">
+                  </a> <!-- selectEntity1 -->
+                  <span class="method-name">selectEntity1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectEntity2">
+                  </a> <!-- selectEntity2 -->
+                  <span class="method-name">selectEntity2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectEntity3">
+                  </a> <!-- selectEntity3 -->
+                  <span class="method-name">selectEntity3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectEntity4">
+                  </a> <!-- selectEntity4 -->
+                  <span class="method-name">selectEntity4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectField1">
+                  </a> <!-- selectField1 -->
+                  <span class="method-name">selectField1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectField2">
+                  </a> <!-- selectField2 -->
+                  <span class="method-name">selectField2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectField3">
+                  </a> <!-- selectField3 -->
+                  <span class="method-name">selectField3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectField4">
+                  </a> <!-- selectField4 -->
+                  <span class="method-name">selectField4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectField5">
+                  </a> <!-- selectField5 -->
+                  <span class="method-name">selectField5</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectLeadContactable">
+                  </a> <!-- selectLeadContactable -->
+                  <span class="method-name">selectLeadContactable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectLeadQualified">
+                  </a> <!-- selectLeadQualified -->
+                  <span class="method-name">selectLeadQualified</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectMobileVerified">
+                  </a> <!-- selectMobileVerified -->
+                  <span class="method-name">selectMobileVerified</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectPriority">
+                  </a> <!-- selectPriority -->
+                  <span class="method-name">selectPriority</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectReason">
+                  </a> <!-- selectReason -->
+                  <span class="method-name">selectReason</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectReferredTo">
+                  </a> <!-- selectReferredTo -->
+                  <span class="method-name">selectReferredTo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectSeason">
+                  </a> <!-- selectSeason -->
+                  <span class="method-name">selectSeason</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectSource">
+                  </a> <!-- selectSource -->
+                  <span class="method-name">selectSource</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectState">
+                  </a> <!-- selectState -->
+                  <span class="method-name">selectState</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectStatus">
+                  </a> <!-- selectStatus -->
+                  <span class="method-name">selectStatus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.GlobalSearch</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="verifyGlobalSearchBar">
@@ -1064,35 +1438,6 @@
                   <a name="verifyLenseIcon">
                   </a> <!-- verifyLenseIcon -->
                   <span class="method-name">verifyLenseIcon</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="clickAddLeadButton">
-                  </a> <!-- clickAddLeadButton -->
-                  <span class="method-name">clickAddLeadButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="enterProspectEmailID">
-                  </a> <!-- enterProspectEmailID -->
-                  <span class="method-name">enterProspectEmailID</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="enterProspectMobileNo">
-                  </a> <!-- enterProspectMobileNo -->
-                  <span class="method-name">enterProspectMobileNo</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -1272,20 +1617,50 @@
           &lt;include name=&quot;verifyJoyRideButton&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.VerifyGlobalIcons --&gt;
+      &lt;class name=&quot;whitefeather.xedge.testcases.Refresh_Page&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;refreshWebPage&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.Refresh_Page --&gt;
       &lt;class name=&quot;whitefeather.xedge.testcases.OpenAddLeadRHSPanel&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;clickAddLeadPlusIcon&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.OpenAddLeadRHSPanel --&gt;
-      &lt;class name=&quot;whitefeather.xedge.testcases.AddNewLeadDefaultValues_1&quot;&gt;
+      &lt;class name=&quot;whitefeather.xedge.testcases.AddNewLeadWithAllValues&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;enterProspectEmailID&quot;/&gt;
-          &lt;include name=&quot;enterProspectMobileNo&quot;/&gt;
-          &lt;include name=&quot;selectActivityType&quot;/&gt;
-          &lt;include name=&quot;addActivityComment&quot;/&gt;
+          &lt;include name=&quot;enterFirstName&quot;/&gt;
+          &lt;include name=&quot;enterLastName&quot;/&gt;
+          &lt;include name=&quot;enterEmailAddress&quot;/&gt;
+          &lt;include name=&quot;enterMobileNumber&quot;/&gt;
+          &lt;include name=&quot;enterHighestQualification&quot;/&gt;
+          &lt;include name=&quot;selectSeason&quot;/&gt;
+          &lt;include name=&quot;selectSource&quot;/&gt;
+          &lt;include name=&quot;selectChannel&quot;/&gt;
+          &lt;include name=&quot;selectPriority&quot;/&gt;
+          &lt;include name=&quot;selectStatus&quot;/&gt;
+          &lt;include name=&quot;selectReason&quot;/&gt;
+          &lt;include name=&quot;selectReferredTo&quot;/&gt;
+          &lt;include name=&quot;selectEntity1&quot;/&gt;
+          &lt;include name=&quot;selectEntity2&quot;/&gt;
+          &lt;include name=&quot;selectEntity3&quot;/&gt;
+          &lt;include name=&quot;selectEntity4&quot;/&gt;
+          &lt;include name=&quot;selectBestCall&quot;/&gt;
+          &lt;include name=&quot;selectLeadQualified&quot;/&gt;
+          &lt;include name=&quot;selectLeadContactable&quot;/&gt;
+          &lt;include name=&quot;selectMobileVerified&quot;/&gt;
+          &lt;include name=&quot;selectField1&quot;/&gt;
+          &lt;include name=&quot;selectField2&quot;/&gt;
+          &lt;include name=&quot;selectField3&quot;/&gt;
+          &lt;include name=&quot;selectField4&quot;/&gt;
+          &lt;include name=&quot;selectField5&quot;/&gt;
+          &lt;include name=&quot;selectCountry&quot;/&gt;
+          &lt;include name=&quot;selectState&quot;/&gt;
+          &lt;include name=&quot;selectCity&quot;/&gt;
+          &lt;include name=&quot;enterLeadComment&quot;/&gt;
           &lt;include name=&quot;clickAddLeadButton&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.AddNewLeadDefaultValues_1 --&gt;
+      &lt;/class&gt; &lt;!-- whitefeather.xedge.testcases.AddNewLeadWithAllValues --&gt;
       &lt;class name=&quot;whitefeather.xedge.testcases.Refresh_Page&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;refreshWebPage&quot;/&gt;
@@ -1372,7 +1747,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Staging QA Test Validations (13 classes)</span>
+                <span class="test-name">Staging QA Test Validations (14 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -1398,344 +1773,452 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(83);
+data.addRows(110);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'openLoginPage')
 data.setCell(0, 2, 'whitefeather.xedge.testcases.OpenLoginPage')
-data.setCell(0, 3, 52709);
+data.setCell(0, 3, 52193);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'endTestSuite')
-data.setCell(1, 2, 'whitefeather.xedge.testcases.EndTesting')
-data.setCell(1, 3, 8568);
+data.setCell(1, 1, 'enterLeadComment')
+data.setCell(1, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(1, 3, 21455);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyDashboardURL')
-data.setCell(2, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(2, 3, 6749);
+data.setCell(2, 1, 'performGlobalSearch')
+data.setCell(2, 2, 'whitefeather.xedge.testcases.GlobalSearch')
+data.setCell(2, 3, 10628);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'enterRecoveryEmail')
-data.setCell(3, 2, 'whitefeather.xedge.testcases.ForgotPassword')
-data.setCell(3, 3, 5683);
+data.setCell(3, 1, 'verifyDashboardURL')
+data.setCell(3, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(3, 3, 7609);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'performGlobalSearch')
-data.setCell(4, 2, 'whitefeather.xedge.testcases.GlobalSearch')
-data.setCell(4, 3, 5290);
+data.setCell(4, 1, 'endTestSuite')
+data.setCell(4, 2, 'whitefeather.xedge.testcases.EndTesting')
+data.setCell(4, 3, 7492);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'clickLoginButton')
-data.setCell(5, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(5, 3, 3427);
+data.setCell(5, 1, 'enterRecoveryEmail')
+data.setCell(5, 2, 'whitefeather.xedge.testcases.ForgotPassword')
+data.setCell(5, 3, 6111);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyLeadListPageURL')
-data.setCell(6, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(6, 3, 3308);
+data.setCell(6, 1, 'refreshWebPage')
+data.setCell(6, 2, 'whitefeather.xedge.testcases.Refresh_Page')
+data.setCell(6, 3, 3818);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'refreshWebPage')
-data.setCell(7, 2, 'whitefeather.xedge.testcases.Refresh_Page')
-data.setCell(7, 3, 2890);
+data.setCell(7, 1, 'clickLoginButton')
+data.setCell(7, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(7, 3, 3501);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'clickAddLeadButton')
-data.setCell(8, 2, 'whitefeather.xedge.testcases.AddNewLeadDefaultValues_1')
-data.setCell(8, 3, 1592);
+data.setCell(8, 1, 'verifyLeadListPageURL')
+data.setCell(8, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(8, 3, 3303);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyGoButton')
-data.setCell(9, 2, 'whitefeather.xedge.testcases.GlobalSearch')
-data.setCell(9, 3, 1127);
+data.setCell(9, 1, 'verifyJoyRideButton')
+data.setCell(9, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(9, 3, 2896);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyLoginPageBackground')
-data.setCell(10, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(10, 3, 1068);
+data.setCell(10, 1, 'clickAddLeadPlusIcon')
+data.setCell(10, 2, 'whitefeather.xedge.testcases.OpenAddLeadRHSPanel')
+data.setCell(10, 3, 2610);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'filterLeadsData')
-data.setCell(11, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(11, 3, 889);
+data.setCell(11, 1, 'enterHighestQualification')
+data.setCell(11, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(11, 3, 2463);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyRecentNewTabCount')
-data.setCell(12, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(12, 3, 871);
+data.setCell(12, 1, 'enterEmailAddress')
+data.setCell(12, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(12, 3, 2299);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'enterProspectEmailID')
-data.setCell(13, 2, 'whitefeather.xedge.testcases.AddNewLeadDefaultValues_1')
-data.setCell(13, 3, 820);
+data.setCell(13, 1, 'enterFirstName')
+data.setCell(13, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(13, 3, 1832);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'verifyFilterLeadsIconIsDisplayed')
-data.setCell(14, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(14, 3, 565);
+data.setCell(14, 1, 'enterMobileNumber')
+data.setCell(14, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(14, 3, 1742);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'sendEmailToAllLeads')
-data.setCell(15, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(15, 3, 545);
+data.setCell(15, 1, 'enterLastName')
+data.setCell(15, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(15, 3, 1473);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'addNewCampaign')
-data.setCell(16, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(16, 3, 515);
+data.setCell(16, 1, 'verifyLoginPageBackground')
+data.setCell(16, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(16, 3, 1088);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'enterProspectMobileNo')
-data.setCell(17, 2, 'whitefeather.xedge.testcases.AddNewLeadDefaultValues_1')
-data.setCell(17, 3, 513);
+data.setCell(17, 1, 'filterLeadsData')
+data.setCell(17, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(17, 3, 906);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'downloadLeadsData')
-data.setCell(18, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(18, 3, 436);
+data.setCell(18, 1, 'selectMobileVerified')
+data.setCell(18, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(18, 3, 805);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'enterLoginId')
-data.setCell(19, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(19, 3, 423);
+data.setCell(19, 1, 'selectLeadContactable')
+data.setCell(19, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(19, 3, 783);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'verifyUpcomingWalkinsTabCount')
-data.setCell(20, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(20, 3, 385);
+data.setCell(20, 1, 'addNewCampaign')
+data.setCell(20, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(20, 3, 753);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'verifyRecentOnlineTabCount')
-data.setCell(21, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(21, 3, 380);
+data.setCell(21, 1, 'selectEntity4')
+data.setCell(21, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(21, 3, 713);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'verifyCallbackTabCount')
-data.setCell(22, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(22, 3, 354);
+data.setCell(22, 1, 'selectField4')
+data.setCell(22, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(22, 3, 708);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'verifyCompanyLogoInHeader')
-data.setCell(23, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(23, 3, 348);
+data.setCell(23, 1, 'verifyRecentNewTabCount')
+data.setCell(23, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(23, 3, 686);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'referAllLeads')
-data.setCell(24, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(24, 3, 321);
+data.setCell(24, 1, 'selectField3')
+data.setCell(24, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(24, 3, 678);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'clickAddLeadPlusIcon')
-data.setCell(25, 2, 'whitefeather.xedge.testcases.OpenAddLeadRHSPanel')
-data.setCell(25, 3, 317);
+data.setCell(25, 1, 'selectBestCall')
+data.setCell(25, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(25, 3, 672);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'sendSMSToAllLeads')
-data.setCell(26, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(26, 3, 310);
+data.setCell(26, 1, 'selectField2')
+data.setCell(26, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(26, 3, 670);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'verifyHighPriorityTabCount')
-data.setCell(27, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(27, 3, 308);
+data.setCell(27, 1, 'selectReferredTo')
+data.setCell(27, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(27, 3, 670);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'verifyAllTabCount')
+data.setCell(28, 1, 'downloadLeadsData')
 data.setCell(28, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(28, 3, 306);
+data.setCell(28, 3, 664);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'verifyEnrolledTabCount')
-data.setCell(29, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(29, 3, 301);
+data.setCell(29, 1, 'selectLeadQualified')
+data.setCell(29, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(29, 3, 655);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'verifyClosedTabCount')
-data.setCell(30, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(30, 3, 300);
+data.setCell(30, 1, 'selectField1')
+data.setCell(30, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(30, 3, 643);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'verifyReferredFromMeTabCount')
-data.setCell(31, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(31, 3, 285);
+data.setCell(31, 1, 'selectSeason')
+data.setCell(31, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(31, 3, 623);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'verifyNewTabCount')
+data.setCell(32, 1, 'sendSMSToAllLeads')
 data.setCell(32, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(32, 3, 285);
+data.setCell(32, 3, 609);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'verifyOnlineTabCount')
+data.setCell(33, 1, 'referAllLeads')
 data.setCell(33, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(33, 3, 276);
+data.setCell(33, 3, 608);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'verifyUpcomingFollowupTabCount')
-data.setCell(34, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(34, 3, 273);
+data.setCell(34, 1, 'selectReason')
+data.setCell(34, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(34, 3, 601);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'verifyWalkinTabCount')
+data.setCell(35, 1, 'verifyFilterLeadsIconIsDisplayed')
 data.setCell(35, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(35, 3, 264);
+data.setCell(35, 3, 600);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'openForgotPasswordWindow')
-data.setCell(36, 2, 'whitefeather.xedge.testcases.ForgotPassword')
-data.setCell(36, 3, 243);
+data.setCell(36, 1, 'selectField5')
+data.setCell(36, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(36, 3, 574);
 data.setCell(37, 0, 37)
-data.setCell(37, 1, 'verifyAllTabIsDisplayed')
-data.setCell(37, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(37, 3, 230);
+data.setCell(37, 1, 'selectEntity1')
+data.setCell(37, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(37, 3, 574);
 data.setCell(38, 0, 38)
-data.setCell(38, 1, 'verifyRecentNewTabIsDisplayed')
-data.setCell(38, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(38, 3, 169);
+data.setCell(38, 1, 'selectStatus')
+data.setCell(38, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(38, 3, 563);
 data.setCell(39, 0, 39)
-data.setCell(39, 1, 'enterLoginPassword')
-data.setCell(39, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(39, 3, 145);
+data.setCell(39, 1, 'selectEntity2')
+data.setCell(39, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(39, 3, 546);
 data.setCell(40, 0, 40)
-data.setCell(40, 1, 'verifyUsernamePlaceholder')
-data.setCell(40, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(40, 3, 122);
+data.setCell(40, 1, 'sendEmailToAllLeads')
+data.setCell(40, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(40, 3, 533);
 data.setCell(41, 0, 41)
-data.setCell(41, 1, 'verifyCounselorName')
-data.setCell(41, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(41, 3, 114);
+data.setCell(41, 1, 'selectCountry')
+data.setCell(41, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(41, 3, 512);
 data.setCell(42, 0, 42)
-data.setCell(42, 1, 'verifyRefreshLeadDataIconIsDisplayed')
-data.setCell(42, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(42, 3, 109);
+data.setCell(42, 1, 'selectCity')
+data.setCell(42, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(42, 3, 512);
 data.setCell(43, 0, 43)
-data.setCell(43, 1, 'verifyLenseIcon')
-data.setCell(43, 2, 'whitefeather.xedge.testcases.GlobalSearch')
-data.setCell(43, 3, 106);
+data.setCell(43, 1, 'selectSource')
+data.setCell(43, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(43, 3, 511);
 data.setCell(44, 0, 44)
-data.setCell(44, 1, 'verifyPasswordPlaceholder')
-data.setCell(44, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(44, 3, 103);
+data.setCell(44, 1, 'selectState')
+data.setCell(44, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(44, 3, 500);
 data.setCell(45, 0, 45)
-data.setCell(45, 1, 'verifyCallbackTabIsDisplayed')
-data.setCell(45, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(45, 3, 100);
+data.setCell(45, 1, 'selectPriority')
+data.setCell(45, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(45, 3, 472);
 data.setCell(46, 0, 46)
-data.setCell(46, 1, 'verifyLoginButton')
-data.setCell(46, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(46, 3, 99);
+data.setCell(46, 1, 'selectEntity3')
+data.setCell(46, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(46, 3, 472);
 data.setCell(47, 0, 47)
-data.setCell(47, 1, 'verifyUpcomingFollowupTabIsDisplayed')
-data.setCell(47, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(47, 3, 95);
+data.setCell(47, 1, 'selectChannel')
+data.setCell(47, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(47, 3, 446);
 data.setCell(48, 0, 48)
-data.setCell(48, 1, 'verifyGlobalSearchPlaceholder')
-data.setCell(48, 2, 'whitefeather.xedge.testcases.GlobalSearch')
-data.setCell(48, 3, 94);
+data.setCell(48, 1, 'verifyCompanyLogoInHeader')
+data.setCell(48, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(48, 3, 411);
 data.setCell(49, 0, 49)
-data.setCell(49, 1, 'verifyGlobalSearchBar')
-data.setCell(49, 2, 'whitefeather.xedge.testcases.GlobalSearch')
-data.setCell(49, 3, 92);
+data.setCell(49, 1, 'enterLoginId')
+data.setCell(49, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(49, 3, 407);
 data.setCell(50, 0, 50)
-data.setCell(50, 1, 'verifyEmailInputBox')
-data.setCell(50, 2, 'whitefeather.xedge.testcases.ForgotPassword')
-data.setCell(50, 3, 85);
+data.setCell(50, 1, 'verifyRecentOnlineTabCount')
+data.setCell(50, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(50, 3, 396);
 data.setCell(51, 0, 51)
-data.setCell(51, 1, 'verifyOnlineTabIsDisplayed')
-data.setCell(51, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(51, 3, 85);
+data.setCell(51, 1, 'verifyUpcomingWalkinsTabCount')
+data.setCell(51, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(51, 3, 373);
 data.setCell(52, 0, 52)
-data.setCell(52, 1, 'verifyUsernameLabel')
-data.setCell(52, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(52, 3, 85);
+data.setCell(52, 1, 'openForgotPasswordWindow')
+data.setCell(52, 2, 'whitefeather.xedge.testcases.ForgotPassword')
+data.setCell(52, 3, 328);
 data.setCell(53, 0, 53)
-data.setCell(53, 1, 'verifyHighPriorityTabIsDisplayed')
-data.setCell(53, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(53, 3, 85);
+data.setCell(53, 1, 'verifyOnlineTabCount')
+data.setCell(53, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(53, 3, 326);
 data.setCell(54, 0, 54)
-data.setCell(54, 1, 'verifyLoginLink')
-data.setCell(54, 2, 'whitefeather.xedge.testcases.ForgotPassword')
-data.setCell(54, 3, 80);
+data.setCell(54, 1, 'verifyNewTabCount')
+data.setCell(54, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(54, 3, 318);
 data.setCell(55, 0, 55)
-data.setCell(55, 1, 'verifyReferredFromMeTabIsDisplayed')
+data.setCell(55, 1, 'verifyEnrolledTabCount')
 data.setCell(55, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(55, 3, 78);
+data.setCell(55, 3, 310);
 data.setCell(56, 0, 56)
-data.setCell(56, 1, 'verifyGoButtonInGlobalSearchBar')
-data.setCell(56, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(56, 3, 78);
+data.setCell(56, 1, 'verifyUpcomingFollowupTabCount')
+data.setCell(56, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(56, 3, 308);
 data.setCell(57, 0, 57)
-data.setCell(57, 1, 'verifyRecoveryMessage')
-data.setCell(57, 2, 'whitefeather.xedge.testcases.ForgotPassword')
-data.setCell(57, 3, 78);
+data.setCell(57, 1, 'verifyAllTabCount')
+data.setCell(57, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(57, 3, 283);
 data.setCell(58, 0, 58)
-data.setCell(58, 1, 'verifyOutStandingActivityCount')
-data.setCell(58, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(58, 3, 78);
+data.setCell(58, 1, 'verifyReferredFromMeTabCount')
+data.setCell(58, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(58, 3, 281);
 data.setCell(59, 0, 59)
-data.setCell(59, 1, 'verifyPasswordLabel')
-data.setCell(59, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(59, 3, 78);
+data.setCell(59, 1, 'verifyHighPriorityTabCount')
+data.setCell(59, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(59, 3, 269);
 data.setCell(60, 0, 60)
-data.setCell(60, 1, 'verifyCounselorPhoto')
-data.setCell(60, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(60, 3, 77);
+data.setCell(60, 1, 'verifyClosedTabCount')
+data.setCell(60, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(60, 3, 269);
 data.setCell(61, 0, 61)
-data.setCell(61, 1, 'verifyDownloadDataIconIsDisplayed')
+data.setCell(61, 1, 'verifyAllTabIsDisplayed')
 data.setCell(61, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(61, 3, 74);
+data.setCell(61, 3, 263);
 data.setCell(62, 0, 62)
-data.setCell(62, 1, 'verifySendEmailToAllLeadsIconIsDisplayed')
+data.setCell(62, 1, 'verifyWalkinTabCount')
 data.setCell(62, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(62, 3, 74);
+data.setCell(62, 3, 263);
 data.setCell(63, 0, 63)
-data.setCell(63, 1, 'verifyPasswordWrapper')
-data.setCell(63, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(63, 3, 71);
+data.setCell(63, 1, 'clickAddLeadButton')
+data.setCell(63, 2, 'whitefeather.xedge.testcases.AddNewLeadWithAllValues')
+data.setCell(63, 3, 245);
 data.setCell(64, 0, 64)
-data.setCell(64, 1, 'verifyOutStandingActivityIcon')
-data.setCell(64, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(64, 3, 69);
+data.setCell(64, 1, 'verifyUsernamePlaceholder')
+data.setCell(64, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(64, 3, 238);
 data.setCell(65, 0, 65)
-data.setCell(65, 1, 'verifyClosedTabIsDisplayed')
+data.setCell(65, 1, 'verifyCallbackTabCount')
 data.setCell(65, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(65, 3, 69);
+data.setCell(65, 3, 237);
 data.setCell(66, 0, 66)
-data.setCell(66, 1, 'verifyCampaignIconIsDisplayed')
-data.setCell(66, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(66, 3, 69);
+data.setCell(66, 1, 'verifyUpcomingWalkinsTabIsDisplayed')
+data.setCell(66, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(66, 3, 234);
 data.setCell(67, 0, 67)
-data.setCell(67, 1, 'verifyJoyRideButton')
-data.setCell(67, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(67, 3, 69);
+data.setCell(67, 1, 'verifyPasswordLabel')
+data.setCell(67, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(67, 3, 229);
 data.setCell(68, 0, 68)
-data.setCell(68, 1, 'verifyReferAllLeadsIconIsDisplayed')
-data.setCell(68, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(68, 3, 69);
+data.setCell(68, 1, 'verifyPasswordWrapper')
+data.setCell(68, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(68, 3, 210);
 data.setCell(69, 0, 69)
-data.setCell(69, 1, 'verifyRecentOnlineTabIsDisplayed')
+data.setCell(69, 1, 'verifyRecentNewTabIsDisplayed')
 data.setCell(69, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(69, 3, 69);
+data.setCell(69, 3, 197);
 data.setCell(70, 0, 70)
-data.setCell(70, 1, 'verifyNewTabIsDisplayed')
-data.setCell(70, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(70, 3, 69);
+data.setCell(70, 1, 'verifyOutStandingActivityIcon')
+data.setCell(70, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(70, 3, 191);
 data.setCell(71, 0, 71)
-data.setCell(71, 1, 'verifyPasswordInputField')
+data.setCell(71, 1, 'enterLoginPassword')
 data.setCell(71, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(71, 3, 68);
+data.setCell(71, 3, 182);
 data.setCell(72, 0, 72)
-data.setCell(72, 1, 'verifyUpcomingWalkinsTabIsDisplayed')
-data.setCell(72, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
-data.setCell(72, 3, 68);
+data.setCell(72, 1, 'verifyLoginButton')
+data.setCell(72, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(72, 3, 166);
 data.setCell(73, 0, 73)
-data.setCell(73, 1, 'verifySignOutLink')
-data.setCell(73, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(73, 3, 65);
+data.setCell(73, 1, 'verifyEmailInputBox')
+data.setCell(73, 2, 'whitefeather.xedge.testcases.ForgotPassword')
+data.setCell(73, 3, 162);
 data.setCell(74, 0, 74)
-data.setCell(74, 1, 'verifyWalkinTabIsDisplayed')
+data.setCell(74, 1, 'verifyReferAllLeadsIconIsDisplayed')
 data.setCell(74, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(74, 3, 60);
+data.setCell(74, 3, 160);
 data.setCell(75, 0, 75)
-data.setCell(75, 1, 'verifySendSMSToAllLeadsIconIsDisplayed')
-data.setCell(75, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(75, 3, 56);
+data.setCell(75, 1, 'verifyPasswordPlaceholder')
+data.setCell(75, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(75, 3, 154);
 data.setCell(76, 0, 76)
-data.setCell(76, 1, 'verifyBulkUploadIcon')
+data.setCell(76, 1, 'verifyCounselorPhoto')
 data.setCell(76, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(76, 3, 51);
+data.setCell(76, 3, 153);
 data.setCell(77, 0, 77)
-data.setCell(77, 1, 'verifyCompanyLogo')
-data.setCell(77, 2, 'whitefeather.xedge.testcases.ForgotPassword')
-data.setCell(77, 3, 51);
+data.setCell(77, 1, 'verifyOnlineTabIsDisplayed')
+data.setCell(77, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(77, 3, 147);
 data.setCell(78, 0, 78)
-data.setCell(78, 1, 'verifyAddLeadPlusIcon')
-data.setCell(78, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
-data.setCell(78, 3, 51);
+data.setCell(78, 1, 'verifyNewTabIsDisplayed')
+data.setCell(78, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(78, 3, 140);
 data.setCell(79, 0, 79)
-data.setCell(79, 1, 'verifyEnrolledTabIsDisplayed')
-data.setCell(79, 2, 'whitefeather.xedge.testcases.LeadList')
-data.setCell(79, 3, 49);
+data.setCell(79, 1, 'verifySignOutLink')
+data.setCell(79, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(79, 3, 138);
 data.setCell(80, 0, 80)
-data.setCell(80, 1, 'verifyUsernameInputField')
-data.setCell(80, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(80, 3, 47);
+data.setCell(80, 1, 'verifyAddLeadPlusIcon')
+data.setCell(80, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(80, 3, 132);
 data.setCell(81, 0, 81)
-data.setCell(81, 1, 'verifyClientAccountLogo')
-data.setCell(81, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(81, 3, 42);
+data.setCell(81, 1, 'verifyGoButtonInGlobalSearchBar')
+data.setCell(81, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(81, 3, 124);
 data.setCell(82, 0, 82)
-data.setCell(82, 1, 'verifyRecoveryLabel')
-data.setCell(82, 2, 'whitefeather.xedge.testcases.ForgotPassword')
-data.setCell(82, 3, 38);
+data.setCell(82, 1, 'verifySendSMSToAllLeadsIconIsDisplayed')
+data.setCell(82, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(82, 3, 122);
+data.setCell(83, 0, 83)
+data.setCell(83, 1, 'verifyUsernameInputField')
+data.setCell(83, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(83, 3, 120);
+data.setCell(84, 0, 84)
+data.setCell(84, 1, 'verifyGlobalSearchBar')
+data.setCell(84, 2, 'whitefeather.xedge.testcases.GlobalSearch')
+data.setCell(84, 3, 119);
+data.setCell(85, 0, 85)
+data.setCell(85, 1, 'verifyOutStandingActivityCount')
+data.setCell(85, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(85, 3, 119);
+data.setCell(86, 0, 86)
+data.setCell(86, 1, 'verifyUsernameLabel')
+data.setCell(86, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(86, 3, 116);
+data.setCell(87, 0, 87)
+data.setCell(87, 1, 'verifyBulkUploadIcon')
+data.setCell(87, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(87, 3, 116);
+data.setCell(88, 0, 88)
+data.setCell(88, 1, 'verifyUpcomingFollowupTabIsDisplayed')
+data.setCell(88, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(88, 3, 115);
+data.setCell(89, 0, 89)
+data.setCell(89, 1, 'verifyPasswordInputField')
+data.setCell(89, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(89, 3, 113);
+data.setCell(90, 0, 90)
+data.setCell(90, 1, 'verifyRecentOnlineTabIsDisplayed')
+data.setCell(90, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(90, 3, 103);
+data.setCell(91, 0, 91)
+data.setCell(91, 1, 'verifyGlobalSearchPlaceholder')
+data.setCell(91, 2, 'whitefeather.xedge.testcases.GlobalSearch')
+data.setCell(91, 3, 102);
+data.setCell(92, 0, 92)
+data.setCell(92, 1, 'verifyCounselorName')
+data.setCell(92, 2, 'whitefeather.xedge.testcases.VerifyGlobalIcons')
+data.setCell(92, 3, 101);
+data.setCell(93, 0, 93)
+data.setCell(93, 1, 'verifyLoginLink')
+data.setCell(93, 2, 'whitefeather.xedge.testcases.ForgotPassword')
+data.setCell(93, 3, 100);
+data.setCell(94, 0, 94)
+data.setCell(94, 1, 'verifyLenseIcon')
+data.setCell(94, 2, 'whitefeather.xedge.testcases.GlobalSearch')
+data.setCell(94, 3, 100);
+data.setCell(95, 0, 95)
+data.setCell(95, 1, 'verifyCampaignIconIsDisplayed')
+data.setCell(95, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(95, 3, 92);
+data.setCell(96, 0, 96)
+data.setCell(96, 1, 'verifySendEmailToAllLeadsIconIsDisplayed')
+data.setCell(96, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(96, 3, 87);
+data.setCell(97, 0, 97)
+data.setCell(97, 1, 'verifyRefreshLeadDataIconIsDisplayed')
+data.setCell(97, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(97, 3, 87);
+data.setCell(98, 0, 98)
+data.setCell(98, 1, 'verifyRecoveryMessage')
+data.setCell(98, 2, 'whitefeather.xedge.testcases.ForgotPassword')
+data.setCell(98, 3, 85);
+data.setCell(99, 0, 99)
+data.setCell(99, 1, 'verifyEnrolledTabIsDisplayed')
+data.setCell(99, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(99, 3, 85);
+data.setCell(100, 0, 100)
+data.setCell(100, 1, 'verifyClosedTabIsDisplayed')
+data.setCell(100, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(100, 3, 84);
+data.setCell(101, 0, 101)
+data.setCell(101, 1, 'verifyHighPriorityTabIsDisplayed')
+data.setCell(101, 2, 'whitefeather.xedge.testcases.UpcomingTasks')
+data.setCell(101, 3, 82);
+data.setCell(102, 0, 102)
+data.setCell(102, 1, 'verifyReferredFromMeTabIsDisplayed')
+data.setCell(102, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(102, 3, 79);
+data.setCell(103, 0, 103)
+data.setCell(103, 1, 'verifyCompanyLogo')
+data.setCell(103, 2, 'whitefeather.xedge.testcases.ForgotPassword')
+data.setCell(103, 3, 77);
+data.setCell(104, 0, 104)
+data.setCell(104, 1, 'verifyDownloadDataIconIsDisplayed')
+data.setCell(104, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(104, 3, 77);
+data.setCell(105, 0, 105)
+data.setCell(105, 1, 'verifyWalkinTabIsDisplayed')
+data.setCell(105, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(105, 3, 69);
+data.setCell(106, 0, 106)
+data.setCell(106, 1, 'verifyGoButton')
+data.setCell(106, 2, 'whitefeather.xedge.testcases.GlobalSearch')
+data.setCell(106, 3, 69);
+data.setCell(107, 0, 107)
+data.setCell(107, 1, 'verifyClientAccountLogo')
+data.setCell(107, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
+data.setCell(107, 3, 63);
+data.setCell(108, 0, 108)
+data.setCell(108, 1, 'verifyCallbackTabIsDisplayed')
+data.setCell(108, 2, 'whitefeather.xedge.testcases.LeadList')
+data.setCell(108, 3, 54);
+data.setCell(109, 0, 109)
+data.setCell(109, 1, 'verifyRecoveryLabel')
+data.setCell(109, 2, 'whitefeather.xedge.testcases.ForgotPassword')
+data.setCell(109, 3, 47);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -1746,18 +2229,6 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUpcomingFollowupTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Upcoming Followup Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyOutStandingActivityIcon</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">OutStanding Activity Icon in header is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">downloadLeadsData</span>
               <div class="reporter-method-output-div">
@@ -1771,9 +2242,154 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyEnrolledTabIsDisplayed</span>
+              <span class="reporter-method-name">verifyJoyRideButton</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Enrolled Tab is displayed.</span>
+                <span class="reporter-method-output">Web page is refreshed.</span>
+                <span class="reporter-method-output">JoyRide button is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectCountry</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Country value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyGoButtonInGlobalSearchBar</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Go Button in header is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterLastName</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has entered Last Name successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectField5</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Field5 value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">referAllLeads</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has referred all leads successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectField1</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Field1 value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectReason</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Reason value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRecoveryMessage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Recovery Message on Forgot Password is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyClosedTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Closed Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyLeadListPageURL</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Lead List Page URL is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">clickAddLeadPlusIcon</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has clicked Add Lead icon.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyOnlineTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Online Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">filterLeadsData</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has successfully filtered the leads data.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyCompanyLogo</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Company Logo on Forgot Password is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">sendSMSToAllLeads</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has sent SMS to all leads successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifySendEmailToAllLeadsIconIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Send Email To All Icon is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterEmailAddress</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has entered Email Address successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyNewTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">New Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyEnrolledTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Enrolled Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectLeadContactable</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Lead Contactable value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyHighPriorityTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">High Priority Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterFirstName</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has entered First Name successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRecentNewTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Recent New Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectState</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided State value successfully.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -1785,431 +2401,9 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">enterLoginPassword(test)</span>
+              <span class="reporter-method-name">selectField4</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Password is entered successfully.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyPasswordPlaceholder</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">'Password' placeholder is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">addNewCampaign</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has successfully added new campaign.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyOnlineTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Online Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyReferredFromMeTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Referred From Me Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyBulkUploadIcon</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Bulk Upload icon is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyEmailInputBox</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Email Input Box on Forgot Password is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyClosedTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Closed Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyClosedTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Closed Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyDownloadDataIconIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Download Leads Data Icon is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyGoButtonInGlobalSearchBar</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Go Button in header is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyCounselorPhoto</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Counselor Photo in header is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyGlobalSearchPlaceholder</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Global Search placeholder is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyCompanyLogoInHeader</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Company Logo in header is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyReferredFromMeTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Referred From Me Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyCampaignIconIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Campaign Icon is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyOnlineTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Online Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyRecoveryMessage</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Recovery Message on Forgot Password is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyLoginButton</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Login Button is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyAllTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">All Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyCompanyLogo</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Company Logo on Forgot Password is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyNewTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">New Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyClientAccountLogo</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Client Company Logo is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyFilterLeadsIconIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Filter Leads Data Icon is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyWalkinTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Walkin Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUsernameInputField</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">'Username' input field is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyEnrolledTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Enrolled Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyOutStandingActivityCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">OutStanding Activity Count in header is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyCounselorName</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Counselor Name in header is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUpcomingWalkinsTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Upcoming Walkins Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">performGlobalSearch</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Specified user details are successfully located in the system.</span>
-                <span class="reporter-method-output">Screenshot is taken and stored at specified location successfully.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">refreshWebPage</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Web page is refreshed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyAllTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">All Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyRecentNewTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Recent New Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">clickAddLeadPlusIcon</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has clicked Add Lead icon.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyWalkinTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Walkin Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">sendEmailToAllLeads</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has sent Email to all leads successfully.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">openForgotPasswordWindow</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has clicked Forgot Password Link on Login window.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyCallbackTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Callback Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">endTestSuite</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Test report has been sent to intended recepeints successfully</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyPasswordInputField</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">'Password' input field is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyLoginPageBackground</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Background Image on Login Page is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyLenseIcon</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Global Search Lense Icon is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyRecentOnlineTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Recent Online Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUpcomingFollowupTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Upcoming Followup Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">clickAddLeadButton</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has clicked Add Lead button on RHS panel.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyPasswordWrapper</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Password wrapper is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyCallbackTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Callback Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyRefreshLeadDataIconIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Send Email To All Icon is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyJoyRideButton</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">JoyRide button is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyReferAllLeadsIconIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Refer All Leads Icon is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">sendSMSToAllLeads</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has sent SMS to all leads successfully.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUsernameLabel</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">'Username' label is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">enterLoginId(counselorshekhar@gmail.com)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Username is entered successfully.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">filterLeadsData</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has successfully filtered the leads data.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyRecentNewTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Recent New Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">enterProspectEmailID</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has entered email address successfully</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">enterRecoveryEmail(counselorshekhar@gmail.com)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Web page is refreshed.</span>
-                <span class="reporter-method-output">Reset Password Link is successfully sent to provided email address</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifySendSMSToAllLeadsIconIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Send SMS To All Icon is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyGoButton</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Global Search Go button is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyPasswordLabel</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">'Password' label is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">referAllLeads</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has referred all leads successfully.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifySendEmailToAllLeadsIconIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Send Email To All Icon is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyHighPriorityTabCount</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">High Priority Tab Count displayed is correct.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyRecoveryLabel</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Recovery Label on Forgot Password is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyAddLeadPlusIcon</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Add LeadPlus icon is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">enterProspectMobileNo</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has entered mobile number successfully</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyRecentOnlineTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Recent Online Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyNewTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">New Tab is displayed.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUsernamePlaceholder</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">'Username' placeholder is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUpcomingWalkinsTabIsDisplayed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Upcoming Walkins Tab is displayed.</span>
+                <span class="reporter-method-output">User has provided Field4 value successfully.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -2220,15 +2414,45 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyHighPriorityTabIsDisplayed</span>
+              <span class="reporter-method-name">verifyAllTabIsDisplayed</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">High Priority Tab is displayed.</span>
+                <span class="reporter-method-output">All Tab is displayed.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyLeadListPageURL</span>
+              <span class="reporter-method-name">selectBestCall</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Lead List Page URL is correct.</span>
+                <span class="reporter-method-output">User has provided Best Call value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUpcomingWalkinsTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Upcoming Walkins Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyCounselorPhoto</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Counselor Photo in header is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyOutStandingActivityIcon</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">OutStanding Activity Icon in header is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">endTestSuite</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test report has been sent to intended recepeints successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyCallbackTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Callback Tab Count displayed is correct.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -2238,15 +2462,437 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyLoginLink</span>
+              <span class="reporter-method-name">verifyNewTabIsDisplayed</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Login Link on Forgot Password is displayed</span>
+                <span class="reporter-method-output">New Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyReferredFromMeTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Referred From Me Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUsernameInputField</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Username' input field is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyOnlineTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Online Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectStatus</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Status value successfully.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">verifyGlobalSearchBar</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Global Search Bar is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyLoginLink</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Login Link on Forgot Password is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">addNewCampaign</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has successfully added new campaign.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyLoginPageBackground</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Background Image on Login Page is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">clickAddLeadButton</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has clicked on Add Lead button successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyHighPriorityTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">High Priority Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectField2</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Field2 value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterHighestQualification</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has entered Highest Qualification successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectCity</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided City value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyReferredFromMeTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Referred From Me Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyCompanyLogoInHeader</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Company Logo in header is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRecentNewTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Recent New Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyAddLeadPlusIcon</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Add LeadPlus icon is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectPriority</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Priority value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUpcomingFollowupTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Upcoming Followup Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUpcomingFollowupTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Upcoming Followup Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUpcomingWalkinsTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Upcoming Walkins Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">refreshWebPage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Web page is refreshed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectEntity3</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Entity3 value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordWrapper</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Password wrapper is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterLeadComment</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided City value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectEntity1</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Entity1 value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordInputField</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Password' input field is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyLoginButton</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Login Button is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordLabel</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Password' label is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectEntity4</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Entity4 value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyCampaignIconIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Campaign Icon is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyCallbackTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Callback Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectMobileVerified</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Mobile Verified value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyWalkinTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Walkin Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">openForgotPasswordWindow</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has clicked Forgot Password Link on Login window.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyEmailInputBox</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Email Input Box on Forgot Password is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectEntity2</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Entity2 value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyWalkinTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Walkin Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRecentOnlineTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Recent Online Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">sendEmailToAllLeads</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has sent Email to all leads successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectChannel</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Channel value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterLoginPassword(test)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Password is entered successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyClientAccountLogo</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Client Company Logo is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectField3</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Field3 value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRecentOnlineTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Recent Online Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyFilterLeadsIconIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Filter Leads Data Icon is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifySendSMSToAllLeadsIconIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Send SMS To All Icon is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRefreshLeadDataIconIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Send Email To All Icon is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUsernameLabel</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Username' label is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyRecoveryLabel</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Recovery Label on Forgot Password is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyReferAllLeadsIconIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Refer All Leads Icon is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyAllTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">All Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyGlobalSearchPlaceholder</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Global Search placeholder is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyBulkUploadIcon</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Bulk Upload icon is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyEnrolledTabIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Enrolled Tab is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterMobileNumber</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has entered Mobile Number successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectReferredTo</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided ReferredTo value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordPlaceholder</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Password' placeholder is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterLoginId(counselorshekhar@gmail.com)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Username is entered successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyCounselorName</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Counselor Name in header is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyGoButton</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Global Search Go button is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUsernamePlaceholder</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Username' placeholder is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectSource</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Source value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyDownloadDataIconIsDisplayed</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Download Leads Data Icon is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectSeason</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Season value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterRecoveryEmail(counselorshekhar@gmail.com)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Web page is refreshed.</span>
+                <span class="reporter-method-output">Reset Password Link is successfully sent to provided email address</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyLenseIcon</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Global Search Lense Icon is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">selectLeadQualified</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">User has provided Lead Qualified value successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyOutStandingActivityCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">OutStanding Activity Count in header is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyClosedTabCount</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Closed Tab Count displayed is correct.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">performGlobalSearch</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Screenshot is taken and stored at specified location successfully.</span>
+                <span class="reporter-method-output">No results found for provided string.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -2285,369 +2931,479 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">openLoginPage(https://extraaedge-stagingwebsite-qa.azurewebsites.net/)</span>
-                <span class="method-start">36 ms</span>
+                <span class="method-start">38 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.ForgotPassword</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">openForgotPasswordWindow</span>
-                <span class="method-start">53393 ms</span>
+                <span class="method-start">53087 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCompanyLogo</span>
-                <span class="method-start">53743 ms</span>
+                <span class="method-start">53548 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyRecoveryLabel</span>
-                <span class="method-start">53894 ms</span>
+                <span class="method-start">53829 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyRecoveryMessage</span>
-                <span class="method-start">54016 ms</span>
+                <span class="method-start">53995 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyEmailInputBox</span>
-                <span class="method-start">54179 ms</span>
+                <span class="method-start">54180 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginLink</span>
-                <span class="method-start">54333 ms</span>
+                <span class="method-start">54458 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterRecoveryEmail(counselorshekhar@gmail.com)</span>
-                <span class="method-start">54471 ms</span>
+                <span class="method-start">54696 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.PerformLoginAction</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageBackground</span>
-                <span class="method-start">60247 ms</span>
+                <span class="method-start">60930 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyClientAccountLogo</span>
-                <span class="method-start">61373 ms</span>
+                <span class="method-start">62087 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUsernameLabel</span>
-                <span class="method-start">61477 ms</span>
+                <span class="method-start">62219 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUsernamePlaceholder</span>
-                <span class="method-start">61675 ms</span>
+                <span class="method-start">62499 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordLabel</span>
-                <span class="method-start">61860 ms</span>
+                <span class="method-start">62820 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordPlaceholder</span>
-                <span class="method-start">62007 ms</span>
+                <span class="method-start">63139 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUsernameInputField</span>
-                <span class="method-start">62152 ms</span>
+                <span class="method-start">63435 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordInputField</span>
-                <span class="method-start">62252 ms</span>
+                <span class="method-start">63662 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordWrapper</span>
-                <span class="method-start">62381 ms</span>
+                <span class="method-start">63854 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterLoginId(counselorshekhar@gmail.com)</span>
-                <span class="method-start">62521 ms</span>
+                <span class="method-start">64134 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterLoginPassword(test)</span>
-                <span class="method-start">62996 ms</span>
+                <span class="method-start">64600 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginButton</span>
-                <span class="method-start">63214 ms</span>
+                <span class="method-start">64914 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickLoginButton</span>
-                <span class="method-start">63364 ms</span>
+                <span class="method-start">65155 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.Refresh_Page</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">refreshWebPage</span>
-                <span class="method-start">66833 ms</span>
+                <span class="method-start">68724 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.VerifyGlobalIcons</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyCompanyLogoInHeader</span>
-                <span class="method-start">69781 ms</span>
+                <span class="method-start">72759 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyGoButtonInGlobalSearchBar</span>
-                <span class="method-start">70182 ms</span>
+                <span class="method-start">73242 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyOutStandingActivityIcon</span>
-                <span class="method-start">70360 ms</span>
+                <span class="method-start">73445 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyOutStandingActivityCount</span>
-                <span class="method-start">70483 ms</span>
+                <span class="method-start">73705 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCounselorName</span>
-                <span class="method-start">70620 ms</span>
+                <span class="method-start">73886 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCounselorPhoto</span>
-                <span class="method-start">70779 ms</span>
+                <span class="method-start">74056 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySignOutLink</span>
-                <span class="method-start">70901 ms</span>
+                <span class="method-start">74287 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyBulkUploadIcon</span>
-                <span class="method-start">71013 ms</span>
+                <span class="method-start">74488 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAddLeadPlusIcon</span>
-                <span class="method-start">71114 ms</span>
+                <span class="method-start">74710 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyJoyRideButton</span>
-                <span class="method-start">71212 ms</span>
+                <span class="method-start">74910 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.OpenAddLeadRHSPanel</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clickAddLeadPlusIcon</span>
-                <span class="method-start">71334 ms</span>
+                <span class="method-start">77876 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">whitefeather.xedge.testcases.AddNewLeadDefaultValues_1</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">whitefeather.xedge.testcases.AddNewLeadWithAllValues</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">enterProspectEmailID</span>
-                <span class="method-start">71715 ms</span>
+                <span class="method-name">enterFirstName</span>
+                <span class="method-start">80575 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">enterProspectMobileNo</span>
-                <span class="method-start">72597 ms</span>
+                <span class="method-name">enterLastName</span>
+                <span class="method-start">82460 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterEmailAddress</span>
+                <span class="method-start">83990 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterMobileNumber</span>
+                <span class="method-start">86518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterHighestQualification</span>
+                <span class="method-start">88312 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectSeason</span>
+                <span class="method-start">90813 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectSource</span>
+                <span class="method-start">91494 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectChannel</span>
+                <span class="method-start">92062 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectPriority</span>
+                <span class="method-start">92547 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectStatus</span>
+                <span class="method-start">93080 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectReason</span>
+                <span class="method-start">93698 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectReferredTo</span>
+                <span class="method-start">94469 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectEntity1</span>
+                <span class="method-start">95181 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectEntity2</span>
+                <span class="method-start">95840 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectEntity3</span>
+                <span class="method-start">96429 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectEntity4</span>
+                <span class="method-start">96981 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectBestCall</span>
+                <span class="method-start">97753 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectLeadQualified</span>
+                <span class="method-start">98487 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectLeadContactable</span>
+                <span class="method-start">99206 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectMobileVerified</span>
+                <span class="method-start">100050 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectField1</span>
+                <span class="method-start">100925 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectField2</span>
+                <span class="method-start">101624 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectField3</span>
+                <span class="method-start">102375 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectField4</span>
+                <span class="method-start">103119 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectField5</span>
+                <span class="method-start">103888 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectCountry</span>
+                <span class="method-start">104530 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectState</span>
+                <span class="method-start">105089 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectCity</span>
+                <span class="method-start">105648 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterLeadComment</span>
+                <span class="method-start">106226 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickAddLeadButton</span>
-                <span class="method-start">73151 ms</span>
+                <span class="method-start">127733 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.GlobalSearch</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyGlobalSearchBar</span>
-                <span class="method-start">74796 ms</span>
+                <span class="method-start">128046 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyGlobalSearchPlaceholder</span>
-                <span class="method-start">74944 ms</span>
+                <span class="method-start">128214 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLenseIcon</span>
-                <span class="method-start">75087 ms</span>
+                <span class="method-start">128367 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyGoButton</span>
-                <span class="method-start">75244 ms</span>
+                <span class="method-start">128514 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">performGlobalSearch</span>
-                <span class="method-start">76421 ms</span>
+                <span class="method-start">128630 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.UpcomingTasks</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyDashboardURL</span>
-                <span class="method-start">81774 ms</span>
+                <span class="method-start">139311 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyRecentNewTabIsDisplayed</span>
-                <span class="method-start">88577 ms</span>
+                <span class="method-start">146970 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyRecentNewTabCount</span>
-                <span class="method-start">88793 ms</span>
+                <span class="method-start">147221 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyRecentOnlineTabIsDisplayed</span>
-                <span class="method-start">89742 ms</span>
+                <span class="method-start">148119 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyRecentOnlineTabCount</span>
-                <span class="method-start">89865 ms</span>
+                <span class="method-start">148287 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUpcomingFollowupTabIsDisplayed</span>
-                <span class="method-start">90295 ms</span>
+                <span class="method-start">148752 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUpcomingFollowupTabCount</span>
-                <span class="method-start">90437 ms</span>
+                <span class="method-start">148935 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUpcomingWalkinsTabIsDisplayed</span>
-                <span class="method-start">90789 ms</span>
+                <span class="method-start">149327 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUpcomingWalkinsTabCount</span>
-                <span class="method-start">90889 ms</span>
+                <span class="method-start">149653 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyHighPriorityTabIsDisplayed</span>
-                <span class="method-start">91327 ms</span>
+                <span class="method-start">150110 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyHighPriorityTabCount</span>
-                <span class="method-start">91459 ms</span>
+                <span class="method-start">150226 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.LeadList</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyLeadListPageURL</span>
-                <span class="method-start">91821 ms</span>
+                <span class="method-start">150558 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAllTabIsDisplayed</span>
-                <span class="method-start">95177 ms</span>
+                <span class="method-start">153915 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAllTabCount</span>
-                <span class="method-start">95444 ms</span>
+                <span class="method-start">154247 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyNewTabIsDisplayed</span>
-                <span class="method-start">95812 ms</span>
+                <span class="method-start">154690 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyNewTabCount</span>
-                <span class="method-start">95912 ms</span>
+                <span class="method-start">154898 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCallbackTabIsDisplayed</span>
-                <span class="method-start">96250 ms</span>
+                <span class="method-start">155504 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCallbackTabCount</span>
-                <span class="method-start">96397 ms</span>
+                <span class="method-start">155620 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyWalkinTabIsDisplayed</span>
-                <span class="method-start">96813 ms</span>
+                <span class="method-start">155920 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyWalkinTabCount</span>
-                <span class="method-start">96914 ms</span>
+                <span class="method-start">156042 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyEnrolledTabIsDisplayed</span>
-                <span class="method-start">97222 ms</span>
+                <span class="method-start">156358 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyEnrolledTabCount</span>
-                <span class="method-start">97334 ms</span>
+                <span class="method-start">156505 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyClosedTabIsDisplayed</span>
-                <span class="method-start">97703 ms</span>
+                <span class="method-start">156869 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyClosedTabCount</span>
-                <span class="method-start">97819 ms</span>
+                <span class="method-start">157016 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyOnlineTabIsDisplayed</span>
-                <span class="method-start">98188 ms</span>
+                <span class="method-start">157385 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyOnlineTabCount</span>
-                <span class="method-start">98313 ms</span>
+                <span class="method-start">157614 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyReferredFromMeTabIsDisplayed</span>
-                <span class="method-start">98642 ms</span>
+                <span class="method-start">158016 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyReferredFromMeTabCount</span>
-                <span class="method-start">98758 ms</span>
+                <span class="method-start">158164 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCampaignIconIsDisplayed</span>
-                <span class="method-start">99090 ms</span>
+                <span class="method-start">158567 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addNewCampaign</span>
-                <span class="method-start">99206 ms</span>
+                <span class="method-start">158734 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyReferAllLeadsIconIsDisplayed</span>
-                <span class="method-start">99775 ms</span>
+                <span class="method-start">159563 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">referAllLeads</span>
-                <span class="method-start">99876 ms</span>
+                <span class="method-start">159845 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySendSMSToAllLeadsIconIsDisplayed</span>
-                <span class="method-start">100246 ms</span>
+                <span class="method-start">160526 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sendSMSToAllLeads</span>
-                <span class="method-start">100340 ms</span>
+                <span class="method-start">160717 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySendEmailToAllLeadsIconIsDisplayed</span>
-                <span class="method-start">100713 ms</span>
+                <span class="method-start">161403 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sendEmailToAllLeads</span>
-                <span class="method-start">100863 ms</span>
+                <span class="method-start">161563 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyRefreshLeadDataIconIsDisplayed</span>
-                <span class="method-start">101497 ms</span>
+                <span class="method-start">162172 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDownloadDataIconIsDisplayed</span>
-                <span class="method-start">101658 ms</span>
+                <span class="method-start">162328 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">downloadLeadsData</span>
-                <span class="method-start">101795 ms</span>
+                <span class="method-start">162475 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFilterLeadsIconIsDisplayed</span>
-                <span class="method-start">102283 ms</span>
+                <span class="method-start">163199 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">filterLeadsData</span>
-                <span class="method-start">102895 ms</span>
+                <span class="method-start">163871 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.EndTesting</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">endTestSuite</span>
-                <span class="method-start">103846 ms</span>
+                <span class="method-start">164836 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">endTestSuite</span>
-                <span class="method-start">112499 ms</span>
+                <span class="method-start">172388 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

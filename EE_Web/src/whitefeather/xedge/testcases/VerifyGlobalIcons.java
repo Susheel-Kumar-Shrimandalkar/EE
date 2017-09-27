@@ -131,6 +131,7 @@ public class VerifyGlobalIcons extends HelperHand
 	{
 		try {
 			Assert.assertTrue(GlobalIcons.displayJoyRideButton().isDisplayed(), "JoyRide button is displayed");
+			Refresh_Page.refreshWebPage();
 			Reporter.log("JoyRide button is displayed",true);
 		} catch (Exception e) {
 			Assert.fail();

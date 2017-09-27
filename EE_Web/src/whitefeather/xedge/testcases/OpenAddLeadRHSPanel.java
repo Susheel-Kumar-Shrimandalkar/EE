@@ -12,6 +12,7 @@ public class OpenAddLeadRHSPanel extends HelperHand
 	public static void clickAddLeadPlusIcon()
 	{
 		try {
+			Thread.sleep(2000);
 			GlobalIcons.displayAddLeadPlusIcon().click();
 			Reporter.log("User has clicked Add Lead icon.",true);
 		} catch (Exception e) {
