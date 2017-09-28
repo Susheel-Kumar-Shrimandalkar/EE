@@ -1,10 +1,12 @@
 package whitefeather.xedge.core;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import whitefeather.xedge.appconfig.Constants;
 import whitefeather.xedge.appconfig.ObjectMapping;
 import whitefeather.xedge.facilitator.HelperHand;
+import whitefeather.xedge.testcases.AddNewLeadWithAllValues;
 
 public class GlobalIcons extends HelperHand
 {
@@ -124,6 +126,17 @@ public class GlobalIcons extends HelperHand
 	{
 			try {
 				element = driver.findElement(properties.selectLocator("AddLeadPlusIcon"));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return element;	
+	}
+	
+	public static WebElement openEditLeadPanel()
+	{
+			try {
+				Thread.sleep(2000);
+				element = driver.findElement(By.xpath(".//span[contains(text(),'"+AddNewLeadWithAllValues.globalSearchLeadName+"')]"));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

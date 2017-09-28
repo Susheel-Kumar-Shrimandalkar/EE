@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import whitefeather.xedge.appconfig.ConfigMethods;
 import whitefeather.xedge.appservices.EmailerService;
 import whitefeather.xedge.core.DataGenerator;
+import whitefeather.xedge.testcases.AddNewLeadWithAllValues;
 
 
 public class HelperHand
@@ -25,6 +26,7 @@ public class HelperHand
 	public static String prospectName=DataGenerator.generateFirstName();
 	public static String currectDate = DataGenerator.getDate();
 	public static String currectTime = DataGenerator.getTime();
+//	public static String globalSearch=AddNewLeadWithAllValues.prospectEmail;
 
 	public void setUpTestSuit(String browser) 
 	{
@@ -35,7 +37,7 @@ public class HelperHand
 	public void setDownTestSuit() throws IOException, InterruptedException 
 	{
 		// close the browser
-		driver.quit();
+//		driver.quit();
 		EmailerService.SendTestReport();
 	}
 	

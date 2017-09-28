@@ -6,11 +6,31 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import whitefeather.xedge.appconfig.ConfigMethods;
+import whitefeather.xedge.core.CloseIconRHSPanels;
+import whitefeather.xedge.core.DataGenerator;
+import whitefeather.xedge.core.GlobalIcons;
 import whitefeather.xedge.core.Page_AddNewLead;
 import whitefeather.xedge.facilitator.HelperHand;
 
 public class AddNewLeadWithAllValues extends HelperHand
 {
+	public static final String globalSearchLeadEmail = prospectEmail;
+	public static final String globalSearchLeadName = prospectName;
+	
+	@Test
+	public static void clickAddLeadPlusIcon()
+	{
+		try {
+			Thread.sleep(2000);
+			GlobalIcons.displayAddLeadPlusIcon().click();
+			Thread.sleep(2000);
+			Reporter.log("User has clicked Add Lead icon.",true);
+		} catch (Exception e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to click Add Lead icon.",true);
+		}
+	}
+	
 	@Test
 	public static void enterFirstName()
 	{
@@ -40,8 +60,9 @@ public class AddNewLeadWithAllValues extends HelperHand
 	public static void enterEmailAddress()
 	{
 		try {
-			Page_AddNewLead.displayEmailInputField().sendKeys(prospectEmail);
-			//Handle Existing Email  scenario later
+//			Page_AddNewLead.displayEmailInputField().sendKeys(DataGenerator.randomEmailGenerator());
+			Page_AddNewLead.displayEmailInputField().sendKeys(globalSearchLeadEmail);
+			//Handle Email Exists scenario later
 			Reporter.log("User has entered Email Address successfully",true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -53,8 +74,8 @@ public class AddNewLeadWithAllValues extends HelperHand
 	public static void enterMobileNumber()
 	{
 		try {
-			Page_AddNewLead.displayMobileInputField().sendKeys(prospectMobile);
-			//Handle Existing Mobile scenario later
+			Page_AddNewLead.displayMobileInputField().sendKeys(Long.toString(DataGenerator.randomMobileNumberGenerator()));
+			//Handle Mobile Exists scenario later
 			Reporter.log("User has entered Mobile Number successfully",true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -78,7 +99,6 @@ public class AddNewLeadWithAllValues extends HelperHand
 	public static void selectSeason()
 	{
 		try {
-			Page_AddNewLead.displaySelectSeasonDropdown().click();
 			ConfigMethods.selectValueFromDropDown(Page_AddNewLead.displaySelectSeasonDropdown(),Page_AddNewLead.driver);
 			Reporter.log("User has provided Season value successfully.",true);
 		} catch (Exception e) {
@@ -160,11 +180,11 @@ public class AddNewLeadWithAllValues extends HelperHand
 			Action seriesOfActions = builder
 		              .moveToElement(Page_AddNewLead.displaySelectReferredToDropdown())
 		              .click()
-		              .sendKeys(Keys.DOWN)
+		              /*.sendKeys(Keys.DOWN)
 		              .sendKeys(Keys.DOWN)//Number of Down Key Press = Position of value from drop down
 		              .sendKeys(Keys.DOWN)
 		              .sendKeys(Keys.DOWN)
-		              .sendKeys(Keys.DOWN)
+		              .sendKeys(Keys.DOWN)*/
 		              .sendKeys(Keys.RETURN)
 		              .build();
 			seriesOfActions.perform();
@@ -374,7 +394,7 @@ public class AddNewLeadWithAllValues extends HelperHand
 	public static void enterLeadComment()
 	{
 		try {
-			Page_AddNewLead.displayCommentInputField().sendKeys("Comments for :"+"\n"+"Lead Name: "+prospectName+"\n"+"Lead Email: "+prospectEmail);
+			Page_AddNewLead.displayCommentInputField().sendKeys("Comments for :"+"\n"+"Lead Name: "+globalSearchLeadName+"\n"+"Lead Email: "+globalSearchLeadEmail);
 			Reporter.log("User has provided City value successfully.",true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -391,6 +411,51 @@ public class AddNewLeadWithAllValues extends HelperHand
 		} catch (Exception e) {
 			e.printStackTrace();
 			Reporter.log("User has failed to click on Add Lead button.",true);
+		}
+	}
+	
+	
+	/*try {
+		try {
+			Page_AddNewLead.displayAddLeadButton().click();
+			Reporter.log("User has clicked on Add Lead button successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) 
+		{
+			try {
+				if(Page_AddNewLead.displayEmailExistsErrorMessage().isDisplayed())
+				{
+					Page_AddNewLead.displayEmailInputField().clear();
+					Page_AddNewLead.displayEmailInputField().sendKeys(DataGenerator.randomEmailGenerator());
+					Page_AddNewLead.displayAddLeadButton().click();
+				}
+			} catch (org.openqa.selenium.NoSuchElementException e1) 
+			{
+				if(Page_AddNewLead.displayMobileExistsErrorMessage().isDisplayed())
+				{
+					Page_AddNewLead.displayMobileInputField().clear();
+					Page_AddNewLead.displayMobileInputField().sendKeys(Long.toString(DataGenerator.randomMobileNumberGenerator()));
+					Page_AddNewLead.displayAddLeadButton().click();
+				}
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+			
+		}
+	} catch (Exception e) {
+		Reporter.log("User has failed to click on Add Lead button.",true);
+		e.printStackTrace();
+	}*/
+	
+	@Test
+	public static void closeRHSPanel() throws InterruptedException
+	{
+		try {
+			Thread.sleep(3000);		
+			CloseIconRHSPanels.displayCloseIcon().click();
+			Reporter.log("User has clicked Close(X) button on RHS panel.",true);
+		} catch (Exception e) {
+			Reporter.log("User has failed to click Close(X) button on RHS panel.",true);
+			e.printStackTrace();
 		}
 	}
 }

@@ -120,7 +120,7 @@ public class Page_GlobalSearch extends HelperHand
 					try {
 						switchCounter=2;
 						caseValues[switchCounter] = displayResultPageText().getText();
-						visibleFlag = true;
+						visibleFlag = true;//As of now, we have considered result on NULL input as PASS case and hence flag is set to True
 					} catch (org.openqa.selenium.NoSuchElementException e) {
 						e.printStackTrace();
 					}

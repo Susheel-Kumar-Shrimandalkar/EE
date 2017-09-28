@@ -50,6 +50,7 @@ public class ConfigMethods extends RootDriver
 	              .build();
 		seriesOfActions.perform();
 	}
+	
 	public static void waitForPageToLoad() 
 	{
         ExpectedCondition<Boolean> expectation = new

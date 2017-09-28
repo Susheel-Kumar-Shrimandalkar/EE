@@ -1,6 +1,9 @@
 package whitefeather.xedge.core;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import whitefeather.xedge.appconfig.Constants;
 import whitefeather.xedge.appconfig.ObjectMapping;
 import whitefeather.xedge.facilitator.HelperHand;
@@ -40,10 +43,30 @@ public class Page_AddNewLead extends HelperHand
 		return element;
 	}
 	
+	public static WebElement displayEmailExistsErrorMessage() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("AddLead_EmailExistsError"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
 	public static WebElement displayMobileInputField() throws Exception
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("AddLead_mobileNumber"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public static WebElement displayMobileExistsErrorMessage() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("AddLead_MobileExistsError"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -63,6 +86,8 @@ public class Page_AddNewLead extends HelperHand
 	public static WebElement displaySelectSeasonDropdown() throws Exception
 	{
 		try {
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("AddLead_SelectSeason")));
 			element = driver.findElement(properties.selectLocator("AddLead_SelectSeason"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();

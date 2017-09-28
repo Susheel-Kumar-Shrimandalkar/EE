@@ -14,7 +14,8 @@ public class CloseIconRHSPanels extends HelperHand
 	public static WebElement displayCloseIcon()
 	{
 		try {
-			element = driver.findElement(properties.selectLocator("CloseIconRHSPanels"));
+			Thread.sleep(1000);
+			element = driver.findElement(properties.selectLocator("CloseIconRHSPanels1"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
