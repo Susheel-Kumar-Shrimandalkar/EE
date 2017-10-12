@@ -6,14 +6,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.SQLException;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import whitefeather.xedge.appconfig.ConfigMethods;
+import whitefeather.xedge.appservices.DatabaseManager;
 import whitefeather.xedge.appservices.EmailerService;
 import whitefeather.xedge.core.DataGenerator;
-import whitefeather.xedge.testcases.AddNewLeadWithAllValues;
+
 
 
 public class HelperHand
@@ -21,11 +24,18 @@ public class HelperHand
 	protected static  WebDriver driver = RootDriver.driver;
 	public static boolean visibleFlag;
 	public static String helperString="";
+	
 	public static String prospectEmail = DataGenerator.randomEmailGenerator();
 	public static String prospectMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static String prospectName=DataGenerator.generateFirstName();
+	
 	public static String currectDate = DataGenerator.getDate();
 	public static String currectTime = DataGenerator.getTime();
+	
+	public static final String thirdPartyLeadEmail = DataGenerator.randomEmailGenerator();
+	public static final String thirdPartyLeadFullName = DataGenerator.generateFirstName();
+	public static final String thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	
 //	public static String globalSearch=AddNewLeadWithAllValues.prospectEmail;
 
 	public void setUpTestSuit(String browser) 
@@ -64,6 +74,9 @@ public class HelperHand
              FileUtils.copyFile(scrFile, new File(CreateReportDirectory(),fileName+currectDate+"_"+currectTime+".png"));
      }
 	
-	 
+	 public static String getPRN() throws SQLException
+	 {
+		 return DatabaseManager.getPRNofLeadAddedThroughAppForm();
+	 }
 }
 

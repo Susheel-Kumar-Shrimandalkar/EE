@@ -42,6 +42,24 @@ public class UpcomingTasks extends HelperHand
 		}
 	}
 	
+	
+	
+	/*@Test
+	@Parameters({"Dashboard_URL"})
+	public static void verifyRecentNewTabCount()
+	{
+		try {
+			Assert.assertEquals(Page_UpcomingTask.displayRecentNewTabCount(), APIDataProvider.getRecentNewTabCount());
+				Reporter.log("Recent New Tab Count displayed is correct.", true);
+			}
+		catch (AssertionError | Exception e) 
+		{
+			Assert.fail();
+			Reporter.log("Recent New Tab Count displayed is incorrect.");
+		}
+	}*/
+	
+	
 	@Test
 	public static void verifyRecentNewTabCount()
 	{

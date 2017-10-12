@@ -2,9 +2,12 @@ package whitefeather.xedge.testcases;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
+import whitefeather.xedge.appconfig.ConfigMethods;
 import whitefeather.xedge.core.CloseIconRHSPanels;
 import whitefeather.xedge.core.DataGenerator;
 import whitefeather.xedge.core.GlobalIcons;
+import whitefeather.xedge.core.Page_AddActivity;
 import whitefeather.xedge.core.Page_AddNewLead;
 import whitefeather.xedge.facilitator.HelperHand;
 
@@ -70,6 +73,33 @@ public class AddNewLeadWithDefaultValues extends HelperHand
 		} catch (Exception e) {
 			Reporter.log("User has failed to enter Mobile Number.",true);
 			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public static void selectSeason()
+	{
+		try {
+			ConfigMethods.selectValueFromDropDown(Page_AddNewLead.displaySelectSeasonDropdown(),Page_AddNewLead.driver);
+			Reporter.log("User has provided Season value successfully.",true);
+		} catch (Exception e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Season value.",true);
+		}
+	}
+	
+	@Test
+	public static void provideActivityType()
+	{
+		try {
+			Thread.sleep(2000);
+			ConfigMethods.selectValueFromDropDown(Page_AddActivity.displaySelectActivityTypeDropdown(), Page_AddActivity.driver);
+			Page_AddActivity.displayAddActivityCommentBox().sendKeys("This is Activity Comment.");
+			Thread.sleep(2000);
+			Reporter.log("User has clicked Add Lead icon.",true);
+		} catch (Exception e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to click Add Lead icon.",true);
 		}
 	}
 	

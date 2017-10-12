@@ -1,6 +1,7 @@
 package whitefeather.xedge.testcases;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
@@ -9,6 +10,7 @@ import whitefeather.xedge.appconfig.ConfigMethods;
 import whitefeather.xedge.core.CloseIconRHSPanels;
 import whitefeather.xedge.core.DataGenerator;
 import whitefeather.xedge.core.GlobalIcons;
+import whitefeather.xedge.core.Page_AddActivity;
 import whitefeather.xedge.core.Page_AddNewLead;
 import whitefeather.xedge.facilitator.HelperHand;
 
@@ -62,6 +64,11 @@ public class AddNewLeadWithAllValues extends HelperHand
 		try {
 //			Page_AddNewLead.displayEmailInputField().sendKeys(DataGenerator.randomEmailGenerator());
 			Page_AddNewLead.displayEmailInputField().sendKeys(globalSearchLeadEmail);
+			/*****************************************************/
+			helperString = Thread.currentThread().getStackTrace()[1].getMethodName();
+			HelperHand.getscreenshot(helperString); 
+			/****************************************************/
+			
 			//Handle Email Exists scenario later
 			Reporter.log("User has entered Email Address successfully",true);
 		} catch (Exception e) {
@@ -75,6 +82,12 @@ public class AddNewLeadWithAllValues extends HelperHand
 	{
 		try {
 			Page_AddNewLead.displayMobileInputField().sendKeys(Long.toString(DataGenerator.randomMobileNumberGenerator()));
+			
+			/*****************************************************/
+			helperString = Thread.currentThread().getStackTrace()[1].getMethodName();
+			HelperHand.getscreenshot(helperString); 
+			/****************************************************/
+			
 			//Handle Mobile Exists scenario later
 			Reporter.log("User has entered Mobile Number successfully",true);
 		} catch (Exception e) {
@@ -144,6 +157,39 @@ public class AddNewLeadWithAllValues extends HelperHand
 	}
 	
 	@Test
+	public static void selectReferredTo()
+	{
+		try {
+			
+			
+			/*************************/
+			//Temp Code. To be removed later
+			Actions builder = new Actions(driver);
+//			Page_AddNewLead.displaySelectReferredToDropdown().click();
+			WebElement element = Page_AddNewLead.displaySelectReferredToDropdown();
+			Action seriesOfActions = builder
+		              .moveToElement(element)
+		              .click()
+		             /* .sendKeys(Keys.DOWN)
+		              .sendKeys(Keys.DOWN)//Number of Down Key Press = Position of value from drop down
+		              .sendKeys(Keys.DOWN)
+		              .sendKeys(Keys.DOWN)
+		              .sendKeys(Keys.DOWN)*/
+		              .sendKeys("Indiana Jones")
+		              .sendKeys(Keys.RETURN)
+		              .build();
+			seriesOfActions.perform();
+			/*************************/
+			
+//			ConfigMethods.selectValueFromDropDown(Page_AddNewLead.displaySelectReferredToDropdown(),Page_AddNewLead.driver);
+			Reporter.log("User has provided ReferredTo value successfully.",true);
+		} catch (Exception e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide ReferredTo value.",true);
+		}
+	}
+	
+	@Test
 	public static void selectStatus()
 	{
 		try {
@@ -167,34 +213,20 @@ public class AddNewLeadWithAllValues extends HelperHand
 		}
 	}
 	
+	
+	
 	@Test
-	public static void selectReferredTo()
+	public static void provideActivityType()
 	{
 		try {
-			
-			
-			/*************************/
-			//Temp Code. To be removed later
-			Actions builder = new Actions(driver);
-			Page_AddNewLead.displaySelectReferredToDropdown().click();
-			Action seriesOfActions = builder
-		              .moveToElement(Page_AddNewLead.displaySelectReferredToDropdown())
-		              .click()
-		              /*.sendKeys(Keys.DOWN)
-		              .sendKeys(Keys.DOWN)//Number of Down Key Press = Position of value from drop down
-		              .sendKeys(Keys.DOWN)
-		              .sendKeys(Keys.DOWN)
-		              .sendKeys(Keys.DOWN)*/
-		              .sendKeys(Keys.RETURN)
-		              .build();
-			seriesOfActions.perform();
-			/*************************/
-			
-//			ConfigMethods.selectValueFromDropDown(Page_AddNewLead.displaySelectReferredToDropdown(),Page_AddNewLead.driver);
-			Reporter.log("User has provided ReferredTo value successfully.",true);
+			Thread.sleep(2000);
+			ConfigMethods.selectValueFromDropDown(Page_AddActivity.displaySelectActivityTypeDropdown(), Page_AddActivity.driver);
+			Page_AddActivity.displayAddActivityCommentBox().sendKeys("This is Activity Comment.");
+			Thread.sleep(2000);
+			Reporter.log("User has clicked Add Lead icon.",true);
 		} catch (Exception e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide ReferredTo value.",true);
+			Reporter.log("User has failed to click Add Lead icon.",true);
 		}
 	}
 	

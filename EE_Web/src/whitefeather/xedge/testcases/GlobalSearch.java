@@ -74,9 +74,12 @@ public class GlobalSearch extends HelperHand
  			Page_GlobalSearch.displayPlaceHolder().sendKeys(AddNewLeadWithAllValues.globalSearchLeadEmail);
 			Page_GlobalSearch.displayGoButton().click();
  		}
- 		try {	
+ 		try 
+ 		{	
 			Assert.assertTrue(Page_GlobalSearch.validateGlobalSearch(Page_GlobalSearch.getElementText(Page_GlobalSearch.knowErrorMessage())));
-		} catch (AssertionError e) {
+		} 
+ 		catch (AssertionError e) 
+ 		{
 			System.out.println("Global Search failed due to non existing data.");
 			Assert.fail();
 			e.printStackTrace();

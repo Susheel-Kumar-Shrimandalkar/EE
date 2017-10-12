@@ -10,7 +10,7 @@ public class Page_AddActivity extends HelperHand
 	public static WebElement element;
 	public static ObjectMapping properties = new ObjectMapping(Constants.LOCATORS);	
 	
-	public static WebElement selectActivityType()
+	public static WebElement displaySelectActivityTypeDropdown()
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("select_activityType_dropdown"));
@@ -19,15 +19,7 @@ public class Page_AddActivity extends HelperHand
 		}
 		return element;
 	}
-	public static WebElement displayAddActivityButton()
-	{
-		try {
-			element = driver.findElement(properties.selectLocator("addActivtyButton"));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return element;
-	}
+	
 	public static WebElement displayAddActivityCommentBox()
 	{
 		try {
@@ -37,5 +29,16 @@ public class Page_AddActivity extends HelperHand
 		}
 		return element;
 	}
+	
+	public static WebElement displayAddActivityButton()
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("addActivtyButton"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
 
 }

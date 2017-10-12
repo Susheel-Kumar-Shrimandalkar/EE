@@ -16,4 +16,5 @@ public class Constants {
 	public static final String TESTDATA_CONTAINER = ".\\src\\whitefeather\\xedge\\testdata\\TestData_Container.xlsx";
 //	public static final String TESTREPORT_CONTAINER = ".\\src\\whitefeather\\xedge\\testreports\\Test_Report_"+ActionListener.getDate()+".xlsx";
 
+	public static final String APPLICATIONFORM = "https://extraaedge-stagingwebsite-qa.azurewebsites.net/application";
 }

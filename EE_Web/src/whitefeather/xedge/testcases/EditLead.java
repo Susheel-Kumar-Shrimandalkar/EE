@@ -56,7 +56,7 @@ public class EditLead extends HelperHand
 	{
 		try {
 			Page_AddNewLead.displayEmailInputField().clear();
-			Page_AddNewLead.displayEmailInputField().sendKeys("EditedLN_"+AddNewLeadWithAllValues.globalSearchLeadEmail);
+			Page_AddNewLead.displayEmailInputField().sendKeys("EditedEmail	_"+AddNewLeadWithAllValues.globalSearchLeadEmail);
 			Reporter.log("User has edited Last Name.", true);
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

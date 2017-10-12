@@ -95,12 +95,13 @@ public class ForgotPassword extends HelperHand
 	public void verifySubmitButton()
 	{
 		try {
-			Assert.assertTrue(Page_ForgotPassword.displaySubmitButton().isDisplayed(), "Login Link on Forgot Password window is displayed");
-			Reporter.log("Login Link on Forgot Password is displayed",true);
+			Assert.assertTrue(Page_ForgotPassword.displaySubmitButton().isDisplayed(), "Submit Button on Forgot Password window is displayed");
+			Page_ForgotPassword.displaySubmitButton().click();
+			Reporter.log("Submit Button on Forgot Password is displayed",true);
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail();
-			Reporter.log("Login Link on Forgot Password is not displayed",true);
+			Reporter.log("Submit Button on Forgot Password is not displayed",true);
 
 		}
 	}
@@ -112,7 +113,7 @@ public class ForgotPassword extends HelperHand
 		try {
 			Page_ForgotPassword.displayEmailInputBox().sendKeys(recoveryEmail);
 			Page_ForgotPassword.displaySubmitButton().click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			if(Page_ForgotPassword.displayResetPasswordLinkSuccessMessage().isDisplayed())
 			{
 				Page_ForgotPassword.displayLoginButton().click();
@@ -125,7 +126,6 @@ public class ForgotPassword extends HelperHand
 			{
 				Page_ForgotPassword.displayForgotPasswordButton().click();
 				Page_ForgotPassword.displayLoginLink().click();
-				Assert.fail();
 				Reporter.log("Provided email address is not registered with the system.",true);
 			}
 		} catch (Exception e) {

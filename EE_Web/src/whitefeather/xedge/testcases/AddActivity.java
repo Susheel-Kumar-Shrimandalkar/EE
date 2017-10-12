@@ -14,7 +14,7 @@ public class AddActivity extends HelperHand
 	public static boolean verifySelectActivityTypeIsDisplayed()
 	{
 		try {
-			visibleFlag = Page_AddActivity.selectActivityType().isDisplayed();
+			visibleFlag = Page_AddActivity.displaySelectActivityTypeDropdown().isDisplayed();
 			Reporter.log("SelectActivityType dropdown is provided successfully", true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -32,7 +32,7 @@ public class AddActivity extends HelperHand
 			{
 				Actions builder = new Actions(driver);
 				Action seriesOfActions = builder
-			              .moveToElement(Page_AddActivity.selectActivityType())
+			              .moveToElement(Page_AddActivity.displaySelectActivityTypeDropdown())
 			              .click()
 			              .sendKeys(Keys.DOWN)
 			              .sendKeys(Keys.DOWN)//Number of Down Key Press = Position of value from drop down
