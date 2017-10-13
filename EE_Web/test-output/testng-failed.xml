@@ -8,7 +8,12 @@
       <class name="whitefeather.xedge.testcases.FillUpApplicationForm">
         <parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
         <methods>
-          <include name="fillUpApplicationFormStep1"/>
+          <include name="attachAttachment3"/>
+          <include name="provideHSCModeOfStudy"/>
+          <include name="attachAttachment1"/>
+          <include name="attachAttachment2"/>
+          <include name="attachAttachment5"/>
+          <include name="attachAttachment4"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
       <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">

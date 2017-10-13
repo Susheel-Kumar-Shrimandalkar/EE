@@ -17,4 +17,10 @@ public class Constants {
 //	public static final String TESTREPORT_CONTAINER = ".\\src\\whitefeather\\xedge\\testreports\\Test_Report_"+ActionListener.getDate()+".xlsx";
 
 	public static final String APPLICATIONFORM = "https://extraaedge-stagingwebsite-qa.azurewebsites.net/application";
+
+	public static final String APPFORM_ATTACHMENT1 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment1.png";
+	public static final String APPFORM_ATTACHMENT2 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment2.png";
+	public static final String APPFORM_ATTACHMENT3 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment3.png";
+	public static final String APPFORM_ATTACHMENT4 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment4.png";
+	public static final String APPFORM_ATTACHMENT5 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment5.png";
 }

@@ -26,187 +26,64 @@
 			<class name="whitefeather.xedge.testcases.FillUpApplicationForm">
 				<methods>
 				<include name="openDetailedApplicationFormPage"/>
-				<include name="fillUpApplicationFormStep1"/>
+				<include name="clickDateOfBirthInputField"/>
+				<include name="provideDateOfBirth"/>
+				<include name="provideBloodGroup"/>
+				<include name="provideGender"/>
+				<include name="provideCitizenship"/>
+				<include name="provideNationality"/>
+				<include name="provideDomicile"/>
+				<include name="provideReligion"/>
+				<include name="provideCommunity"/>
+				<include name="provideCaste"/>
+				<include name="provideMainAddress"/>
+				<include name="provideCountry"/>
+				<include name="provideState"/>
+				<include name="provideCity"/>
+				<include name="provideEmergencyContactNumber"/>
+				<include name="provideEmergencyEmail"/>
+				<include name="provideAlternateAddress1"/>
+				<include name="provideAlternateAddress2"/>
+				<include name="provideAlternateContactNumber"/>
+				<include name="clickNextButtonStep1"/>
+				<include name="provideFathersName"/>
+				<include name="provideMothersName"/>
+				<include name="provideGuardiansName"/>
+				<include name="provideGuardiansAddress1"/>
+				<include name="provideGuardiansAddress2"/>
+				<include name="provideGuardiansContactNumber"/>
+				<include name="provideGuardiansRelation"/>
+				<include name="clickNextButtonStep2"/>
+				<include name="provideCourse"/>
+				<include name="provideSSCSchoolName"/>
+				<include name="provideSSCRegNumber"/>
+				<include name="provideSSCYearOfPassing"/>
+				<include name="provideSSCPercentageValue"/>
+				<include name="provideSSCModeOfStudy"/>
+				<include name="provideHSCSchoolName"/>
+				<include name="provideHSCRegNumber"/>
+				<include name="provideHSCYearOfPassing"/>
+				<include name="provideHSCPercentageValue"/>
+				<include name="provideHSCModeOfStudy"/>
+				<include name="provideEntranceExamValue"/>
+				<include name="provideSubject1NameValue"/>
+				<include name="provideSubject1Marks1Value"/>
+				<include name="provideSubject1Percetage1Value"/>
+				<include name="provideSubject2NameValue"/>
+				<include name="provideSubject2Marks1Value"/>
+				<include name="provideSubject2Percetage2Value"/>
+				<include name="provideSubject3NameValue"/>
+				<include name="provideSubject3Marks3Value"/>
+				<include name="provideSubject3Percetage3Value"/>
+				<include name="attachAttachment1"/>
+				<include name="attachAttachment2"/>
+				<include name="attachAttachment3"/>
+				<include name="attachAttachment4"/>
+				<include name="attachAttachment5"/>
+				<include name="clickNextButtonStep3"/>
 				</methods>
-			</class>
-			
-			
-			<!-- <class name="whitefeather.xedge.testcases.ForgotPassword">
-			<methods>
-			<include name="openForgotPasswordWindow"/>
-			<include name="verifyCompanyLogo"/>
-			<include name="verifyRecoveryLabel"/>
-			<include name="verifyRecoveryMessage"/>
-			<include name="verifyEmailInputBox"/>
-			<include name="verifyLoginLink"/>
-			<parameter name="recoveryEmail" value="counselorshekhar@gmail.com"/>
-			<include name="enterRecoveryEmail"/>
-			</methods></class>
-			 
-			<class name="whitefeather.xedge.testcases.PerformLoginAction" >
-			<methods>
-			<include name="verifyLoginPageBackground"/>
-			<include name="verifyClientAccountLogo"/>
-			<include name="verifyUsernameLabel"/>
-			<include name="verifyUsernamePlaceholder"/>
-			<include name="verifyPasswordLabel"/>
-			<include name="verifyPasswordPlaceholder"/>
-			<include name="verifyUsernameInputField"/>
-			<include name="verifyPasswordInputField"/>
-			<include name="verifyPasswordWrapper"/>
-			<parameter name="_username" value="counselorshekhar@gmail.com"/>
-			<parameter name="_password" value="test"/>
-			<include name="enterLoginId"/>
-			<include name="enterLoginPassword"/>
-			<include name="verifyLoginButton"/>
-			<include name="clickLoginButton"/>
-			</methods>
-			</class>
-			 
-			<class name="whitefeather.xedge.testcases.VerifyGlobalIcons" >
-			<methods>
-			<include name="verifyCompanyLogoInHeader"/>
-			<include name="verifyGoButtonInGlobalSearchBar"/>
-			<include name="verifyOutStandingActivityIcon"/>
-			<include name="verifyOutStandingActivityCount"/>
-			<include name="verifyCounselorName"/>
-			<include name="verifyCounselorPhoto"/>
-			<include name="verifySignOutLink"/>
-			<include name="verifyBulkUploadIcon"/>
-			<include name="verifyAddLeadPlusIcon"/>
-			<include name="verifyJoyRideButton"/>
-			</methods></class>
-			
-			<class name="whitefeather.xedge.testcases.AddNewLeadWithDefaultValues">
-			<methods>
-			<include name="clickAddLeadPlusIcon"/>
-			<include name="enterEmailAddress"/>
-			<include name="enterMobileNumber"/>
-			<include name="selectSeason"/>
-			<include name="provideActivityType"/>
-			<include name="clickAddLeadButton"/>
-			<include name="closeRHSPanel"/>
-			</methods></class>
-			
-			<class name="whitefeather.xedge.testcases.Refresh_Page" >
-			<methods><include name="refreshWebPage"></include></methods></class>
-			 
-			<class name="whitefeather.xedge.testcases.AddNewLeadWithAllValues">
-			<methods>
-			<include name="clickAddLeadPlusIcon"/>
-			<include name="enterFirstName"/>
-			<include name="enterLastName"/>
-			<include name="enterEmailAddress"/>
-			<include name="enterMobileNumber"/>
-			<include name="enterHighestQualification"/>
-			<include name="selectSeason"/>
-			<include name="selectSource"/>
-			<include name="selectChannel"/>
-			<include name="selectPriority"/>
-			<include name="selectReferredTo"/>
-			<include name="selectStatus"/>
-			<include name="selectReason"/>
-			<include name="provideActivityType"/>
-			<include name="selectEntity1"/>
-			<include name="selectEntity2"/>
-			<include name="selectEntity3"/>
-			<include name="selectEntity4"/>
-			<include name="selectBestCall"/>
-			<include name="selectLeadQualified"/>
-			<include name="selectLeadContactable"/>
-			<include name="selectMobileVerified"/>
-			<include name="selectField1"/>
-			<include name="selectField2"/>
-			<include name="selectField3"/>
-			<include name="selectField4"/>
-			<include name="selectField5"/>
-			<include name="selectCountry"/>
-			<include name="selectState"/>
-			<include name="selectCity"/>
-			<include name="enterLeadComment"/>
-			<include name="clickAddLeadButton"/>
-			<include name="closeRHSPanel"/>
-			</methods></class>
-			
-			<class name="whitefeather.xedge.testcases.Refresh_Page" >
-			<methods><include name="refreshWebPage"></include></methods></class>
-			
-			<class name="whitefeather.xedge.testcases.GlobalSearch">
-			<methods>
-			<include name="verifyGlobalSearchBar"/>
-			<include name="verifyGlobalSearchPlaceholder"/>
-			<include name="verifyLenseIcon"/>
-			<include name="verifyGoButton"/>
-			<include name="performGlobalSearch"/>
-			</methods></class>
-			
-			<class name="whitefeather.xedge.testcases.Refresh_Page" >
-			<methods><include name="refreshWebPage"></include></methods></class>
-			
-			<class name="whitefeather.xedge.testcases.UpcomingTasks">
-			<methods>
-			<include name="verifyDashboardURL"/>
-			<include name="verifyRecentNewTabIsDisplayed"/>
-			<include name="verifyRecentNewTabCount"/>
-			<include name="verifyRecentOnlineTabIsDisplayed"/>
-			<include name="verifyRecentOnlineTabCount"/>
-			<include name="verifyUpcomingFollowupTabIsDisplayed"/>
-			<include name="verifyUpcomingFollowupTabCount"/>
-			<include name="verifyUpcomingWalkinsTabIsDisplayed"/>
-			<include name="verifyUpcomingWalkinsTabCount"/>
-			<include name="verifyHighPriorityTabIsDisplayed"/>
-			<include name="verifyHighPriorityTabCount"/>
-			</methods></class>
-			
-			<class name="whitefeather.xedge.testcases.LeadList">
-			<methods>
-			<include name="verifyLeadListPageURL"/>
-			<include name="verifyAllTabIsDisplayed"/>
-			<include name="verifyAllTabCount"/>
-			<include name="verifyNewTabIsDisplayed"/>
-			<include name="verifyNewTabCount"/>
-			<include name="verifyCallbackTabIsDisplayed"/>
-			<include name="verifyCallbackTabCount"/>
-			<include name="verifyWalkinTabIsDisplayed"/>
-			<include name="verifyWalkinTabCount"/>
-			<include name="verifyEnrolledTabIsDisplayed"/>
-			<include name="verifyEnrolledTabCount"/>
-			<include name="verifyClosedTabIsDisplayed"/>
-			<include name="verifyClosedTabCount"/>
-			<include name="verifyOnlineTabIsDisplayed"/>
-			<include name="verifyOnlineTabCount"/>
-			<include name="verifyReferredFromMeTabIsDisplayed"/>
-			<include name="verifyReferredFromMeTabCount"/>
-			<include name="verifyCampaignIconIsDisplayed"/>
-			<include name="addNewCampaign"/>
-			<include name="verifyReferAllLeadsIconIsDisplayed"/>
-			<include name="referAllLeads"/>
-			<include name="verifySendSMSToAllLeadsIconIsDisplayed"/>
-			<include name="sendSMSToAllLeads"/>
-			<include name="verifySendEmailToAllLeadsIconIsDisplayed"/>
-			<include name="sendEmailToAllLeads"/>
-			<include name="verifyRefreshLeadDataIconIsDisplayed"/>
-			<include name="verifyDownloadDataIconIsDisplayed"/>
-			<include name="downloadLeadsData"/>
-			<include name="verifyFilterLeadsIconIsDisplayed"/>
-			<include name="filterLeadsData"/>
-			</methods></class>
-			
-			<class name="whitefeather.xedge.testcases.Refresh_Page" >
-			<methods><include name="refreshWebPage"></include></methods></class>
-			
-			<class name="whitefeather.xedge.testcases.EditLead">
-			<methods>
-			<include name="openEditLeadPanel"/>
-			<include name="editFirstName"/>
-			<include name="editLastName"/>
-			<include name="editEmailAddress"/>
-			<include name="clickAddLeadButton"/>
-			</methods></class>
-			
-			<class name="whitefeather.xedge.testcases.EndTesting" >
-			<methods><include name="endTestSuite"></include></methods></class>
-		 	 -->
+			</class>	
+		
 		</classes>
 	</test>
 	

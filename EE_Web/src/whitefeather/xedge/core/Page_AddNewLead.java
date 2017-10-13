@@ -347,3 +347,88 @@ public class Page_AddNewLead extends HelperHand
 
 }
 
+/*
+WebElement season = driver.findElement(By.xpath(".//div[starts-with(.,'Select Season')]"));
+Actions seasonbuilder = new Actions(driver);
+season.click();
+Action seasonA = seasonbuilder
+          .moveToElement(season)
+          .click()
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.TAB)
+          .build();
+seasonA.perform();
+
+WebElement source = driver.findElement(By.cssSelector("#leadSource"));
+Actions sourcebuilder = new Actions(driver);
+source.click();
+Action sourceA = sourcebuilder
+          .moveToElement(source)
+          .click()
+          .sendKeys(Keys.BACK_SPACE)
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.TAB)
+          .build();
+sourceA.perform();
+
+WebElement entity1 = driver.findElement(By.cssSelector("#entity1"));
+Actions entity1builder = new Actions(driver);
+entity1.click();
+Action entity1A = entity1builder
+          .moveToElement(entity1)
+          .click()
+//          .sendKeys(Keys.BACK_SPACE)
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.TAB)
+          .build();
+entity1A.perform();
+Thread.sleep(1000);
+
+
+//		WebElement entity2 = driver.findElement(By.cssSelector("#entity2"));
+		WebElement entity2 = driver.findElement(By.xpath(".//div[contains(text(),'Select Course')]"));
+		Actions entity2builder = new Actions(driver);
+		entity2.click();
+		Action entity2A = entity2builder
+	              .moveToElement(entity2)
+//	              .click()
+	              .doubleClick()
+//	              .sendKeys(Keys.BACK_SPACE)
+	              .sendKeys("s")
+	              .sendKeys(Keys.DOWN)
+	              .sendKeys(Keys.DOWN)
+	              .sendKeys(Keys.TAB)
+	              .build();
+		entity2A.perform();
+
+//WebElement entity3 = driver.findElement(By.cssSelector("#entity3"));
+WebElement entity3 = driver.findElement(By.xpath(".//div[contains(text(),'Select Location')]"));
+Actions entity3builder = new Actions(driver);
+entity3.click();
+Action entity3A = entity3builder
+          .moveToElement(entity3)
+          .click()
+          .sendKeys(Keys.BACK_SPACE)
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.TAB)
+          .build();
+entity3A.perform();
+
+//WebElement entity4 = driver.findElement(By.cssSelector("#entity4"));
+WebElement entity4 = driver.findElement(By.xpath(".//div[contains(text(),'Select Year')]"));
+Actions entity4builder = new Actions(driver);
+entity4.click();
+Action entity4A = entity4builder
+          .moveToElement(entity4)
+          .click()
+          .sendKeys(Keys.BACK_SPACE)
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.DOWN)
+          .sendKeys(Keys.TAB)
+          .build();
+entity4A.perform();
+Thread.sleep(3000);*/
+

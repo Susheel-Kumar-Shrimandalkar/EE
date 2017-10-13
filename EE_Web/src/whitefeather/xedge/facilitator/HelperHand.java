@@ -36,6 +36,11 @@ public class HelperHand
 	public static final String thirdPartyLeadFullName = DataGenerator.generateFirstName();
 	public static final String thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	
+	public static final String thirdPartyEmergencyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	public static final String thirdPartyEmergencyLeadEmail = DataGenerator.randomEmailGenerator();
+	public static final String thirdPartyAlternateContact = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	public static final String thirdPartyGuardiansContact = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	
 //	public static String globalSearch=AddNewLeadWithAllValues.prospectEmail;
 
 	public void setUpTestSuit(String browser) 

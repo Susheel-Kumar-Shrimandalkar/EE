@@ -46,6 +46,14 @@ public class ObjectMapping
 		else if(locatorType.toLowerCase().equals("id"))
 		return By.id(locatorValue);
 		
+		//For ClassName
+		else if(locatorType.toLowerCase().equals("class"))
+		return By.className(locatorValue);
+		
+		//For Name
+		else if(locatorType.toLowerCase().equals("name"))
+		return By.name(locatorValue);
+		
 		else
 			throw new Exception("Unknown Locator Type: "+locatorType);
 	}

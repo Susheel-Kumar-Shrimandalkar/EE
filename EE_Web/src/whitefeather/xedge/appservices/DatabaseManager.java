@@ -36,7 +36,18 @@ public class DatabaseManager extends HelperHand
 		con = DriverManager.getConnection(connectionUrl); 
 		
 		String SQL = "SELECT * FROM Users WHERE EMAIL LIKE '%"+HelperHand.thirdPartyLeadEmail+"%'";
-		 
+		/*String SQL = "DECLARE \r\n" + 
+				"@USER_NAME NVARCHAR(60), \r\n" + 
+				"@USER_MOBILE INT,\r\n" + 
+				"@USER_ID INT,\r\n" + 
+				"@CITIZENSHIP NVARCHAR(60)\r\n" + 
+				"\r\n" + 
+				"SET @USER_NAME = (SELECT TOP 1 FIRSTNAME FROM USERS WHERE FIRSTNAME LIKE '%LeadName_%' ORDER BY ID DESC)\r\n" + 
+				"SET @USER_MOBILE = (SELECT TOP 1 MOBILENUMBER FROM USERS WHERE FIRSTNAME LIKE '%LeadName_%' ORDER BY ID DESC)\r\n" + 
+				"SET @USER_ID = (SELECT TOP 1 ID FROM USERS WHERE FIRSTNAME LIKE '%LeadName_%' ORDER BY ID DESC)\r\n" + 
+				"SET @CITIZENSHIP = (SELECT TOP 1 CITIZENSHIP FROM APPLICATIONFORM WHERE CITIZENSHIP = 'KOLHAPUR' AND USERID=@USER_ID)\r\n" + 
+				"\r\n" + 
+				"SELECT @USER_NAME, @USER_MOBILE, @USER_ID, @CITIZENSHIP";*/
 		 stmt = con.createStatement();  
          rs = stmt.executeQuery(SQL);  
 
@@ -45,13 +56,14 @@ public class DatabaseManager extends HelperHand
          {
         	 prn = rs.getString(14);
         	 System.out.println(prn);  
+//        	 System.out.println(rs.getString(1)+" >> "+rs.getString(2)+" >> "+rs.getString(3)+" >>" +rs.getString(4));  
          }  
          return prn;
 	}
 	
-	/*public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException {
 		establishDatabaseConnection();
 		getPRNofLeadAddedThroughAppForm();
-	}*/
+	}
 
 }
