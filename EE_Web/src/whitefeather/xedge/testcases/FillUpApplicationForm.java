@@ -16,6 +16,7 @@ public class FillUpApplicationForm  extends HelperHand
 	public static void openDetailedApplicationFormPage() throws SQLException, InterruptedException
 	{
 		System.out.println("\n"+"*********************** Filling up Step 1 Information ***************************"+"\n");
+		System.out.println(Constants.APPLICATIONFORM+"?ref_no="+getPRN());
 		try 
 		{
 			driver.get(Constants.APPLICATIONFORM+"?ref_no="+getPRN());
@@ -751,6 +752,48 @@ public class FillUpApplicationForm  extends HelperHand
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 			Reporter.log("User has failed to click Next button on Step 3.",true);
+		}
+	}
+	
+		/********************* STEP 4 *************************/
+	
+	@Test
+	public static void providePaymentType() throws Exception
+	{
+		System.out.println("\n"+"*********************** Filling up Step 4 Information ***************************"+"\n");
+		try 
+		{
+			Page_DetailedApplicationForm.displayPaymentTypeDropdownDropDown().selectByIndex(1);
+			Reporter.log("User has entered Payment Type value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Payment Type value.",true);
+		}
+	}
+	
+	@Test
+	public static void providePaymentAmount() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayPaymentAmountField().sendKeys("100");
+			Reporter.log("User has entered Payment Amount value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Payment Amount value.",true);
+		}
+	}
+	
+	@Test
+	public static void clickSubmitButtonStep4() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displaySubmitButtonStep4().click();
+			Reporter.log("User has clicked Submit button on Step 3 successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to click Submit button.",true);
 		}
 	}
 }

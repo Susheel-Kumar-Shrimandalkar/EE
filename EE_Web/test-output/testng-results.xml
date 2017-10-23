@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="61" passed="61">
+<testng-results skipped="0" failed="0" ignored="0" total="64" passed="64">
   <reporter-output>
     <line>
       <![CDATA[Chrome Browser is opened]]>
@@ -190,34 +190,43 @@
     <line>
       <![CDATA[User has clicked Next button on Step 3 successfully.]]>
     </line>
+    <line>
+      <![CDATA[User has entered Payment Type value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Payment Amount value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has clicked Submit button on Step 3 successfully.]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="51490" started-at="2017-10-13T11:39:13Z" finished-at="2017-10-13T11:40:05Z">
+  <suite name="Suite" duration-ms="57043" started-at="2017-10-23T12:19:51Z" finished-at="2017-10-23T12:20:48Z">
     <groups>
     </groups>
-    <test name="Staging QA Application Form Test Validations" duration-ms="51490" started-at="2017-10-13T11:39:13Z" finished-at="2017-10-13T11:40:05Z">
+    <test name="Staging QA Application Form Test Validations" duration-ms="57043" started-at="2017-10-23T12:19:51Z" finished-at="2017-10-23T12:20:48Z">
       <class name="whitefeather.xedge.testcases.GenerateLeadForApplicationForm">
-        <test-method status="PASS" signature="enterFullName()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@1f28c152]" name="enterFullName" duration-ms="343" started-at="2017-10-13T17:09:26Z" finished-at="2017-10-13T17:09:26Z">
+        <test-method status="PASS" signature="enterFullName()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@1f28c152]" name="enterFullName" duration-ms="312" started-at="2017-10-23T17:50:03Z" finished-at="2017-10-23T17:50:04Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Full Name successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterFullName -->
-        <test-method status="PASS" signature="enterMobileNumber()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@1f28c152]" name="enterMobileNumber" duration-ms="266" started-at="2017-10-13T17:09:26Z" finished-at="2017-10-13T17:09:27Z">
+        <test-method status="PASS" signature="enterMobileNumber()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@1f28c152]" name="enterMobileNumber" duration-ms="188" started-at="2017-10-23T17:50:04Z" finished-at="2017-10-23T17:50:04Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Mobile successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterMobileNumber -->
-        <test-method status="PASS" signature="enterEmailAddress()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@1f28c152]" name="enterEmailAddress" duration-ms="314" started-at="2017-10-13T17:09:27Z" finished-at="2017-10-13T17:09:27Z">
+        <test-method status="PASS" signature="enterEmailAddress()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@1f28c152]" name="enterEmailAddress" duration-ms="220" started-at="2017-10-23T17:50:04Z" finished-at="2017-10-23T17:50:04Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Email Address successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterEmailAddress -->
-        <test-method status="PASS" signature="clickSubmitButton()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@1f28c152]" name="clickSubmitButton" duration-ms="5182" started-at="2017-10-13T17:09:27Z" finished-at="2017-10-13T17:09:32Z">
+        <test-method status="PASS" signature="clickSubmitButton()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@1f28c152]" name="clickSubmitButton" duration-ms="5151" started-at="2017-10-23T17:50:04Z" finished-at="2017-10-23T17:50:09Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Submit button successfully.]]>
@@ -226,7 +235,7 @@
         </test-method> <!-- clickSubmitButton -->
       </class> <!-- whitefeather.xedge.testcases.GenerateLeadForApplicationForm -->
       <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
-        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@369f73a2]" name="selectBrowser" is-config="true" duration-ms="25" started-at="2017-10-13T17:09:13Z" finished-at="2017-10-13T17:09:13Z">
+        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@369f73a2]" name="selectBrowser" is-config="true" duration-ms="16" started-at="2017-10-23T17:49:51Z" finished-at="2017-10-23T17:49:51Z">
           <params>
             <param index="0">
               <value>
@@ -237,7 +246,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectBrowser -->
-        <test-method status="PASS" signature="openAppForm(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@369f73a2]" name="openAppForm" duration-ms="12712" started-at="2017-10-13T17:09:13Z" finished-at="2017-10-13T17:09:26Z">
+        <test-method status="PASS" signature="openAppForm(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@369f73a2]" name="openAppForm" duration-ms="12311" started-at="2017-10-23T17:49:51Z" finished-at="2017-10-23T17:50:03Z">
           <params>
             <param index="0">
               <value>
@@ -259,398 +268,419 @@
         </test-method> <!-- openAppForm -->
       </class> <!-- whitefeather.xedge.testcases.OpenApplicationFormLandingPage -->
       <class name="whitefeather.xedge.testcases.FillUpApplicationForm">
-        <test-method status="PASS" signature="openDetailedApplicationFormPage()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="openDetailedApplicationFormPage" duration-ms="3049" started-at="2017-10-13T17:09:32Z" finished-at="2017-10-13T17:09:35Z">
+        <test-method status="PASS" signature="openDetailedApplicationFormPage()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="openDetailedApplicationFormPage" duration-ms="3886" started-at="2017-10-23T17:50:09Z" finished-at="2017-10-23T17:50:13Z">
           <reporter-output>
             <line>
               <![CDATA[User has opened Application Form successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- openDetailedApplicationFormPage -->
-        <test-method status="PASS" signature="clickDateOfBirthInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickDateOfBirthInputField" duration-ms="1529" started-at="2017-10-13T17:09:35Z" finished-at="2017-10-13T17:09:37Z">
+        <test-method status="PASS" signature="clickDateOfBirthInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickDateOfBirthInputField" duration-ms="1741" started-at="2017-10-23T17:50:13Z" finished-at="2017-10-23T17:50:15Z">
           <reporter-output>
             <line>
               <![CDATA[User has opened calender successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickDateOfBirthInputField -->
-        <test-method status="PASS" signature="provideDateOfBirth()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideDateOfBirth" duration-ms="3511" started-at="2017-10-13T17:09:37Z" finished-at="2017-10-13T17:09:40Z">
+        <test-method status="PASS" signature="provideDateOfBirth()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideDateOfBirth" duration-ms="3483" started-at="2017-10-23T17:50:15Z" finished-at="2017-10-23T17:50:18Z">
           <reporter-output>
             <line>
               <![CDATA[User has selected date successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDateOfBirth -->
-        <test-method status="PASS" signature="provideBloodGroup()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideBloodGroup" duration-ms="249" started-at="2017-10-13T17:09:40Z" finished-at="2017-10-13T17:09:41Z">
+        <test-method status="PASS" signature="provideBloodGroup()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideBloodGroup" duration-ms="166" started-at="2017-10-23T17:50:18Z" finished-at="2017-10-23T17:50:19Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered blood group value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideBloodGroup -->
-        <test-method status="PASS" signature="provideGender()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGender" duration-ms="297" started-at="2017-10-13T17:09:41Z" finished-at="2017-10-13T17:09:41Z">
+        <test-method status="PASS" signature="provideGender()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGender" duration-ms="211" started-at="2017-10-23T17:50:19Z" finished-at="2017-10-23T17:50:19Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Gender value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGender -->
-        <test-method status="PASS" signature="provideCitizenship()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCitizenship" duration-ms="451" started-at="2017-10-13T17:09:41Z" finished-at="2017-10-13T17:09:41Z">
+        <test-method status="PASS" signature="provideCitizenship()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCitizenship" duration-ms="216" started-at="2017-10-23T17:50:19Z" finished-at="2017-10-23T17:50:19Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Citizenship value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCitizenship -->
-        <test-method status="PASS" signature="provideNationality()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideNationality" duration-ms="271" started-at="2017-10-13T17:09:41Z" finished-at="2017-10-13T17:09:42Z">
+        <test-method status="PASS" signature="provideNationality()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideNationality" duration-ms="173" started-at="2017-10-23T17:50:19Z" finished-at="2017-10-23T17:50:19Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Nationality value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideNationality -->
-        <test-method status="PASS" signature="provideDomicile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideDomicile" duration-ms="259" started-at="2017-10-13T17:09:42Z" finished-at="2017-10-13T17:09:42Z">
+        <test-method status="PASS" signature="provideDomicile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideDomicile" duration-ms="206" started-at="2017-10-23T17:50:19Z" finished-at="2017-10-23T17:50:19Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Domicile value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDomicile -->
-        <test-method status="PASS" signature="provideReligion()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideReligion" duration-ms="372" started-at="2017-10-13T17:09:42Z" finished-at="2017-10-13T17:09:42Z">
+        <test-method status="PASS" signature="provideReligion()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideReligion" duration-ms="268" started-at="2017-10-23T17:50:19Z" finished-at="2017-10-23T17:50:20Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Religion value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideReligion -->
-        <test-method status="PASS" signature="provideCommunity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCommunity" duration-ms="233" started-at="2017-10-13T17:09:42Z" finished-at="2017-10-13T17:09:42Z">
+        <test-method status="PASS" signature="provideCommunity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCommunity" duration-ms="186" started-at="2017-10-23T17:50:20Z" finished-at="2017-10-23T17:50:20Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Community value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCommunity -->
-        <test-method status="PASS" signature="provideCaste()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCaste" duration-ms="268" started-at="2017-10-13T17:09:42Z" finished-at="2017-10-13T17:09:43Z">
+        <test-method status="PASS" signature="provideCaste()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCaste" duration-ms="216" started-at="2017-10-23T17:50:20Z" finished-at="2017-10-23T17:50:20Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Caste value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCaste -->
-        <test-method status="PASS" signature="provideMainAddress()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideMainAddress" duration-ms="251" started-at="2017-10-13T17:09:43Z" finished-at="2017-10-13T17:09:43Z">
+        <test-method status="PASS" signature="provideMainAddress()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideMainAddress" duration-ms="264" started-at="2017-10-23T17:50:20Z" finished-at="2017-10-23T17:50:20Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Address value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideMainAddress -->
-        <test-method status="PASS" signature="provideCountry()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCountry" duration-ms="107" started-at="2017-10-13T17:09:43Z" finished-at="2017-10-13T17:09:43Z">
+        <test-method status="PASS" signature="provideCountry()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCountry" duration-ms="100" started-at="2017-10-23T17:50:20Z" finished-at="2017-10-23T17:50:20Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Country value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCountry -->
-        <test-method status="PASS" signature="provideState()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideState" duration-ms="87" started-at="2017-10-13T17:09:43Z" finished-at="2017-10-13T17:09:43Z">
+        <test-method status="PASS" signature="provideState()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideState" duration-ms="82" started-at="2017-10-23T17:50:20Z" finished-at="2017-10-23T17:50:21Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered State value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideState -->
-        <test-method status="PASS" signature="provideCity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCity" duration-ms="84" started-at="2017-10-13T17:09:43Z" finished-at="2017-10-13T17:09:43Z">
+        <test-method status="PASS" signature="provideCity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCity" duration-ms="79" started-at="2017-10-23T17:50:21Z" finished-at="2017-10-23T17:50:21Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered City value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCity -->
-        <test-method status="PASS" signature="provideEmergencyContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideEmergencyContactNumber" duration-ms="318" started-at="2017-10-13T17:09:43Z" finished-at="2017-10-13T17:09:44Z">
+        <test-method status="PASS" signature="provideEmergencyContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideEmergencyContactNumber" duration-ms="274" started-at="2017-10-23T17:50:21Z" finished-at="2017-10-23T17:50:21Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Emergency Contact Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideEmergencyContactNumber -->
-        <test-method status="PASS" signature="provideEmergencyEmail()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideEmergencyEmail" duration-ms="469" started-at="2017-10-13T17:09:44Z" finished-at="2017-10-13T17:09:44Z">
+        <test-method status="PASS" signature="provideEmergencyEmail()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideEmergencyEmail" duration-ms="327" started-at="2017-10-23T17:50:21Z" finished-at="2017-10-23T17:50:21Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Emergency Email value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideEmergencyEmail -->
-        <test-method status="PASS" signature="provideAlternateAddress1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideAlternateAddress1" duration-ms="351" started-at="2017-10-13T17:09:44Z" finished-at="2017-10-13T17:09:44Z">
+        <test-method status="PASS" signature="provideAlternateAddress1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideAlternateAddress1" duration-ms="235" started-at="2017-10-23T17:50:21Z" finished-at="2017-10-23T17:50:21Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Alternate Address 1 value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAlternateAddress1 -->
-        <test-method status="PASS" signature="provideAlternateAddress2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideAlternateAddress2" duration-ms="314" started-at="2017-10-13T17:09:44Z" finished-at="2017-10-13T17:09:45Z">
+        <test-method status="PASS" signature="provideAlternateAddress2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideAlternateAddress2" duration-ms="233" started-at="2017-10-23T17:50:21Z" finished-at="2017-10-23T17:50:22Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Alternate Address 2 value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAlternateAddress2 -->
-        <test-method status="PASS" signature="provideAlternateContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideAlternateContactNumber" duration-ms="294" started-at="2017-10-13T17:09:45Z" finished-at="2017-10-13T17:09:45Z">
+        <test-method status="PASS" signature="provideAlternateContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideAlternateContactNumber" duration-ms="218" started-at="2017-10-23T17:50:22Z" finished-at="2017-10-23T17:50:22Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Alternate Contact Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAlternateContactNumber -->
-        <test-method status="PASS" signature="clickNextButtonStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickNextButtonStep1" duration-ms="2648" started-at="2017-10-13T17:09:45Z" finished-at="2017-10-13T17:09:48Z">
+        <test-method status="PASS" signature="clickNextButtonStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickNextButtonStep1" duration-ms="497" started-at="2017-10-23T17:50:22Z" finished-at="2017-10-23T17:50:22Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Next button  on Step 1 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickNextButtonStep1 -->
-        <test-method status="PASS" signature="provideFathersName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideFathersName" duration-ms="561" started-at="2017-10-13T17:09:48Z" finished-at="2017-10-13T17:09:48Z">
+        <test-method status="PASS" signature="provideFathersName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideFathersName" duration-ms="476" started-at="2017-10-23T17:50:22Z" finished-at="2017-10-23T17:50:23Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Fathers Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersName -->
-        <test-method status="PASS" signature="provideMothersName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideMothersName" duration-ms="491" started-at="2017-10-13T17:09:48Z" finished-at="2017-10-13T17:09:49Z">
+        <test-method status="PASS" signature="provideMothersName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideMothersName" duration-ms="391" started-at="2017-10-23T17:50:23Z" finished-at="2017-10-23T17:50:23Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Mothers Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideMothersName -->
-        <test-method status="PASS" signature="provideGuardiansName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansName" duration-ms="554" started-at="2017-10-13T17:09:49Z" finished-at="2017-10-13T17:09:49Z">
+        <test-method status="PASS" signature="provideGuardiansName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansName" duration-ms="399" started-at="2017-10-23T17:50:23Z" finished-at="2017-10-23T17:50:24Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Guardians Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansName -->
-        <test-method status="PASS" signature="provideGuardiansAddress1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansAddress1" duration-ms="389" started-at="2017-10-13T17:09:49Z" finished-at="2017-10-13T17:09:50Z">
+        <test-method status="PASS" signature="provideGuardiansAddress1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansAddress1" duration-ms="230" started-at="2017-10-23T17:50:24Z" finished-at="2017-10-23T17:50:24Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Guardians Address 1 value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansAddress1 -->
-        <test-method status="PASS" signature="provideGuardiansAddress2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansAddress2" duration-ms="312" started-at="2017-10-13T17:09:50Z" finished-at="2017-10-13T17:09:50Z">
+        <test-method status="PASS" signature="provideGuardiansAddress2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansAddress2" duration-ms="261" started-at="2017-10-23T17:50:24Z" finished-at="2017-10-23T17:50:24Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Guardians Address 2 value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansAddress2 -->
-        <test-method status="PASS" signature="provideGuardiansContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansContactNumber" duration-ms="391" started-at="2017-10-13T17:09:50Z" finished-at="2017-10-13T17:09:50Z">
+        <test-method status="PASS" signature="provideGuardiansContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansContactNumber" duration-ms="225" started-at="2017-10-23T17:50:24Z" finished-at="2017-10-23T17:50:24Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Guardians Contact Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansContactNumber -->
-        <test-method status="PASS" signature="provideGuardiansRelation()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansRelation" duration-ms="328" started-at="2017-10-13T17:09:50Z" finished-at="2017-10-13T17:09:51Z">
+        <test-method status="PASS" signature="provideGuardiansRelation()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideGuardiansRelation" duration-ms="235" started-at="2017-10-23T17:50:24Z" finished-at="2017-10-23T17:50:25Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Guardians Relation value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansRelation -->
-        <test-method status="PASS" signature="clickNextButtonStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickNextButtonStep2" duration-ms="1016" started-at="2017-10-13T17:09:51Z" finished-at="2017-10-13T17:09:52Z">
+        <test-method status="PASS" signature="clickNextButtonStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickNextButtonStep2" duration-ms="370" started-at="2017-10-23T17:50:25Z" finished-at="2017-10-23T17:50:25Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Next button on Step 2successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickNextButtonStep2 -->
-        <test-method status="PASS" signature="provideCourse()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCourse" duration-ms="355" started-at="2017-10-13T17:09:52Z" finished-at="2017-10-13T17:09:52Z">
+        <test-method status="PASS" signature="provideCourse()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideCourse" duration-ms="222" started-at="2017-10-23T17:50:25Z" finished-at="2017-10-23T17:50:25Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Course value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCourse -->
-        <test-method status="PASS" signature="provideSSCSchoolName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCSchoolName" duration-ms="624" started-at="2017-10-13T17:09:52Z" finished-at="2017-10-13T17:09:53Z">
+        <test-method status="PASS" signature="provideSSCSchoolName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCSchoolName" duration-ms="375" started-at="2017-10-23T17:50:25Z" finished-at="2017-10-23T17:50:26Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered SSC School Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCSchoolName -->
-        <test-method status="PASS" signature="provideSSCRegNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCRegNumber" duration-ms="278" started-at="2017-10-13T17:09:53Z" finished-at="2017-10-13T17:09:53Z">
+        <test-method status="PASS" signature="provideSSCRegNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCRegNumber" duration-ms="172" started-at="2017-10-23T17:50:26Z" finished-at="2017-10-23T17:50:26Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered SSC Registration Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCRegNumber -->
-        <test-method status="PASS" signature="provideSSCYearOfPassing()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCYearOfPassing" duration-ms="334" started-at="2017-10-13T17:09:53Z" finished-at="2017-10-13T17:09:53Z">
+        <test-method status="PASS" signature="provideSSCYearOfPassing()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCYearOfPassing" duration-ms="225" started-at="2017-10-23T17:50:26Z" finished-at="2017-10-23T17:50:26Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Year of Passing successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCYearOfPassing -->
-        <test-method status="PASS" signature="provideSSCPercentageValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCPercentageValue" duration-ms="508" started-at="2017-10-13T17:09:53Z" finished-at="2017-10-13T17:09:54Z">
+        <test-method status="PASS" signature="provideSSCPercentageValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCPercentageValue" duration-ms="240" started-at="2017-10-23T17:50:26Z" finished-at="2017-10-23T17:50:26Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered SSC Registration Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCPercentageValue -->
-        <test-method status="PASS" signature="provideSSCModeOfStudy()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCModeOfStudy" duration-ms="284" started-at="2017-10-13T17:09:54Z" finished-at="2017-10-13T17:09:54Z">
+        <test-method status="PASS" signature="provideSSCModeOfStudy()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSSCModeOfStudy" duration-ms="216" started-at="2017-10-23T17:50:26Z" finished-at="2017-10-23T17:50:26Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered SSC Mode of Study value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCModeOfStudy -->
-        <test-method status="PASS" signature="provideHSCSchoolName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCSchoolName" duration-ms="553" started-at="2017-10-13T17:09:54Z" finished-at="2017-10-13T17:09:55Z">
+        <test-method status="PASS" signature="provideHSCSchoolName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCSchoolName" duration-ms="432" started-at="2017-10-23T17:50:26Z" finished-at="2017-10-23T17:50:27Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered HSC School Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCSchoolName -->
-        <test-method status="PASS" signature="provideHSCRegNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCRegNumber" duration-ms="329" started-at="2017-10-13T17:09:55Z" finished-at="2017-10-13T17:09:55Z">
+        <test-method status="PASS" signature="provideHSCRegNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCRegNumber" duration-ms="192" started-at="2017-10-23T17:50:27Z" finished-at="2017-10-23T17:50:27Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered HSC Registration Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCRegNumber -->
-        <test-method status="PASS" signature="provideHSCYearOfPassing()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCYearOfPassing" duration-ms="349" started-at="2017-10-13T17:09:55Z" finished-at="2017-10-13T17:09:55Z">
+        <test-method status="PASS" signature="provideHSCYearOfPassing()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCYearOfPassing" duration-ms="198" started-at="2017-10-23T17:50:27Z" finished-at="2017-10-23T17:50:27Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered HSC Year of Passing successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCYearOfPassing -->
-        <test-method status="PASS" signature="provideHSCPercentageValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCPercentageValue" duration-ms="242" started-at="2017-10-13T17:09:55Z" finished-at="2017-10-13T17:09:56Z">
+        <test-method status="PASS" signature="provideHSCPercentageValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCPercentageValue" duration-ms="196" started-at="2017-10-23T17:50:27Z" finished-at="2017-10-23T17:50:27Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered HSC Registration Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCPercentageValue -->
-        <test-method status="PASS" signature="provideHSCModeOfStudy()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCModeOfStudy" duration-ms="248" started-at="2017-10-13T17:09:56Z" finished-at="2017-10-13T17:09:56Z">
+        <test-method status="PASS" signature="provideHSCModeOfStudy()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideHSCModeOfStudy" duration-ms="194" started-at="2017-10-23T17:50:27Z" finished-at="2017-10-23T17:50:28Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered HSC Mode of Study value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCModeOfStudy -->
-        <test-method status="PASS" signature="provideEntranceExamValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideEntranceExamValue" duration-ms="557" started-at="2017-10-13T17:09:56Z" finished-at="2017-10-13T17:09:56Z">
+        <test-method status="PASS" signature="provideEntranceExamValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideEntranceExamValue" duration-ms="401" started-at="2017-10-23T17:50:28Z" finished-at="2017-10-23T17:50:28Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Entrance Exam value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideEntranceExamValue -->
-        <test-method status="PASS" signature="provideSubject1NameValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject1NameValue" duration-ms="390" started-at="2017-10-13T17:09:56Z" finished-at="2017-10-13T17:09:57Z">
+        <test-method status="PASS" signature="provideSubject1NameValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject1NameValue" duration-ms="379" started-at="2017-10-23T17:50:28Z" finished-at="2017-10-23T17:50:28Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject 1 Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject1NameValue -->
-        <test-method status="PASS" signature="provideSubject1Marks1Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject1Marks1Value" duration-ms="159" started-at="2017-10-13T17:09:57Z" finished-at="2017-10-13T17:09:57Z">
+        <test-method status="PASS" signature="provideSubject1Marks1Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject1Marks1Value" duration-ms="190" started-at="2017-10-23T17:50:28Z" finished-at="2017-10-23T17:50:29Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject1 Marks1 value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject1Marks1Value -->
-        <test-method status="PASS" signature="provideSubject1Percetage1Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject1Percetage1Value" duration-ms="251" started-at="2017-10-13T17:09:57Z" finished-at="2017-10-13T17:09:57Z">
+        <test-method status="PASS" signature="provideSubject1Percetage1Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject1Percetage1Value" duration-ms="192" started-at="2017-10-23T17:50:29Z" finished-at="2017-10-23T17:50:29Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject1 Percetage1 Value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject1Percetage1Value -->
-        <test-method status="PASS" signature="provideSubject2NameValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject2NameValue" duration-ms="401" started-at="2017-10-13T17:09:57Z" finished-at="2017-10-13T17:09:58Z">
+        <test-method status="PASS" signature="provideSubject2NameValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject2NameValue" duration-ms="308" started-at="2017-10-23T17:50:29Z" finished-at="2017-10-23T17:50:29Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject2 Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject2NameValue -->
-        <test-method status="PASS" signature="provideSubject2Marks1Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject2Marks1Value" duration-ms="149" started-at="2017-10-13T17:09:58Z" finished-at="2017-10-13T17:09:58Z">
+        <test-method status="PASS" signature="provideSubject2Marks1Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject2Marks1Value" duration-ms="145" started-at="2017-10-23T17:50:29Z" finished-at="2017-10-23T17:50:29Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject2 Marks2 value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject2Marks1Value -->
-        <test-method status="PASS" signature="provideSubject2Percetage2Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject2Percetage2Value" duration-ms="231" started-at="2017-10-13T17:09:58Z" finished-at="2017-10-13T17:09:58Z">
+        <test-method status="PASS" signature="provideSubject2Percetage2Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject2Percetage2Value" duration-ms="212" started-at="2017-10-23T17:50:29Z" finished-at="2017-10-23T17:50:30Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject2 Percetage2 Value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject2Percetage2Value -->
-        <test-method status="PASS" signature="provideSubject3NameValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject3NameValue" duration-ms="396" started-at="2017-10-13T17:09:58Z" finished-at="2017-10-13T17:09:58Z">
+        <test-method status="PASS" signature="provideSubject3NameValue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject3NameValue" duration-ms="327" started-at="2017-10-23T17:50:30Z" finished-at="2017-10-23T17:50:30Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject3 Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject3NameValue -->
-        <test-method status="PASS" signature="provideSubject3Marks3Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject3Marks3Value" duration-ms="213" started-at="2017-10-13T17:09:58Z" finished-at="2017-10-13T17:09:59Z">
+        <test-method status="PASS" signature="provideSubject3Marks3Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject3Marks3Value" duration-ms="167" started-at="2017-10-23T17:50:30Z" finished-at="2017-10-23T17:50:30Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject3 Marks3 value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject3Marks3Value -->
-        <test-method status="PASS" signature="provideSubject3Percetage3Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject3Percetage3Value" duration-ms="221" started-at="2017-10-13T17:09:59Z" finished-at="2017-10-13T17:09:59Z">
+        <test-method status="PASS" signature="provideSubject3Percetage3Value()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="provideSubject3Percetage3Value" duration-ms="184" started-at="2017-10-23T17:50:30Z" finished-at="2017-10-23T17:50:30Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Subject3 Percetage3 Value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSubject3Percetage3Value -->
-        <test-method status="PASS" signature="attachAttachment1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment1" duration-ms="102" started-at="2017-10-13T17:09:59Z" finished-at="2017-10-13T17:09:59Z">
+        <test-method status="PASS" signature="attachAttachment1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment1" duration-ms="174" started-at="2017-10-23T17:50:30Z" finished-at="2017-10-23T17:50:30Z">
           <reporter-output>
             <line>
               <![CDATA[User has attached Certificate1 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- attachAttachment1 -->
-        <test-method status="PASS" signature="attachAttachment2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment2" duration-ms="88" started-at="2017-10-13T17:09:59Z" finished-at="2017-10-13T17:09:59Z">
+        <test-method status="PASS" signature="attachAttachment2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment2" duration-ms="72" started-at="2017-10-23T17:50:30Z" finished-at="2017-10-23T17:50:30Z">
           <reporter-output>
             <line>
               <![CDATA[User has attached Certificate2 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- attachAttachment2 -->
-        <test-method status="PASS" signature="attachAttachment3()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment3" duration-ms="82" started-at="2017-10-13T17:09:59Z" finished-at="2017-10-13T17:09:59Z">
+        <test-method status="PASS" signature="attachAttachment3()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment3" duration-ms="71" started-at="2017-10-23T17:50:30Z" finished-at="2017-10-23T17:50:31Z">
           <reporter-output>
             <line>
               <![CDATA[User has attached Certificate3 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- attachAttachment3 -->
-        <test-method status="PASS" signature="attachAttachment4()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment4" duration-ms="84" started-at="2017-10-13T17:09:59Z" finished-at="2017-10-13T17:09:59Z">
+        <test-method status="PASS" signature="attachAttachment4()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment4" duration-ms="67" started-at="2017-10-23T17:50:31Z" finished-at="2017-10-23T17:50:31Z">
           <reporter-output>
             <line>
               <![CDATA[User has attached Certificate4 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- attachAttachment4 -->
-        <test-method status="PASS" signature="attachAttachment5()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment5" duration-ms="78" started-at="2017-10-13T17:09:59Z" finished-at="2017-10-13T17:09:59Z">
+        <test-method status="PASS" signature="attachAttachment5()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="attachAttachment5" duration-ms="72" started-at="2017-10-23T17:50:31Z" finished-at="2017-10-23T17:50:31Z">
           <reporter-output>
             <line>
               <![CDATA[User has attached Certificate5 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- attachAttachment5 -->
-        <test-method status="PASS" signature="clickNextButtonStep3()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickNextButtonStep3" duration-ms="5547" started-at="2017-10-13T17:09:59Z" finished-at="2017-10-13T17:10:05Z">
+        <test-method status="PASS" signature="clickNextButtonStep3()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickNextButtonStep3" duration-ms="13528" started-at="2017-10-23T17:50:31Z" finished-at="2017-10-23T17:50:44Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Next button on Step 3 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickNextButtonStep3 -->
+        <test-method status="PASS" signature="providePaymentType()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="providePaymentType" duration-ms="276" started-at="2017-10-23T17:50:44Z" finished-at="2017-10-23T17:50:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Payment Type value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- providePaymentType -->
+        <test-method status="PASS" signature="providePaymentAmount()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="providePaymentAmount" duration-ms="124" started-at="2017-10-23T17:50:44Z" finished-at="2017-10-23T17:50:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Payment Amount value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- providePaymentAmount -->
+        <test-method status="PASS" signature="clickSubmitButtonStep4()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7d907bac]" name="clickSubmitButtonStep4" duration-ms="3470" started-at="2017-10-23T17:50:45Z" finished-at="2017-10-23T17:50:48Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has clicked Submit button on Step 3 successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickSubmitButtonStep4 -->
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
     </test> <!-- Staging QA Application Form Test Validations -->
   </suite> <!-- Suite -->

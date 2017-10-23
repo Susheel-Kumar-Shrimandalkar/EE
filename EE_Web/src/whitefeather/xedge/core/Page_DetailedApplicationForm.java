@@ -606,4 +606,35 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return element;	
 	}
 	
+/********************* STEP 3 *************************/
+	
+	public static Select displayPaymentTypeDropdownDropDown() throws Exception
+	{
+		try {
+			dropdown = new Select(driver.findElement((properties.selectLocator("Step4_PaymentType"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return dropdown;	
+	}
+	
+	public static WebElement displayPaymentAmountField() throws Exception
+	{	
+		try {
+			element = driver.findElement(properties.selectLocator("Step4_PaymentAmount"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displaySubmitButtonStep4() throws Exception
+	{	
+		try {
+			element = driver.findElement(properties.selectLocator("Step4_SubmitButton"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
 }

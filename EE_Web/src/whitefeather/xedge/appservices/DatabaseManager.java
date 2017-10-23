@@ -11,6 +11,7 @@ import whitefeather.xedge.facilitator.HelperHand;
 
 public class DatabaseManager extends HelperHand
 {
+	//to be done later - successful connection
 	public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
 	         "databaseName=ExtraaEdgeV2_Version1;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; 
 	
@@ -58,12 +59,13 @@ public class DatabaseManager extends HelperHand
         	 System.out.println(prn);  
 //        	 System.out.println(rs.getString(1)+" >> "+rs.getString(2)+" >> "+rs.getString(3)+" >>" +rs.getString(4));  
          }  
+         con.close();
          return prn;
 	}
 	
-	public static void main(String[] args) throws SQLException {
+	/*public static void main(String[] args) throws SQLException {
 		establishDatabaseConnection();
 		getPRNofLeadAddedThroughAppForm();
-	}
+	}*/
 
 }

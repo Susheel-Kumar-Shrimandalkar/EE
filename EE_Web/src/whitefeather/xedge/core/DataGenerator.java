@@ -37,7 +37,7 @@ public class DataGenerator {
 	
 	public static String generateFirstName()
 	{
-		return "LeadName_"+getDate()+"_"+getTime();
+		return "AppFormLead_"+getDate()+"_"+getTime();
 	}
 	
 	/*public static void main(String[] args) {
