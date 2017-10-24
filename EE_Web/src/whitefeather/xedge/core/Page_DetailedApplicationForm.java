@@ -13,12 +13,15 @@ public class Page_DetailedApplicationForm extends HelperHand
 {
 	public static WebElement element;
 	public static Select dropdown;
+	public static int numericMonth = 0;
+	public static String dob = "";
 	public static ObjectMapping properties = new ObjectMapping(Constants.LOCATORS);
 	
 	/********************* STEP 1 *************************/
 	
 	public static WebElement displayDateOfBirthInputFieldStep1() throws Exception
 	{
+		//DB Format: 2017-02-22 00:00:00.000
 		try {
 			element =driver.findElement(properties.selectLocator("Step1_DateOfBirth"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -28,22 +31,91 @@ public class Page_DetailedApplicationForm extends HelperHand
 		
 	}
 	
-	public static WebElement displayDateOfBirthStep1() throws Exception
+	public static Select displayDOBMonthDropDown() throws Exception
+	{
+		try {
+			dropdown  = new Select(driver.findElement((properties.selectLocator("Step1_SelectBirthMonth"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return dropdown;	
+	}
+	
+	public static Select displayDOBYearDropDown() throws Exception
+	{
+		try {
+			dropdown = new Select(driver.findElement((properties.selectLocator("Step1_SelectBirthYear"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return dropdown;	
+	}
+	
+	public static WebElement displayDaysOfMonth() throws Exception
 	{
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 30);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("Step1_DayOfDateOfBirth")));
-			//To be done later - past month logic
-			dropdown  = new Select(driver.findElement((properties.selectLocator("Step1_SelectBirthMonth"))));
-			dropdown.selectByIndex(1);
 			element = driver.findElement(properties.selectLocator("Step1_DayOfDateOfBirth"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		return element;
-		
 	}
 		
+	public static String getBirthMonthFromProvidedDOB(String mon) throws Exception
+	{
+		switch (mon) {
+		case "Jan":
+			numericMonth  = 1;
+			break;
+		case "Feb":
+			numericMonth  = 2;
+		case "Mar":
+			numericMonth  = 3;
+			break;
+		case "Apr":
+			numericMonth  = 4;
+			break;
+		case "May":
+			numericMonth  = 5;
+			break;
+		case "Jun":
+			numericMonth  = 6;
+			break;
+		case "Jul":
+			numericMonth  = 7;
+			break;
+		case "Aug":
+			numericMonth  = 8;
+			break;
+		case "Sep":
+			numericMonth  = 9;
+			break;
+		case "Oct":
+			numericMonth  = 10;
+			break;
+		case "Nov":
+			numericMonth  = 11;
+			break;
+		case "Dec":
+			numericMonth  = 12;
+			break;
+		default:
+			break;
+		}
+		return Integer.toString(numericMonth);
+	}
+	
+	/*
+	public static String getProvideDateOfBirth() throws Exception
+	{
+		
+		dob = displayDOBYearDropDown().getFirstSelectedOption().getText()+"-0"
+				+getBirthMonthFromProvidedDOB(displayDOBMonthDropDown().getFirstSelectedOption().getText())
+				+displayDaysOfMonth().getText();
+		return dob;
+	}*/
 		/*			
 		List<WebElement> allDates=driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']//td"));
 		
@@ -61,7 +133,7 @@ public class Page_DetailedApplicationForm extends HelperHand
 		}
 		return element;
 	*/
-	
+
 	public static WebElement displayBloodGroupInputField() throws Exception
 	{
 		try {

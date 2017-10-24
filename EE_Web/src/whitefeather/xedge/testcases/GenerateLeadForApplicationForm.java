@@ -2,8 +2,6 @@ package whitefeather.xedge.testcases;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-import whitefeather.xedge.appconfig.Constants;
-import whitefeather.xedge.core.Page_DetailedApplicationForm;
 import whitefeather.xedge.core.Page_GenerateLeadApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
@@ -39,6 +37,7 @@ public class GenerateLeadForApplicationForm extends HelperHand
 	{
 		try {
 			Page_GenerateLeadApplicationForm.displayEmailInputField().sendKeys(thirdPartyLeadEmail);
+			System.out.println("Entered Email is: "+thirdPartyLeadEmail);
 			Reporter.log("User has entered Email Address successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();

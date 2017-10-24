@@ -81,7 +81,13 @@ public class HelperHand
 	
 	 public static String getPRN() throws SQLException
 	 {
-		 return DatabaseManager.getPRNofLeadAddedThroughAppForm();
+		 DatabaseManager.getLeadDataFromDatabase();
+		 return DatabaseManager.getPRNFromUsers();
+	 }
+	 
+	 public static String generateAppFormLeadEmail()
+	 {
+		 return thirdPartyLeadEmail ;
 	 }
 }
 

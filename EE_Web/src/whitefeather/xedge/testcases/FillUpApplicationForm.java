@@ -1,10 +1,13 @@
 package whitefeather.xedge.testcases;
 
 import java.sql.SQLException;
+
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import whitefeather.xedge.appconfig.Constants;
+import whitefeather.xedge.appservices.DatabaseManager;
 import whitefeather.xedge.core.Page_DetailedApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
@@ -16,14 +19,19 @@ public class FillUpApplicationForm  extends HelperHand
 	public static void openDetailedApplicationFormPage() throws SQLException, InterruptedException
 	{
 		System.out.println("\n"+"*********************** Filling up Step 1 Information ***************************"+"\n");
-		System.out.println(Constants.APPLICATIONFORM+"?ref_no="+getPRN());
+		String leadPrn = DatabaseManager.getPRNFromUsers();
+		System.out.println(leadPrn);
+		System.out.println(Constants.APPLICATIONFORM+"?ref_no="+leadPrn);
 		try 
 		{
-			driver.get(Constants.APPLICATIONFORM+"?ref_no="+getPRN());
+			driver.get(Constants.APPLICATIONFORM+"?ref_no="+leadPrn);
 			Thread.sleep(500);
+			Assert.assertEquals(Constants.APPLICATIONFORM+"?ref_no="+leadPrn, driver.getCurrentUrl());
+			System.out.println("Assertion Successful");
 			Reporter.log("User has opened Application Form successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
+			Assert.fail();
 			Reporter.log("User has failed to open Application Form.",true);
 		}
 	}
@@ -34,10 +42,12 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			driver.navigate().refresh();
+			Assert.assertTrue(Page_DetailedApplicationForm.displayDateOfBirthInputFieldStep1().isDisplayed());
 			Page_DetailedApplicationForm.displayDateOfBirthInputFieldStep1().click();
 			Reporter.log("User has opened calender successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
+			Assert.fail();
 			Reporter.log("User has failed to open Caledar Form.",true);
 		}
 	}
@@ -46,14 +56,22 @@ public class FillUpApplicationForm  extends HelperHand
 	public static void provideDateOfBirth() throws Exception
 	{
 		try 
-		{
-			Thread.sleep(3000);
-			//To be implemented - proper past date
-			Page_DetailedApplicationForm.displayDateOfBirthStep1().click();
-			Reporter.log("User has selected date successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
+		{		
+			Page_DetailedApplicationForm.displayDOBMonthDropDown().selectByIndex(6);
+			String month = Page_DetailedApplicationForm.getBirthMonthFromProvidedDOB(Page_DetailedApplicationForm.displayDOBMonthDropDown().getFirstSelectedOption().getText());
+			Page_DetailedApplicationForm.displayDOBYearDropDown().selectByIndex(80);
+			String year = Page_DetailedApplicationForm.displayDOBYearDropDown().getFirstSelectedOption().getText();
+			Page_DetailedApplicationForm.displayDaysOfMonth().click();
+			String day = Page_DetailedApplicationForm.displayDaysOfMonth().getText();
+			
+			String dateOfBirth = year+"-0"+month+"-"+day+" 00:00:00.000";
+			Assert.assertEquals(dateOfBirth, DatabaseManager.getUserDOBFromUsers());
+			System.out.println("DOB is validated.");
+			Reporter.log("User has Date of Birth successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to select date.",true);
+			Assert.fail();
+			Reporter.log("User has failed to enter Date of Birth.",true);
 		}
 	}
 	
@@ -127,7 +145,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayReligionDropDown().sendKeys("Anti-National");
+			Page_DetailedApplicationForm.displayReligionDropDown().sendKeys("National");
 			Reporter.log("User has entered Religion value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -379,7 +397,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayGuardianRelationInputField().sendKeys("Maalik");
+			Page_DetailedApplicationForm.displayGuardianRelationInputField().sendKeys("Foster Parent");
 			Reporter.log("User has entered Guardians Relation value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -551,7 +569,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayEntranceExamInputField().sendKeys("RuleTheWorld-Stage I");
+			Page_DetailedApplicationForm.displayEntranceExamInputField().sendKeys("Join ExtraaEdge");
 			Reporter.log("User has entered Entrance Exam value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();

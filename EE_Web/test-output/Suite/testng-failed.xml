@@ -5,6 +5,12 @@
     <parameter name="browser" value="Chrome"/>
     <parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/>
     <classes>
+      <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
+        <parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
+        <methods>
+          <include name="selectBrowser"/>
+        </methods>
+      </class> <!-- whitefeather.xedge.testcases.OpenApplicationFormLandingPage -->
       <class name="whitefeather.xedge.testcases.FillUpApplicationForm">
         <parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
         <methods>
@@ -19,7 +25,7 @@
           <include name="provideSubject2NameValue"/>
           <include name="provideEntranceExamValue"/>
           <include name="provideEmergencyContactNumber"/>
-          <include name="openDetailedApplicationFormPage"/>
+          <include name="clickSubmitButtonStep4"/>
           <include name="provideCommunity"/>
           <include name="provideSubject2Percetage2Value"/>
           <include name="provideHSCPercentageValue"/>
@@ -35,38 +41,38 @@
           <include name="provideGuardiansName"/>
           <include name="clickNextButtonStep2"/>
           <include name="provideBloodGroup"/>
-          <include name="clickDateOfBirthInputField"/>
           <include name="provideNationality"/>
           <include name="provideReligion"/>
           <include name="provideSubject1NameValue"/>
           <include name="provideMothersName"/>
+          <include name="providePaymentType"/>
           <include name="provideCity"/>
           <include name="provideSubject3NameValue"/>
           <include name="provideMainAddress"/>
           <include name="provideAlternateContactNumber"/>
           <include name="provideHSCRegNumber"/>
+          <include name="providePaymentAmount"/>
           <include name="provideSubject3Marks3Value"/>
           <include name="provideDateOfBirth"/>
           <include name="provideGuardiansRelation"/>
           <include name="provideSSCModeOfStudy"/>
           <include name="provideSubject2Marks1Value"/>
           <include name="provideSubject3Percetage3Value"/>
+          <include name="attachAttachment3"/>
           <include name="provideGender"/>
           <include name="provideGuardiansContactNumber"/>
           <include name="provideHSCModeOfStudy"/>
+          <include name="attachAttachment1"/>
           <include name="provideSSCYearOfPassing"/>
+          <include name="attachAttachment2"/>
+          <include name="attachAttachment5"/>
           <include name="provideHSCSchoolName"/>
+          <include name="attachAttachment4"/>
           <include name="provideSubject1Percetage1Value"/>
           <include name="provideCourse"/>
           <include name="provideCountry"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
-      <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
-        <parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
-        <methods>
-          <include name="selectBrowser"/>
-        </methods>
-      </class> <!-- whitefeather.xedge.testcases.OpenApplicationFormLandingPage -->
     </classes>
   </test> <!-- Staging QA Application Form Test Validations(failed) -->
 </suite> <!-- Failed suite [Suite] -->
