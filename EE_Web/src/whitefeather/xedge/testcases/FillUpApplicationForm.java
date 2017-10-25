@@ -4,22 +4,22 @@ import java.sql.SQLException;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import whitefeather.xedge.appconfig.Constants;
-import whitefeather.xedge.appservices.DatabaseManager;
 import whitefeather.xedge.core.Page_DetailedApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
 public class FillUpApplicationForm  extends HelperHand
 {
 	
+	public static String providedDOB="", blGroup=null;
 	/********************* STEP 1 *************************/
 	@Test
 	public static void openDetailedApplicationFormPage() throws SQLException, InterruptedException
 	{
 		System.out.println("\n"+"*********************** Filling up Step 1 Information ***************************"+"\n");
-		String leadPrn = DatabaseManager.getPRNFromUsers();
+		String leadPrn = extractDataFromDatabase("userPRN");
 		System.out.println(leadPrn);
 		System.out.println(Constants.APPLICATIONFORM+"?ref_no="+leadPrn);
 		try 
@@ -64,10 +64,9 @@ public class FillUpApplicationForm  extends HelperHand
 			Page_DetailedApplicationForm.displayDaysOfMonth().click();
 			String day = Page_DetailedApplicationForm.displayDaysOfMonth().getText();
 			
-			String dateOfBirth = year+"-0"+month+"-"+day+" 00:00:00.000";
-			Assert.assertEquals(dateOfBirth, DatabaseManager.getUserDOBFromUsers());
-			System.out.println("DOB is validated.");
-			Reporter.log("User has Date of Birth successfully.",true);
+			providedDOB = year+"-0"+month+"-"+day;
+			
+			Reporter.log("User has provided Date of Birth successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -76,11 +75,13 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideBloodGroup() throws Exception
+	@Parameters({"bloodGroup"})	
+	public static void provideBloodGroup(String bloodGroup) throws Exception
 	{
+		blGroup = bloodGroup;
 		try 
 		{
-			Page_DetailedApplicationForm.displayBloodGroupInputField().sendKeys("B+");
+			Page_DetailedApplicationForm.displayBloodGroupInputField().sendKeys(blGroup);
 			Reporter.log("User has entered blood group value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -306,6 +307,42 @@ public class FillUpApplicationForm  extends HelperHand
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 			Reporter.log("User has failed to click Next button on Step 1.",true);
+		}
+	}
+	
+	@Test
+	public static void validateProvidedDataInStep1() throws InterruptedException, SQLException
+	{
+		System.out.println("\n"+"*********************** Validating information filled up in Step 1 ***************************"+"\n");
+
+		try {
+			System.out.println("--------------Validating Date of Birth--------------");
+			System.out.println("Provided DoB: "+providedDOB);
+			//Intentional Pause
+			Thread.sleep(2000);
+			String actualDOB = extractDataFromDatabase("userDOB");
+			System.out.println("DoB value frm DB: "+actualDOB);
+			Assert.assertEquals(providedDOB, actualDOB.substring(0, 10));
+			Reporter.log("Provided DOB matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided DOB doesn't match the value stored in database.",true);
+		}
+		
+		try {
+			System.out.println("--------------Validating Blood Group--------------");
+			System.out.println("Provided Blood Group: "+blGroup);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String actualBLGrp = extractDataFromDatabase("userBloodGrp");
+			System.out.println("Blood Group value frm DB: "+actualBLGrp);
+			Assert.assertEquals(blGroup, actualBLGrp);
+			Reporter.log("Provided Blood Group matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Blood Group doesn't match the value stored in database.",true);
 		}
 	}
 	

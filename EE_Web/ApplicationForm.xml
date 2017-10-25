@@ -28,6 +28,7 @@
 				<include name="openDetailedApplicationFormPage"/>
 				<include name="clickDateOfBirthInputField"/>
 				<include name="provideDateOfBirth"/>
+				<parameter name="bloodGroup" value="O+"/>
 				<include name="provideBloodGroup"/>
 				<include name="provideGender"/>
 				<include name="provideCitizenship"/>
@@ -46,6 +47,7 @@
 				<include name="provideAlternateAddress2"/>
 				<include name="provideAlternateContactNumber"/>
 				<include name="clickNextButtonStep1"/>
+				<include name="validateProvidedDataInStep1"></include>
 				<include name="provideFathersName"/>
 				<include name="provideMothersName"/>
 				<include name="provideGuardiansName"/>

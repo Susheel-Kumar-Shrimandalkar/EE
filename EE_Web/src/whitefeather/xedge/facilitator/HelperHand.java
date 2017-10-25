@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -16,7 +18,6 @@ import whitefeather.xedge.appconfig.ConfigMethods;
 import whitefeather.xedge.appservices.DatabaseManager;
 import whitefeather.xedge.appservices.EmailerService;
 import whitefeather.xedge.core.DataGenerator;
-
 
 
 public class HelperHand
@@ -40,6 +41,8 @@ public class HelperHand
 	public static final String thirdPartyEmergencyLeadEmail = DataGenerator.randomEmailGenerator();
 	public static final String thirdPartyAlternateContact = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String thirdPartyGuardiansContact = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	
+	public static LinkedHashMap<String, String> dbValues = new LinkedHashMap<String, String>();
 	
 //	public static String globalSearch=AddNewLeadWithAllValues.prospectEmail;
 
@@ -82,12 +85,13 @@ public class HelperHand
 	 public static String getPRN() throws SQLException
 	 {
 		 DatabaseManager.getLeadDataFromDatabase();
-		 return DatabaseManager.getPRNFromUsers();
+		 return (String) dbValues.get("userPRN");
 	 }
 	 
-	 public static String generateAppFormLeadEmail()
-	 {
-		 return thirdPartyLeadEmail ;
-	 }
+	public static String extractDataFromDatabase(String columnName) throws SQLException
+	{
+		DatabaseManager.getLeadDataFromDatabase();
+		return (String) dbValues.get(columnName);
+	}
 }
 
