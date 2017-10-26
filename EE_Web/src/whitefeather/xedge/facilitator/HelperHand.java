@@ -7,9 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -33,9 +31,9 @@ public class HelperHand
 	public static String currectDate = DataGenerator.getDate();
 	public static String currectTime = DataGenerator.getTime();
 	
-	public static final String thirdPartyLeadEmail = DataGenerator.randomEmailGenerator();
-	public static final String thirdPartyLeadFullName = DataGenerator.generateFirstName();
-	public static final String thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	public static String thirdPartyLeadEmail = DataGenerator.randomEmailGenerator();
+	public static String thirdPartyLeadFullName = DataGenerator.generateFirstName();
+	public static String thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	
 	public static final String thirdPartyEmergencyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String thirdPartyEmergencyLeadEmail = DataGenerator.randomEmailGenerator();

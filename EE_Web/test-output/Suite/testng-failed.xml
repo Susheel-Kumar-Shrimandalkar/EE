@@ -6,18 +6,49 @@
     <parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/>
     <classes>
       <class name="whitefeather.xedge.testcases.FillUpApplicationForm">
-        <parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
         <parameter name="bloodGroup" value="O+"/>
+        <parameter name="citizen" value="Kolhapur"/>
+        <parameter name="nationality" value="Indian"/>
+        <parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
         <methods>
-          <include name="providePaymentAmount"/>
-          <include name="validateProvidedDataInStep1"/>
+          <include name="provideHSCYearOfPassing"/>
+          <include name="provideSubject1NameValue"/>
           <include name="providePaymentType"/>
+          <include name="provideSubject3NameValue"/>
+          <include name="validateNationalityInStep1"/>
+          <include name="validateBloodGroupInStep1"/>
+          <include name="provideHSCRegNumber"/>
+          <include name="providePaymentAmount"/>
+          <include name="validateDoBStep1"/>
+          <include name="provideSubject3Marks3Value"/>
+          <include name="validateCitizenShipInStep1"/>
+          <include name="provideSSCModeOfStudy"/>
+          <include name="provideSubject2Marks1Value"/>
+          <include name="provideSubject2NameValue"/>
+          <include name="provideSubject3Percetage3Value"/>
+          <include name="provideEntranceExamValue"/>
+          <include name="provideHSCModeOfStudy"/>
+          <include name="provideSSCYearOfPassing"/>
           <include name="clickSubmitButtonStep4"/>
+          <include name="provideHSCSchoolName"/>
+          <include name="provideSubject2Percetage2Value"/>
+          <include name="provideHSCPercentageValue"/>
+          <include name="provideSubject1Percetage1Value"/>
+          <include name="provideSubject1Marks1Value"/>
+          <include name="provideCourse"/>
+          <include name="provideSSCSchoolName"/>
+          <include name="validateGenderValueInStep1"/>
+          <include name="provideSSCPercentageValue"/>
+          <include name="provideSSCRegNumber"/>
+          <include name="clickNextButtonStep3"/>
+          <include name="clickNextButtonStep2"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
       <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
-        <parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
         <parameter name="bloodGroup" value="O+"/>
+        <parameter name="citizen" value="Kolhapur"/>
+        <parameter name="nationality" value="Indian"/>
+        <parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
         <methods>
           <include name="selectBrowser"/>
         </methods>

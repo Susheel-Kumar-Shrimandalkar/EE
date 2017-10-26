@@ -12,8 +12,9 @@ import whitefeather.xedge.facilitator.HelperHand;
 
 public class FillUpApplicationForm  extends HelperHand
 {
+	public static final String fullName=thirdPartyLeadFullName;
 	
-	public static String providedDOB="", blGroup=null;
+	public static String providedDOB, providedBlGroup, providedGenderValue,providedCitizenship, providedNationality;
 	/********************* STEP 1 *************************/
 	@Test
 	public static void openDetailedApplicationFormPage() throws SQLException, InterruptedException
@@ -78,10 +79,10 @@ public class FillUpApplicationForm  extends HelperHand
 	@Parameters({"bloodGroup"})	
 	public static void provideBloodGroup(String bloodGroup) throws Exception
 	{
-		blGroup = bloodGroup;
+		providedBlGroup = bloodGroup;
 		try 
 		{
-			Page_DetailedApplicationForm.displayBloodGroupInputField().sendKeys(blGroup);
+			Page_DetailedApplicationForm.displayBloodGroupInputField().sendKeys(providedBlGroup);
 			Reporter.log("User has entered blood group value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -95,6 +96,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			Page_DetailedApplicationForm.displayGenderDropDown().selectByIndex(1);
+			providedGenderValue = Page_DetailedApplicationForm.displayGenderDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered Gender value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -103,11 +105,13 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideCitizenship() throws Exception
+	@Parameters({"citizen"})	
+	public static void provideCitizenship(String citizen) throws Exception
 	{
+		providedCitizenship = citizen;
 		try 
 		{
-			Page_DetailedApplicationForm.displayCitizenshipInputField().sendKeys("Kolhapur");
+			Page_DetailedApplicationForm.displayCitizenshipInputField().sendKeys(providedCitizenship);
 			Reporter.log("User has entered Citizenship value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -116,11 +120,13 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideNationality() throws Exception
+	@Parameters({"nationality"})
+	public static void provideNationality(String nationality) throws Exception
 	{
+		providedNationality = nationality;
 		try 
 		{
-			Page_DetailedApplicationForm.displayNationalityInputField().sendKeys("Bharat");
+			Page_DetailedApplicationForm.displayNationalityInputField().sendKeys(providedNationality);
 			Reporter.log("User has entered Nationality value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -310,8 +316,9 @@ public class FillUpApplicationForm  extends HelperHand
 		}
 	}
 	
+
 	@Test
-	public static void validateProvidedDataInStep1() throws InterruptedException, SQLException
+	public static void validateDoBStep1() throws InterruptedException, SQLException
 	{
 		System.out.println("\n"+"*********************** Validating information filled up in Step 1 ***************************"+"\n");
 
@@ -329,15 +336,19 @@ public class FillUpApplicationForm  extends HelperHand
 			Assert.fail();
 			Reporter.log("Provided DOB doesn't match the value stored in database.",true);
 		}
-		
+	}
+	
+	@Test
+	public static void validateBloodGroupInStep1() throws InterruptedException, SQLException
+	{	
 		try {
 			System.out.println("--------------Validating Blood Group--------------");
-			System.out.println("Provided Blood Group: "+blGroup);
+			System.out.println("Provided Blood Group: "+providedBlGroup);
 			//Intentional Pause
 			Thread.sleep(1000);
 			String actualBLGrp = extractDataFromDatabase("userBloodGrp");
 			System.out.println("Blood Group value frm DB: "+actualBLGrp);
-			Assert.assertEquals(blGroup, actualBLGrp);
+			Assert.assertEquals(providedBlGroup, actualBLGrp);
 			Reporter.log("Provided Blood Group matches the value stored in database.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
@@ -346,12 +357,68 @@ public class FillUpApplicationForm  extends HelperHand
 		}
 	}
 	
+	@Test
+	public static void validateGenderValueInStep1() throws InterruptedException, SQLException
+	{	
+		try {
+			System.out.println("--------------Validating Blood Group--------------");
+			System.out.println("Provided Gender: "+providedGenderValue);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String dbGender = extractDataFromDatabase("userGender");
+			System.out.println("Gender value frm DB: "+dbGender);
+			Assert.assertEquals(providedGenderValue, dbGender); //Do later trimming in Gender Value. Assertion should fail as of now.
+			Reporter.log("Provided Gender matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Gender doesn't match the value stored in database.",true);
+		}
+	}
 	
+	@Test
+	public static void validateCitizenShipInStep1() throws InterruptedException, SQLException
+	{	
+		try {
+			System.out.println("--------------Validating Citizenship--------------");
+			System.out.println("Provided CitizenShip: "+providedCitizenship);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String dbCityZensp = extractDataFromDatabase("appFormCitizenship");
+			System.out.println("CitizenShip frm DB: "+dbCityZensp);
+			Assert.assertEquals(providedCitizenship, dbCityZensp);
+			Reporter.log("Provided CitizenShip matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided CitizenShip doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateNationalityInStep1() throws InterruptedException, SQLException
+	{	
+		try {
+			System.out.println("--------------Validating Nationality--------------");
+			System.out.println("Provided Nationality: "+providedNationality);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String dbNation = extractDataFromDatabase("appFormCitizenship");
+			System.out.println("Nationality frm DB: "+dbNation);
+			Assert.assertEquals(providedNationality, dbNation);
+			Reporter.log("Provided Nationality matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Nationality doesn't match the value stored in database.",true);
+		}
+	}
 	/********************* STEP 2 *************************/
 	
 	@Test
 	public static void provideFathersName() throws Exception
 	{
+		Thread.sleep(1000);
 		System.out.println("\n"+"*********************** Filling up Step 2 Information ***************************"+"\n");
 
 		try 

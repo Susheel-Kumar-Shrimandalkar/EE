@@ -20,6 +20,10 @@
 				<include name="enterMobileNumber"/>
 				<include name="enterEmailAddress"/>
 				<include name="clickSubmitButton"/>
+				<include name = "validateLeadFirstName"/>
+				<include name = "validateLeadMobileNumber"/>
+				<include name = "validateLeadEmailAddress"/>
+				<include name = "validateLeadDetailsSuccessfulSumbission"/>
 				</methods>
 			</class>
 			
@@ -31,7 +35,9 @@
 				<parameter name="bloodGroup" value="O+"/>
 				<include name="provideBloodGroup"/>
 				<include name="provideGender"/>
+				<parameter name="citizen" value="Kolhapur"/>
 				<include name="provideCitizenship"/>
+				<parameter name="nationality" value="Indian"/>
 				<include name="provideNationality"/>
 				<include name="provideDomicile"/>
 				<include name="provideReligion"/>
@@ -56,6 +62,11 @@
 				<include name="provideGuardiansContactNumber"/>
 				<include name="provideGuardiansRelation"/>
 				<include name="clickNextButtonStep2"/>
+				<include name="validateDoBStep1"/>
+				<include name="validateBloodGroupInStep1"/>
+				<include name="validateGenderValueInStep1"/>
+				<include name="validateCitizenShipInStep1"/>
+				<include name="validateNationalityInStep1"/>
 				<include name="provideCourse"/>
 				<include name="provideSSCSchoolName"/>
 				<include name="provideSSCRegNumber"/>
