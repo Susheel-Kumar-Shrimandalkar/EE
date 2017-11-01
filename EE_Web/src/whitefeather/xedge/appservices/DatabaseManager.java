@@ -213,7 +213,25 @@ public class DatabaseManager extends HelperHand
         	 dbValues.put("userFthrMob", rs.getString(20));
         	 dbValues.put("usercommLAddr1", rs.getString(21));
         	 dbValues.put("usercommLAddr1", rs.getString(22));
-        	 dbValues.put("usercommLCN", rs.getString(23));
+        	 dbValues.put("usercommLCN", rs.getString(23));	 
+        	 dbValues.put("userFatherNm", rs.getString(24));
+        	 dbValues.put("userMotherNm", rs.getString(25));
+        	 dbValues.put("userEmergncyNm", rs.getString(26));
+        	 dbValues.put("userCommPrimaryAddr1", rs.getString(27));
+        	 dbValues.put("userCommPrimaryAddr2", rs.getString(28));
+        	 dbValues.put("userCommPrimaryContactNum", rs.getString(29));
+        	 dbValues.put("userEmrgncyRelatn", rs.getString(30));
+        	 dbValues.put("userHighSchoolNm", rs.getString(31));
+        	 dbValues.put("appFormRegNum1", rs.getString(32));
+        	 dbValues.put("appFormSSLCYop", rs.getString(33));
+        	 dbValues.put("appFormMoSSSC", rs.getString(34));
+        	 dbValues.put("userSecSchoolNm", rs.getString(35));
+        	 dbValues.put("appFormRegNum2", rs.getString(36));
+        	 dbValues.put("appFormHSLCYop", rs.getString(37));
+        	 dbValues.put("userUGPercent", rs.getString(38));
+        	 dbValues.put("appFormMoSHSC", rs.getString(39));
+        	 dbValues.put("appFormEntrncExm", rs.getString(40));
+        	 
         	 
          }  
          con.close();

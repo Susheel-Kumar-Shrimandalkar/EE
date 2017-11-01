@@ -12,6 +12,9 @@ public class Page_GenerateLeadApplicationForm extends HelperHand
 
 	public static WebElement displayFullNameInputField() throws Exception
 	{
+		driver.navigate().refresh();
+		Thread.sleep(500);
+		
 		try {
 			element = driver.findElement(properties.selectLocator("BasicInfo_FullName"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {

@@ -9,7 +9,8 @@
 		<classes>
 			<class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
 				<methods>
-				<parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/>
+<!-- 				<parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/> -->
+				<parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/>
 				<include name="openAppForm"/>
 				</methods>
 			</class>
@@ -32,6 +33,10 @@
 				<include name="openDetailedApplicationFormPage"/>
 				<include name="clickDateOfBirthInputField"/>
 				<include name="provideDateOfBirth"/>
+				<parameter name="placeOfBirth" value="Kavathe Mahaankaal"/>
+				<include name="providePlaceOfBirth"/>
+				<parameter name="age" value="25"/>
+				<include name="provideAge"/>
 				<parameter name="bloodGroup" value="O+"/>
 				<include name="provideBloodGroup"/>
 				<include name="provideGender"/>

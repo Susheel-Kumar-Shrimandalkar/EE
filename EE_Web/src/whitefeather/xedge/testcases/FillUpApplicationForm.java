@@ -7,6 +7,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import whitefeather.xedge.appconfig.Constants;
+import whitefeather.xedge.core.DataGenerator;
 import whitefeather.xedge.core.Page_DetailedApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
@@ -58,20 +59,57 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{		
-			Page_DetailedApplicationForm.displayDOBMonthDropDown().selectByIndex(6);
+			Page_DetailedApplicationForm.displayDOBMonthDropDown().selectByIndex(DataGenerator.getRandomMonth());
 			String month = Page_DetailedApplicationForm.getBirthMonthFromProvidedDOB(Page_DetailedApplicationForm.displayDOBMonthDropDown().getFirstSelectedOption().getText());
-			Page_DetailedApplicationForm.displayDOBYearDropDown().selectByIndex(80);
+			Page_DetailedApplicationForm.displayDOBYearDropDown().selectByIndex(DataGenerator.getRandomYear());
 			String year = Page_DetailedApplicationForm.displayDOBYearDropDown().getFirstSelectedOption().getText();
-			Page_DetailedApplicationForm.displayDaysOfMonth().click();
-			String day = Page_DetailedApplicationForm.displayDaysOfMonth().getText();
+			Page_DetailedApplicationForm.displayDaysOfMonthInDoB().click();
+			String day = Page_DetailedApplicationForm.displayDaysOfMonthInDoB().getText();
 			
-			providedDOB = year+"-0"+month+"-"+day;
+			if((Integer.parseInt(month)>9))
+			{
+				providedDOB = year+"-"+month+"-"+day;
+			}
+			else
+			{
+				providedDOB = year+"-0"+month+"-"+day;
+			}
+			
+			System.out.println(providedDOB);
 			
 			Reporter.log("User has provided Date of Birth successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
 			Assert.fail();
 			Reporter.log("User has failed to enter Date of Birth.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"placeOfBirth"})	
+	public static void providePlaceOfBirth(String placeOfBirth) throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayPlaceOfBirthInputField().sendKeys(placeOfBirth);
+			Reporter.log("User has entered PlaceOfBirth value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide PlaceOfBirth value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"age"})	
+	public static void provideAge(String age) throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayAgeInputField().sendKeys(age);
+			Reporter.log("User has entered Age value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Age value.",true);
 		}
 	}
 	
