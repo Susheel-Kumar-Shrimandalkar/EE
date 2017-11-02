@@ -15,7 +15,10 @@ public class FillUpApplicationForm  extends HelperHand
 {
 	public static final String fullName=thirdPartyLeadFullName;
 	
-	public static String providedDOB, providedBlGroup, providedGenderValue,providedCitizenship, providedNationality;
+	public static String providedDOB, providedBlGroup, providedGenderValue,providedCitizenship, providedNationality, 
+	providedUID, providedPlaceOfBirth, providedPassportN, providedPlOfIssue, providedDateOfIssue, providedExpiryDate,
+	providedReligion, providedCaste, providedDomicile,providedCommunnity, providedAddress1Step1, providedCountry, providedState,
+	providedCity, providedPincode, providedContactNumberStep1;
 	/********************* STEP 1 *************************/
 	@Test
 	public static void openDetailedApplicationFormPage() throws SQLException, InterruptedException
@@ -44,13 +47,13 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			driver.navigate().refresh();
-			Assert.assertTrue(Page_DetailedApplicationForm.displayDateOfBirthInputFieldStep1().isDisplayed());
-			Page_DetailedApplicationForm.displayDateOfBirthInputFieldStep1().click();
+			Assert.assertTrue(Page_DetailedApplicationForm.displayDateOfBirthInputField().isDisplayed());
+			Page_DetailedApplicationForm.displayDateOfBirthInputField().click();
 			Reporter.log("User has opened calender successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
 			Assert.fail();
-			Reporter.log("User has failed to open Caledar Form.",true);
+			Reporter.log("User has failed to open Caledar.",true);
 		}
 	}
 	
@@ -60,22 +63,24 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{		
 			Page_DetailedApplicationForm.displayDOBMonthDropDown().selectByIndex(DataGenerator.getRandomMonth());
-			String month = Page_DetailedApplicationForm.getBirthMonthFromProvidedDOB(Page_DetailedApplicationForm.displayDOBMonthDropDown().getFirstSelectedOption().getText());
+			String DOB_month = Page_DetailedApplicationForm.getBirthMonthFromProvidedDOB(Page_DetailedApplicationForm.displayDOBMonthDropDown().getFirstSelectedOption().getText());
 			Page_DetailedApplicationForm.displayDOBYearDropDown().selectByIndex(DataGenerator.getRandomYear());
-			String year = Page_DetailedApplicationForm.displayDOBYearDropDown().getFirstSelectedOption().getText();
+			String DOB_year = Page_DetailedApplicationForm.displayDOBYearDropDown().getFirstSelectedOption().getText();
 			Page_DetailedApplicationForm.displayDaysOfMonthInDoB().click();
-			String day = Page_DetailedApplicationForm.displayDaysOfMonthInDoB().getText();
+			String DOB_day = Page_DetailedApplicationForm.displayDaysOfMonthInDoB().getText();
 			
-			if((Integer.parseInt(month)>9))
+			if(Integer.parseInt(DOB_month)<10)
 			{
-				providedDOB = year+"-"+month+"-"+day;
+				DOB_month = String.format("%02d", Integer.parseInt(DOB_month));
 			}
-			else
+			if(Integer.parseInt(DOB_day)<10)
 			{
-				providedDOB = year+"-0"+month+"-"+day;
+				DOB_day = String.format("%02d", Integer.parseInt(DOB_day));
 			}
 			
-			System.out.println(providedDOB);
+			providedDOB = DOB_year+"-"+DOB_month+"-"+DOB_day;
+				
+			System.out.println("providedDOB: "+providedDOB);
 			
 			Reporter.log("User has provided Date of Birth successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
@@ -89,9 +94,10 @@ public class FillUpApplicationForm  extends HelperHand
 	@Parameters({"placeOfBirth"})	
 	public static void providePlaceOfBirth(String placeOfBirth) throws Exception
 	{
+		providedPlaceOfBirth = placeOfBirth;
 		try 
 		{
-			Page_DetailedApplicationForm.displayPlaceOfBirthInputField().sendKeys(placeOfBirth);
+			Page_DetailedApplicationForm.displayPlaceOfBirthInputField().sendKeys(providedPlaceOfBirth);
 			Reporter.log("User has entered PlaceOfBirth value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -100,16 +106,16 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	@Parameters({"age"})	
-	public static void provideAge(String age) throws Exception
+	public static void provideGender() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayAgeInputField().sendKeys(age);
-			Reporter.log("User has entered Age value successfully.",true);
+			Page_DetailedApplicationForm.displayGenderDropDown().selectByIndex(1);
+			providedGenderValue = Page_DetailedApplicationForm.displayGenderDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered Gender value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Age value.",true);
+			Reporter.log("User has failed to provide Gender value.",true);
 		}
 	}
 	
@@ -128,17 +134,176 @@ public class FillUpApplicationForm  extends HelperHand
 		}
 	}
 	
+
 	@Test
-	public static void provideGender() throws Exception
+	@Parameters({"nationality"})
+	public static void provideNationality(String nationality) throws Exception
+	{
+		providedNationality = nationality;
+		try 
+		{
+			Page_DetailedApplicationForm.displayNationalityInputField().sendKeys(providedNationality);
+			Reporter.log("User has entered Nationality value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Nationality value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"uid"})	
+	public static void provideAadharNumber(String uid) throws Exception
+	{
+		providedUID = uid;
+		try 
+		{
+			Page_DetailedApplicationForm.displayAadhaarNumberInputField().sendKeys(providedUID);
+			Reporter.log("User has entered Aadhaar Number value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Aadhaar Number value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"pNumber"})	
+	public static void providePassportNumber(String pNumber) throws Exception
+	{
+		providedPassportN = pNumber;
+		try 
+		{
+			Page_DetailedApplicationForm.displayPassportNumberInputField().sendKeys(providedPassportN);
+			Reporter.log("User has entered Passport Number value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Passport Number value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"plOfIssue"})	
+	public static void providePlaceOfIssue(String plOfIssue) throws Exception
+	{
+		providedPlOfIssue = plOfIssue;
+		try 
+		{
+			Page_DetailedApplicationForm.displayPlaceOfIssueInputField().sendKeys(providedPlOfIssue);
+			Reporter.log("User has entered Place Of Issue value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Place Of Issue value.",true);
+		}
+	}
+	
+	@Test
+	public static void clickDateOfIssueInputField() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayGenderDropDown().selectByIndex(1);
-			providedGenderValue = Page_DetailedApplicationForm.displayGenderDropDown().getFirstSelectedOption().getText();
-			Reporter.log("User has entered Gender value successfully.",true);
+			Assert.assertTrue(Page_DetailedApplicationForm.displayDateOfIssueInputField().isDisplayed());
+			Page_DetailedApplicationForm.displayDateOfIssueInputField().click();
+			Reporter.log("User has opened date of issue calender successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("User has failed to open date of issue Caledar.",true);
+		}
+	}
+	
+	@Test
+	public static void provideDateOfIssue() throws Exception
+	{
+		try 
+		{		
+			Page_DetailedApplicationForm.displayDateOfIssueMonthDropDown().selectByIndex(DataGenerator.getRandomMonth());
+			String DateOfIssue_month = Page_DetailedApplicationForm.getMonthFromProvidedDateOfIssue(Page_DetailedApplicationForm.displayDateOfIssueMonthDropDown().getFirstSelectedOption().getText());
+			Page_DetailedApplicationForm.displayDOBYearDropDown().selectByIndex(DataGenerator.getRandomYear()+10);
+			String DateOfIssue_year = Page_DetailedApplicationForm.displayDateOfIssueYearDropDown().getFirstSelectedOption().getText();
+			Page_DetailedApplicationForm.displayDaysOfMonthInDateOfIssue().click();
+			String DateOfIssue_day = Page_DetailedApplicationForm.displayDaysOfMonthInDateOfIssue().getText();
+			
+			if(Integer.parseInt(DateOfIssue_month)<10)
+			{
+				DateOfIssue_month = String.format("%02d", Integer.parseInt(DateOfIssue_month));
+			}
+			if(Integer.parseInt(DateOfIssue_day)<10)
+			{
+				DateOfIssue_day = String.format("%02d", Integer.parseInt(DateOfIssue_day));
+			}
+			
+			providedDateOfIssue = DateOfIssue_year+"-"+DateOfIssue_month+"-"+DateOfIssue_day;
+			
+			System.out.println("providedDateOfIssue: "+providedDateOfIssue);
+			
+			Reporter.log("User has provided Date of Issue successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("User has failed to enter Date of Issue.",true);
+		}
+	}
+	
+	@Test
+	public static void clickExpiryDateInputField() throws Exception
+	{
+		try 
+		{
+			Assert.assertTrue(Page_DetailedApplicationForm.displayExpiryDateInputField().isDisplayed());
+			Page_DetailedApplicationForm.displayExpiryDateInputField().click();
+			Reporter.log("User has opened Expiry Date calender successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("User has failed to open Expiry Date Caledar.",true);
+		}
+	}
+	
+	@Test
+	public static void provideExpiryDate() throws Exception
+	{
+		try 
+		{		
+			Page_DetailedApplicationForm.displayExpiryDateMonthDropDown().selectByIndex(DataGenerator.getRandomMonth());
+			String ExpiryDate_month = Page_DetailedApplicationForm.getMonthFromProvidedExpiryDate(Page_DetailedApplicationForm.displayExpiryDateMonthDropDown().getFirstSelectedOption().getText());
+			Page_DetailedApplicationForm.displayExpiryDateYearDropDown().selectByIndex(DataGenerator.getRandomYear()+15);
+			String ExpiryDate_year = Page_DetailedApplicationForm.displayExpiryDateYearDropDown().getFirstSelectedOption().getText();
+			Page_DetailedApplicationForm.displayDaysOfMonthInExpiryDate().click();
+			String ExpiryDate_day = Page_DetailedApplicationForm.displayDaysOfMonthInExpiryDate().getText();
+			
+			if(Integer.parseInt(ExpiryDate_month)<10)
+			{
+				ExpiryDate_month = String.format("%02d", Integer.parseInt(ExpiryDate_month));
+			}
+			if(Integer.parseInt(ExpiryDate_day)<10)
+			{
+				ExpiryDate_day = String.format("%02d", Integer.parseInt(ExpiryDate_day));
+			}
+			
+			providedExpiryDate = ExpiryDate_year+"-"+ExpiryDate_month+"-"+ExpiryDate_day;
+			
+			System.out.println("providedExpiryDate: "+providedExpiryDate);
+			
+			Reporter.log("User has provided Expiry Date successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("User has failed to enter Expiry Date.",true);
+		}
+	}
+	
+
+	@Test
+	@Parameters({"religion"})	
+	public static void provideReligion(String religion) throws Exception
+	{
+		providedReligion = religion;
+		try 
+		{
+			Page_DetailedApplicationForm.displayReligionDropDown().sendKeys(providedReligion);
+			Reporter.log("User has entered Religion value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Gender value.",true);
+			Reporter.log("User has failed to provide Religion value.",true);
 		}
 	}
 	
@@ -158,17 +323,16 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	@Parameters({"nationality"})
-	public static void provideNationality(String nationality) throws Exception
+	public static void provideCaste() throws Exception
 	{
-		providedNationality = nationality;
 		try 
 		{
-			Page_DetailedApplicationForm.displayNationalityInputField().sendKeys(providedNationality);
-			Reporter.log("User has entered Nationality value successfully.",true);
+			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(1);
+			providedCaste = Page_DetailedApplicationForm.displayCasteDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered Caste value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Nationality value.",true);
+			Reporter.log("User has failed to provide Caste value.",true);
 		}
 	}
 	
@@ -178,23 +342,11 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			Page_DetailedApplicationForm.displayDomicileDropDown().selectByIndex(1);
+			providedDomicile = Page_DetailedApplicationForm.displayDomicileDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered Domicile value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 			Reporter.log("User has failed to provide Domicile value.",true);
-		}
-	}
-	
-	@Test
-	public static void provideReligion() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayReligionDropDown().sendKeys("National");
-			Reporter.log("User has entered Religion value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Religion value.",true);
 		}
 	}
 	
@@ -204,6 +356,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			Page_DetailedApplicationForm.displayCommunityDropDown().selectByIndex(1);
+			providedCommunnity = Page_DetailedApplicationForm.displayCommunityDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered Community value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -211,38 +364,32 @@ public class FillUpApplicationForm  extends HelperHand
 		}
 	}
 	
+	
 	@Test
-	public static void provideCaste() throws Exception
+	@Parameters({"presentAddress"})	
+	public static void providePresentAddress(String presentAddress) throws Exception
 	{
+		providedAddress1Step1 = presentAddress;
 		try 
 		{
-			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(1);
-			Reporter.log("User has entered Caste value successfully.",true);
+			Page_DetailedApplicationForm.displayPresentAddressInputFieldStep1().sendKeys(providedAddress1Step1+DataGenerator.getTime());
+			providedAddress1Step1 = Page_DetailedApplicationForm.displayPresentAddressInputFieldStep1().getText();
+			Reporter.log("User has entered Present Address value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Caster value.",true);
+			Reporter.log("User has failed to provide Present Address value.",true);
 		}
 	}
 	
-	@Test
-	public static void provideMainAddress() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayMainAddressInputField().sendKeys("Ichalkaranji");
-			Reporter.log("User has entered Address value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Address value.",true);
-		}
-	}
 	
 	@Test
 	public static void provideCountry() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(1);
+			//Do later random selection logic once correct data is added to db
+			Page_DetailedApplicationForm.displayPresentAddrCountryDropDown().selectByValue("India");
+			providedCountry =  Page_DetailedApplicationForm.displayPresentAddrCountryDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered Country value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -255,7 +402,9 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(1);
+			//Do later random selection logic once correct data is added to db
+			Page_DetailedApplicationForm.displayPresentAddrStateDropDown().selectByValue("Maharashtra");
+			providedState =  Page_DetailedApplicationForm.displayPresentAddrStateDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered State value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -268,7 +417,9 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(1);
+			//Do later random selection logic once correct data is added to db
+			Page_DetailedApplicationForm.displayPresentAddrCityDropDown().selectByIndex(1);
+			providedCity =  Page_DetailedApplicationForm.displayPresentAddrCityDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered City value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -277,11 +428,26 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideEmergencyContactNumber() throws Exception
+	@Parameters({"pincode"})	
+	public static void providePincodePresentAddressStep1(String pincode) throws Exception
+	{
+		providedPincode = pincode;
+		try 
+		{
+			Page_DetailedApplicationForm.displayPresentAddrPincodeInputField().sendKeys(providedPincode);
+			Reporter.log("User has successfully entered Pincode value in Present Address section.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Pincode value in Present Address section.",true);
+		}
+	}
+	
+	@Test
+	public static void providePresentAddrContactNumber() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayEmergencyContactNumberInputField().sendKeys(thirdPartyEmergencyLeadMobile);
+			Page_DetailedApplicationForm.displayPresentAddrContactNumberInputField().sendKeys(step1PresentAddrContactNumber);
 			Reporter.log("User has entered Emergency Contact Number value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -290,18 +456,22 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideEmergencyEmail() throws Exception
+	public static void clickSameAddressCheckbox() throws Exception
 	{
+		//Implement logic for permanent address later. As of now just validate check box
 		try 
 		{
-			Page_DetailedApplicationForm.displayEmergencyEmailInputField().sendKeys(thirdPartyEmergencyLeadEmail);
-			Reporter.log("User has entered Emergency Email value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
+			Assert.assertTrue(Page_DetailedApplicationForm.displaySameAddressCheckboxStep1().isDisplayed());
+			Page_DetailedApplicationForm.displaySameAddressCheckboxStep1().click();
+			Reporter.log("User has clicked Same Address checkbox successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Emergency Email value.",true);
+			Assert.fail();
+			Reporter.log("User has failed to click Same Address Checkbox.",true);
 		}
 	}
 	
+	/*
 	@Test
 	public static void provideAlternateAddress1() throws Exception
 	{
@@ -339,7 +509,7 @@ public class FillUpApplicationForm  extends HelperHand
 			e.printStackTrace();
 			Reporter.log("User has failed to provide Alternate Contact Number value.",true);
 		}
-	}
+	}*/
 	
 	@Test
 	public static void clickNextButtonStep1() throws Exception
@@ -347,6 +517,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			Page_DetailedApplicationForm.displayNextButtonStep1().click();
+			Thread.sleep(30000);
 			Reporter.log("User has clicked Next button  on Step 1 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();

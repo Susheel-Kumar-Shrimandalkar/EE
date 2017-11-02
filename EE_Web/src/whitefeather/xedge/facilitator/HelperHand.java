@@ -35,7 +35,7 @@ public class HelperHand
 	public static String thirdPartyLeadFullName = DataGenerator.generateFirstName();
 	public static String thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	
-	public static final String thirdPartyEmergencyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	public static final String step1PresentAddrContactNumber = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String thirdPartyEmergencyLeadEmail = DataGenerator.randomEmailGenerator();
 	public static final String thirdPartyAlternateContact = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String thirdPartyGuardiansContact = Long.toString(DataGenerator.randomMobileNumberGenerator());

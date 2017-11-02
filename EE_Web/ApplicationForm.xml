@@ -35,31 +35,45 @@
 				<include name="provideDateOfBirth"/>
 				<parameter name="placeOfBirth" value="Kavathe Mahaankaal"/>
 				<include name="providePlaceOfBirth"/>
-				<parameter name="age" value="25"/>
-				<include name="provideAge"/>
+				<include name="provideGender"/>
 				<parameter name="bloodGroup" value="O+"/>
 				<include name="provideBloodGroup"/>
-				<include name="provideGender"/>
-				<parameter name="citizen" value="Kolhapur"/>
-				<include name="provideCitizenship"/>
 				<parameter name="nationality" value="Indian"/>
 				<include name="provideNationality"/>
-				<include name="provideDomicile"/>
+				<parameter name="uid" value="252025100000"/>
+				<include name="provideAadharNumber"/>
+				<parameter name="pNumber" value="A 2025100000"/>
+				<include name="providePassportNumber"/>
+				<parameter name="plOfIssue" value="Pune"/>
+				<include name="providePlaceOfIssue"/>
+				<include name="clickDateOfIssueInputField"/>
+				<include name="provideDateOfIssue"/>
+				<include name="clickExpiryDateInputField"/>
+				<include name="provideExpiryDate"/>
+				<parameter name="religion" value="Hindu"/>
 				<include name="provideReligion"/>
-				<include name="provideCommunity"/>
+				<parameter name="citizen" value="Kolhapur"/>
+				<include name="provideCitizenship"/>
 				<include name="provideCaste"/>
-				<include name="provideMainAddress"/>
+				<include name="provideDomicile"/>
+				<include name="provideCommunity"/>
+				<parameter name="presentAddress" value="Present_Address_Step1_"/>
+				<include name="providePresentAddress"/>
 				<include name="provideCountry"/>
 				<include name="provideState"/>
 				<include name="provideCity"/>
-				<include name="provideEmergencyContactNumber"/>
-				<include name="provideEmergencyEmail"/>
-				<include name="provideAlternateAddress1"/>
-				<include name="provideAlternateAddress2"/>
-				<include name="provideAlternateContactNumber"/>
+				<parameter name="pincode" value="416116"/>
+				<include name="providePincodePresentAddressStep1"/>
+				<include name="providePresentAddrContactNumber"/>
+				<include name="clickSameAddressCheckbox"/>
 				<include name="clickNextButtonStep1"/>
-				<include name="validateProvidedDataInStep1"></include>
-				<include name="provideFathersName"/>
+				<include name="validateDoBStep1"/>
+				<include name="validateBloodGroupInStep1"/>
+				<include name="validateGenderValueInStep1"/>
+				<include name="validateCitizenShipInStep1"/>
+				<include name="validateNationalityInStep1"/>
+				
+			<!-- 	<include name="provideFathersName"/>
 				<include name="provideMothersName"/>
 				<include name="provideGuardiansName"/>
 				<include name="provideGuardiansAddress1"/>
@@ -67,11 +81,7 @@
 				<include name="provideGuardiansContactNumber"/>
 				<include name="provideGuardiansRelation"/>
 				<include name="clickNextButtonStep2"/>
-				<include name="validateDoBStep1"/>
-				<include name="validateBloodGroupInStep1"/>
-				<include name="validateGenderValueInStep1"/>
-				<include name="validateCitizenShipInStep1"/>
-				<include name="validateNationalityInStep1"/>
+				
 				<include name="provideCourse"/>
 				<include name="provideSSCSchoolName"/>
 				<include name="provideSSCRegNumber"/>
@@ -101,7 +111,7 @@
 				<include name="clickNextButtonStep3"/>
 				<include name="providePaymentType"/>
 				<include name="providePaymentAmount"/>
-				<include name="clickSubmitButtonStep4"/>
+				<include name="clickSubmitButtonStep4"/> -->
 				</methods>
 			</class>	
 		
