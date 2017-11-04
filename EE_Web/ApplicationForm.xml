@@ -29,11 +29,12 @@
 			</class>
 			
 			<class name="whitefeather.xedge.testcases.FillUpApplicationForm">
+			<!-- Write separate class for each step later -->
 				<methods>
 				<include name="openDetailedApplicationFormPage"/>
 				<include name="clickDateOfBirthInputField"/>
 				<include name="provideDateOfBirth"/>
-				<parameter name="placeOfBirth" value="Kavathe Mahaankaal"/>
+				<parameter name="placeOfBirth" value="Kavathe_Mahaankaal"/>
 				<include name="providePlaceOfBirth"/>
 				<include name="provideGender"/>
 				<parameter name="bloodGroup" value="O+"/>
@@ -42,7 +43,7 @@
 				<include name="provideNationality"/>
 				<parameter name="uid" value="252025100000"/>
 				<include name="provideAadharNumber"/>
-				<parameter name="pNumber" value="A 2025100000"/>
+				<parameter name="pNumber" value="A-2025100000"/>
 				<include name="providePassportNumber"/>
 				<parameter name="plOfIssue" value="Pune"/>
 				<include name="providePlaceOfIssue"/>
@@ -59,19 +60,45 @@
 				<include name="provideCommunity"/>
 				<parameter name="presentAddress" value="Present_Address_Step1_"/>
 				<include name="providePresentAddress"/>
-				<include name="provideCountry"/>
-				<include name="provideState"/>
-				<include name="provideCity"/>
+				<include name="providePresentAddrCountry"/>
+				<include name="providePresentAddrState"/>
+				<include name="providePresentAddrCity"/>
 				<parameter name="pincode" value="416116"/>
-				<include name="providePincodePresentAddressStep1"/>
+				<include name="providePresentAddrPincode"/>
 				<include name="providePresentAddrContactNumber"/>
 				<include name="clickSameAddressCheckbox"/>
 				<include name="clickNextButtonStep1"/>
 				<include name="validateDoBStep1"/>
-				<include name="validateBloodGroupInStep1"/>
+				<include name="validatePlaceOfBirthStep1"/>
 				<include name="validateGenderValueInStep1"/>
-				<include name="validateCitizenShipInStep1"/>
+				<include name="validateBloodGroupInStep1"/>
 				<include name="validateNationalityInStep1"/>
+				<include name="validateAadhaarNumberInStep1"/>
+				<include name="validatePassportNumberInStep1"/>
+				<include name="validatePlaceOfIssueInStep1"/>
+				<include name="validateDateOfIssueInStep1"/>
+				<include name="validateExpiryDateInStep1"/>
+				<include name="validateReligionInStep1"/>
+				<include name="validateCitizenShipInStep1"/>
+				<include name="validateCasteInStep1"/>
+				<include name="validateDomicileInStep1"/>
+				<include name="validateCommunityInStep1"/>
+				<include name="validatePresentAddressInStep1"/>
+				<include name="validatePresentAddressCountryInStep1"/>
+				<include name="validatePresentAddressStateInStep1"/>
+				<include name="validatePresentAddressCityInStep1"/>
+				
+				<parameter name="fathersName" value="FathersName_Step2"/>
+				<include name="provideFathersName"/>
+				<parameter name="fathersQual" value="B.E.I.T."/>
+				<include name="provideFathersQualification"/>
+				<parameter name="fathersOccpn" value="RAW_Agent"/>
+				<include name="provideFathersOccupation"/>
+				<include name="clickNextButtonStep2"/>
+				<include name="validateFathersNameStep2"/>
+				<include name="validateFathersQualificationStep2"/>
+				<include name="validateFathersOccupationStep2"/>
+				
 				
 			<!-- 	<include name="provideFathersName"/>
 				<include name="provideMothersName"/>
@@ -80,7 +107,7 @@
 				<include name="provideGuardiansAddress2"/>
 				<include name="provideGuardiansContactNumber"/>
 				<include name="provideGuardiansRelation"/>
-				<include name="clickNextButtonStep2"/>
+				
 				
 				<include name="provideCourse"/>
 				<include name="provideSSCSchoolName"/>

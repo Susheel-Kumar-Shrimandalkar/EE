@@ -54,26 +54,34 @@ public class DatabaseManager extends HelperHand
 				"@USER_NAMETIME NVARCHAR(80),\r\n" + 
 				"@USER_PRN NVARCHAR(80),\r\n" + 
 				"@USER_DOB DATETIME,\r\n" + 
+				"@USER_PLACEOFBIRTH NVARCHAR(40),\r\n" + 
 				"@USER_BLOODGRP NVARCHAR(10),\r\n" + 
-				"@USER_GENDER NVARCHAR(10),\r\n" + 
-				"@USERCOMM_APPFORMID INT,\r\n" + 
-				"@APPFORM_CITIZENSHIP NVARCHAR(60),\r\n" + 
 				"@USER_NATIONALITY NVARCHAR(60),\r\n" + 
-				"@APPFORM_DOMICILE NVARCHAR(40),\r\n" + 
+				"@USER_GENDER NVARCHAR(10),\r\n" + 
+				"@APPFORM_UID NVARCHAR(20),\r\n" + 
+				"@APPFORM_PASSPORTNUMBER NVARCHAR(20),\r\n" + 
+				"@APPFORM_PLACEOFISSUE NVARCHAR(40),\r\n" + 
+				"@APPFORM_DATEOFISSUE DATETIME,\r\n" + 
+				"@APPFORM_EXPIRYDATE DATETIME,\r\n" + 
+				"@USERCOMM_APPFORMID INT,\r\n" + 
 				"@APPFORM_RELIGION NVARCHAR(40),\r\n" + 
-				"@APPFORM_COMMUNITY NVARCHAR(40),\r\n" + 
+				"@APPFORM_CITIZENSHIP NVARCHAR(60),\r\n" + 
 				"@APPFORM_CASTE NVARCHAR(40),\r\n" + 
+				"@APPFORM_DOMICILE NVARCHAR(40),\r\n" + 
+				"@APPFORM_COMMUNITY NVARCHAR(40),\r\n" + 
 				"@USER_ADDRESS NVARCHAR(100),\r\n" + 
 				"@USER_COUNTRY NVARCHAR(40),\r\n" + 
 				"@USER_STATE NVARCHAR(60),\r\n" + 
 				"@USER_CITY NVARCHAR(80),\r\n" + 
+				"@USER_FTHRNAME NVARCHAR(100), \r\n" + 
+				"@APPFORM_FATHERQUALFCN NVARCHAR(60),\r\n" + 
+				"@APPFORM_FATHEROCCUPN NVARCHAR(60),\r\n" + 
 				"@USER_FATHEREMAIL NVARCHAR(80),\r\n" + 
 				"@USER_FATHERMOBILE NVARCHAR(40),\r\n" + 
 				"@USERCOMM_LCLADDRTYPE INT,\r\n" + 
 				"@USERCOMMN_LCLADDR1 NVARCHAR(100),\r\n" + 
 				"@USERCOMMN_LCLADDR2 NVARCHAR(100),\r\n" + 
 				"@USERCOMMN_LCLCONTACTNUM NVARCHAR(40),\r\n" + 
-				"@USER_FTHRNAME NVARCHAR(100), \r\n" + 
 				"@USER_MTHRNAME NVARCHAR(100),\r\n" + 
 				"@USER_EMERGNCYNAME NVARCHAR(100),\r\n" + 
 				"@USERCOMM_PRMADDRTYPE INT,\r\n" + 
@@ -101,25 +109,36 @@ public class DatabaseManager extends HelperHand
 				"SET @USER_ID = (SELECT TOP 1 ID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"SET @USER_PRN = (SELECT TOP 1 PRN FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"SET @USER_DOB = (SELECT TOP 1 DATEOFBIRTH FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"SET @USER_BLOODGRP = (SELECT TOP 1 BLOODGROUP FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"SET @USER_PLACEOFBIRTH = (SELECT TOP 1 PLACEOFBIRTH FROM USERS WHERE  ID=@USER_ID ORDER BY ID DESC)\r\n" + 
 				"SET @USER_GENDER = (SELECT TOP 1 GENDER FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"SET @USERCOMM_LCLADDRTYPE = (SELECT TOP 1 ID FROM COMMUNICATIONADDRESSINFO WHERE USERID=@USER_ID AND ADDRESS ='LocalAddress') --Using string 'LocalAddress' and 'PermanentAddress' just because I am not sure for this requirement.\r\n" + 
-				"SET @APPFORM_CITIZENSHIP = (SELECT TOP 1 CITIZENSHIP FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @USER_BLOODGRP = (SELECT TOP 1 BLOODGROUP FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"SET @USER_NATIONALITY = (SELECT TOP 1 NATIONALITY FROM USERS WHERE EMAIL = @USER_EMAIL)\r\n" + 
-				"SET @APPFORM_DOMICILE = (SELECT TOP 1 DOMICILE FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_UID = (SELECT TOP 1 AADHAARNO FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_PASSPORTNUMBER = (SELECT TOP 1 PASSPORTNUMBER FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_PLACEOFISSUE = (SELECT TOP 1 PLACEOFISSUE FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_DATEOFISSUE = (SELECT TOP 1 DATEOFISSUE FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_EXPIRYDATE = (SELECT TOP 1 EXPIRYDATE FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"SET @APPFORM_RELIGION = (SELECT TOP 1 RELIGION FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
-				"SET @APPFORM_COMMUNITY = (SELECT TOP 1 CATEGORY FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_CITIZENSHIP = (SELECT TOP 1 CITIZENSHIP FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"SET @APPFORM_CASTE = (SELECT TOP 1 CASTE FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_DOMICILE = (SELECT TOP 1 DOMICILE FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_COMMUNITY = (SELECT TOP 1 CATEGORY FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"SET @USER_ADDRESS = (SELECT TOP 1 ADDRESS FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"SET @USER_COUNTRY = (SELECT TOP 1 COUNTRYID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"SET @USER_STATE = (SELECT TOP 1 STATEID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"SET @USER_CITY = (SELECT TOP 1 CITYID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"--SET @USER_COUNTRY = (SELECT TOP 1 COUNTRYID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"SET @USER_COUNTRY =  (SELECT NAME FROM COUNTRIES WHERE ID = (SELECT COUNTRYID FROM USERS WHERE ID=@USER_ID))\r\n" + 
+				"--SET @USER_STATE = (SELECT TOP 1 STATEID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"SET @USER_STATE =  (SELECT NAME FROM STATES WHERE ID = (SELECT STATEID FROM USERS WHERE ID=@USER_ID))\r\n" + 
+				"--SET @USER_CITY = (SELECT TOP 1 CITYID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"SET @USER_CITY = (SELECT NAME FROM CITIES WHERE ID = (SELECT CITYID FROM USERS WHERE ID=@USER_ID))\r\n" + 
+				"SET @USERCOMM_LCLADDRTYPE = (SELECT TOP 1 ID FROM COMMUNICATIONADDRESSINFO WHERE USERID=@USER_ID AND ADDRESS ='LocalAddress') --Using string 'LocalAddress' and 'PermanentAddress' just because I am not sure for this requirement.\r\n" + 
+				"SET @USER_FTHRNAME = (SELECT TOP 1 FATHERSNAME FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"SET @APPFORM_FATHERQUALFCN = (SELECT TOP 1 FATHERQUALIFICATION FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_FATHEROCCUPN = (SELECT TOP 1 FATHEROCCUPATION FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"SET @USER_FATHEREMAIL = (SELECT TOP 1 FATHERSEMAIL FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"SET @USER_FATHERMOBILE = (SELECT TOP 1 FATHERSMOBILE FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"SET @USERCOMMN_LCLADDR1 = (SELECT TOP 1 ADDRESS1 FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE ORDER BY ID DESC)\r\n" + 
 				"SET @USERCOMMN_LCLADDR2 = (SELECT TOP 1 ADDRESS2 FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE ORDER BY ID DESC)\r\n" + 
 				"SET @USERCOMMN_LCLCONTACTNUM = (SELECT TOP 1 ALTERNATENUMBER FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE ORDER BY ID DESC)\r\n" + 
-				"SET @USER_FTHRNAME = (SELECT TOP 1 FATHERSNAME FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"SET @USER_MTHRNAME = (SELECT TOP 1 MOTHERSNAME FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"SET @USER_EMERGNCYNAME = (SELECT TOP 1 EMERGENCYCONTACTNAME FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"SET @USERCOMM_PRMADDRTYPE = (SELECT TOP 1 ID FROM COMMUNICATIONADDRESSINFO WHERE USERID=@USER_ID AND ADDRESS ='PermanentAddress') \r\n" + 
@@ -137,7 +156,7 @@ public class DatabaseManager extends HelperHand
 				"SET @APPFORM_REGNUM2 = (SELECT TOP 1 REGISTRATIONNUMBER2 FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"SET @APPFORM_HSLCYOP = (SELECT TOP 1 XIIYEAROFPASSING FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"SET @USER_UGPERCENT = (SELECT TOP 1 UNDERGRADUATEPERCENTAGE FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"SET @APPFORM_MODEOFSTUDYHSC = (SELECT TOP 1 MODEOFSTUDYXII FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"SET @APPFORM_MODEOFSTUDYHSC = (SELECT TOP 1 XIIMODEOFSTUDY FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"SET @APPFORM_ENTRNCEXAM = (SELECT TOP 1 ENTRANCEEXAM FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"\r\n" + 
 				"SELECT \r\n" + 
@@ -147,18 +166,27 @@ public class DatabaseManager extends HelperHand
 				"@USER_MOBILE AS USERS_MOBILENUMBER, \r\n" + 
 				"@USER_PRN AS USRS_PRN,\r\n" + 
 				"@USER_DOB AS USERS_DOB,\r\n" + 
-				"@USER_BLOODGRP AS USERS_BLOODGROUP,\r\n" + 
+				"@USER_PLACEOFBIRTH AS USERS_PLACEOFBIRTH,\r\n" + 
 				"@USER_GENDER AS USERS_GENDER,\r\n" + 
-				"@APPFORM_CITIZENSHIP AS APPLFORM_CITIZENSHIP,\r\n" + 
+				"@USER_BLOODGRP AS USERS_BLOODGROUP,\r\n" + 
 				"@USER_NATIONALITY AS USERS_NATIONALITY,\r\n" + 
-				"@APPFORM_DOMICILE AS APPLFORM_DOMICILE,\r\n" + 
+				"@APPFORM_UID AS APPLFORM_UID,\r\n" + 
+				"@APPFORM_PASSPORTNUMBER AS APPLFORM_PASSPORTNUMBER,\r\n" + 
+				"@APPFORM_PLACEOFISSUE AS APPLFORM_PLACEOFISSUE,\r\n" + 
+				"@APPFORM_DATEOFISSUE AS APPLFORM_DATEOFISSUE,\r\n" + 
+				"@APPFORM_EXPIRYDATE AS APPLFORM_EXPIRYDATE,\r\n" + 
 				"@APPFORM_RELIGION AS APPLFORM_RELIGION,\r\n" + 
-				"@APPFORM_COMMUNITY AS APPLFORM_COMMUNITY,\r\n" + 
+				"@APPFORM_CITIZENSHIP AS APPLFORM_CITIZENSHIP,\r\n" + 
 				"@APPFORM_CASTE AS APPLFORM_CASTE,\r\n" + 
+				"@APPFORM_DOMICILE AS APPLFORM_DOMICILE,\r\n" + 
+				"@APPFORM_COMMUNITY AS APPLFORM_COMMUNITY,\r\n" + 
 				"@USER_ADDRESS AS USERS_ADDRESS,\r\n" + 
 				"@USER_COUNTRY AS USERS_COUNTRY,\r\n" + 
 				"@USER_STATE AS USERS_STATE,\r\n" + 
 				"@USER_CITY AS USERS_CITY,\r\n" + 
+				"@USER_FTHRNAME AS USERS_FTHRNAME,\r\n" + 
+				"@APPFORM_FATHERQUALFCN AS APPLFORM_FATHERQUALFCN,\r\n" + 
+				"@APPFORM_FATHEROCCUPN AS APPLFORM_FATHEROCCUPN,\r\n" + 
 				"@USER_FATHEREMAIL AS USERS_FATHEREMAIL,\r\n" + 
 				"@USER_FATHERMOBILE AS USERS_FATHERMOBILE,\r\n" + 
 				"@USERCOMMN_LCLADDR1 AS LOCAL_ADDRESS1,\r\n" + 
@@ -189,49 +217,62 @@ public class DatabaseManager extends HelperHand
          // Iterate through the data in the result set and display it.  
          while (rs.next()) 
          {
-//        	 userDob = dobCustomFormat.format(rs.getDate("USERS_DOB"));
+/*        	 dbValues.put("userDOB", rs.getString(6));	//Use this format when both date and time is needed.
+        	 userDob = dobCustomFormat.format(rs.getDate("USERS_DOB"));
+        	 dbValues.put("userDOB",userDob );	//Use this format when only date is needed is needed.
+*/        	 
         	 dbValues.put("userId", rs.getString(1));
         	 dbValues.put("userEmail", rs.getString(2));
         	 dbValues.put("userName", rs.getString(3));
         	 dbValues.put("userMobile", rs.getString(4));
         	 dbValues.put("userPRN", rs.getString(5));
-        	 dbValues.put("userDOB", rs.getString(6));	//Use this format when both date and time is needed.
-//        	 dbValues.put("userDOB",userDob );	//Use this format when only date is needed is needed.
-        	 dbValues.put("userBloodGrp", rs.getString(7));
+        	 dbValues.put("userDOB", rs.getString(6));
+        	 dbValues.put("userPlaceOfBirth", rs.getString(7));
         	 dbValues.put("userGender", rs.getString(8));
-        	 dbValues.put("appFormCitizenship", rs.getString(9));
-        	 dbValues.put("appFormNationality", rs.getString(10));
-        	 dbValues.put("appFormDomicile", rs.getString(11));
-        	 dbValues.put("appFormReligion", rs.getString(12));
-        	 dbValues.put("appFormCommunity", rs.getString(13));
-        	 dbValues.put("appFormCaste", rs.getString(14));
-        	 dbValues.put("userAddress", rs.getString(15));
-        	 dbValues.put("userCountry", rs.getString(16));
-        	 dbValues.put("userState", rs.getString(17));
-        	 dbValues.put("userCity", rs.getString(18));
-        	 dbValues.put("userFthrEmail", rs.getString(19));
-        	 dbValues.put("userFthrMob", rs.getString(20));
-        	 dbValues.put("usercommLAddr1", rs.getString(21));
-        	 dbValues.put("usercommLAddr1", rs.getString(22));
-        	 dbValues.put("usercommLCN", rs.getString(23));	 
-        	 dbValues.put("userFatherNm", rs.getString(24));
-        	 dbValues.put("userMotherNm", rs.getString(25));
-        	 dbValues.put("userEmergncyNm", rs.getString(26));
-        	 dbValues.put("userCommPrimaryAddr1", rs.getString(27));
-        	 dbValues.put("userCommPrimaryAddr2", rs.getString(28));
-        	 dbValues.put("userCommPrimaryContactNum", rs.getString(29));
-        	 dbValues.put("userEmrgncyRelatn", rs.getString(30));
-        	 dbValues.put("userHighSchoolNm", rs.getString(31));
-        	 dbValues.put("appFormRegNum1", rs.getString(32));
-        	 dbValues.put("appFormSSLCYop", rs.getString(33));
-        	 dbValues.put("appFormMoSSSC", rs.getString(34));
-        	 dbValues.put("userSecSchoolNm", rs.getString(35));
-        	 dbValues.put("appFormRegNum2", rs.getString(36));
-        	 dbValues.put("appFormHSLCYop", rs.getString(37));
-        	 dbValues.put("userUGPercent", rs.getString(38));
-        	 dbValues.put("appFormMoSHSC", rs.getString(39));
-        	 dbValues.put("appFormEntrncExm", rs.getString(40));
-        	 
+        	 dbValues.put("userBloodGrp", rs.getString(9));
+        	 dbValues.put("userNationality", rs.getString(10));
+        	 dbValues.put("appFormUID", rs.getString(11));
+        	 dbValues.put("appFormPassportNum", rs.getString(12));
+        	 dbValues.put("appFormPlaceOfIssue", rs.getString(13));
+        	 dbValues.put("appFormDateOfIssue", rs.getString(14));
+        	 dbValues.put("appFormExpiryDate", rs.getString(15));
+        	 dbValues.put("appFormReligion", rs.getString(16));
+        	 dbValues.put("appFormCitizenship", rs.getString(17));
+        	 dbValues.put("appFormCaste", rs.getString(18));
+        	 dbValues.put("appFormDomicile", rs.getString(19));
+        	 dbValues.put("appFormCommunity", rs.getString(20));
+        	 dbValues.put("userPresentAddress", rs.getString(21));
+        	 dbValues.put("userPresentAddrCountry", rs.getString(22));
+        	 dbValues.put("userPresentAddrState", rs.getString(23));
+        	 dbValues.put("userPresentAddrCity", rs.getString(24));
+        	 dbValues.put("userFathersName", rs.getString(25));
+        	 dbValues.put("appFormFatherQualfcn", rs.getString(26));
+        	 dbValues.put("appFormFatherOccpn", rs.getString(27));
+        	 dbValues.put("userFthrEmail", rs.getString(28));
+        	 dbValues.put("userFthrMob", rs.getString(29));
+        	 dbValues.put("usercommLAddr1", rs.getString(30));
+        	 dbValues.put("usercommLAddr1", rs.getString(31));
+        	 dbValues.put("usercommLCN", rs.getString(32));
+        	 dbValues.put("userFathersName", rs.getString(33));
+        	 dbValues.put("userMothersName", rs.getString(34));
+        	 dbValues.put("userEmergncyNm", rs.getString(35));
+        	 dbValues.put("userCommPrimaryAddr1", rs.getString(36));
+        	 dbValues.put("userCommPrimaryAddr2", rs.getString(37));
+        	 dbValues.put("userCommPrimaryContactNum", rs.getString(38));
+        	 dbValues.put("userEmrgncyRelatn", rs.getString(39));
+        	 dbValues.put("userHighSchoolNm", rs.getString(40));
+        	 dbValues.put("appFormRegNum1", rs.getString(41));
+        	 dbValues.put("appFormSSLCYop", rs.getString(42));
+        	 dbValues.put("appFormMoSSSC", rs.getString(43));
+        	 dbValues.put("userSecSchoolNm", rs.getString(44));
+        	 dbValues.put("appFormRegNum2", rs.getString(45));
+        	 dbValues.put("appFormHSLCYop", rs.getString(46));
+        	 dbValues.put("userUGPercent", rs.getString(47));
+        	 dbValues.put("appFormMoSHSC", rs.getString(48));
+        	 dbValues.put("appFormEntrncExm", rs.getString(49));
+
+
+       	 
         	 
          }  
          con.close();

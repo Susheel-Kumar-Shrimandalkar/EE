@@ -6,39 +6,42 @@
     <parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/>
     <classes>
       <class name="whitefeather.xedge.testcases.FillUpApplicationForm">
-        <parameter name="bloodGroup" value="O+"/>
-        <parameter name="uid" value="252025100000"/>
         <parameter name="citizen" value="Kolhapur"/>
         <parameter name="pincode" value="416116"/>
-        <parameter name="placeOfBirth" value="Kavathe Mahaankaal"/>
+        <parameter name="placeOfBirth" value="Kavathe_Mahaankaal"/>
         <parameter name="plOfIssue" value="Pune"/>
+        <parameter name="fathersName" value="FathersName_Step2"/>
+        <parameter name="pNumber" value="A-2025100000"/>
+        <parameter name="fathersQual" value="B.E.I.T."/>
+        <parameter name="religion" value="Hindu"/>
+        <parameter name="fathersOccpn" value="RAW_Agent"/>
+        <parameter name="bloodGroup" value="O+"/>
+        <parameter name="uid" value="252025100000"/>
         <parameter name="nationality" value="Indian"/>
         <parameter name="presentAddress" value="Present_Address_Step1_"/>
         <parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/>
-        <parameter name="pNumber" value="A 2025100000"/>
-        <parameter name="religion" value="Hindu"/>
         <methods>
-          <include name="validateNationalityInStep1"/>
           <include name="validateBloodGroupInStep1"/>
-          <include name="validateDoBStep1"/>
-          <include name="providePresentAddrContactNumber"/>
-          <include name="validateCitizenShipInStep1"/>
-          <include name="provideDateOfBirth"/>
-          <include name="validateGenderValueInStep1"/>
+          <include name="validateFathersNameStep2"/>
+          <include name="validateFathersQualificationStep2"/>
+          <include name="validatePresentAddressStateInStep1"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
       <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
-        <parameter name="bloodGroup" value="O+"/>
-        <parameter name="uid" value="252025100000"/>
         <parameter name="citizen" value="Kolhapur"/>
         <parameter name="pincode" value="416116"/>
-        <parameter name="placeOfBirth" value="Kavathe Mahaankaal"/>
+        <parameter name="placeOfBirth" value="Kavathe_Mahaankaal"/>
         <parameter name="plOfIssue" value="Pune"/>
+        <parameter name="fathersName" value="FathersName_Step2"/>
+        <parameter name="pNumber" value="A-2025100000"/>
+        <parameter name="fathersQual" value="B.E.I.T."/>
+        <parameter name="religion" value="Hindu"/>
+        <parameter name="fathersOccpn" value="RAW_Agent"/>
+        <parameter name="bloodGroup" value="O+"/>
+        <parameter name="uid" value="252025100000"/>
         <parameter name="nationality" value="Indian"/>
         <parameter name="presentAddress" value="Present_Address_Step1_"/>
         <parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/>
-        <parameter name="pNumber" value="A 2025100000"/>
-        <parameter name="religion" value="Hindu"/>
         <methods>
           <include name="selectBrowser"/>
         </methods>

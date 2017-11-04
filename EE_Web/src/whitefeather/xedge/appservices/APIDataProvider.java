@@ -239,5 +239,47 @@ public class APIDataProvider
 	{
 		return getLeadListPageCounts().get("referredFromMeCount");
 	}
+	
+	
+	/***************Get All Masters API*************************/
+	public static HashMap<String,String > getAllMasterData() throws IOException, MalformedURLException
+	{		
+		//Establish connection to Lead List Count API
+		URL _leadListAPI = new URL(properties.getLeadListCountAPIQAStaging());
+		HttpURLConnection connGet = (HttpURLConnection)_leadListAPI.openConnection();
+		connGet.setRequestMethod("GET");
+		connGet.setRequestProperty("Authorization", "bearer "+APILogin());
+		
+		//Get response code after hitting Lead List  Count API
+		int _respCode = connGet.getResponseCode();
+//		System.out.println("Response Code received is: "+_respCode);
+		
+		if(_respCode==HttpURLConnection.HTTP_OK)
+		{
+			BufferedReader brGet = new BufferedReader(new InputStreamReader(connGet.getInputStream()));
+			String _getStream;
+			StringBuffer respGet = new StringBuffer();
+			
+			while((_getStream=brGet.readLine())!=null)
+			{
+				respGet.append(_getStream);
+			}
+			
+			//Store the Lead List Count API response in a String
+			_leadListCountJSONResponse = respGet.toString();
+//			System.out.println("Lead List Page Count JSON Response: "+_leadListCountJSONResponse);
+			brGet.close();
+		}
+		
+		//Parse JSON response and store it into Hashmap
+		_leadListCountJSONResponse = _leadListCountJSONResponse.replaceAll("\\{", "").replaceAll("\\}", "").replaceAll(":", ",").replaceAll("\"", "").toString();
+		String [] countData = _leadListCountJSONResponse.split(",");
+		for(int i=0;i<countData.length;i+=2)
+		{
+			leadListCountmap.put(countData[i], countData[i+1]);
+		}	
+		
+		return leadListCountmap;	
+	}
 }
 
