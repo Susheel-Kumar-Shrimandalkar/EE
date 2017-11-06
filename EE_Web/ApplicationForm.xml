@@ -28,8 +28,9 @@
 				</methods>
 			</class>
 			
+<!-- 			Implement logic for Going back to previous step later -->
 			<class name="whitefeather.xedge.testcases.FillUpApplicationForm">
-			<!-- Write separate class for each step later -->
+<!-- 			Write separate class for each step later -->
 				<methods>
 				<include name="openDetailedApplicationFormPage"/>
 				<include name="clickDateOfBirthInputField"/>
@@ -87,18 +88,59 @@
 				<include name="validatePresentAddressCountryInStep1"/>
 				<include name="validatePresentAddressStateInStep1"/>
 				<include name="validatePresentAddressCityInStep1"/>
-				
-				<parameter name="fathersName" value="FathersName_Step2"/>
+				<parameter name="fathersName" value="FathersName"/>
 				<include name="provideFathersName"/>
 				<parameter name="fathersQual" value="B.E.I.T."/>
 				<include name="provideFathersQualification"/>
 				<parameter name="fathersOccpn" value="RAW_Agent"/>
 				<include name="provideFathersOccupation"/>
+				<parameter name="annualIncome" value="2500000"/>
+				<include name="provideAnnualIncome"/>
+				<include name="provideFathersEmail"/>
+				<include name="provideFathersMobile"/>				
+				<parameter name="MothersName" value="MothersName"/>
+				<include name="provideMothersName"/>
+				<parameter name="MothersQual" value="M.E.I.T."/>
+				<include name="provideMothersQualification"/>
+				<parameter name="MothersOccpn" value="College"/>
+				<include name="provideMothersOccupation"/>
+				<include name="provideMothersEmail"/>
+				<include name="provideMothersMobile"/>
+				<parameter name="LocalGuardianName" value="LocalGuardianName"/>
+				<include name="provideGuardiansName"/>
+				<parameter name="address1" value="Address1Field"/>
+				<include name="provideGuardiansAddress1"/>
+				<parameter name="address2" value="Address2Field"/>
+				<include name="provideGuardiansAddress2"/>
+				<parameter name="address3" value="Address3Field"/>
+				<include name="provideGuardiansAddress3"/>
+				<parameter name="lgpincode" value="416115"/>
+				<include name="provideGuardiansAddress3"/>
+				<include name="provideGuardiansAddrPincode"/>
+				<parameter name="lgrelation" value="Brother-in-law"/>
+				<include name="provideGuardiansRelation"/>
+				<include name="provideGuardiansContactNumber"/>
 				<include name="clickNextButtonStep2"/>
 				<include name="validateFathersNameStep2"/>
 				<include name="validateFathersQualificationStep2"/>
 				<include name="validateFathersOccupationStep2"/>
-				
+				<include name="validateFathersAnnualIncomeStep2"/>
+				<include name="validateFathersEmailStep2"/>
+				<include name="validateFathersMobileStep2"/>
+				<include name="validateMothersNameStep2"/>
+				<include name="validateMothersQualificationStep2"/>
+				<include name="validateMothersOccupationStep2"/>
+				<include name="validateMothersEmailStep2"/>
+				<include name="validateMothersMobileStep2"/>
+				<include name="validateLocalGuardianNameStep2"/>
+				<include name="validateLocalGuardianAddr1Step2"/>
+				<include name="validateLocalGuardianAddr2Step2"/>
+				<include name="validateLocalGuardianAddr3Step2"/>
+				<include name="validateGrdnAddrPincodeStep2"/>
+				<include name="validateGuardianRelationStep2"/>
+				<include name="validateGuardianContactNumberStep2"/>
+			 		</methods>
+			</class>
 				
 			<!-- 	<include name="provideFathersName"/>
 				<include name="provideMothersName"/>
@@ -138,10 +180,10 @@
 				<include name="clickNextButtonStep3"/>
 				<include name="providePaymentType"/>
 				<include name="providePaymentAmount"/>
-				<include name="clickSubmitButtonStep4"/> -->
+				<include name="clickSubmitButtonStep4"/> 
 				</methods>
 			</class>	
-		
+		-->
 		</classes>
 	</test>
 	

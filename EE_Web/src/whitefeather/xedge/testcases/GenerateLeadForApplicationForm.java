@@ -4,14 +4,18 @@ import java.sql.SQLException;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
+import whitefeather.xedge.core.DataGenerator;
 import whitefeather.xedge.core.Page_GenerateLeadApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
 public class GenerateLeadForApplicationForm extends HelperHand 
 {
+	//Do later. Work upon 'final' keyword logic later.
 	public static final String fullName=thirdPartyLeadFullName;
 	public static  final  String mobileNumber=thirdPartyLeadMobile;
-	public static  final String emailAddress=thirdPartyLeadEmail;
+	public static final String emailAddress=thirdPartyLeadEmail;
+
 	
 	@Test	
 	public static void enterFullName() throws Exception

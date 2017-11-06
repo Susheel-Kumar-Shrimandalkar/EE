@@ -13,10 +13,11 @@ public class DataGenerator {
 	
 	
 	public static SecureRandom randomEmail = new SecureRandom();
+	public static final String emailaddress=new BigInteger(50, randomEmail).toString(32)+"@domain.in";
+	
 	public static String randomEmailGenerator()
 	{
-		return new BigInteger(50, randomEmail).toString(32)+"@domain.in";
-	
+		return emailaddress;
 	}
 	
 	public static long randomMobileNumberGenerator()
@@ -66,6 +67,7 @@ public class DataGenerator {
 	}
 	
 	public static void main(String[] args) {
+		System.out.println(emailaddress);
 		System.out.println(getRandomDayOfMonth());
 		System.out.println(getRandomMonth());
 	}

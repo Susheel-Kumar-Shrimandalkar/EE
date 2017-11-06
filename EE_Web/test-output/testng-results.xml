@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="36" total="98" passed="58">
+<testng-results skipped="0" failed="3" ignored="30" total="122" passed="89">
   <reporter-output>
     <line>
       <![CDATA[Chrome Browser is opened]]>
@@ -140,9 +140,6 @@
       <![CDATA[Provided Date Of Issue matches the value stored in database.]]>
     </line>
     <line>
-      <![CDATA[Provided Expiry Date matches the value stored in database.]]>
-    </line>
-    <line>
       <![CDATA[Provided Religion matches the value stored in database.]]>
     </line>
     <line>
@@ -176,67 +173,163 @@
       <![CDATA[User has entered Fathers Occupation value successfully.]]>
     </line>
     <line>
+      <![CDATA[User has entered Fathers Annual Income value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Fathers Email value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Fathers Mobile value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Mothers Name value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Mothers Qualification value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Mothers Occupation value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Mothers Email value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Mothers Mobile value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Guardians Name value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Guardians Address 1 value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Guardians Address 2 value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Guardians Address 3 value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Guardians Relation value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Guardians Relation value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Guardians Contact Number value successfully.]]>
+    </line>
+    <line>
       <![CDATA[User has clicked Next button on Step 2successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Fathers Name matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Fathers Qualification matches the value stored in database.]]>
     </line>
     <line>
       <![CDATA[Provided Fathers Occupation matches the value stored in database.]]>
     </line>
+    <line>
+      <![CDATA[Provided Fathers Annual Income matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Fathers Email matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Fathers Mobile matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Mothers Name matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Mothers Qualification matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Mothers Occupation matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Mothers Email matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Mothers Mobile matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Guardians Name matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Guardians Address 1 matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Guardians Address 2 matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Guardians Address 3 matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Guardians Pincode matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Guardians Relation matches the value stored in database.]]>
+    </line>
+    <line>
+      <![CDATA[Provided Guardians ContactNumber matches the value stored in database.]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="103099" started-at="2017-11-04T10:54:45Z" finished-at="2017-11-04T10:56:28Z">
+  <suite name="Suite" duration-ms="117896" started-at="2017-11-06T10:30:59Z" finished-at="2017-11-06T10:32:57Z">
     <groups>
     </groups>
-    <test name="Staging QA Application Form Test Validations" duration-ms="103099" started-at="2017-11-04T10:54:45Z" finished-at="2017-11-04T10:56:28Z">
+    <test name="Staging QA Application Form Test Validations" duration-ms="117896" started-at="2017-11-06T10:30:59Z" finished-at="2017-11-06T10:32:57Z">
       <class name="whitefeather.xedge.testcases.GenerateLeadForApplicationForm">
-        <test-method status="PASS" signature="enterFullName()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="enterFullName" duration-ms="3193" started-at="2017-11-04T16:24:55Z" finished-at="2017-11-04T16:24:59Z">
+        <test-method status="PASS" signature="enterFullName()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="enterFullName" duration-ms="816" started-at="2017-11-06T16:01:08Z" finished-at="2017-11-06T16:01:09Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Full Name successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterFullName -->
-        <test-method status="PASS" signature="enterMobileNumber()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="enterMobileNumber" duration-ms="188" started-at="2017-11-04T16:24:59Z" finished-at="2017-11-04T16:24:59Z">
+        <test-method status="PASS" signature="enterMobileNumber()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="enterMobileNumber" duration-ms="167" started-at="2017-11-06T16:01:09Z" finished-at="2017-11-06T16:01:09Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Mobile successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterMobileNumber -->
-        <test-method status="PASS" signature="enterEmailAddress()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="enterEmailAddress" duration-ms="224" started-at="2017-11-04T16:24:59Z" finished-at="2017-11-04T16:24:59Z">
+        <test-method status="PASS" signature="enterEmailAddress()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="enterEmailAddress" duration-ms="254" started-at="2017-11-06T16:01:09Z" finished-at="2017-11-06T16:01:09Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Email Address successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterEmailAddress -->
-        <test-method status="PASS" signature="clickSubmitButton()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="clickSubmitButton" duration-ms="5211" started-at="2017-11-04T16:24:59Z" finished-at="2017-11-04T16:25:04Z">
+        <test-method status="PASS" signature="clickSubmitButton()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="clickSubmitButton" duration-ms="5188" started-at="2017-11-06T16:01:09Z" finished-at="2017-11-06T16:01:15Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Submit button successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickSubmitButton -->
-        <test-method status="PASS" signature="validateLeadFirstName()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="validateLeadFirstName" duration-ms="2998" started-at="2017-11-04T16:25:04Z" finished-at="2017-11-04T16:25:07Z">
+        <test-method status="PASS" signature="validateLeadFirstName()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="validateLeadFirstName" duration-ms="2763" started-at="2017-11-06T16:01:15Z" finished-at="2017-11-06T16:01:17Z">
           <reporter-output>
             <line>
               <![CDATA[Provided First Name matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateLeadFirstName -->
-        <test-method status="PASS" signature="validateLeadMobileNumber()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="validateLeadMobileNumber" duration-ms="2595" started-at="2017-11-04T16:25:07Z" finished-at="2017-11-04T16:25:10Z">
+        <test-method status="PASS" signature="validateLeadMobileNumber()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="validateLeadMobileNumber" duration-ms="2407" started-at="2017-11-06T16:01:17Z" finished-at="2017-11-06T16:01:20Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Mobile Number matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateLeadMobileNumber -->
-        <test-method status="PASS" signature="validateLeadEmailAddress()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="validateLeadEmailAddress" duration-ms="2606" started-at="2017-11-04T16:25:10Z" finished-at="2017-11-04T16:25:12Z">
+        <test-method status="PASS" signature="validateLeadEmailAddress()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="validateLeadEmailAddress" duration-ms="2382" started-at="2017-11-06T16:01:20Z" finished-at="2017-11-06T16:01:22Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Email Address matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateLeadEmailAddress -->
-        <test-method status="PASS" signature="validateLeadDetailsSuccessfulSumbission()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="validateLeadDetailsSuccessfulSumbission" duration-ms="133" started-at="2017-11-04T16:25:12Z" finished-at="2017-11-04T16:25:13Z">
+        <test-method status="PASS" signature="validateLeadDetailsSuccessfulSumbission()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac]" name="validateLeadDetailsSuccessfulSumbission" duration-ms="133" started-at="2017-11-06T16:01:22Z" finished-at="2017-11-06T16:01:22Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Lead details are submitted successfully.]]>
@@ -245,7 +338,7 @@
         </test-method> <!-- validateLeadDetailsSuccessfulSumbission -->
       </class> <!-- whitefeather.xedge.testcases.GenerateLeadForApplicationForm -->
       <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
-        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@1f28c152]" name="selectBrowser" is-config="true" duration-ms="15" started-at="2017-11-04T16:24:45Z" finished-at="2017-11-04T16:24:45Z">
+        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@1f28c152]" name="selectBrowser" is-config="true" duration-ms="15" started-at="2017-11-06T16:00:59Z" finished-at="2017-11-06T16:00:59Z">
           <params>
             <param index="0">
               <value>
@@ -256,7 +349,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectBrowser -->
-        <test-method status="PASS" signature="openAppForm(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@1f28c152]" name="openAppForm" duration-ms="10477" started-at="2017-11-04T16:24:45Z" finished-at="2017-11-04T16:24:55Z">
+        <test-method status="PASS" signature="openAppForm(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@1f28c152]" name="openAppForm" duration-ms="9004" started-at="2017-11-06T16:00:59Z" finished-at="2017-11-06T16:01:08Z">
           <params>
             <param index="0">
               <value>
@@ -278,28 +371,28 @@
         </test-method> <!-- openAppForm -->
       </class> <!-- whitefeather.xedge.testcases.OpenApplicationFormLandingPage -->
       <class name="whitefeather.xedge.testcases.FillUpApplicationForm">
-        <test-method status="PASS" signature="openDetailedApplicationFormPage()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="openDetailedApplicationFormPage" duration-ms="3237" started-at="2017-11-04T16:25:13Z" finished-at="2017-11-04T16:25:16Z">
+        <test-method status="PASS" signature="openDetailedApplicationFormPage()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="openDetailedApplicationFormPage" duration-ms="3644" started-at="2017-11-06T16:01:22Z" finished-at="2017-11-06T16:01:26Z">
           <reporter-output>
             <line>
               <![CDATA[User has opened Application Form successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- openDetailedApplicationFormPage -->
-        <test-method status="PASS" signature="clickDateOfBirthInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickDateOfBirthInputField" duration-ms="1330" started-at="2017-11-04T16:25:16Z" finished-at="2017-11-04T16:25:17Z">
+        <test-method status="PASS" signature="clickDateOfBirthInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickDateOfBirthInputField" duration-ms="2004" started-at="2017-11-06T16:01:26Z" finished-at="2017-11-06T16:01:28Z">
           <reporter-output>
             <line>
               <![CDATA[User has opened calender successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickDateOfBirthInputField -->
-        <test-method status="PASS" signature="provideDateOfBirth()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideDateOfBirth" duration-ms="3994" started-at="2017-11-04T16:25:17Z" finished-at="2017-11-04T16:25:21Z">
+        <test-method status="PASS" signature="provideDateOfBirth()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideDateOfBirth" duration-ms="3969" started-at="2017-11-06T16:01:28Z" finished-at="2017-11-06T16:01:32Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Date of Birth successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDateOfBirth -->
-        <test-method status="PASS" signature="providePlaceOfBirth(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePlaceOfBirth" duration-ms="412" started-at="2017-11-04T16:25:21Z" finished-at="2017-11-04T16:25:21Z">
+        <test-method status="PASS" signature="providePlaceOfBirth(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePlaceOfBirth" duration-ms="385" started-at="2017-11-06T16:01:32Z" finished-at="2017-11-06T16:01:32Z">
           <params>
             <param index="0">
               <value>
@@ -313,14 +406,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- providePlaceOfBirth -->
-        <test-method status="PASS" signature="provideGender()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGender" duration-ms="311" started-at="2017-11-04T16:25:21Z" finished-at="2017-11-04T16:25:22Z">
+        <test-method status="PASS" signature="provideGender()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGender" duration-ms="318" started-at="2017-11-06T16:01:32Z" finished-at="2017-11-06T16:01:33Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Gender value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGender -->
-        <test-method status="PASS" signature="provideBloodGroup(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideBloodGroup" duration-ms="153" started-at="2017-11-04T16:25:22Z" finished-at="2017-11-04T16:25:22Z">
+        <test-method status="PASS" signature="provideBloodGroup(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideBloodGroup" duration-ms="135" started-at="2017-11-06T16:01:33Z" finished-at="2017-11-06T16:01:33Z">
           <params>
             <param index="0">
               <value>
@@ -334,7 +427,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideBloodGroup -->
-        <test-method status="PASS" signature="provideNationality(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideNationality" duration-ms="224" started-at="2017-11-04T16:25:22Z" finished-at="2017-11-04T16:25:22Z">
+        <test-method status="PASS" signature="provideNationality(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideNationality" duration-ms="228" started-at="2017-11-06T16:01:33Z" finished-at="2017-11-06T16:01:33Z">
           <params>
             <param index="0">
               <value>
@@ -348,7 +441,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideNationality -->
-        <test-method status="PASS" signature="provideAadharNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideAadharNumber" duration-ms="286" started-at="2017-11-04T16:25:22Z" finished-at="2017-11-04T16:25:22Z">
+        <test-method status="PASS" signature="provideAadharNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideAadharNumber" duration-ms="333" started-at="2017-11-06T16:01:33Z" finished-at="2017-11-06T16:01:33Z">
           <params>
             <param index="0">
               <value>
@@ -362,7 +455,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideAadharNumber -->
-        <test-method status="PASS" signature="providePassportNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePassportNumber" duration-ms="294" started-at="2017-11-04T16:25:22Z" finished-at="2017-11-04T16:25:23Z">
+        <test-method status="PASS" signature="providePassportNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePassportNumber" duration-ms="325" started-at="2017-11-06T16:01:33Z" finished-at="2017-11-06T16:01:34Z">
           <params>
             <param index="0">
               <value>
@@ -376,7 +469,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- providePassportNumber -->
-        <test-method status="PASS" signature="providePlaceOfIssue(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePlaceOfIssue" duration-ms="158" started-at="2017-11-04T16:25:23Z" finished-at="2017-11-04T16:25:23Z">
+        <test-method status="PASS" signature="providePlaceOfIssue(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePlaceOfIssue" duration-ms="200" started-at="2017-11-06T16:01:34Z" finished-at="2017-11-06T16:01:34Z">
           <params>
             <param index="0">
               <value>
@@ -390,35 +483,35 @@
             </line>
           </reporter-output>
         </test-method> <!-- providePlaceOfIssue -->
-        <test-method status="PASS" signature="clickDateOfIssueInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickDateOfIssueInputField" duration-ms="206" started-at="2017-11-04T16:25:23Z" finished-at="2017-11-04T16:25:23Z">
+        <test-method status="PASS" signature="clickDateOfIssueInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickDateOfIssueInputField" duration-ms="221" started-at="2017-11-06T16:01:34Z" finished-at="2017-11-06T16:01:34Z">
           <reporter-output>
             <line>
               <![CDATA[User has opened date of issue calender successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickDateOfIssueInputField -->
-        <test-method status="PASS" signature="provideDateOfIssue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideDateOfIssue" duration-ms="4092" started-at="2017-11-04T16:25:23Z" finished-at="2017-11-04T16:25:27Z">
+        <test-method status="PASS" signature="provideDateOfIssue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideDateOfIssue" duration-ms="3762" started-at="2017-11-06T16:01:34Z" finished-at="2017-11-06T16:01:38Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Date of Issue successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDateOfIssue -->
-        <test-method status="PASS" signature="clickExpiryDateInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickExpiryDateInputField" duration-ms="214" started-at="2017-11-04T16:25:27Z" finished-at="2017-11-04T16:25:27Z">
+        <test-method status="PASS" signature="clickExpiryDateInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickExpiryDateInputField" duration-ms="215" started-at="2017-11-06T16:01:38Z" finished-at="2017-11-06T16:01:38Z">
           <reporter-output>
             <line>
               <![CDATA[User has opened Expiry Date calender successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickExpiryDateInputField -->
-        <test-method status="PASS" signature="provideExpiryDate()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideExpiryDate" duration-ms="4232" started-at="2017-11-04T16:25:27Z" finished-at="2017-11-04T16:25:32Z">
+        <test-method status="PASS" signature="provideExpiryDate()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideExpiryDate" duration-ms="4121" started-at="2017-11-06T16:01:38Z" finished-at="2017-11-06T16:01:42Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Expiry Date successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideExpiryDate -->
-        <test-method status="PASS" signature="provideReligion(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideReligion" duration-ms="250" started-at="2017-11-04T16:25:32Z" finished-at="2017-11-04T16:25:32Z">
+        <test-method status="PASS" signature="provideReligion(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideReligion" duration-ms="210" started-at="2017-11-06T16:01:42Z" finished-at="2017-11-06T16:01:42Z">
           <params>
             <param index="0">
               <value>
@@ -432,7 +525,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideReligion -->
-        <test-method status="PASS" signature="provideCitizenship(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideCitizenship" duration-ms="337" started-at="2017-11-04T16:25:32Z" finished-at="2017-11-04T16:25:32Z">
+        <test-method status="PASS" signature="provideCitizenship(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideCitizenship" duration-ms="227" started-at="2017-11-06T16:01:42Z" finished-at="2017-11-06T16:01:43Z">
           <params>
             <param index="0">
               <value>
@@ -446,28 +539,28 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideCitizenship -->
-        <test-method status="PASS" signature="provideCaste()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideCaste" duration-ms="365" started-at="2017-11-04T16:25:32Z" finished-at="2017-11-04T16:25:33Z">
+        <test-method status="PASS" signature="provideCaste()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideCaste" duration-ms="294" started-at="2017-11-06T16:01:43Z" finished-at="2017-11-06T16:01:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Caste value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCaste -->
-        <test-method status="PASS" signature="provideDomicile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideDomicile" duration-ms="312" started-at="2017-11-04T16:25:33Z" finished-at="2017-11-04T16:25:33Z">
+        <test-method status="PASS" signature="provideDomicile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideDomicile" duration-ms="303" started-at="2017-11-06T16:01:43Z" finished-at="2017-11-06T16:01:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Domicile value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDomicile -->
-        <test-method status="PASS" signature="provideCommunity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideCommunity" duration-ms="306" started-at="2017-11-04T16:25:33Z" finished-at="2017-11-04T16:25:33Z">
+        <test-method status="PASS" signature="provideCommunity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideCommunity" duration-ms="297" started-at="2017-11-06T16:01:43Z" finished-at="2017-11-06T16:01:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Community value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCommunity -->
-        <test-method status="PASS" signature="providePresentAddress(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddress" duration-ms="242" started-at="2017-11-04T16:25:33Z" finished-at="2017-11-04T16:25:34Z">
+        <test-method status="PASS" signature="providePresentAddress(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddress" duration-ms="282" started-at="2017-11-06T16:01:43Z" finished-at="2017-11-06T16:01:44Z">
           <params>
             <param index="0">
               <value>
@@ -481,28 +574,28 @@
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddress -->
-        <test-method status="PASS" signature="providePresentAddrCountry()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrCountry" duration-ms="371" started-at="2017-11-04T16:25:34Z" finished-at="2017-11-04T16:25:34Z">
+        <test-method status="PASS" signature="providePresentAddrCountry()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrCountry" duration-ms="361" started-at="2017-11-06T16:01:44Z" finished-at="2017-11-06T16:01:44Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Country value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrCountry -->
-        <test-method status="PASS" signature="providePresentAddrState()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrState" duration-ms="326" started-at="2017-11-04T16:25:34Z" finished-at="2017-11-04T16:25:34Z">
+        <test-method status="PASS" signature="providePresentAddrState()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrState" duration-ms="352" started-at="2017-11-06T16:01:44Z" finished-at="2017-11-06T16:01:44Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered State value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrState -->
-        <test-method status="PASS" signature="providePresentAddrCity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrCity" duration-ms="316" started-at="2017-11-04T16:25:34Z" finished-at="2017-11-04T16:25:35Z">
+        <test-method status="PASS" signature="providePresentAddrCity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrCity" duration-ms="286" started-at="2017-11-06T16:01:44Z" finished-at="2017-11-06T16:01:45Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered City value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrCity -->
-        <test-method status="PASS" signature="providePresentAddrPincode(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrPincode" duration-ms="235" started-at="2017-11-04T16:25:35Z" finished-at="2017-11-04T16:25:35Z">
+        <test-method status="PASS" signature="providePresentAddrPincode(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrPincode" duration-ms="198" started-at="2017-11-06T16:01:45Z" finished-at="2017-11-06T16:01:45Z">
           <params>
             <param index="0">
               <value>
@@ -516,49 +609,49 @@
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrPincode -->
-        <test-method status="PASS" signature="providePresentAddrContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrContactNumber" duration-ms="306" started-at="2017-11-04T16:25:35Z" finished-at="2017-11-04T16:25:35Z">
+        <test-method status="PASS" signature="providePresentAddrContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="providePresentAddrContactNumber" duration-ms="289" started-at="2017-11-06T16:01:45Z" finished-at="2017-11-06T16:01:45Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Emergency Contact Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrContactNumber -->
-        <test-method status="PASS" signature="clickSameAddressCheckbox()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickSameAddressCheckbox" duration-ms="146" started-at="2017-11-04T16:25:35Z" finished-at="2017-11-04T16:25:35Z">
+        <test-method status="PASS" signature="clickSameAddressCheckbox()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickSameAddressCheckbox" duration-ms="146" started-at="2017-11-06T16:01:45Z" finished-at="2017-11-06T16:01:45Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Same Address checkbox successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickSameAddressCheckbox -->
-        <test-method status="PASS" signature="clickNextButtonStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickNextButtonStep1" duration-ms="10187" started-at="2017-11-04T16:25:35Z" finished-at="2017-11-04T16:25:45Z">
+        <test-method status="PASS" signature="clickNextButtonStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickNextButtonStep1" duration-ms="10182" started-at="2017-11-06T16:01:45Z" finished-at="2017-11-06T16:01:56Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Next button  on Step 1 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickNextButtonStep1 -->
-        <test-method status="PASS" signature="validateDoBStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateDoBStep1" duration-ms="2671" started-at="2017-11-04T16:25:45Z" finished-at="2017-11-04T16:25:48Z">
+        <test-method status="PASS" signature="validateDoBStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateDoBStep1" duration-ms="1375" started-at="2017-11-06T16:01:56Z" finished-at="2017-11-06T16:01:57Z">
           <reporter-output>
             <line>
               <![CDATA[Provided DOB matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateDoBStep1 -->
-        <test-method status="PASS" signature="validatePlaceOfBirthStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePlaceOfBirthStep1" duration-ms="1580" started-at="2017-11-04T16:25:48Z" finished-at="2017-11-04T16:25:50Z">
+        <test-method status="PASS" signature="validatePlaceOfBirthStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePlaceOfBirthStep1" duration-ms="1362" started-at="2017-11-06T16:01:57Z" finished-at="2017-11-06T16:01:58Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Place Of Birth matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validatePlaceOfBirthStep1 -->
-        <test-method status="PASS" signature="validateGenderValueInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateGenderValueInStep1" duration-ms="1597" started-at="2017-11-04T16:25:50Z" finished-at="2017-11-04T16:25:51Z">
+        <test-method status="PASS" signature="validateGenderValueInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateGenderValueInStep1" duration-ms="1388" started-at="2017-11-06T16:01:58Z" finished-at="2017-11-06T16:02:00Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Gender matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateGenderValueInStep1 -->
-        <test-method status="FAIL" signature="validateBloodGroupInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateBloodGroupInStep1" duration-ms="1607" started-at="2017-11-04T16:25:51Z" finished-at="2017-11-04T16:25:53Z">
+        <test-method status="FAIL" signature="validateBloodGroupInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateBloodGroupInStep1" duration-ms="1366" started-at="2017-11-06T16:02:00Z" finished-at="2017-11-06T16:02:01Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -567,7 +660,7 @@
               <![CDATA[java.lang.AssertionError: null
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validateBloodGroupInStep1(FillUpApplicationForm.java:606)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.validateBloodGroupInStep1(FillUpApplicationForm.java:607)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -599,98 +692,42 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateBloodGroupInStep1 -->
-        <test-method status="PASS" signature="validateNationalityInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateNationalityInStep1" duration-ms="1603" started-at="2017-11-04T16:25:53Z" finished-at="2017-11-04T16:25:54Z">
+        <test-method status="PASS" signature="validateNationalityInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateNationalityInStep1" duration-ms="1398" started-at="2017-11-06T16:02:01Z" finished-at="2017-11-06T16:02:02Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Nationality matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateNationalityInStep1 -->
-        <test-method status="PASS" signature="validateAadhaarNumberInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateAadhaarNumberInStep1" duration-ms="1645" started-at="2017-11-04T16:25:54Z" finished-at="2017-11-04T16:25:56Z">
+        <test-method status="PASS" signature="validateAadhaarNumberInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateAadhaarNumberInStep1" duration-ms="1406" started-at="2017-11-06T16:02:02Z" finished-at="2017-11-06T16:02:04Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Aadhaar Number matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateAadhaarNumberInStep1 -->
-        <test-method status="PASS" signature="validatePassportNumberInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePassportNumberInStep1" duration-ms="1583" started-at="2017-11-04T16:25:56Z" finished-at="2017-11-04T16:25:58Z">
+        <test-method status="PASS" signature="validatePassportNumberInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePassportNumberInStep1" duration-ms="1390" started-at="2017-11-06T16:02:04Z" finished-at="2017-11-06T16:02:05Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Passport Number matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validatePassportNumberInStep1 -->
-        <test-method status="PASS" signature="validatePlaceOfIssueInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePlaceOfIssueInStep1" duration-ms="1610" started-at="2017-11-04T16:25:58Z" finished-at="2017-11-04T16:25:59Z">
+        <test-method status="PASS" signature="validatePlaceOfIssueInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePlaceOfIssueInStep1" duration-ms="1382" started-at="2017-11-06T16:02:05Z" finished-at="2017-11-06T16:02:07Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Place Of Issue matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validatePlaceOfIssueInStep1 -->
-        <test-method status="PASS" signature="validateDateOfIssueInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateDateOfIssueInStep1" duration-ms="1563" started-at="2017-11-04T16:25:59Z" finished-at="2017-11-04T16:26:01Z">
+        <test-method status="PASS" signature="validateDateOfIssueInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateDateOfIssueInStep1" duration-ms="1437" started-at="2017-11-06T16:02:07Z" finished-at="2017-11-06T16:02:08Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Date Of Issue matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateDateOfIssueInStep1 -->
-        <test-method status="PASS" signature="validateExpiryDateInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateExpiryDateInStep1" duration-ms="1594" started-at="2017-11-04T16:26:01Z" finished-at="2017-11-04T16:26:03Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Provided Expiry Date matches the value stored in database.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validateExpiryDateInStep1 -->
-        <test-method status="PASS" signature="validateReligionInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateReligionInStep1" duration-ms="1578" started-at="2017-11-04T16:26:03Z" finished-at="2017-11-04T16:26:04Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Provided Religion matches the value stored in database.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validateReligionInStep1 -->
-        <test-method status="PASS" signature="validateCitizenShipInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateCitizenShipInStep1" duration-ms="1627" started-at="2017-11-04T16:26:04Z" finished-at="2017-11-04T16:26:06Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Provided CitizenShip matches the value stored in database.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validateCitizenShipInStep1 -->
-        <test-method status="PASS" signature="validateCasteInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateCasteInStep1" duration-ms="1594" started-at="2017-11-04T16:26:06Z" finished-at="2017-11-04T16:26:07Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Provided Caste matches the value stored in database.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validateCasteInStep1 -->
-        <test-method status="PASS" signature="validateDomicileInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateDomicileInStep1" duration-ms="1594" started-at="2017-11-04T16:26:07Z" finished-at="2017-11-04T16:26:09Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Provided Domicile matches the value stored in database.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validateDomicileInStep1 -->
-        <test-method status="PASS" signature="validateCommunityInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateCommunityInStep1" duration-ms="1592" started-at="2017-11-04T16:26:09Z" finished-at="2017-11-04T16:26:11Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Provided Community matches the value stored in database.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validateCommunityInStep1 -->
-        <test-method status="PASS" signature="validatePresentAddressInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePresentAddressInStep1" duration-ms="1594" started-at="2017-11-04T16:26:11Z" finished-at="2017-11-04T16:26:12Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Provided Present Address matches the value stored in database.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validatePresentAddressInStep1 -->
-        <test-method status="PASS" signature="validatePresentAddressCountryInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePresentAddressCountryInStep1" duration-ms="1638" started-at="2017-11-04T16:26:12Z" finished-at="2017-11-04T16:26:14Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Provided Present Address Country matches the value stored in database.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- validatePresentAddressCountryInStep1 -->
-        <test-method status="FAIL" signature="validatePresentAddressStateInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePresentAddressStateInStep1" duration-ms="1624" started-at="2017-11-04T16:26:14Z" finished-at="2017-11-04T16:26:15Z">
+        <test-method status="FAIL" signature="validateExpiryDateInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateExpiryDateInStep1" duration-ms="1375" started-at="2017-11-06T16:02:08Z" finished-at="2017-11-06T16:02:10Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -699,7 +736,97 @@
               <![CDATA[java.lang.AssertionError: null
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validatePresentAddressStateInStep1(FillUpApplicationForm.java:873)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.validateExpiryDateInStep1(FillUpApplicationForm.java:721)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateExpiryDateInStep1 -->
+        <test-method status="PASS" signature="validateReligionInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateReligionInStep1" duration-ms="1391" started-at="2017-11-06T16:02:10Z" finished-at="2017-11-06T16:02:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Religion matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateReligionInStep1 -->
+        <test-method status="PASS" signature="validateCitizenShipInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateCitizenShipInStep1" duration-ms="4174" started-at="2017-11-06T16:02:11Z" finished-at="2017-11-06T16:02:15Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided CitizenShip matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateCitizenShipInStep1 -->
+        <test-method status="PASS" signature="validateCasteInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateCasteInStep1" duration-ms="1464" started-at="2017-11-06T16:02:15Z" finished-at="2017-11-06T16:02:17Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Caste matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateCasteInStep1 -->
+        <test-method status="PASS" signature="validateDomicileInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateDomicileInStep1" duration-ms="1361" started-at="2017-11-06T16:02:17Z" finished-at="2017-11-06T16:02:18Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Domicile matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateDomicileInStep1 -->
+        <test-method status="PASS" signature="validateCommunityInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateCommunityInStep1" duration-ms="1379" started-at="2017-11-06T16:02:18Z" finished-at="2017-11-06T16:02:19Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Community matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateCommunityInStep1 -->
+        <test-method status="PASS" signature="validatePresentAddressInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePresentAddressInStep1" duration-ms="1364" started-at="2017-11-06T16:02:19Z" finished-at="2017-11-06T16:02:21Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Present Address matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validatePresentAddressInStep1 -->
+        <test-method status="PASS" signature="validatePresentAddressCountryInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePresentAddressCountryInStep1" duration-ms="1379" started-at="2017-11-06T16:02:21Z" finished-at="2017-11-06T16:02:22Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Present Address Country matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validatePresentAddressCountryInStep1 -->
+        <test-method status="FAIL" signature="validatePresentAddressStateInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePresentAddressStateInStep1" duration-ms="1390" started-at="2017-11-06T16:02:22Z" finished-at="2017-11-06T16:02:23Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.fail(Assert.java:101)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.validatePresentAddressStateInStep1(FillUpApplicationForm.java:874)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -731,18 +858,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatePresentAddressStateInStep1 -->
-        <test-method status="PASS" signature="validatePresentAddressCityInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePresentAddressCityInStep1" duration-ms="1594" started-at="2017-11-04T16:26:15Z" finished-at="2017-11-04T16:26:17Z">
+        <test-method status="PASS" signature="validatePresentAddressCityInStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validatePresentAddressCityInStep1" duration-ms="1382" started-at="2017-11-06T16:02:23Z" finished-at="2017-11-06T16:02:25Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Present Address City matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validatePresentAddressCityInStep1 -->
-        <test-method status="PASS" signature="provideFathersName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideFathersName" duration-ms="1392" started-at="2017-11-04T16:26:17Z" finished-at="2017-11-04T16:26:18Z">
+        <test-method status="PASS" signature="provideFathersName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideFathersName" duration-ms="1410" started-at="2017-11-06T16:02:25Z" finished-at="2017-11-06T16:02:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FathersName_Step2]]>
+                <![CDATA[FathersName]]>
               </value>
             </param>
           </params>
@@ -752,7 +879,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersName -->
-        <test-method status="PASS" signature="provideFathersQualification(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideFathersQualification" duration-ms="239" started-at="2017-11-04T16:26:18Z" finished-at="2017-11-04T16:26:19Z">
+        <test-method status="PASS" signature="provideFathersQualification(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideFathersQualification" duration-ms="215" started-at="2017-11-06T16:02:26Z" finished-at="2017-11-06T16:02:27Z">
           <params>
             <param index="0">
               <value>
@@ -766,7 +893,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersQualification -->
-        <test-method status="PASS" signature="provideFathersOccupation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideFathersOccupation" duration-ms="248" started-at="2017-11-04T16:26:19Z" finished-at="2017-11-04T16:26:19Z">
+        <test-method status="PASS" signature="provideFathersOccupation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideFathersOccupation" duration-ms="230" started-at="2017-11-06T16:02:27Z" finished-at="2017-11-06T16:02:27Z">
           <params>
             <param index="0">
               <value>
@@ -780,102 +907,314 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersOccupation -->
-        <test-method status="PASS" signature="clickNextButtonStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickNextButtonStep2" duration-ms="166" started-at="2017-11-04T16:26:19Z" finished-at="2017-11-04T16:26:19Z">
+        <test-method status="PASS" signature="provideAnnualIncome(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideAnnualIncome" duration-ms="198" started-at="2017-11-06T16:02:27Z" finished-at="2017-11-06T16:02:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2500000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Fathers Annual Income value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideAnnualIncome -->
+        <test-method status="PASS" signature="provideFathersEmail()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideFathersEmail" duration-ms="384" started-at="2017-11-06T16:02:27Z" finished-at="2017-11-06T16:02:27Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Fathers Email value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideFathersEmail -->
+        <test-method status="PASS" signature="provideFathersMobile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideFathersMobile" duration-ms="240" started-at="2017-11-06T16:02:27Z" finished-at="2017-11-06T16:02:28Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Fathers Mobile value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideFathersMobile -->
+        <test-method status="PASS" signature="provideMothersName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideMothersName" duration-ms="387" started-at="2017-11-06T16:02:28Z" finished-at="2017-11-06T16:02:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MothersName]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Mothers Name value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideMothersName -->
+        <test-method status="PASS" signature="provideMothersQualification(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideMothersQualification" duration-ms="214" started-at="2017-11-06T16:02:28Z" finished-at="2017-11-06T16:02:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M.E.I.T.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Mothers Qualification value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideMothersQualification -->
+        <test-method status="PASS" signature="provideMothersOccupation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideMothersOccupation" duration-ms="278" started-at="2017-11-06T16:02:28Z" finished-at="2017-11-06T16:02:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[College]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Mothers Occupation value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideMothersOccupation -->
+        <test-method status="PASS" signature="provideMothersEmail()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideMothersEmail" duration-ms="391" started-at="2017-11-06T16:02:28Z" finished-at="2017-11-06T16:02:29Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Mothers Email value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideMothersEmail -->
+        <test-method status="PASS" signature="provideMothersMobile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideMothersMobile" duration-ms="272" started-at="2017-11-06T16:02:29Z" finished-at="2017-11-06T16:02:29Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Mothers Mobile value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideMothersMobile -->
+        <test-method status="PASS" signature="provideGuardiansName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGuardiansName" duration-ms="474" started-at="2017-11-06T16:02:29Z" finished-at="2017-11-06T16:02:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LocalGuardianName]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Guardians Name value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideGuardiansName -->
+        <test-method status="PASS" signature="provideGuardiansAddress1(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGuardiansAddress1" duration-ms="234" started-at="2017-11-06T16:02:30Z" finished-at="2017-11-06T16:02:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Address1Field]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Guardians Address 1 value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideGuardiansAddress1 -->
+        <test-method status="PASS" signature="provideGuardiansAddress2(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGuardiansAddress2" duration-ms="250" started-at="2017-11-06T16:02:30Z" finished-at="2017-11-06T16:02:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Address2Field]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Guardians Address 2 value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideGuardiansAddress2 -->
+        <test-method status="PASS" signature="provideGuardiansAddress3(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGuardiansAddress3" duration-ms="243" started-at="2017-11-06T16:02:30Z" finished-at="2017-11-06T16:02:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Address3Field]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Guardians Address 3 value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideGuardiansAddress3 -->
+        <test-method status="PASS" signature="provideGuardiansAddrPincode(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGuardiansAddrPincode" duration-ms="186" started-at="2017-11-06T16:02:30Z" finished-at="2017-11-06T16:02:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[416115]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Guardians Relation value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideGuardiansAddrPincode -->
+        <test-method status="PASS" signature="provideGuardiansRelation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGuardiansRelation" duration-ms="308" started-at="2017-11-06T16:02:31Z" finished-at="2017-11-06T16:02:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Brother-in-law]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Guardians Relation value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideGuardiansRelation -->
+        <test-method status="PASS" signature="provideGuardiansContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="provideGuardiansContactNumber" duration-ms="247" started-at="2017-11-06T16:02:31Z" finished-at="2017-11-06T16:02:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Guardians Contact Number value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- provideGuardiansContactNumber -->
+        <test-method status="PASS" signature="clickNextButtonStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="clickNextButtonStep2" duration-ms="148" started-at="2017-11-06T16:02:31Z" finished-at="2017-11-06T16:02:31Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Next button on Step 2successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickNextButtonStep2 -->
-        <test-method status="FAIL" signature="validateFathersNameStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersNameStep2" duration-ms="3496" started-at="2017-11-04T16:26:19Z" finished-at="2017-11-04T16:26:23Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validateFathersNameStep2(FillUpApplicationForm.java:1056)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="validateFathersNameStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersNameStep2" duration-ms="1554" started-at="2017-11-06T16:02:31Z" finished-at="2017-11-06T16:02:33Z">
           <reporter-output>
+            <line>
+              <![CDATA[Provided Fathers Name matches the value stored in database.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- validateFathersNameStep2 -->
-        <test-method status="FAIL" signature="validateFathersQualificationStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersQualificationStep2" duration-ms="2664" started-at="2017-11-04T16:26:23Z" finished-at="2017-11-04T16:26:25Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validateFathersQualificationStep2(FillUpApplicationForm.java:1075)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="validateFathersQualificationStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersQualificationStep2" duration-ms="1393" started-at="2017-11-06T16:02:33Z" finished-at="2017-11-06T16:02:34Z">
           <reporter-output>
+            <line>
+              <![CDATA[Provided Fathers Qualification matches the value stored in database.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- validateFathersQualificationStep2 -->
-        <test-method status="PASS" signature="validateFathersOccupationStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersOccupationStep2" duration-ms="2624" started-at="2017-11-04T16:26:25Z" finished-at="2017-11-04T16:26:28Z">
+        <test-method status="PASS" signature="validateFathersOccupationStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersOccupationStep2" duration-ms="1372" started-at="2017-11-06T16:02:34Z" finished-at="2017-11-06T16:02:36Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Fathers Occupation matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateFathersOccupationStep2 -->
+        <test-method status="PASS" signature="validateFathersAnnualIncomeStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersAnnualIncomeStep2" duration-ms="1368" started-at="2017-11-06T16:02:36Z" finished-at="2017-11-06T16:02:37Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Fathers Annual Income matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateFathersAnnualIncomeStep2 -->
+        <test-method status="PASS" signature="validateFathersEmailStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersEmailStep2" duration-ms="1391" started-at="2017-11-06T16:02:37Z" finished-at="2017-11-06T16:02:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Fathers Email matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateFathersEmailStep2 -->
+        <test-method status="PASS" signature="validateFathersMobileStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateFathersMobileStep2" duration-ms="1994" started-at="2017-11-06T16:02:38Z" finished-at="2017-11-06T16:02:40Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Fathers Mobile matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateFathersMobileStep2 -->
+        <test-method status="PASS" signature="validateMothersNameStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateMothersNameStep2" duration-ms="1376" started-at="2017-11-06T16:02:40Z" finished-at="2017-11-06T16:02:42Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Mothers Name matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateMothersNameStep2 -->
+        <test-method status="PASS" signature="validateMothersQualificationStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateMothersQualificationStep2" duration-ms="1384" started-at="2017-11-06T16:02:42Z" finished-at="2017-11-06T16:02:43Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Mothers Qualification matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateMothersQualificationStep2 -->
+        <test-method status="PASS" signature="validateMothersOccupationStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateMothersOccupationStep2" duration-ms="1375" started-at="2017-11-06T16:02:43Z" finished-at="2017-11-06T16:02:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Mothers Occupation matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateMothersOccupationStep2 -->
+        <test-method status="PASS" signature="validateMothersEmailStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateMothersEmailStep2" duration-ms="1391" started-at="2017-11-06T16:02:45Z" finished-at="2017-11-06T16:02:46Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Mothers Email matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateMothersEmailStep2 -->
+        <test-method status="PASS" signature="validateMothersMobileStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateMothersMobileStep2" duration-ms="1361" started-at="2017-11-06T16:02:46Z" finished-at="2017-11-06T16:02:47Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Mothers Mobile matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateMothersMobileStep2 -->
+        <test-method status="PASS" signature="validateLocalGuardianNameStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateLocalGuardianNameStep2" duration-ms="1359" started-at="2017-11-06T16:02:47Z" finished-at="2017-11-06T16:02:49Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Guardians Name matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateLocalGuardianNameStep2 -->
+        <test-method status="PASS" signature="validateLocalGuardianAddr1Step2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateLocalGuardianAddr1Step2" duration-ms="1393" started-at="2017-11-06T16:02:49Z" finished-at="2017-11-06T16:02:50Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Guardians Address 1 matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateLocalGuardianAddr1Step2 -->
+        <test-method status="PASS" signature="validateLocalGuardianAddr2Step2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateLocalGuardianAddr2Step2" duration-ms="1362" started-at="2017-11-06T16:02:50Z" finished-at="2017-11-06T16:02:51Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Guardians Address 2 matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateLocalGuardianAddr2Step2 -->
+        <test-method status="PASS" signature="validateLocalGuardianAddr3Step2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateLocalGuardianAddr3Step2" duration-ms="1399" started-at="2017-11-06T16:02:51Z" finished-at="2017-11-06T16:02:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Guardians Address 3 matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateLocalGuardianAddr3Step2 -->
+        <test-method status="PASS" signature="validateGrdnAddrPincodeStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateGrdnAddrPincodeStep2" duration-ms="1389" started-at="2017-11-06T16:02:53Z" finished-at="2017-11-06T16:02:54Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Guardians Pincode matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateGrdnAddrPincodeStep2 -->
+        <test-method status="PASS" signature="validateGuardianRelationStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateGuardianRelationStep2" duration-ms="1365" started-at="2017-11-06T16:02:54Z" finished-at="2017-11-06T16:02:56Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Guardians Relation matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateGuardianRelationStep2 -->
+        <test-method status="PASS" signature="validateGuardianContactNumberStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@7791a895]" name="validateGuardianContactNumberStep2" duration-ms="1346" started-at="2017-11-06T16:02:56Z" finished-at="2017-11-06T16:02:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Provided Guardians ContactNumber matches the value stored in database.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateGuardianContactNumberStep2 -->
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
     </test> <!-- Staging QA Application Form Test Validations -->
   </suite> <!-- Suite -->

@@ -19,9 +19,10 @@ public class FillUpApplicationForm  extends HelperHand
 	providedPresentAddrState,providedPresentAddrCity, providedPresentAddrPincode, providedPresentAddrContactNumber,
 	providedFathersNm, proviedFatherQualfcn, providedFathersOccpn, providedFathersIncome, providedFathersEmail,
 	providedFathersMobile, providedMothersNm, proviedMotherQualfcn, providedMothersOccpn, providedMothersEmail,
-	providedMothersMobile, providedLocalGuardianNm, providedAddress1Step2, providedAddress2Step2, providedAddress3Step2,
-	providedLGCountry, providedLGState, providedLGCity, providedLGPincode, providedLGRelation, providedLGContactNumber,
-	providedLGEmail;
+	providedMothersMobile, providedLGuardianNm, providedAddress1Step2, providedAddress2Step2, providedAddress3Step2,
+	providedLGCountry, providedLGState, providedLGCity, providedLGPincode, providedLGRelation, providedLGContactNumber;
+	
+	
 	/********************* STEP 1 *************************/
 	@Test
 	public static void openDetailedApplicationFormPage() throws SQLException, InterruptedException
@@ -70,8 +71,7 @@ public class FillUpApplicationForm  extends HelperHand
 			Page_DetailedApplicationForm.displayDOBYearDropDown().selectByIndex(DataGenerator.getRandomYear());
 			String DOB_year = Page_DetailedApplicationForm.displayDOBYearDropDown().getFirstSelectedOption().getText();
 			Page_DetailedApplicationForm.displayDaysOfMonthInDoB().click();
-			String DOB_day = Page_DetailedApplicationForm.displayDaysOfMonthInDoB().getText();
-			
+			String DOB_day = Page_DetailedApplicationForm.displayDaysOfMonthInDoB().getText();			
 			
 			if(Integer.parseInt(DOB_month)<10)
 			{
@@ -270,6 +270,7 @@ public class FillUpApplicationForm  extends HelperHand
 			Page_DetailedApplicationForm.displayExpiryDateMonthDropDown().selectByIndex(DataGenerator.getRandomMonth());
 			String ExpiryDate_month = Page_DetailedApplicationForm.getMonthFromProvidedExpiryDate(Page_DetailedApplicationForm.displayExpiryDateMonthDropDown().getFirstSelectedOption().getText());
 			Page_DetailedApplicationForm.displayExpiryDateYearDropDown().selectByIndex(DataGenerator.getRandomYear()+20);
+			//Do separate logic for Expiry date later
 			String ExpiryDate_year = Page_DetailedApplicationForm.displayExpiryDateYearDropDown().getFirstSelectedOption().getText();
 			Page_DetailedApplicationForm.displayDaysOfMonthInExpiryDate().click();
 			String ExpiryDate_day = Page_DetailedApplicationForm.displayDaysOfMonthInExpiryDate().getText();
@@ -539,7 +540,7 @@ public class FillUpApplicationForm  extends HelperHand
 			System.out.println("--------------Validating Date of Birth--------------");
 			System.out.println("Provided DoB: "+providedDOB);
 			//Intentional Pause
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			String actualDOB = extractDataFromDatabase("userDOB");
 			System.out.println("DoB value from DB: "+actualDOB);
 			Assert.assertEquals(providedDOB, actualDOB.substring(0, 10));
@@ -906,7 +907,7 @@ public class FillUpApplicationForm  extends HelperHand
 
 		try 
 		{
-			providedFathersNm = fathersName;
+			providedFathersNm = fathersName+" in Step2";
 			Page_DetailedApplicationForm.displayFathersNameInputField().sendKeys(providedFathersNm);
 			Reporter.log("User has entered Fathers Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -946,11 +947,56 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideMothersName() throws Exception
+	@Parameters({"annualIncome"})
+	public static void provideAnnualIncome(String annualIncome) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayMothersNameInputField().sendKeys("Mothers Name Input Field");
+			providedFathersIncome = annualIncome;
+			Page_DetailedApplicationForm.displayAnnualIncomeInputField().sendKeys(providedFathersIncome);
+			Reporter.log("User has entered Fathers Annual Income value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Fathers Annual Income value.",true);
+		}
+	}
+	
+	@Test
+	public static void provideFathersEmail() throws Exception
+	{
+		try 
+		{
+			providedFathersEmail = DataGenerator.randomEmailGenerator();
+			Page_DetailedApplicationForm.displayFathersEmailInputField().sendKeys(providedFathersEmail);
+			Reporter.log("User has entered Fathers Email value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Fathers Email value.",true);
+		}
+	}
+	
+	@Test
+	public static void provideFathersMobile() throws Exception
+	{
+		try 
+		{
+			providedFathersMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
+			Page_DetailedApplicationForm.displayFathersMobileInputField().sendKeys(providedFathersMobile);
+			Reporter.log("User has entered Fathers Mobile value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Fathers Mobile value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"MothersName"})
+	public static void provideMothersName(String MothersName) throws Exception
+	{
+		try 
+		{
+			providedMothersNm = MothersName+" in Step2";
+			Page_DetailedApplicationForm.displayMothersNameInputField().sendKeys(providedMothersNm);
 			Reporter.log("User has entered Mothers Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -959,11 +1005,71 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideGuardiansName() throws Exception
+	@Parameters({"MothersQual"})
+	public static void provideMothersQualification(String MothersQual) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayGuardiansNameInputField().sendKeys("Guardians Name Input Field");
+			proviedMotherQualfcn = MothersQual;
+			Page_DetailedApplicationForm.displayMothersQualificationInputField().sendKeys(proviedMotherQualfcn);
+			Reporter.log("User has entered Mothers Qualification value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Mothers Qualification value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"MothersOccpn"})
+	public static void provideMothersOccupation(String MothersOccpn) throws Exception
+	{
+		try 
+		{
+			providedMothersOccpn = MothersOccpn+" Dean";
+			Page_DetailedApplicationForm.displayMothersOccupationInputField().sendKeys(providedMothersOccpn);
+			Reporter.log("User has entered Mothers Occupation value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Mothers Occupation value.",true);
+		}
+	}
+	
+	@Test
+	public static void provideMothersEmail() throws Exception
+	{
+		try 
+		{
+			providedMothersEmail = DataGenerator.randomEmailGenerator();
+			Page_DetailedApplicationForm.displayMothersEmailInputField().sendKeys(providedMothersEmail);
+			Reporter.log("User has entered Mothers Email value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Mothers Email value.",true);
+		}
+	}
+	
+	@Test
+	public static void provideMothersMobile() throws Exception
+	{
+		try 
+		{
+			providedMothersMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
+			Page_DetailedApplicationForm.displayMothersMobileInputField().sendKeys(providedMothersMobile);
+			Reporter.log("User has entered Mothers Mobile value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Mothers Mobile value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"LocalGuardianName"})
+	public static void provideGuardiansName(String LocalGuardianName) throws Exception
+	{
+		try 
+		{
+			providedLGuardianNm = LocalGuardianName+" in Step2";
+			Page_DetailedApplicationForm.displayGuardiansNameInputField().sendKeys(providedLGuardianNm);
 			Reporter.log("User has entered Guardians Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -972,11 +1078,13 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideGuardiansAddress1() throws Exception
+	@Parameters({"address1"})
+	public static void provideGuardiansAddress1(String address1) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayGuardiansAddress1InputField().sendKeys("Guardians Address 1 - Step 2");
+			providedAddress1Step2 = address1+" in Step2";
+			Page_DetailedApplicationForm.displayGuardiansAddress1InputField().sendKeys(providedAddress1Step2);
 			Reporter.log("User has entered Guardians Address 1 value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -985,11 +1093,13 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideGuardiansAddress2() throws Exception
+	@Parameters({"address2"})
+	public static void provideGuardiansAddress2(String address2) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayGuardiansAddress2InputField().sendKeys("Guardians Address 2 - Step 2");
+			providedAddress2Step2 = address2+" in Step2";
+			Page_DetailedApplicationForm.displayGuardiansAddress2InputField().sendKeys(providedAddress2Step2);
 			Reporter.log("User has entered Guardians Address 2 value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -998,28 +1108,61 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideGuardiansContactNumber() throws Exception
+	@Parameters({"address3"})
+	public static void provideGuardiansAddress3(String address3) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayGuardiansContactNumberInputField().sendKeys(thirdPartyGuardiansContact);
-			Reporter.log("User has entered Guardians Contact Number value successfully.",true);
+			providedAddress3Step2 = address3+" in Step2";
+			Page_DetailedApplicationForm.displayGuardiansAddress3InputField().sendKeys(providedAddress3Step2);
+			Reporter.log("User has entered Guardians Address 3 value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Guardians Contact Number value.",true);
+			Reporter.log("User has failed to provide Guardians Address 3 value.",true);
 		}
 	}
 	
 	@Test
-	public static void provideGuardiansRelation() throws Exception
+	@Parameters({"lgpincode"})
+	public static void provideGuardiansAddrPincode(String lgpincode) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayGuardianRelationInputField().sendKeys("Foster Parent");
+			providedLGPincode = lgpincode;
+			Page_DetailedApplicationForm.displayGuardianAddrPincodeInputField().sendKeys(providedLGPincode);
 			Reporter.log("User has entered Guardians Relation value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 			Reporter.log("User has failed to provide Guardians Relation value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"lgrelation"})
+	public static void provideGuardiansRelation(String lgrelation) throws Exception
+	{
+		try 
+		{
+			providedLGRelation = lgrelation;
+			Page_DetailedApplicationForm.displayGuardianRelationInputField().sendKeys(providedLGRelation);
+			Reporter.log("User has entered Guardians Relation value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Guardians Relation value.",true);
+		}
+	}
+	
+	@Test
+	public static void provideGuardiansContactNumber() throws Exception
+	{
+		try 
+		{
+			providedLGContactNumber = Long.toString(DataGenerator.randomMobileNumberGenerator());
+			Page_DetailedApplicationForm.displayGuardiansContactNumberInputField().sendKeys(providedLGContactNumber);
+			Reporter.log("User has entered Guardians Contact Number value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Guardians Contact Number value.",true);
 		}
 	}
 	
@@ -1046,7 +1189,7 @@ public class FillUpApplicationForm  extends HelperHand
 			System.out.println("--------------Validating Fathers Name--------------");
 			System.out.println("Provided Fathers Name: "+providedFathersNm);
 			//Intentional Pause
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			String storedFatherNM = extractDataFromDatabase("userFathersName");
 			System.out.println("Fathers Name value from DB: "+storedFatherNM);
 			Assert.assertEquals(providedFathersNm, storedFatherNM);
@@ -1065,7 +1208,7 @@ public class FillUpApplicationForm  extends HelperHand
 			System.out.println("--------------Validating Fathers Qualification--------------");
 			System.out.println("Provided Fathers Qualification: "+proviedFatherQualfcn);
 			//Intentional Pause
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			String storedFatherQualfcn = extractDataFromDatabase("appFormFatherQualfcn");
 			System.out.println("Fathers Qualification value from DB: "+storedFatherQualfcn);
 			Assert.assertEquals(proviedFatherQualfcn, storedFatherQualfcn);
@@ -1084,7 +1227,7 @@ public class FillUpApplicationForm  extends HelperHand
 			System.out.println("--------------Validating Fathers Occupation--------------");
 			System.out.println("Provided Fathers Occupation: "+providedFathersOccpn);
 			//Intentional Pause
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			String storedFatherOccpn = extractDataFromDatabase("appFormFatherOccpn");
 			System.out.println("Fathers Occupation value from DB: "+storedFatherOccpn);
 			Assert.assertEquals(providedFathersOccpn, storedFatherOccpn);
@@ -1096,7 +1239,290 @@ public class FillUpApplicationForm  extends HelperHand
 		}
 	}
 	
+	@Test
+	public static void validateFathersAnnualIncomeStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Fathers Annual Income--------------");
+			System.out.println("Provided Fathers Annual Income: "+providedFathersIncome);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedFatherIncome = extractDataFromDatabase("appFormFatherIncome");
+			System.out.println("Fathers Annual Income value from DB: "+storedFatherIncome);
+			Assert.assertEquals(providedFathersIncome, storedFatherIncome);
+			Reporter.log("Provided Fathers Annual Income matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Fathers Annual Income doesn't match the value stored in database.",true);
+		}
+	}
 	
+	@Test
+	public static void validateFathersEmailStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Fathers Email--------------");
+			System.out.println("Provided Email: "+providedFathersEmail);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedFatherEmail = extractDataFromDatabase("userFthrEmail");
+			System.out.println("Fathers Email value from DB: "+storedFatherEmail);
+			Assert.assertEquals(providedFathersEmail, storedFatherEmail);
+			Reporter.log("Provided Fathers Email matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Fathers Email doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateFathersMobileStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Fathers Mobile--------------");
+			System.out.println("Provided Mobile: "+providedFathersMobile);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedFatherMob = extractDataFromDatabase("userFthrMob");
+			System.out.println("Fathers Mobile value from DB: "+storedFatherMob);
+			Assert.assertEquals(providedFathersMobile, storedFatherMob);
+			Reporter.log("Provided Fathers Mobile matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Fathers Mobile doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateMothersNameStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Mothers Name--------------");
+			System.out.println("Provided Mothers Name: "+providedMothersNm);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedMotherNM = extractDataFromDatabase("userMothersName");
+			System.out.println("Mothers Name value from DB: "+storedMotherNM);
+			Assert.assertEquals(providedMothersNm, storedMotherNM);
+			Reporter.log("Provided Mothers Name matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Mothers Name doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateMothersQualificationStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Mothers Qualification--------------");
+			System.out.println("Provided Mothers Qualification: "+proviedMotherQualfcn);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedMotherQualfcn = extractDataFromDatabase("appFormMotherQualfcn");
+			System.out.println("Mothers Qualification value from DB: "+storedMotherQualfcn);
+			Assert.assertEquals(proviedMotherQualfcn, storedMotherQualfcn);
+			Reporter.log("Provided Mothers Qualification matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Mothers Qualification doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateMothersOccupationStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Mothers Occupation--------------");
+			System.out.println("Provided Mothers Occupation: "+providedMothersOccpn);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedMotherOccpn = extractDataFromDatabase("appFormMotherOccpn");
+			System.out.println("Mothers Occupation value from DB: "+storedMotherOccpn);
+			Assert.assertEquals(providedMothersOccpn, storedMotherOccpn);
+			Reporter.log("Provided Mothers Occupation matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Mothers Occupation doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateMothersEmailStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Mothers Email--------------");
+			System.out.println("Provided Email: "+providedMothersEmail);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedMotherEmail = extractDataFromDatabase("userMthrEmail");
+			System.out.println("Mothers Email value from DB: "+storedMotherEmail);
+			Assert.assertEquals(providedMothersEmail, storedMotherEmail);
+			Reporter.log("Provided Mothers Email matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Mothers Email doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateMothersMobileStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Mothers Mobile--------------");
+			System.out.println("Provided Mobile: "+providedMothersMobile);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedMotherMob = extractDataFromDatabase("userMthrMob");
+			System.out.println("Mothers Mobile value from DB: "+storedMotherMob);
+			Assert.assertEquals(providedMothersMobile, storedMotherMob);
+			Reporter.log("Provided Mothers Mobile matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Mothers Mobile doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateLocalGuardianNameStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Guardians Name--------------");
+			System.out.println("Provided Guardians Name: "+providedLGuardianNm);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedGrdnName = extractDataFromDatabase("userLocalGrdnName");
+			System.out.println("Guardians Name value from DB: "+ storedGrdnName);
+			Assert.assertEquals(providedLGuardianNm, storedGrdnName);
+			Reporter.log("Provided Guardians Name matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Guardians Name doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateLocalGuardianAddr1Step2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Guardians Address 1--------------");
+			System.out.println("Provided Guardians Address 1: "+providedAddress1Step2);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedGrdnAddr1 = extractDataFromDatabase("usercommLAddr1");
+			System.out.println("Guardians Address 1 value from DB: "+storedGrdnAddr1);
+			Assert.assertEquals(providedAddress1Step2, storedGrdnAddr1);
+			Reporter.log("Provided Guardians Address 1 matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Guardians Address 1 doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateLocalGuardianAddr2Step2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Guardians Address 2--------------");
+			System.out.println("Provided Guardians Address 2: "+providedAddress2Step2);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedGrdnAddr2 = extractDataFromDatabase("usercommLAddr2");
+			System.out.println("Guardians Address 2 value from DB: "+storedGrdnAddr2);
+			Assert.assertEquals(providedAddress2Step2, storedGrdnAddr2);
+			Reporter.log("Provided Guardians Address 2 matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Guardians Address 2 doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateLocalGuardianAddr3Step2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Guardians Address 3--------------");
+			System.out.println("Provided Guardians Address 3: "+providedAddress3Step2);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedGrdnAddr3 = extractDataFromDatabase("usercommLAddr3");
+			System.out.println("Guardians Address 3 value from DB: "+storedGrdnAddr3);
+			Assert.assertEquals(providedAddress3Step2, storedGrdnAddr3);
+			Reporter.log("Provided Guardians Address 3 matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Guardians Address 3 doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateGrdnAddrPincodeStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Guardians Pincode--------------");
+			System.out.println("Provided Guardians Pincode: "+providedLGPincode);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedGrdnPincode = extractDataFromDatabase("usercommPincode");
+			System.out.println("Guardians provided Pincode value from DB: "+storedGrdnPincode);
+			Assert.assertEquals(providedLGPincode, storedGrdnPincode);
+			Reporter.log("Provided Guardians Pincode matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Guardians Pincode doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateGuardianRelationStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Guardians Relation--------------");
+			System.out.println("Provided Guardians Relation: "+providedLGRelation);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedGrdnRelation = extractDataFromDatabase("userEmrgncyRelatn");
+			System.out.println("Guardians provided Relation value from DB: "+storedGrdnRelation);
+			Assert.assertEquals(providedLGRelation, storedGrdnRelation);
+			Reporter.log("Provided Guardians Relation matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Guardians Relation doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateGuardianContactNumberStep2() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating Guardians ContactNumber--------------");
+			System.out.println("Provided Guardians ContactNumber: "+providedLGContactNumber);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedContactNumber = extractDataFromDatabase("userGrdnContactNum");
+			System.out.println("Guardians provided ContactNumber value from DB: "+storedContactNumber);
+			Assert.assertEquals(providedLGContactNumber, storedContactNumber);
+			Reporter.log("Provided Guardians ContactNumber matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Guardians ContactNumber doesn't match the value stored in database.",true);
+		}
+	}
 	
 	/********************* STEP 3 *************************/
 	

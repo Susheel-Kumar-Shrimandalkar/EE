@@ -31,9 +31,9 @@ public class HelperHand
 	public static String currectDate = DataGenerator.getDate();
 	public static String currectTime = DataGenerator.getTime();
 	
-	public static String thirdPartyLeadEmail = DataGenerator.randomEmailGenerator();
-	public static String thirdPartyLeadFullName = DataGenerator.generateFirstName();
-	public static String thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	public static final String thirdPartyLeadEmail = DataGenerator.randomEmailGenerator();
+	public static final String thirdPartyLeadFullName = DataGenerator.generateFirstName();
+	public static final String  thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	
 	public static final String step1PresentAddrContactNumber = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String thirdPartyEmergencyLeadEmail = DataGenerator.randomEmailGenerator();

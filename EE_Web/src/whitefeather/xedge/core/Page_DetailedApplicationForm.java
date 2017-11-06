@@ -58,8 +58,8 @@ public class Page_DetailedApplicationForm extends HelperHand
 	public static WebElement displayDaysOfMonthInDoB() throws Exception
 	{
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 30);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("Step1_DayOfMonth")));
+//			WEBDRIVERWAIT WAIT = NEW WEBDRIVERWAIT(DRIVER, 30);
+//			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("Step1_DayOfMonth")));
 //			element = driver.findElement(properties.selectLocator("Step1_DayOfDateOfBirth"));
 			element = driver.findElement(By.xpath(".//a[contains(text(),'"+dayInDob+"')]"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -265,8 +265,8 @@ public class Page_DetailedApplicationForm extends HelperHand
 	public static WebElement displayDaysOfMonthInDateOfIssue() throws Exception
 	{
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 30);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("Step1_DayOfMonth")));
+//			WebDriverWait wait = new WebDriverWait(driver, 30);
+//			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("Step1_DayOfMonth")));
 			element = driver.findElement(By.xpath(".//a[contains(text(),'"+dayInDateOfIssue+"')]"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -354,8 +354,8 @@ public class Page_DetailedApplicationForm extends HelperHand
 	public static WebElement displayDaysOfMonthInExpiryDate() throws Exception
 	{
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 30);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("Step1_DayOfMonth")));
+//			WebDriverWait wait = new WebDriverWait(driver, 30);
+//			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("Step1_DayOfMonth")));
 			element = driver.findElement(By.xpath(".//a[contains(text(),'"+dayInExpiryDate+"')]"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -593,10 +593,80 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return element;	
 	}
 	
+	public static WebElement displayAnnualIncomeInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_FathersAnnualIncome"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displayFathersEmailInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_FathersEmail"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displayFathersMobileInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_FathersMobile"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
 	public static WebElement displayMothersNameInputField() throws Exception
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("Step2_MothersName"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displayMothersQualificationInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_MothersQualification"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displayMothersOccupationInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_MothersOccupation"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displayMothersEmailInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_MothersEmail"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displayMothersMobileInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_MothersMobile"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -633,10 +703,20 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return element;	
 	}
 	
-	public static WebElement displayGuardiansContactNumberInputField() throws Exception
+	public static WebElement displayGuardiansAddress3InputField() throws Exception
 	{
 		try {
-			element = driver.findElement(properties.selectLocator("Step2_GuardianContactNumber"));
+			element = driver.findElement(properties.selectLocator("Step2_GuardianAddress3"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displayGuardianAddrPincodeInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_GuardianAddrPincode"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -652,6 +732,18 @@ public class Page_DetailedApplicationForm extends HelperHand
 		}
 		return element;	
 	}
+	
+	public static WebElement displayGuardiansContactNumberInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step2_GuardianContactNumber"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	
 	
 	public static WebElement displayNextButtonStep2() throws Exception
 	{
