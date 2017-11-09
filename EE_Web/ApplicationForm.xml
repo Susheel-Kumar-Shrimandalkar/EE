@@ -188,28 +188,23 @@
 				<include name="provideAttachment9"/>
 				<include name="provideAttachment10"/>
 				<include name="clickNextButtonStep3"/>
-				<!-- <include name="validateCourseStep3"/>
-				<include name="validateSSCSchoolNameStep3"/>
-				<include name="validateSSCBoardStep3"/>
-				<include name="validateSSCYoPStep3"/>
-				<include name="validateSSCRegNumberStep3"/>
-				<include name="validateSSCModeOfStudyStep3"/>
-				<include name="validateSSCPercentageStep3"/>
-				<include name="validateHSCSchoolNameStep3"/>
-				<include name="validateHSCBoardStep3"/>
-				<include name="validateHSCYoPStep3"/>
-				<include name="validateHSCRegNumberStep3"/>
-				<include name="validateHSCModeOfStudyStep3"/>
-				<include name="validateHSCPercentageStep3"/> -->
-			 	</methods>
-			</class>
-				<!-- 
-				<include name="clickNextButtonStep3"/>
+				<include name="providePaymentCourse"/>
 				<include name="providePaymentType"/>
-				<include name="providePaymentAmount"/>
-				<include name="clickSubmitButtonStep4"/> 
+				<include name="clickSubmitButtonStep4"/>
+			 	</methods>
+				</class>
+				
+				<class name="whitefeather.xedge.testcases.DoPaymentInApplicationForm">
+				<methods>
+				<include name="clickLoginLinkForPaytmPayment"/>
+				<parameter name="paytmUsername" value="7777777777"/>
+				<include name="providePaytmAccoutUsername"/>
+				<include name="clickRequestOTPButtonForPaytmPayment"/>
+				<parameter name="paytmPaymentOTP" value="489871"/>
+				<include name="provideLoginOTPReceived"/>
+				<include name="clickLoginButtonPaytmLoginWindow"/>
 				</methods>
-			</class> -->	
+				</class>
 		</classes>
 	</test>
 	

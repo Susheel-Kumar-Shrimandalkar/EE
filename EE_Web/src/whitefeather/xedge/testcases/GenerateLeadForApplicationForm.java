@@ -15,7 +15,6 @@ public class GenerateLeadForApplicationForm extends HelperHand
 	public static final String fullName=thirdPartyLeadFullName;
 	public static  final  String mobileNumber=thirdPartyLeadMobile;
 	public static final String emailAddress=thirdPartyLeadEmail;
-	public static String providedEntityValue;
 	
 	@Test	
 	public static void enterFullName() throws Exception
@@ -66,6 +65,7 @@ public class GenerateLeadForApplicationForm extends HelperHand
 		{
 			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByIndex(4);
 			providedEntityValue = Page_GenerateLeadApplicationForm.displayEntityDropDown().getFirstSelectedOption().getText();
+			System.out.println("reference---"+providedEntityValue);
 			Reporter.log("User has entered Entity value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();

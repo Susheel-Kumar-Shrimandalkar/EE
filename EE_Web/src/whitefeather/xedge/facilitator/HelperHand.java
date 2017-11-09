@@ -48,6 +48,9 @@ public class HelperHand
 	public static LinkedHashMap<String, String> dbValues = new LinkedHashMap<String, String>();
 	public static List<WebElement> hscSubjects = new LinkedList<WebElement>();
 	
+	//Later sort out logic for this
+	public static String providedEntityValue;
+	
 //	public static String globalSearch=AddNewLeadWithAllValues.prospectEmail;
 
 	public void setUpTestSuit(String browser) 

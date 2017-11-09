@@ -1228,7 +1228,17 @@ public class Page_DetailedApplicationForm extends HelperHand
 	
 /********************* STEP 3 *************************/
 	
-	public static Select displayPaymentTypeDropdownDropDown() throws Exception
+	public static Select displayEntityDropdown() throws Exception
+	{
+		try {
+			dropdown = new Select(driver.findElement((properties.selectLocator("Step4_PaymentCourse"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return dropdown;	
+	}
+	
+	public static Select displayPaymentTypeDropdown() throws Exception
 	{
 		try {
 			dropdown = new Select(driver.findElement((properties.selectLocator("Step4_PaymentType"))));
@@ -1251,7 +1261,9 @@ public class Page_DetailedApplicationForm extends HelperHand
 	public static WebElement displaySubmitButtonStep4() throws Exception
 	{	
 		try {
-			element = driver.findElement(properties.selectLocator("Step4_SubmitButton"));
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(properties.selectLocator("Step4_SubmitButtonStep4")));
+			element = driver.findElement(properties.selectLocator("Step4_SubmitButtonStep4"));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}

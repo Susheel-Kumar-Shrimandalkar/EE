@@ -13,6 +13,7 @@
         <parameter name="numberOfExams" value="3"/>
         <parameter name="fathersQual" value="B.E.I.T."/>
         <parameter name="lgrelation" value="Brother-in-law"/>
+        <parameter name="paytmPaymentOTP" value="489871"/>
         <parameter name="fathersOccpn" value="RAW_Agent"/>
         <parameter name="bloodGroup" value="O+"/>
         <parameter name="uid" value="252025100000"/>
@@ -42,8 +43,9 @@
         <parameter name="hscSchoolName" value="HSCSchoolName"/>
         <parameter name="lgpincode" value="416115"/>
         <parameter name="degreeUnivName" value="Kolhapur"/>
+        <parameter name="paytmUsername" value="7777777777"/>
         <methods>
-          <include name="provideHSCRegNumber" invocation-numbers="0"/>
+          <include name="provideMothersMobile"/>
           <include name="provideFathersMobile"/>
           <include name="provideFathersQualification" invocation-numbers="0"/>
           <include name="provideFathersName" invocation-numbers="0"/>
@@ -63,6 +65,7 @@
         <parameter name="numberOfExams" value="3"/>
         <parameter name="fathersQual" value="B.E.I.T."/>
         <parameter name="lgrelation" value="Brother-in-law"/>
+        <parameter name="paytmPaymentOTP" value="489871"/>
         <parameter name="fathersOccpn" value="RAW_Agent"/>
         <parameter name="bloodGroup" value="O+"/>
         <parameter name="uid" value="252025100000"/>
@@ -92,10 +95,56 @@
         <parameter name="hscSchoolName" value="HSCSchoolName"/>
         <parameter name="lgpincode" value="416115"/>
         <parameter name="degreeUnivName" value="Kolhapur"/>
+        <parameter name="paytmUsername" value="7777777777"/>
         <methods>
           <include name="selectBrowser"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.OpenApplicationFormLandingPage -->
+      <class name="whitefeather.xedge.testcases.DoPaymentInApplicationForm">
+        <parameter name="annualIncome" value="2500000"/>
+        <parameter name="fathersName" value="FathersName"/>
+        <parameter name="numberOfSubjects" value="2"/>
+        <parameter name="degreeCollege" value="Sangli"/>
+        <parameter name="numberOfExams" value="3"/>
+        <parameter name="fathersQual" value="B.E.I.T."/>
+        <parameter name="lgrelation" value="Brother-in-law"/>
+        <parameter name="paytmPaymentOTP" value="489871"/>
+        <parameter name="fathersOccpn" value="RAW_Agent"/>
+        <parameter name="bloodGroup" value="O+"/>
+        <parameter name="uid" value="252025100000"/>
+        <parameter name="presentAddress" value="Present_Address_Step1_"/>
+        <parameter name="hscRegNumber" value="142187335"/>
+        <parameter name="citizen" value="Kolhapur"/>
+        <parameter name="pincode" value="416116"/>
+        <parameter name="placeOfBirth" value="Kavathe_Mahaankaal"/>
+        <parameter name="plOfIssue" value="Pune"/>
+        <parameter name="degreeAOS" value="Advanced Java"/>
+        <parameter name="address3" value="Address3Field"/>
+        <parameter name="address2" value="Address2Field"/>
+        <parameter name="address1" value="Address1Field"/>
+        <parameter name="MothersQual" value="M.E.I.T."/>
+        <parameter name="sscRegNumber" value="136346533"/>
+        <parameter name="degreeName" value="Automation of Web Applications"/>
+        <parameter name="LocalGuardianName" value="LocalGuardianName"/>
+        <parameter name="gradYears" value="4"/>
+        <parameter name="pNumber" value="A-2025100000"/>
+        <parameter name="MothersName" value="MothersName"/>
+        <parameter name="religion" value="Hindu"/>
+        <parameter name="sscGradePercent" value="87"/>
+        <parameter name="MothersOccpn" value="College"/>
+        <parameter name="nationality" value="Indian"/>
+        <parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/>
+        <parameter name="hscGradePercent" value="94.24"/>
+        <parameter name="hscSchoolName" value="HSCSchoolName"/>
+        <parameter name="lgpincode" value="416115"/>
+        <parameter name="degreeUnivName" value="Kolhapur"/>
+        <parameter name="paytmUsername" value="7777777777"/>
+        <methods>
+          <include name="providePaytmAccoutUsername" invocation-numbers="0"/>
+          <include name="clickLoginLinkForPaytmPayment"/>
+          <include name="clickLoginButtonPaytmLoginWindow"/>
+        </methods>
+      </class> <!-- whitefeather.xedge.testcases.DoPaymentInApplicationForm -->
     </classes>
   </test> <!-- Staging QA Application Form Test Validations(failed) -->
 </suite> <!-- Failed suite [Suite] -->

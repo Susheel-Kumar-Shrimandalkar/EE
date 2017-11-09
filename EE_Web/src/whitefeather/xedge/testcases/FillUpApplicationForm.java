@@ -1540,7 +1540,7 @@ public class FillUpApplicationForm  extends HelperHand
 		System.out.println("\n"+"*********************** Filling up Step 3 Information ***************************"+"\n");
 		try 
 		{
-			Page_DetailedApplicationForm.displaySelectCourseDropDown().selectByIndex(1);
+			Page_DetailedApplicationForm.displaySelectCourseDropDown().selectByVisibleText(GenerateLeadForApplicationForm.providedEntityValue);
 			providedCourseStep3 =  Page_DetailedApplicationForm.displaySelectCourseDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered Course value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1740,9 +1740,7 @@ public class FillUpApplicationForm  extends HelperHand
 	@Parameters({"hscRegNumber"})
 	public static void provideHSCRegNumber(String hscRegNumber) throws Exception
 	{
-		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
-		{
-			try
+		try
 			{
 				providedHSCRegNumber = hscRegNumber;
 				Page_DetailedApplicationForm.displayHSCRegNumberInputField().sendKeys(providedHSCRegNumber);
@@ -1753,11 +1751,6 @@ public class FillUpApplicationForm  extends HelperHand
 				e.printStackTrace();
 				Reporter.log("User has failed to enter HSC Registration Number value.",true);
 			}
-		}
-		else
-		{
-			Reporter.log("HSC examination is still not completed.",true);
-		}
 	}
 	
 	@Test
@@ -1859,7 +1852,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 			try
 			{
-				providedDiplomaAOS = "Area of Spectialization in "+degreeAOS;
+				providedDiplomaAOS = "Area of Specialization in "+degreeAOS;
 				Page_DetailedApplicationForm.displayDegreeDiplomaAoSInputField().sendKeys(providedDiplomaAOS);
 				Reporter.log("User has entered Degree AoS value successfully.",true);
 			}
@@ -1957,11 +1950,11 @@ public class FillUpApplicationForm  extends HelperHand
 		{
 			gradMarksDetails[counter]="Year "+(i+1) +"Subject";		//Subject	**These values to be generated randomly later**
 			counter++;
-			gradMarksDetails[counter]="74"+i*2;							//Max Marks
+			gradMarksDetails[counter]="74";							//Max Marks
 			counter++;
-			gradMarksDetails[counter]="77"+i*2;							//Obtained Marks / Grade
+			gradMarksDetails[counter]="77";							//Obtained Marks / Grade
 			counter++;
-			gradMarksDetails[counter]="67"+i*2;							//Percentage
+			gradMarksDetails[counter]="67";							//Percentage
 			counter++;
 		}
 		
@@ -2111,8 +2104,9 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Thread.sleep(5000);
+			Thread.sleep(4000);
 			Page_DetailedApplicationForm.displayNextButtonStep3().click();
+			Thread.sleep(6000);
 			Reporter.log("User has clicked Next button on Step 3 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -2372,12 +2366,25 @@ public class FillUpApplicationForm  extends HelperHand
 		/********************* STEP 4 *************************/
 	
 	@Test
-	public static void providePaymentType() throws Exception
+	public static void providePaymentCourse() throws Exception
 	{
 		System.out.println("\n"+"*********************** Filling up Step 4 Information ***************************"+"\n");
 		try 
 		{
-			Page_DetailedApplicationForm.displayPaymentTypeDropdownDropDown().selectByIndex(1);
+			Page_DetailedApplicationForm.displayEntityDropdown().selectByVisibleText(GenerateLeadForApplicationForm.providedEntityValue);
+			Reporter.log("User has entered Payment Course value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Payment Course value.",true);
+		}
+	}
+	
+	@Test
+	public static void providePaymentType() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayPaymentTypeDropdown().selectByIndex(1);
 			Reporter.log("User has entered Payment Type value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -2385,7 +2392,7 @@ public class FillUpApplicationForm  extends HelperHand
 		}
 	}
 	
-	@Test
+	/*@Test
 	public static void providePaymentAmount() throws Exception
 	{
 		try 
@@ -2396,15 +2403,16 @@ public class FillUpApplicationForm  extends HelperHand
 			e.printStackTrace();
 			Reporter.log("User has failed to provide Payment Amount value.",true);
 		}
-	}
+	}*/
 	
 	@Test
 	public static void clickSubmitButtonStep4() throws Exception
 	{
 		try 
 		{
+			Thread.sleep(2000);
 			Page_DetailedApplicationForm.displaySubmitButtonStep4().click();
-			Reporter.log("User has clicked Submit button on Step 3 successfully.",true);
+			Reporter.log("User has clicked Submit button on Step 4 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 			Reporter.log("User has failed to click Submit button.",true);
