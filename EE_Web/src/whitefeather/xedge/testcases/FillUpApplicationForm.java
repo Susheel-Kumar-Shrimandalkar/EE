@@ -1,7 +1,6 @@
 package whitefeather.xedge.testcases;
 
 import java.sql.SQLException;
-
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Parameters;
@@ -20,7 +19,11 @@ public class FillUpApplicationForm  extends HelperHand
 	providedFathersNm, proviedFatherQualfcn, providedFathersOccpn, providedFathersIncome, providedFathersEmail,
 	providedFathersMobile, providedMothersNm, proviedMotherQualfcn, providedMothersOccpn, providedMothersEmail,
 	providedMothersMobile, providedLGuardianNm, providedAddress1Step2, providedAddress2Step2, providedAddress3Step2,
-	providedLGCountry, providedLGState, providedLGCity, providedLGPincode, providedLGRelation, providedLGContactNumber;
+	providedLGCountry, providedLGState, providedLGCity, providedLGPincode, providedLGRelation, providedLGContactNumber,
+	providedCourseStep3, providedSSCSchoolName, providedSSCBoard, providedSSCYoP, providedSSCRegNumber, providedSSCModeOfStudy,
+	providedSSCGrade, providedHSCSchoolName, providedHSCBoard, providedHSCYoP, providedHSCRegNumber, providedHSCModeOfStudy,
+	providedHSCPerGrade,providedDegDiplomaName, providedDiplomaAOS, providedDiplomaCollegeName, providedUniversityNm, 
+	providedDiplomaExamType, providedDiplomaYoC, providedDiplomaModeOfStudy;
 	
 	
 	/********************* STEP 1 *************************/
@@ -463,6 +466,9 @@ public class FillUpApplicationForm  extends HelperHand
 	@Test
 	public static void clickSameAddressCheckbox() throws Exception
 	{
+		Page_DetailedApplicationForm.displaySameAddressCheckboxStep1();
+		
+		/*
 		//Implement logic for permanent address later. As of now just validate check box
 		try 
 		{
@@ -473,7 +479,7 @@ public class FillUpApplicationForm  extends HelperHand
 			e.printStackTrace();
 			Assert.fail();
 			Reporter.log("User has failed to click Same Address Checkbox.",true);
-		}
+		}*/
 	}
 	
 	/*
@@ -522,7 +528,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			Page_DetailedApplicationForm.displayNextButtonStep1().click();
-			Thread.sleep(10000);
+			Thread.sleep(1000);
 			Reporter.log("User has clicked Next button  on Step 1 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1172,6 +1178,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			Page_DetailedApplicationForm.displayNextButtonStep2().click();
+			Thread.sleep(3000);
 			Reporter.log("User has clicked Next button on Step 2successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1529,10 +1536,12 @@ public class FillUpApplicationForm  extends HelperHand
 	@Test
 	public static void provideCourse() throws Exception
 	{
+		Thread.sleep(3000);
 		System.out.println("\n"+"*********************** Filling up Step 3 Information ***************************"+"\n");
 		try 
 		{
 			Page_DetailedApplicationForm.displaySelectCourseDropDown().selectByIndex(1);
+			providedCourseStep3 =  Page_DetailedApplicationForm.displaySelectCourseDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered Course value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1545,7 +1554,8 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displaySSCSchoolNameInputField().sendKeys("SSC School Name Text");
+			providedSSCSchoolName = "School Name in Step 3";
+			Page_DetailedApplicationForm.displaySSCSchoolNameInputField().sendKeys(providedSSCSchoolName);
 			Reporter.log("User has entered SSC School Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1554,15 +1564,16 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideSSCRegNumber() throws Exception
+	public static void provideSSCBoard() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displaySSCRegNumberInputField().sendKeys("007420");
-			Reporter.log("User has entered SSC Registration Number value successfully.",true);
+			Page_DetailedApplicationForm.displaySelectSSCBoardDropDown().selectByIndex(1);
+			providedSSCBoard =  Page_DetailedApplicationForm.displaySelectSSCBoardDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered SSCBoard value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide SSC Registration Number value.",true);
+			Reporter.log("User has failed to provide SSCBoard value.",true);
 		}
 	}
 	
@@ -1571,20 +1582,23 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displaySSCYearOfPassingDropDown().selectByIndex(1);
-			Reporter.log("User has entered Year of Passing successfully.",true);
+			Page_DetailedApplicationForm.displaySelectSSCYoPDropDown().selectByIndex(2);
+			providedSSCYoP =  Page_DetailedApplicationForm.displaySelectSSCYoPDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered SSC Year of Passing value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Year of Passing value.",true);
+			Reporter.log("User has failed to provide SSC Year of Passing value.",true);
 		}
 	}
 	
 	@Test
-	public static void provideSSCPercentageValue() throws Exception
+	@Parameters({"sscRegNumber"})	
+	public static void provideSSCRegNumber(String sscRegNumber) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displaySSCPercentageInputField().sendKeys("86.85");
+			providedSSCRegNumber = sscRegNumber;
+			Page_DetailedApplicationForm.displaySSCRegNumberInputField().sendKeys(providedSSCRegNumber);
 			Reporter.log("User has entered SSC Registration Number value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1597,7 +1611,8 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displaySSCModeOfStudyDropDown().selectByIndex(1);
+			Page_DetailedApplicationForm.displaySSCModeOfStudyDropDown().selectByIndex(2);
+			providedSSCModeOfStudy = Page_DetailedApplicationForm.displaySSCModeOfStudyDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered SSC Mode of Study value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1606,11 +1621,29 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideHSCSchoolName() throws Exception
+	@Parameters({"sscGradePercent"})	
+	public static void provideSSCPercentageValue(String sscGradePercent) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayHSCSchoolNameInputField().sendKeys("HSC School Name Text");
+			providedSSCGrade = sscGradePercent;
+			Page_DetailedApplicationForm.displaySSCPercentageInputField().sendKeys(providedSSCGrade);
+			Reporter.log("User has entered SSC Grade/Percentage value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide SSC Grade/Percentage value.",true);
+		}
+	}
+	
+	
+	@Test
+	@Parameters({"hscSchoolName"})	
+	public static void provideHSCSchoolName(String hscSchoolName) throws Exception
+	{
+		try 
+		{
+			providedHSCSchoolName = hscSchoolName+" in step 3";
+			Page_DetailedApplicationForm.displayHSCSchoolNameInputField().sendKeys(providedHSCSchoolName);
 			Reporter.log("User has entered HSC School Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1619,251 +1652,459 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideHSCRegNumber() throws Exception
+	public static void provideHSCBoard() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayHSCRegNumberInputField().sendKeys("420007");
-			Reporter.log("User has entered HSC Registration Number value successfully.",true);
+			Page_DetailedApplicationForm.displaySelectHSCBoardDropDown().selectByIndex(1);
+			providedHSCBoard =  Page_DetailedApplicationForm.displaySelectHSCBoardDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered HSCBoard value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide HSC Registration Number value.",true);
+			Reporter.log("User has failed to provide HSCBoard value.",true);
+		}
+	}
+	
+	@Test
+	public static void provideModeOfStudyHSC() throws Exception
+	{
+		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
+		{
+			try 
+			{
+				Page_DetailedApplicationForm.displayModeOfStudyHSCDropDown().selectByIndex(2);
+				providedHSCModeOfStudy =  Page_DetailedApplicationForm.displayModeOfStudyHSCDropDown().getFirstSelectedOption().getText();
+				Reporter.log("User has entered HSC Mode Of Study value successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to enter HSC Mode Of Study value.",true);
+			}
+		}
+		else
+		{
+			Reporter.log("HSC examination is still not completed.",true);
 		}
 	}
 	
 	@Test
 	public static void provideHSCYearOfPassing() throws Exception
 	{
-		try 
+		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
 		{
-			Page_DetailedApplicationForm.displayHSCYearOfPassingDropDown().selectByIndex(1);
-			Reporter.log("User has entered HSC Year of Passing successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide HSC Year of Passing value.",true);
+			try
+			{
+				Page_DetailedApplicationForm.displayHSCYearOfPassingDropDown().selectByIndex(1);
+				providedHSCYoP =  Page_DetailedApplicationForm.displayHSCYearOfPassingDropDown().getFirstSelectedOption().getText();
+				Reporter.log("User has entered HSC Year Of Passing value successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to enter HSC Mode Of Study value.",true);
+			}
+		}
+		else
+		{
+			Reporter.log("HSC examination is still not completed.",true);
 		}
 	}
 	
 	@Test
-	public static void provideHSCPercentageValue() throws Exception
+	@Parameters({"hscGradePercent"})
+	public static void provideHSCPercentageGradeType(String hscGradePercent) throws Exception
+	{
+		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
+		{
+			try
+			{
+				providedHSCPerGrade = hscGradePercent;
+				Page_DetailedApplicationForm.displayHSCPercentageGradeRadioButton().click();
+				Page_DetailedApplicationForm.displayHSCPercentageInputField().sendKeys(providedHSCPerGrade);
+				Reporter.log("User has entered HSC Percentage/Grade value successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to enter HSC Percentage/Grade value.",true);
+			}
+		}
+		else
+		{
+			Reporter.log("HSC examination is still not completed.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"hscRegNumber"})
+	public static void provideHSCRegNumber(String hscRegNumber) throws Exception
+	{
+		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
+		{
+			try
+			{
+				providedHSCRegNumber = hscRegNumber;
+				Page_DetailedApplicationForm.displayHSCRegNumberInputField().sendKeys(providedHSCRegNumber);
+				Reporter.log("User has entered HSC Registration Number value successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to enter HSC Registration Number value.",true);
+			}
+		}
+		else
+		{
+			Reporter.log("HSC examination is still not completed.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"numberOfSubjects"})
+	public static void provideHSCSubjectScoreDetails(int numberOfSubjects) throws Exception
+	{
+		String [] scoreDetails = new String [numberOfSubjects*4];
+		int counter=0;
+		for (int i = 0; i <numberOfSubjects; i++) 
+		{
+			scoreDetails[counter]="Subject "+(i+1);	//Subject
+			counter++;
+			scoreDetails[counter]="100";			//Max Marks
+			counter++;
+			scoreDetails[counter]="88";				//Obtained Marks
+			counter++;
+			scoreDetails[counter]="88.00";			//Percentage
+			counter++;
+		}
+		
+			Page_DetailedApplicationForm.displaySubMarkPercentageInputFields(numberOfSubjects);
+//			System.out.println("Just for check: "+ Arrays.toString(webElements.toArray()));
+			for (int i = 0; i < hscSubjects.size(); i++) 
+			{
+				hscSubjects.get(i).sendKeys(scoreDetails[i]);
+				Thread.sleep(500);
+			}
+			hscSubjects.clear();
+			Reporter.log("User has successfully added HSC examination details.",true);
+	}
+	
+	@Test
+	@Parameters({"numberOfExams"})
+	public static void provideEntranceExamDetails(int numberOfExams) throws Exception
+	{
+		String [] examDetails = new String [numberOfExams*2];
+		int counter=0;
+		for (int i = 0; i <numberOfExams; i++) 
+		{
+			examDetails[counter]="Examination Name "+(i+1);	//Subject
+			counter++;
+			examDetails[counter]="87";						//Marks
+			counter++;
+		}
+		if(Page_DetailedApplicationForm.displayEntranceExamSection().isDisplayed())
+		{
+			Page_DetailedApplicationForm.displayEntranceExamDetailsInputFields(numberOfExams);
+			for (int i = 0; i < hscSubjects.size(); i++) 
+			{
+				hscSubjects.get(i).sendKeys(examDetails[i]);
+				Thread.sleep(500);
+			}
+			hscSubjects.clear();
+			Reporter.log("User has successfully added Entrance examination details.",true);
+		}
+		else
+		{
+			Reporter.log("User has failed to add Entrance examination details.",true);
+		}
+	}
+	
+	@Test
+	public static void provideDegreeOrDiplomaType() throws Exception
+	{
+			try
+			{
+				//Do validation of provided value later
+				Page_DetailedApplicationForm.showHideDiplomaDetailsSection().click();
+				Page_DetailedApplicationForm.selectGradDiplomaType().click();
+				Reporter.log("User has clicked Grad/Diploma Radio button successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to click Grad/Diploma Radio button.",true);
+			}
+	}
+	
+	@Test
+	@Parameters({"degreeName"})
+	public static void provideDegreeOrDiplomaName(String degreeName) throws Exception
+	{
+			try
+			{
+				providedDegDiplomaName = "Degree in "+degreeName;
+				Page_DetailedApplicationForm.displayDegreeDiplomaNameInputField().sendKeys(providedDegDiplomaName);
+				Reporter.log("User has entered Degree Name value successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to enter Degree Name value.",true);
+			}
+	}
+	
+	@Test
+	@Parameters({"degreeAOS"})
+	public static void provideDegreeOrDiplomaAreaOfSpecialization(String degreeAOS) throws Exception
+	{
+			try
+			{
+				providedDiplomaAOS = "Area of Spectialization in "+degreeAOS;
+				Page_DetailedApplicationForm.displayDegreeDiplomaAoSInputField().sendKeys(providedDiplomaAOS);
+				Reporter.log("User has entered Degree AoS value successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to enter Degree AoS value.",true);
+			}
+	}
+	
+	@Test
+	@Parameters({"degreeCollege"})
+	public static void provideDegreeOrDiplomaCollegeName(String degreeCollege) throws Exception
+	{
+			try
+			{
+				providedDiplomaCollegeName = "Walchand College of Engineering, "+degreeCollege;
+				Page_DetailedApplicationForm.displayDegreeDiplomaCollegeNameInputField().sendKeys(providedDiplomaCollegeName);
+				Reporter.log("User has entered Degree College Name value successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to enter Degree College Name value.",true);
+			}
+	}
+	
+	@Test
+	@Parameters({"degreeUnivName"})
+	public static void provideDegreeOrDiplomaUniversityName(String degreeUnivName) throws Exception
+	{
+			try
+			{
+				providedUniversityNm = "Shivaji University, "+degreeUnivName;
+				Page_DetailedApplicationForm.displayDegreeDiplomaUniversityNameInputField().sendKeys(providedUniversityNm);
+				Reporter.log("User has entered Degree University Name value successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to enter Degree University Name value.",true);
+			}
+	}
+	
+	
+	@Test
+	public static void provideDegDiplomaExamType() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayHSCPercentageInputField().sendKeys("96.85");
-			Reporter.log("User has entered HSC Registration Number value successfully.",true);
+			Page_DetailedApplicationForm.displayDegreeDiplomaExamTypeDropDown().selectByIndex(2);
+			providedDiplomaExamType =  Page_DetailedApplicationForm.displayDegreeDiplomaExamTypeDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered Degree/Diploma Exam Type value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide HSC Registration Number value.",true);
+			Reporter.log("User has failed to provide Degree/Diploma Exam Type value.",true);
 		}
 	}
 	
 	@Test
-	public static void provideHSCModeOfStudy() throws Exception
+	public static void provideDegDiplomaYearOfCompletion() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayHSCModeOfStudyDropDown().selectByIndex(1);
-			Reporter.log("User has entered HSC Mode of Study value successfully.",true);
+			Page_DetailedApplicationForm.displayDegreeDiplomaYoCDropDown().selectByIndex(1);
+			providedDiplomaYoC =  Page_DetailedApplicationForm.displayDegreeDiplomaYoCDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered Degree/Diploma YoC value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide HSC Mode of Study value.",true);
+			Reporter.log("User has failed to provide Degree/Diploma YoC value.",true);
 		}
 	}
 	
 	@Test
-	public static void provideEntranceExamValue() throws Exception
+	public static void provideDegDiplomaModeOfStudy() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayEntranceExamInputField().sendKeys("Join ExtraaEdge");
-			Reporter.log("User has entered Entrance Exam value successfully.",true);
+			Page_DetailedApplicationForm.displayDegreeDiplomaModeOfStudyDropDown().selectByIndex(2);
+			providedDiplomaModeOfStudy =  Page_DetailedApplicationForm.displayDegreeDiplomaModeOfStudyDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered Degree/Diploma Mode Of Study value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Entrance Exam value.",true);
+			Reporter.log("User has failed to provide Degree/Diploma Mode Of Study value.",true);
 		}
 	}
 	
 	@Test
-	public static void provideSubject1NameValue() throws Exception
+	@Parameters({"gradYears"})
+	public static void provideGraduationYearwiseMarksDetails(int gradYears) throws Exception
 	{
-		try 
+		String [] gradMarksDetails = new String [gradYears*4];	//4 = graduation years
+		int counter=0;
+		for (int i = 0; i <gradYears; i++) 
 		{
-			Page_DetailedApplicationForm.displaySubject1InputField().sendKeys("Subject 1 Name");
-			Reporter.log("User has entered Subject 1 Name value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject 1 Name value.",true);
+			gradMarksDetails[counter]="Year "+(i+1) +"Subject";		//Subject	**These values to be generated randomly later**
+			counter++;
+			gradMarksDetails[counter]="74"+i*2;							//Max Marks
+			counter++;
+			gradMarksDetails[counter]="77"+i*2;							//Obtained Marks / Grade
+			counter++;
+			gradMarksDetails[counter]="67"+i*2;							//Percentage
+			counter++;
 		}
+		
+			Page_DetailedApplicationForm.displayGraduationYearwiseMarksInputFields(gradYears);
+			for (int i = 0; i < hscSubjects.size(); i++) 
+			{
+				hscSubjects.get(i).sendKeys(gradMarksDetails[i]);
+				Thread.sleep(500);
+			}
+			hscSubjects.clear();
+			Reporter.log("User has successfully added Graduation Marks year wise details.",true);
 	}
 	
 	@Test
-	public static void provideSubject1Marks1Value() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayMarks1InputField().sendKeys("77");
-			Reporter.log("User has entered Subject1 Marks1 value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject1 Marks1 value.",true);
-		}
-	}
-	
-	@Test
-	public static void provideSubject1Percetage1Value() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayPercentage1InputField().sendKeys("88.23");
-			Reporter.log("User has entered Subject1 Percetage1 Value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject1 Percetage1 Value.",true);
-		}
-	}
-	
-	@Test
-	public static void provideSubject2NameValue() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displaySubject2InputField().sendKeys("Subject 2 Name");
-			Reporter.log("User has entered Subject2 Name value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject2 Name value.",true);
-		}
-	}
-	
-	@Test
-	public static void provideSubject2Marks1Value() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayMarks2InputField().sendKeys("97");
-			Reporter.log("User has entered Subject2 Marks2 value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject2 Marks2 value.",true);
-		}
-	}
-	
-	@Test
-	public static void provideSubject2Percetage2Value() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayPercentage2InputField().sendKeys("78.23");
-			Reporter.log("User has entered Subject2 Percetage2 Value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject2 Percetage2 Value.",true);
-		}
-	}
-	
-	@Test
-	public static void provideSubject3NameValue() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displaySubject3InputField().sendKeys("Subject 3 Name");
-			Reporter.log("User has entered Subject3 Name value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject3 Name value.",true);
-		}
-	}
-	
-	@Test
-	public static void provideSubject3Marks3Value() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayMarks3InputField().sendKeys("77.27");
-			Reporter.log("User has entered Subject3 Marks3 value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject2 Marks2 value.",true);
-		}
-	}
-	
-	@Test
-	public static void provideSubject3Percetage3Value() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayPercentage3InputField().sendKeys("68.23");
-			Reporter.log("User has entered Subject3 Percetage3 Value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Subject3 Percetage3 Value.",true);
-		}
-	}
-	
-	@Test
-	public static void attachAttachment1() throws Exception
+	public static void provideAttachment1() throws Exception
 	{
 		try 
 		{
 			Page_DetailedApplicationForm.displayAttachment1Button().sendKeys(Constants.APPFORM_ATTACHMENT1);
-			Reporter.log("User has attached Certificate1 successfully.",true);
+			Reporter.log("User has provided Attachement1 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to attach Certificate1.",true);
+			Reporter.log("User has failed to attach Attachement1.",true);
 		}
 	}
 	
 	@Test
-	public static void attachAttachment2() throws Exception
+	public static void provideAttachment2() throws Exception
 	{
 		try 
 		{
 			Page_DetailedApplicationForm.displayAttachment2Button().sendKeys(Constants.APPFORM_ATTACHMENT2);
-			Reporter.log("User has attached Certificate2 successfully.",true);
+			Reporter.log("User has provided Attachement2 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to attach Certificate2.",true);
+			Reporter.log("User has failed to attach Attachement2.",true);
 		}
 	}
 	
 	@Test
-	public static void attachAttachment3() throws Exception
+	public static void provideAttachment3() throws Exception
 	{
 		try 
 		{
 			Page_DetailedApplicationForm.displayAttachment3Button().sendKeys(Constants.APPFORM_ATTACHMENT3);
-			Reporter.log("User has attached Certificate3 successfully.",true);
+			Reporter.log("User has provided Attachement3 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to attach Certificate3.",true);
+			Reporter.log("User has failed to attach Attachement3.",true);
 		}
 	}
 	
 	@Test
-	public static void attachAttachment4() throws Exception
+	public static void provideAttachment4() throws Exception
 	{
 		try 
 		{
 			Page_DetailedApplicationForm.displayAttachment4Button().sendKeys(Constants.APPFORM_ATTACHMENT4);
-			Reporter.log("User has attached Certificate4 successfully.",true);
+			Reporter.log("User has provided Attachement4 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to attach Certificate4.",true);
+			Reporter.log("User has failed to attach Attachement4.",true);
 		}
 	}
 	
 	@Test
-	public static void attachAttachment5() throws Exception
+	public static void provideAttachment5() throws Exception
 	{
 		try 
 		{
 			Page_DetailedApplicationForm.displayAttachment5Button().sendKeys(Constants.APPFORM_ATTACHMENT5);
-			Reporter.log("User has attached Certificate5 successfully.",true);
+			Reporter.log("User has provided Attachement5 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to attach Certificate5.",true);
+			Reporter.log("User has failed to attach Attachement5.",true);
 		}
 	}
+	
+	@Test
+	public static void provideAttachment6() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayAttachment6Button().sendKeys(Constants.APPFORM_ATTACHMENT6);
+			Reporter.log("User has provided Attachement5 successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to attach Attachement6.",true);
+		}
+	}
+
+	@Test
+	public static void provideAttachment7() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayAttachment7Button().sendKeys(Constants.APPFORM_ATTACHMENT7);
+			Reporter.log("User has provided Attachement7 successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to attach Attachement7.",true);
+		}
+	}
+	
+	@Test
+	public static void provideAttachment8() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayAttachment8Button().sendKeys(Constants.APPFORM_ATTACHMENT8);
+			Reporter.log("User has provided Attachement8 successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to attach Attachement8.",true);
+		}
+	}
+	
+	@Test
+	public static void provideAttachment9() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayAttachment9Button().sendKeys(Constants.APPFORM_ATTACHMENT9);
+			Reporter.log("User has provided Attachement9 successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to attach Attachement9.",true);
+		}
+	}
+	
+	@Test
+	public static void provideAttachment10() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayAttachment10Button().sendKeys(Constants.APPFORM_ATTACHMENT10);
+			Reporter.log("User has provided Attachement10 successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to attach Attachement10.",true);
+		}
+	}
+	
 	
 	@Test
 	public static void clickNextButtonStep3() throws Exception
@@ -1879,6 +2120,255 @@ public class FillUpApplicationForm  extends HelperHand
 		}
 	}
 	
+	@Test
+	public static void validateCourseStep3() throws InterruptedException, SQLException
+	{
+		System.out.println("\n"+"*********************** Validating information filled up in Step 3 ***************************"+"\n");
+
+		try {
+			System.out.println("--------------Validating Course Value--------------");
+			System.out.println("Provided Course: "+providedCourseStep3);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedCourse = extractDataFromDatabase("userFathersName");
+			System.out.println("Course value from DB: "+storedCourse);
+			Assert.assertEquals(providedCourseStep3, storedCourse);
+			Reporter.log("Provided Course matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Course doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateSSCSchoolNameStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating SSC School Name Value--------------");
+			System.out.println("Provided SSC School Name: "+providedSSCSchoolName);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedSSCSchool = extractDataFromDatabase("userFathersName");
+			System.out.println("SSC School Name value from DB: "+storedSSCSchool);
+			Assert.assertEquals(providedSSCSchoolName, storedSSCSchool);
+			Reporter.log("Provided SSC School Name matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided SSC School Name doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateSSCBoardStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating SSC Board Value--------------");
+			System.out.println("Provided SSC Board Name: "+providedSSCBoard);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedSSCBoard = extractDataFromDatabase("userFathersName");
+			System.out.println("SSC Board Name value from DB: "+storedSSCBoard);
+			Assert.assertEquals(providedSSCBoard, storedSSCBoard);
+			Reporter.log("Provided SSC Board Name matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided SSC Board Name doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateSSCYoPStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating SSC YoP Value--------------");	
+			System.out.println("Provided SSC YoP Name: "+providedSSCYoP);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedSSCYoP = extractDataFromDatabase("userFathersName");
+			System.out.println("SSC Board Name value from DB: "+storedSSCYoP);
+			Assert.assertEquals(providedSSCYoP, storedSSCYoP);
+			Reporter.log("Provided SSC YoP matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided SSC YoP doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateSSCRegNumberStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating SSC RegNumber Value--------------");
+			System.out.println("Provided SSC RegNumber: "+providedSSCRegNumber);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedSSCRegNumber = extractDataFromDatabase("userFathersName");
+			System.out.println("SSC RegNumber value from DB: "+storedSSCRegNumber);
+			Assert.assertEquals(providedSSCRegNumber, storedSSCRegNumber);
+			Reporter.log("Provided SSC RegNumber matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided SSC RegNumber doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateSSCModeOfStudyStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating SSC Mode Of Study Value--------------");
+			System.out.println("Provided SSC Mode Of Study: "+providedHSCModeOfStudy);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedSSCMoS = extractDataFromDatabase("userFathersName");
+			System.out.println("SSC RegNumber value from DB: "+storedSSCMoS);
+			Assert.assertEquals(providedHSCModeOfStudy, storedSSCMoS);
+			Reporter.log("Provided SSC Mode Of Study matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided SSC Mode Of Study doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateSSCPercentageStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating SSC Percentage Value--------------");
+			System.out.println("Provided SSC Percentage: "+providedSSCGrade);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedSSCPercentage = extractDataFromDatabase("userFathersName");
+			System.out.println("SSC Percentage value from DB: "+storedSSCPercentage);
+			Assert.assertEquals(providedSSCGrade, storedSSCPercentage);
+			Reporter.log("Provided SSC Percentage matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided SSC Percentage doesn't match the value stored in database.",true);
+		}
+	}
+
+	@Test
+	public static void validateHSCSchoolNameStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating HSC School Name Value--------------");
+			System.out.println("Provided HSC School Name: "+providedHSCSchoolName);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedHSCSchool = extractDataFromDatabase("userFathersName");
+			System.out.println("HSC School Name value from DB: "+storedHSCSchool);
+			Assert.assertEquals(providedHSCSchoolName, storedHSCSchool);
+			Reporter.log("Provided HSC School Name matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided HSC School Name doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateHSCBoardStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating HSC Board Value--------------");
+			System.out.println("Provided HSC Board Name: "+providedHSCBoard);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedHSCBoard = extractDataFromDatabase("userFathersName");
+			System.out.println("HSC Board Name value from DB: "+storedHSCBoard);
+			Assert.assertEquals(providedHSCBoard, storedHSCBoard);
+			Reporter.log("Provided HSC Board Name matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided HSC Board Name doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateHSCYoPStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating HSC YoP Value--------------");
+			System.out.println("Provided HSC YoP Name: "+providedHSCYoP);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedHSCYoP = extractDataFromDatabase("userFathersName");
+			System.out.println("HSC Board Name value from DB: "+storedHSCYoP);
+			Assert.assertEquals(providedHSCYoP, storedHSCYoP);
+			Reporter.log("Provided HSC YoP matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided HSC YoP doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateHSCRegNumberStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating HSC RegNumber Value--------------");
+			System.out.println("Provided HSC RegNumber: "+providedHSCRegNumber);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedHSCRegNumber = extractDataFromDatabase("userFathersName");
+			System.out.println("HSC RegNumber value from DB: "+storedHSCRegNumber);
+			Assert.assertEquals(providedHSCRegNumber, storedHSCRegNumber);
+			Reporter.log("Provided HSC RegNumber matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided HSC RegNumber doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateHSCModeOfStudyStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating HSC Mode Of Study Value--------------");
+			System.out.println("Provided HSC Mode Of Study: "+providedHSCModeOfStudy);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedHSCMoS = extractDataFromDatabase("userFathersName");
+			System.out.println("HSC RegNumber value from DB: "+storedHSCMoS);
+			Assert.assertEquals(providedHSCModeOfStudy, storedHSCMoS);
+			Reporter.log("Provided HSC Mode Of Study matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided HSC Mode Of Study doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateHSCPercentageStep3() throws InterruptedException, SQLException
+	{
+		try {
+			System.out.println("--------------Validating HSC Percentage Value--------------");
+			System.out.println("Provided HSC Percentage: "+providedHSCPerGrade);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedHSCPercentage = extractDataFromDatabase("userFathersName");
+			System.out.println("HSC Percentage value from DB: "+storedHSCPercentage);
+			Assert.assertEquals(providedHSCPerGrade, storedHSCPercentage);
+			Reporter.log("Provided HSC Percentage matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided HSC Percentage doesn't match the value stored in database.",true);
+		}
+	}
+
 		/********************* STEP 4 *************************/
 	
 	@Test

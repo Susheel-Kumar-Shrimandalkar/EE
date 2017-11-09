@@ -51,6 +51,7 @@ public class DatabaseManager extends HelperHand
 				"	@USER_EMAIL NVARCHAR(80),\r\n" + 
 				"	@USER_NAME NVARCHAR(100), \r\n" + 
 				"	@USER_MOBILE INT,\r\n" + 
+				"	@ENTITY2_ENTITY NVARCHAR(80),\r\n" + 
 				"	@USER_ID INT,\r\n" + 
 				"	@USER_NAMETIME NVARCHAR(80),\r\n" + 
 				"	@USER_PRN NVARCHAR(80),\r\n" + 
@@ -116,6 +117,7 @@ public class DatabaseManager extends HelperHand
 				"	SET @USER_NAME = (SELECT TOP 1 FIRSTNAME FROM USERS WHERE FIRSTNAME LIKE '%'+@USER_NAMETIME+'%' AND EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_MOBILE = (SELECT TOP 1 MOBILENUMBER FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_ID = (SELECT TOP 1 ID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"	SET @ENTITY2_ENTITY = (SELECT TOP 1 NAME FROM ENTITY2 WHERE ID = (SELECT TOP 1 ENTITY2ID FROM LEADENTITY2IDS WHERE LEADID = (SELECT TOP 1 ID FROM LEADS WHERE USERID=(SELECT TOP 1 ID FROM USERS ORDER BY ID DESC))))\r\n" + 
 				"	SET @USER_PRN = (SELECT TOP 1 PRN FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_DOB = (SELECT TOP 1 DATEOFBIRTH FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_PLACEOFBIRTH = (SELECT TOP 1 PLACEOFBIRTH FROM USERS WHERE  ID=@USER_ID ORDER BY ID DESC)\r\n" + 
@@ -181,6 +183,7 @@ public class DatabaseManager extends HelperHand
 				"	@USER_EMAIL AS USERS_EMAIL, \r\n" + 
 				"	@USER_NAME AS USERS_FIRSTNAME, \r\n" + 
 				"	@USER_MOBILE AS USERS_MOBILENUMBER, \r\n" + 
+				"	@ENTITY2_ENTITY AS ENTITY2_ENTITY,\r\n" + 
 				"	@USER_PRN AS USRS_PRN,\r\n" + 
 				"	@USER_DOB AS USERS_DOB,\r\n" + 
 				"	@USER_PLACEOFBIRTH AS USERS_PLACEOFBIRTH,\r\n" + 
@@ -248,57 +251,59 @@ public class DatabaseManager extends HelperHand
         	 dbValues.put("userEmail", rs.getString(2));
         	 dbValues.put("userName", rs.getString(3));
         	 dbValues.put("userMobile", rs.getString(4));
-        	 dbValues.put("userPRN", rs.getString(5));
-        	 dbValues.put("userDOB", rs.getString(6));
-        	 dbValues.put("userPlaceOfBirth", rs.getString(7));
-        	 dbValues.put("userGender", rs.getString(8));
-        	 dbValues.put("userBloodGrp", rs.getString(9));
-        	 dbValues.put("userNationality", rs.getString(10));
-        	 dbValues.put("appFormUID", rs.getString(11));
-        	 dbValues.put("appFormPassportNum", rs.getString(12));
-        	 dbValues.put("appFormPlaceOfIssue", rs.getString(13));
-        	 dbValues.put("appFormDateOfIssue", rs.getString(14));
-        	 dbValues.put("appFormExpiryDate", rs.getString(15));
-        	 dbValues.put("appFormReligion", rs.getString(16));
-        	 dbValues.put("appFormCitizenship", rs.getString(17));
-        	 dbValues.put("appFormCaste", rs.getString(18));
-        	 dbValues.put("appFormDomicile", rs.getString(19));
-        	 dbValues.put("appFormCommunity", rs.getString(20));
-        	 dbValues.put("userPresentAddress", rs.getString(21));
-        	 dbValues.put("userPresentAddrCountry", rs.getString(22));
-        	 dbValues.put("userPresentAddrState", rs.getString(23));
-        	 dbValues.put("userPresentAddrCity", rs.getString(24));
-        	 dbValues.put("userFathersName", rs.getString(25));
-        	 dbValues.put("appFormFatherQualfcn", rs.getString(26));
-        	 dbValues.put("appFormFatherOccpn", rs.getString(27));
-        	 dbValues.put("appFormFatherIncome", rs.getString(28));
-        	 dbValues.put("userFthrEmail", rs.getString(29));
-        	 dbValues.put("userFthrMob", rs.getString(30));
-        	 dbValues.put("userMothersName", rs.getString(31));
-        	 dbValues.put("appFormMotherQualfcn", rs.getString(32));
-        	 dbValues.put("appFormMotherOccpn", rs.getString(33));
-        	 dbValues.put("userMthrEmail", rs.getString(34));
-        	 dbValues.put("userMthrMob", rs.getString(35));
-        	 dbValues.put("userLocalGrdnName", rs.getString(36));
-        	 dbValues.put("usercommLAddr1", rs.getString(37));
-        	 dbValues.put("usercommLAddr2", rs.getString(38));
-        	 dbValues.put("usercommLAddr3", rs.getString(39));
-        	 dbValues.put("usercommPincode", rs.getString(40));
-        	 dbValues.put("userEmrgncyRelatn", rs.getString(41));
-        	 dbValues.put("userGrdnContactNum", rs.getString(42));
-        	 dbValues.put("userCommPrimaryAddr1", rs.getString(43));
-        	 dbValues.put("userCommPrimaryAddr2", rs.getString(44));
-        	 dbValues.put("userCommPrimaryContactNum", rs.getString(45));
-        	 dbValues.put("userHighSchoolNm", rs.getString(46));
-        	 dbValues.put("appFormRegNum1", rs.getString(47));
-        	 dbValues.put("appFormSSLCYop", rs.getString(48));
-        	 dbValues.put("appFormMoSSSC", rs.getString(49));
-        	 dbValues.put("userSecSchoolNm", rs.getString(50));
-        	 dbValues.put("appFormRegNum2", rs.getString(51));
-        	 dbValues.put("appFormHSLCYop", rs.getString(52));
-        	 dbValues.put("userUGPercent", rs.getString(53));
-        	 dbValues.put("appFormMoSHSC", rs.getString(54));
-        	 dbValues.put("appFormEntrncExm", rs.getString(55));
+        	 dbValues.put("entityEntity", rs.getString(5));
+        	 dbValues.put("userPRN", rs.getString(6));
+        	 dbValues.put("userDOB", rs.getString(7));
+        	 dbValues.put("userPlaceOfBirth", rs.getString(8));
+        	 dbValues.put("userGender", rs.getString(9));
+        	 dbValues.put("userBloodGrp", rs.getString(10));
+        	 dbValues.put("userNationality", rs.getString(11));
+        	 dbValues.put("appFormUID", rs.getString(12));
+        	 dbValues.put("appFormPassportNum", rs.getString(13));
+        	 dbValues.put("appFormPlaceOfIssue", rs.getString(14));
+        	 dbValues.put("appFormDateOfIssue", rs.getString(15));
+        	 dbValues.put("appFormExpiryDate", rs.getString(16));
+        	 dbValues.put("appFormReligion", rs.getString(17));
+        	 dbValues.put("appFormCitizenship", rs.getString(18));
+        	 dbValues.put("appFormCaste", rs.getString(19));
+        	 dbValues.put("appFormDomicile", rs.getString(20));
+        	 dbValues.put("appFormCommunity", rs.getString(21));
+        	 dbValues.put("userPresentAddress", rs.getString(22));
+        	 dbValues.put("userPresentAddrCountry", rs.getString(23));
+        	 dbValues.put("userPresentAddrState", rs.getString(24));
+        	 dbValues.put("userPresentAddrCity", rs.getString(25));
+        	 dbValues.put("userFathersName", rs.getString(26));
+        	 dbValues.put("appFormFatherQualfcn", rs.getString(27));
+        	 dbValues.put("appFormFatherOccpn", rs.getString(28));
+        	 dbValues.put("appFormFatherIncome", rs.getString(29));
+        	 dbValues.put("userFthrEmail", rs.getString(30));
+        	 dbValues.put("userFthrMob", rs.getString(31));
+        	 dbValues.put("userMothersName", rs.getString(32));
+        	 dbValues.put("appFormMotherQualfcn", rs.getString(33));
+        	 dbValues.put("appFormMotherOccpn", rs.getString(34));
+        	 dbValues.put("userMthrEmail", rs.getString(35));
+        	 dbValues.put("userMthrMob", rs.getString(36));
+        	 dbValues.put("userLocalGrdnName", rs.getString(37));
+        	 dbValues.put("usercommLAddr1", rs.getString(38));
+        	 dbValues.put("usercommLAddr2", rs.getString(39));
+        	 dbValues.put("usercommLAddr3", rs.getString(40));
+        	 dbValues.put("usercommPincode", rs.getString(41));
+        	 dbValues.put("userEmrgncyRelatn", rs.getString(42));
+        	 dbValues.put("userGrdnContactNum", rs.getString(43));
+        	 dbValues.put("userCommPrimaryAddr1", rs.getString(44));
+        	 dbValues.put("userCommPrimaryAddr2", rs.getString(45));
+        	 dbValues.put("userCommPrimaryContactNum", rs.getString(46));
+        	 dbValues.put("userHighSchoolNm", rs.getString(47));
+        	 dbValues.put("appFormRegNum1", rs.getString(48));
+        	 dbValues.put("appFormSSLCYop", rs.getString(49));
+        	 dbValues.put("appFormMoSSSC", rs.getString(50));
+        	 dbValues.put("userSecSchoolNm", rs.getString(51));
+        	 dbValues.put("appFormRegNum2", rs.getString(52));
+        	 dbValues.put("appFormHSLCYop", rs.getString(53));
+        	 dbValues.put("userUGPercent", rs.getString(54));
+        	 dbValues.put("appFormMoSHSC", rs.getString(55));
+        	 dbValues.put("appFormEntrncExm", rs.getString(56));
+
 
 
 

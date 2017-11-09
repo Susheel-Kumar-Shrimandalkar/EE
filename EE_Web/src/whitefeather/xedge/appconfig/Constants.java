@@ -24,4 +24,10 @@ public class Constants {
 	public static final String APPFORM_ATTACHMENT3 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment3.png";
 	public static final String APPFORM_ATTACHMENT4 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment4.png";
 	public static final String APPFORM_ATTACHMENT5 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment5.png";
+	public static final String APPFORM_ATTACHMENT6 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment6.png";
+	public static final String APPFORM_ATTACHMENT7 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment7.png";
+	public static final String APPFORM_ATTACHMENT8 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment8.png";
+	public static final String APPFORM_ATTACHMENT9 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment9.png";
+	public static final String APPFORM_ATTACHMENT10 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment10.png";
+
 }

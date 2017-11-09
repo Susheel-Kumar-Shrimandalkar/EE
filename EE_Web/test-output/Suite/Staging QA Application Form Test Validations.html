@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Staging QA Application Form Test Validations</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>89/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>77/10/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 06 16:00:59 IST 2017</td>
+<td>Started on:</td><td>Thu Nov 09 14:42:31 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>117 seconds (117896 ms)</td>
+<tr><td>Total time:</td><td>95 seconds (95430 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,237 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateBloodGroupInStep1()'><b>validateBloodGroupInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm</td>
-<td><div><pre>java.lang.AssertionError: null
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validateBloodGroupInStep1(FillUpApplicationForm.java:607)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1204088028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1204088028'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validateBloodGroupInStep1(FillUpApplicationForm.java:607)
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAnnualIncome()'><b>provideAnnualIncome</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 2500000</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideAnnualIncome(FillUpApplicationForm.java:962)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace295180183", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace295180183'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideAnnualIncome(FillUpApplicationForm.java:962)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersEmail()'><b>provideFathersEmail</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 59 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersEmail(FillUpApplicationForm.java:976)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1089930529", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1089930529'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 59 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersEmail(FillUpApplicationForm.java:976)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersMobile()'><b>provideFathersMobile</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 51 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersMobile(FillUpApplicationForm.java:990)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace833240229", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace833240229'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 51 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersMobile(FillUpApplicationForm.java:990)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersName()'><b>provideFathersName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: FathersName</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 65 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersName(FillUpApplicationForm.java:917)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1271041075", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1271041075'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 65 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersName(FillUpApplicationForm.java:917)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -112,14 +335,42 @@ function toggleAllBoxes() {
 <td>1</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateExpiryDateInStep1()'><b>validateExpiryDateInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm</td>
-<td><div><pre>java.lang.AssertionError: null
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validateExpiryDateInStep1(FillUpApplicationForm.java:721)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1545077099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1545077099'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validateExpiryDateInStep1(FillUpApplicationForm.java:721)
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersOccupation()'><b>provideFathersOccupation</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: RAW_Agent</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersOccupation(FillUpApplicationForm.java:947)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace611289995", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace611289995'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersOccupation(FillUpApplicationForm.java:947)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -146,17 +397,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
+<td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validatePresentAddressStateInStep1()'><b>validatePresentAddressStateInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm</td>
-<td><div><pre>java.lang.AssertionError: null
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validatePresentAddressStateInStep1(FillUpApplicationForm.java:874)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace191568263", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace191568263'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.validatePresentAddressStateInStep1(FillUpApplicationForm.java:874)
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersQualification()'><b>provideFathersQualification</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: B.E.I.T.</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 55 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersQualification(FillUpApplicationForm.java:932)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2126723403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2126723403'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 55 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersQualification(FillUpApplicationForm.java:932)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -183,7 +462,269 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideHSCRegNumber()'><b>provideHSCRegNumber</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 142187335</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;input type=&quot;radio&quot; name=&quot;resultStatus&quot; onchange=&quot;chkMe(this)&quot; value=&quot;yes&quot; id=&quot;yesRes&quot;&gt; is not clickable at point (153, 63). Other element would receive the click: &lt;img src=&quot;https://extraaedgeresources.blob.core.windows.net/staticfiles/padmashree/loginlogo.png&quot; id=&quot;logoImg&quot; class=&quot;img-responsive&quot;&gt;
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 43 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at whitefeather.xedge.core.Page_DetailedApplicationForm.displayHSCDetailsSection(Page_DetailedApplicationForm.java:885)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideHSCRegNumber(FillUpApplicationForm.java:1743)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace422409467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace422409467'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;input type=&quot;radio&quot; name=&quot;resultStatus&quot; onchange=&quot;chkMe(this)&quot; value=&quot;yes&quot; id=&quot;yesRes&quot;&gt; is not clickable at point (153, 63). Other element would receive the click: &lt;img src=&quot;https://extraaedgeresources.blob.core.windows.net/staticfiles/padmashree/loginlogo.png&quot; id=&quot;logoImg&quot; class=&quot;img-responsive&quot;&gt;
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 43 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at whitefeather.xedge.core.Page_DetailedApplicationForm.displayHSCDetailsSection(Page_DetailedApplicationForm.java:885)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideHSCRegNumber(FillUpApplicationForm.java:1743)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersName()'><b>provideMothersName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: MothersName</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 54 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersName(FillUpApplicationForm.java:1005)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace751608431", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace751608431'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 54 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersName(FillUpApplicationForm.java:1005)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersOccupation()'><b>provideMothersOccupation</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: College</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 52 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersOccupation(FillUpApplicationForm.java:1035)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace203149502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace203149502'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 52 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersOccupation(FillUpApplicationForm.java:1035)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersQualification()'><b>provideMothersQualification</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: M.E.I.T.</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersQualification(FillUpApplicationForm.java:1020)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1770070706", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1770070706'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-TMQM6DS&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir13564_23234}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f13847b763bb8dfeb4053b8f66afe4e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersQualification(FillUpApplicationForm.java:1020)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -195,22 +736,22 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.clickDateOfBirthInputField()'><b>clickDateOfBirthInputField</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1262607708" onClick='toggleBox("Output-1262607708", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1072506992" onClick='toggleBox("Output-1072506992", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1262607708" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1262607708">
+<a href="#Output-1072506992" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1072506992">
 User has opened calender successfully.<br/>
 </div>
 </td>
 <td></td>
-<td>2</td>
+<td>1</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.clickDateOfIssueInputField()'><b>clickDateOfIssueInputField</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-413218476" onClick='toggleBox("Output-413218476", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2010545395" onClick='toggleBox("Output-2010545395", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-413218476" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-413218476">
+<a href="#Output-2010545395" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2010545395">
 User has opened date of issue calender successfully.<br/>
 </div>
 </td>
@@ -219,10 +760,10 @@ User has opened date of issue calender successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.clickExpiryDateInputField()'><b>clickExpiryDateInputField</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1615801298" onClick='toggleBox("Output-1615801298", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2008106788" onClick='toggleBox("Output-2008106788", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1615801298" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1615801298">
+<a href="#Output-2008106788" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2008106788">
 User has opened Expiry Date calender successfully.<br/>
 </div>
 </td>
@@ -231,46 +772,51 @@ User has opened Expiry Date calender successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.clickNextButtonStep1()'><b>clickNextButtonStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-472991420" onClick='toggleBox("Output-472991420", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1057468716" onClick='toggleBox("Output-1057468716", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-472991420" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-472991420">
+<a href="#Output-1057468716" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1057468716">
 User has clicked Next button  on Step 1 successfully.<br/>
 </div>
 </td>
 <td></td>
-<td>10</td>
+<td>1</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.clickNextButtonStep2()'><b>clickNextButtonStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-263833514" onClick='toggleBox("Output-263833514", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1037163664" onClick='toggleBox("Output-1037163664", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-263833514" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-263833514">
+<a href="#Output-1037163664" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1037163664">
 User has clicked Next button on Step 2successfully.<br/>
 </div>
 </td>
 <td></td>
-<td>0</td>
+<td>3</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.clickSameAddressCheckbox()'><b>clickSameAddressCheckbox</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-192428201" onClick='toggleBox("Output-192428201", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.clickNextButtonStep3()'><b>clickNextButtonStep3</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-42820240" onClick='toggleBox("Output-42820240", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-192428201" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-192428201">
-User has clicked Same Address checkbox successfully.<br/>
+<a href="#Output-42820240" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-42820240">
+User has clicked Next button on Step 3 successfully.<br/>
 </div>
 </td>
 <td></td>
-<td>0</td>
+<td>5</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.clickSameAddressCheckbox()'><b>clickSameAddressCheckbox</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm</td>
+<td></td>
+<td>1</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.GenerateLeadForApplicationForm.clickSubmitButton()'><b>clickSubmitButton</b><br>Test class: whitefeather.xedge.testcases.GenerateLeadForApplicationForm<br/>
-<a href="#Output-350059321" onClick='toggleBox("Output-350059321", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-304354378" onClick='toggleBox("Output-304354378", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-350059321" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-350059321">
+<a href="#Output-304354378" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-304354378">
 User has clicked Submit button successfully.<br/>
 </div>
 </td>
@@ -325,14 +871,14 @@ User has opened correct Application Form page.<br/>
 </div>
 </td>
 <td></td>
-<td>9</td>
+<td>10</td>
 <td>whitefeather.xedge.testcases.OpenApplicationFormLandingPage@1f28c152</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.openDetailedApplicationFormPage()'><b>openDetailedApplicationFormPage</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1825419935" onClick='toggleBox("Output-1825419935", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-473153915" onClick='toggleBox("Output-473153915", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1825419935" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1825419935">
+<a href="#Output-473153915" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-473153915">
 User has opened Application Form successfully.<br/>
 </div>
 </td>
@@ -341,10 +887,10 @@ User has opened Application Form successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAadharNumber()'><b>provideAadharNumber</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 252025100000<br/>
-<a href="#Output-1958402562" onClick='toggleBox("Output-1958402562", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-5395829" onClick='toggleBox("Output-5395829", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1958402562" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1958402562">
+<a href="#Output-5395829" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-5395829">
 User has entered Aadhaar Number value successfully.<br/>
 </div>
 </td>
@@ -352,12 +898,120 @@ User has entered Aadhaar Number value successfully.<br/>
 <td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAnnualIncome()'><b>provideAnnualIncome</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 2500000<br/>
-<a href="#Output-396918327" onClick='toggleBox("Output-396918327", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment1()'><b>provideAttachment1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-777313177" onClick='toggleBox("Output-777313177", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-396918327" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-396918327">
-User has entered Fathers Annual Income value successfully.<br/>
+<a href="#Output-777313177" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-777313177">
+User has provided Attachement1 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment10()'><b>provideAttachment10</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1491522744" onClick='toggleBox("Output-1491522744", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1491522744" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1491522744">
+User has provided Attachement10 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment2()'><b>provideAttachment2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1705277839" onClick='toggleBox("Output-1705277839", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1705277839" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1705277839">
+User has provided Attachement2 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment3()'><b>provideAttachment3</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-80026551" onClick='toggleBox("Output-80026551", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-80026551" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-80026551">
+User has provided Attachement3 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment4()'><b>provideAttachment4</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-2000469839" onClick='toggleBox("Output-2000469839", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2000469839" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2000469839">
+User has provided Attachement4 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment5()'><b>provideAttachment5</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1868578441" onClick='toggleBox("Output-1868578441", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1868578441" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1868578441">
+User has provided Attachement5 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment6()'><b>provideAttachment6</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-119112899" onClick='toggleBox("Output-119112899", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-119112899" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-119112899">
+User has provided Attachement5 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment7()'><b>provideAttachment7</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1821100643" onClick='toggleBox("Output-1821100643", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1821100643" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1821100643">
+User has provided Attachement7 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment8()'><b>provideAttachment8</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-690822257" onClick='toggleBox("Output-690822257", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-690822257" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-690822257">
+User has provided Attachement8 successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideAttachment9()'><b>provideAttachment9</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1574615832" onClick='toggleBox("Output-1574615832", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1574615832" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1574615832">
+User has provided Attachement9 successfully.<br/>
 </div>
 </td>
 <td></td>
@@ -365,10 +1019,10 @@ User has entered Fathers Annual Income value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideBloodGroup()'><b>provideBloodGroup</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: O+<br/>
-<a href="#Output-692743054" onClick='toggleBox("Output-692743054", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1260217713" onClick='toggleBox("Output-1260217713", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-692743054" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-692743054">
+<a href="#Output-1260217713" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1260217713">
 User has entered blood group value successfully.<br/>
 </div>
 </td>
@@ -377,10 +1031,10 @@ User has entered blood group value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideCaste()'><b>provideCaste</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-2116511124" onClick='toggleBox("Output-2116511124", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-294658299" onClick='toggleBox("Output-294658299", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2116511124" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2116511124">
+<a href="#Output-294658299" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-294658299">
 User has entered Caste value successfully.<br/>
 </div>
 </td>
@@ -389,10 +1043,10 @@ User has entered Caste value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideCitizenship()'><b>provideCitizenship</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Kolhapur<br/>
-<a href="#Output-15477956" onClick='toggleBox("Output-15477956", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1640899500" onClick='toggleBox("Output-1640899500", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-15477956" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-15477956">
+<a href="#Output-1640899500" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1640899500">
 User has entered Citizenship value successfully.<br/>
 </div>
 </td>
@@ -401,10 +1055,10 @@ User has entered Citizenship value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideCommunity()'><b>provideCommunity</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1884231057" onClick='toggleBox("Output-1884231057", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2101527076" onClick='toggleBox("Output-2101527076", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1884231057" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1884231057">
+<a href="#Output-2101527076" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2101527076">
 User has entered Community value successfully.<br/>
 </div>
 </td>
@@ -412,11 +1066,23 @@ User has entered Community value successfully.<br/>
 <td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDateOfBirth()'><b>provideDateOfBirth</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1076071888" onClick='toggleBox("Output-1076071888", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideCourse()'><b>provideCourse</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1064905627" onClick='toggleBox("Output-1064905627", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1076071888" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1076071888">
+<a href="#Output-1064905627" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1064905627">
+User has entered Course value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDateOfBirth()'><b>provideDateOfBirth</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-7829163" onClick='toggleBox("Output-7829163", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-7829163" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-7829163">
 User has provided Date of Birth successfully.<br/>
 </div>
 </td>
@@ -425,22 +1091,118 @@ User has provided Date of Birth successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDateOfIssue()'><b>provideDateOfIssue</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1849015357" onClick='toggleBox("Output-1849015357", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-598357562" onClick='toggleBox("Output-598357562", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1849015357" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1849015357">
+<a href="#Output-598357562" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-598357562">
 User has provided Date of Issue successfully.<br/>
 </div>
 </td>
 <td></td>
-<td>3</td>
+<td>4</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDegDiplomaExamType()'><b>provideDegDiplomaExamType</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-628392976" onClick='toggleBox("Output-628392976", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-628392976" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-628392976">
+User has entered Degree/Diploma Exam Type value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDegDiplomaModeOfStudy()'><b>provideDegDiplomaModeOfStudy</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-865858182" onClick='toggleBox("Output-865858182", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-865858182" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-865858182">
+User has entered Degree/Diploma Mode Of Study value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDegDiplomaYearOfCompletion()'><b>provideDegDiplomaYearOfCompletion</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-36531985" onClick='toggleBox("Output-36531985", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-36531985" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-36531985">
+User has entered Degree/Diploma YoC value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDegreeOrDiplomaAreaOfSpecialization()'><b>provideDegreeOrDiplomaAreaOfSpecialization</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Advanced Java<br/>
+<a href="#Output-1535026957" onClick='toggleBox("Output-1535026957", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1535026957" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1535026957">
+User has entered Degree AoS value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDegreeOrDiplomaCollegeName()'><b>provideDegreeOrDiplomaCollegeName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Sangli<br/>
+<a href="#Output-505231702" onClick='toggleBox("Output-505231702", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-505231702" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-505231702">
+User has entered Degree College Name value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDegreeOrDiplomaName()'><b>provideDegreeOrDiplomaName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Automation of Web Applications<br/>
+<a href="#Output-1637613097" onClick='toggleBox("Output-1637613097", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1637613097" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1637613097">
+User has entered Degree Name value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDegreeOrDiplomaType()'><b>provideDegreeOrDiplomaType</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-259630944" onClick='toggleBox("Output-259630944", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-259630944" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-259630944">
+User has clicked Grad/Diploma Radio button successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDegreeOrDiplomaUniversityName()'><b>provideDegreeOrDiplomaUniversityName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Kolhapur<br/>
+<a href="#Output-617928649" onClick='toggleBox("Output-617928649", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-617928649" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-617928649">
+User has entered Degree University Name value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideDomicile()'><b>provideDomicile</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1414013111" onClick='toggleBox("Output-1414013111", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1806880779" onClick='toggleBox("Output-1806880779", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1414013111" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1414013111">
+<a href="#Output-1806880779" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1806880779">
 User has entered Domicile value successfully.<br/>
 </div>
 </td>
@@ -448,11 +1210,35 @@ User has entered Domicile value successfully.<br/>
 <td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideExpiryDate()'><b>provideExpiryDate</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1640899500" onClick='toggleBox("Output-1640899500", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.GenerateLeadForApplicationForm.provideEntity()'><b>provideEntity</b><br>Test class: whitefeather.xedge.testcases.GenerateLeadForApplicationForm<br/>
+<a href="#Output-757708014" onClick='toggleBox("Output-757708014", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1640899500" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1640899500">
+<a href="#Output-757708014" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-757708014">
+User has entered Entity value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideEntranceExamDetails()'><b>provideEntranceExamDetails</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 3<br/>
+<a href="#Output-1275009283" onClick='toggleBox("Output-1275009283", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1275009283" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1275009283">
+User has successfully added Entrance examination details.<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideExpiryDate()'><b>provideExpiryDate</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1479140596" onClick='toggleBox("Output-1479140596", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1479140596" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1479140596">
 User has provided Expiry Date successfully.<br/>
 </div>
 </td>
@@ -460,71 +1246,11 @@ User has provided Expiry Date successfully.<br/>
 <td>4</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersEmail()'><b>provideFathersEmail</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1839206329" onClick='toggleBox("Output-1839206329", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1839206329" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1839206329">
-User has entered Fathers Email value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersMobile()'><b>provideFathersMobile</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-402808045" onClick='toggleBox("Output-402808045", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-402808045" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-402808045">
-User has entered Fathers Mobile value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersName()'><b>provideFathersName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: FathersName<br/>
-<a href="#Output-893523498" onClick='toggleBox("Output-893523498", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-893523498" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-893523498">
-User has entered Fathers Name value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersOccupation()'><b>provideFathersOccupation</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: RAW_Agent<br/>
-<a href="#Output-476579021" onClick='toggleBox("Output-476579021", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-476579021" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-476579021">
-User has entered Fathers Occupation value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideFathersQualification()'><b>provideFathersQualification</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: B.E.I.T.<br/>
-<a href="#Output-992743048" onClick='toggleBox("Output-992743048", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-992743048" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-992743048">
-User has entered Fathers Qualification value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGender()'><b>provideGender</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-896072146" onClick='toggleBox("Output-896072146", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1908571880" onClick='toggleBox("Output-1908571880", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-896072146" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-896072146">
+<a href="#Output-1908571880" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1908571880">
 User has entered Gender value successfully.<br/>
 </div>
 </td>
@@ -532,11 +1258,23 @@ User has entered Gender value successfully.<br/>
 <td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGuardiansAddrPincode()'><b>provideGuardiansAddrPincode</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 416115<br/>
-<a href="#Output-1659286984" onClick='toggleBox("Output-1659286984", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGraduationYearwiseMarksDetails()'><b>provideGraduationYearwiseMarksDetails</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 4<br/>
+<a href="#Output-2070160397" onClick='toggleBox("Output-2070160397", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1659286984" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1659286984">
+<a href="#Output-2070160397" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2070160397">
+User has successfully added Graduation Marks year wise details.<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGuardiansAddrPincode()'><b>provideGuardiansAddrPincode</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 416115<br/>
+<a href="#Output-1539947037" onClick='toggleBox("Output-1539947037", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1539947037" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1539947037">
 User has entered Guardians Relation value successfully.<br/>
 </div>
 </td>
@@ -545,10 +1283,10 @@ User has entered Guardians Relation value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGuardiansAddress1()'><b>provideGuardiansAddress1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Address1Field<br/>
-<a href="#Output-443713699" onClick='toggleBox("Output-443713699", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-977160959" onClick='toggleBox("Output-977160959", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-443713699" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-443713699">
+<a href="#Output-977160959" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-977160959">
 User has entered Guardians Address 1 value successfully.<br/>
 </div>
 </td>
@@ -557,10 +1295,10 @@ User has entered Guardians Address 1 value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGuardiansAddress2()'><b>provideGuardiansAddress2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Address2Field<br/>
-<a href="#Output-1717433286" onClick='toggleBox("Output-1717433286", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2007599722" onClick='toggleBox("Output-2007599722", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1717433286" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1717433286">
+<a href="#Output-2007599722" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2007599722">
 User has entered Guardians Address 2 value successfully.<br/>
 </div>
 </td>
@@ -569,10 +1307,10 @@ User has entered Guardians Address 2 value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGuardiansAddress3()'><b>provideGuardiansAddress3</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Address3Field<br/>
-<a href="#Output-57624756" onClick='toggleBox("Output-57624756", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1172535934" onClick='toggleBox("Output-1172535934", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-57624756" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-57624756">
+<a href="#Output-1172535934" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1172535934">
 User has entered Guardians Address 3 value successfully.<br/>
 </div>
 </td>
@@ -581,10 +1319,10 @@ User has entered Guardians Address 3 value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGuardiansContactNumber()'><b>provideGuardiansContactNumber</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-713898436" onClick='toggleBox("Output-713898436", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1862994526" onClick='toggleBox("Output-1862994526", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-713898436" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-713898436">
+<a href="#Output-1862994526" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1862994526">
 User has entered Guardians Contact Number value successfully.<br/>
 </div>
 </td>
@@ -593,10 +1331,10 @@ User has entered Guardians Contact Number value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGuardiansName()'><b>provideGuardiansName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: LocalGuardianName<br/>
-<a href="#Output-839771540" onClick='toggleBox("Output-839771540", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-552674617" onClick='toggleBox("Output-552674617", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-839771540" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-839771540">
+<a href="#Output-552674617" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-552674617">
 User has entered Guardians Name value successfully.<br/>
 </div>
 </td>
@@ -605,10 +1343,10 @@ User has entered Guardians Name value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideGuardiansRelation()'><b>provideGuardiansRelation</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Brother-in-law<br/>
-<a href="#Output-482307698" onClick='toggleBox("Output-482307698", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1585571244" onClick='toggleBox("Output-1585571244", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-482307698" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-482307698">
+<a href="#Output-1585571244" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1585571244">
 User has entered Guardians Relation value successfully.<br/>
 </div>
 </td>
@@ -616,11 +1354,83 @@ User has entered Guardians Relation value successfully.<br/>
 <td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersEmail()'><b>provideMothersEmail</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1964434661" onClick='toggleBox("Output-1964434661", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideHSCBoard()'><b>provideHSCBoard</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1280124872" onClick='toggleBox("Output-1280124872", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1964434661" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1964434661">
+<a href="#Output-1280124872" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1280124872">
+User has entered HSCBoard value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideHSCPercentageGradeType()'><b>provideHSCPercentageGradeType</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 94.24<br/>
+<a href="#Output-1636322481" onClick='toggleBox("Output-1636322481", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1636322481" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1636322481">
+User has entered HSC Percentage/Grade value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideHSCSchoolName()'><b>provideHSCSchoolName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: HSCSchoolName<br/>
+<a href="#Output-1967496309" onClick='toggleBox("Output-1967496309", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1967496309" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1967496309">
+User has entered HSC School Name value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideHSCSubjectScoreDetails()'><b>provideHSCSubjectScoreDetails</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 2<br/>
+<a href="#Output-509864971" onClick='toggleBox("Output-509864971", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-509864971" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-509864971">
+User has successfully added HSC examination details.<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideHSCYearOfPassing()'><b>provideHSCYearOfPassing</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1552400354" onClick='toggleBox("Output-1552400354", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1552400354" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1552400354">
+User has entered HSC Year Of Passing value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideModeOfStudyHSC()'><b>provideModeOfStudyHSC</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1976166251" onClick='toggleBox("Output-1976166251", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1976166251" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1976166251">
+User has entered HSC Mode Of Study value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersEmail()'><b>provideMothersEmail</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1419332030" onClick='toggleBox("Output-1419332030", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1419332030" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1419332030">
 User has entered Mothers Email value successfully.<br/>
 </div>
 </td>
@@ -629,10 +1439,10 @@ User has entered Mothers Email value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersMobile()'><b>provideMothersMobile</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-66724371" onClick='toggleBox("Output-66724371", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-547441493" onClick='toggleBox("Output-547441493", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-66724371" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-66724371">
+<a href="#Output-547441493" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-547441493">
 User has entered Mothers Mobile value successfully.<br/>
 </div>
 </td>
@@ -640,47 +1450,11 @@ User has entered Mothers Mobile value successfully.<br/>
 <td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersName()'><b>provideMothersName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: MothersName<br/>
-<a href="#Output-1464177809" onClick='toggleBox("Output-1464177809", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1464177809" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1464177809">
-User has entered Mothers Name value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersOccupation()'><b>provideMothersOccupation</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: College<br/>
-<a href="#Output-1765900922" onClick='toggleBox("Output-1765900922", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1765900922" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1765900922">
-User has entered Mothers Occupation value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideMothersQualification()'><b>provideMothersQualification</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: M.E.I.T.<br/>
-<a href="#Output-65080774" onClick='toggleBox("Output-65080774", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-65080774" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-65080774">
-User has entered Mothers Qualification value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideNationality()'><b>provideNationality</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Indian<br/>
-<a href="#Output-1327871893" onClick='toggleBox("Output-1327871893", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1874028013" onClick='toggleBox("Output-1874028013", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1327871893" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1327871893">
+<a href="#Output-1874028013" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1874028013">
 User has entered Nationality value successfully.<br/>
 </div>
 </td>
@@ -689,10 +1463,10 @@ User has entered Nationality value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePassportNumber()'><b>providePassportNumber</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: A-2025100000<br/>
-<a href="#Output-2016949136" onClick='toggleBox("Output-2016949136", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1792227359" onClick='toggleBox("Output-1792227359", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2016949136" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2016949136">
+<a href="#Output-1792227359" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1792227359">
 User has entered Passport Number value successfully.<br/>
 </div>
 </td>
@@ -701,10 +1475,10 @@ User has entered Passport Number value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePlaceOfBirth()'><b>providePlaceOfBirth</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Kavathe_Mahaankaal<br/>
-<a href="#Output-1370283822" onClick='toggleBox("Output-1370283822", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1783966110" onClick='toggleBox("Output-1783966110", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1370283822" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1370283822">
+<a href="#Output-1783966110" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1783966110">
 User has entered PlaceOfBirth value successfully.<br/>
 </div>
 </td>
@@ -713,10 +1487,10 @@ User has entered PlaceOfBirth value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePlaceOfIssue()'><b>providePlaceOfIssue</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Pune<br/>
-<a href="#Output-883455411" onClick='toggleBox("Output-883455411", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1195942137" onClick='toggleBox("Output-1195942137", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-883455411" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-883455411">
+<a href="#Output-1195942137" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1195942137">
 User has entered Place Of Issue value successfully.<br/>
 </div>
 </td>
@@ -725,10 +1499,10 @@ User has entered Place Of Issue value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePresentAddrCity()'><b>providePresentAddrCity</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-955324150" onClick='toggleBox("Output-955324150", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1957078537" onClick='toggleBox("Output-1957078537", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-955324150" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-955324150">
+<a href="#Output-1957078537" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1957078537">
 User has entered City value successfully.<br/>
 </div>
 </td>
@@ -737,10 +1511,10 @@ User has entered City value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePresentAddrContactNumber()'><b>providePresentAddrContactNumber</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-191945292" onClick='toggleBox("Output-191945292", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1852661033" onClick='toggleBox("Output-1852661033", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-191945292" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-191945292">
+<a href="#Output-1852661033" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1852661033">
 User has entered Emergency Contact Number value successfully.<br/>
 </div>
 </td>
@@ -749,10 +1523,10 @@ User has entered Emergency Contact Number value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePresentAddrCountry()'><b>providePresentAddrCountry</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-788905599" onClick='toggleBox("Output-788905599", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-975033189" onClick='toggleBox("Output-975033189", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-788905599" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-788905599">
+<a href="#Output-975033189" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-975033189">
 User has entered Country value successfully.<br/>
 </div>
 </td>
@@ -761,10 +1535,10 @@ User has entered Country value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePresentAddrPincode()'><b>providePresentAddrPincode</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 416116<br/>
-<a href="#Output-1814423236" onClick='toggleBox("Output-1814423236", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-352776719" onClick='toggleBox("Output-352776719", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1814423236" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1814423236">
+<a href="#Output-352776719" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-352776719">
 User has successfully entered Pincode value in Present Address section.<br/>
 </div>
 </td>
@@ -773,10 +1547,10 @@ User has successfully entered Pincode value in Present Address section.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePresentAddrState()'><b>providePresentAddrState</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-594651850" onClick='toggleBox("Output-594651850", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1756207614" onClick='toggleBox("Output-1756207614", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-594651850" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-594651850">
+<a href="#Output-1756207614" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1756207614">
 User has entered State value successfully.<br/>
 </div>
 </td>
@@ -785,10 +1559,10 @@ User has entered State value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.providePresentAddress()'><b>providePresentAddress</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Present_Address_Step1_<br/>
-<a href="#Output-937277082" onClick='toggleBox("Output-937277082", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1577167234" onClick='toggleBox("Output-1577167234", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-937277082" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-937277082">
+<a href="#Output-1577167234" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1577167234">
 User has entered Present Address value successfully.<br/>
 </div>
 </td>
@@ -797,10 +1571,10 @@ User has entered Present Address value successfully.<br/>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideReligion()'><b>provideReligion</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: Hindu<br/>
-<a href="#Output-2138005960" onClick='toggleBox("Output-2138005960", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-204805934" onClick='toggleBox("Output-204805934", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2138005960" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2138005960">
+<a href="#Output-204805934" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-204805934">
 User has entered Religion value successfully.<br/>
 </div>
 </td>
@@ -808,460 +1582,76 @@ User has entered Religion value successfully.<br/>
 <td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateAadhaarNumberInStep1()'><b>validateAadhaarNumberInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1057468716" onClick='toggleBox("Output-1057468716", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1057468716" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1057468716">
-Provided Aadhaar Number matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateCasteInStep1()'><b>validateCasteInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1547883191" onClick='toggleBox("Output-1547883191", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1547883191" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1547883191">
-Provided Caste matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateCitizenShipInStep1()'><b>validateCitizenShipInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1810518740" onClick='toggleBox("Output-1810518740", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1810518740" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1810518740">
-Provided CitizenShip matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateCommunityInStep1()'><b>validateCommunityInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1089930529" onClick='toggleBox("Output-1089930529", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1089930529" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1089930529">
-Provided Community matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateDateOfIssueInStep1()'><b>validateDateOfIssueInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1027319653" onClick='toggleBox("Output-1027319653", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1027319653" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1027319653">
-Provided Date Of Issue matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateDoBStep1()'><b>validateDoBStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1202220987" onClick='toggleBox("Output-1202220987", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1202220987" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1202220987">
-Provided DOB matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateDomicileInStep1()'><b>validateDomicileInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1528769018" onClick='toggleBox("Output-1528769018", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1528769018" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1528769018">
-Provided Domicile matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateFathersAnnualIncomeStep2()'><b>validateFathersAnnualIncomeStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1087072654" onClick='toggleBox("Output-1087072654", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1087072654" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1087072654">
-Provided Fathers Annual Income matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateFathersEmailStep2()'><b>validateFathersEmailStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideSSCBoard()'><b>provideSSCBoard</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
 <a href="#Output-1617174216" onClick='toggleBox("Output-1617174216", this, "Show output", "Hide output");'>Show output</a>
 
 <a href="#Output-1617174216" onClick="toggleAllBoxes();">Show all outputs</a>
 <div class='log' id="Output-1617174216">
-Provided Fathers Email matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateFathersMobileStep2()'><b>validateFathersMobileStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1860886124" onClick='toggleBox("Output-1860886124", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1860886124" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1860886124">
-Provided Fathers Mobile matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateFathersNameStep2()'><b>validateFathersNameStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-2143739483" onClick='toggleBox("Output-2143739483", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2143739483" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2143739483">
-Provided Fathers Name matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateFathersOccupationStep2()'><b>validateFathersOccupationStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-702500163" onClick='toggleBox("Output-702500163", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-702500163" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-702500163">
-Provided Fathers Occupation matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateFathersQualificationStep2()'><b>validateFathersQualificationStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1618984457" onClick='toggleBox("Output-1618984457", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1618984457" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1618984457">
-Provided Fathers Qualification matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateGenderValueInStep1()'><b>validateGenderValueInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-2145896000" onClick='toggleBox("Output-2145896000", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2145896000" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2145896000">
-Provided Gender matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateGrdnAddrPincodeStep2()'><b>validateGrdnAddrPincodeStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-547923534" onClick='toggleBox("Output-547923534", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-547923534" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-547923534">
-Provided Guardians Pincode matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateGuardianContactNumberStep2()'><b>validateGuardianContactNumberStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-544966217" onClick='toggleBox("Output-544966217", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-544966217" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-544966217">
-Provided Guardians ContactNumber matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateGuardianRelationStep2()'><b>validateGuardianRelationStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-379124840" onClick='toggleBox("Output-379124840", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-379124840" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-379124840">
-Provided Guardians Relation matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.GenerateLeadForApplicationForm.validateLeadDetailsSuccessfulSumbission()'><b>validateLeadDetailsSuccessfulSumbission</b><br>Test class: whitefeather.xedge.testcases.GenerateLeadForApplicationForm<br/>
-<a href="#Output-337533935" onClick='toggleBox("Output-337533935", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-337533935" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-337533935">
-Provided Lead details are submitted successfully.<br/>
+User has entered SSCBoard value successfully.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.GenerateLeadForApplicationForm.validateLeadEmailAddress()'><b>validateLeadEmailAddress</b><br>Test class: whitefeather.xedge.testcases.GenerateLeadForApplicationForm<br/>
-<a href="#Output-1574898980" onClick='toggleBox("Output-1574898980", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1574898980" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1574898980">
-Provided Email Address matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.GenerateLeadForApplicationForm.validateLeadFirstName()'><b>validateLeadFirstName</b><br>Test class: whitefeather.xedge.testcases.GenerateLeadForApplicationForm<br/>
-<a href="#Output-341372316" onClick='toggleBox("Output-341372316", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-341372316" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-341372316">
-Provided First Name matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.GenerateLeadForApplicationForm.validateLeadMobileNumber()'><b>validateLeadMobileNumber</b><br>Test class: whitefeather.xedge.testcases.GenerateLeadForApplicationForm<br/>
-<a href="#Output-319689067" onClick='toggleBox("Output-319689067", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-319689067" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-319689067">
-Provided Mobile Number matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7d907bac</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateLocalGuardianAddr1Step2()'><b>validateLocalGuardianAddr1Step2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1448805967" onClick='toggleBox("Output-1448805967", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1448805967" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1448805967">
-Provided Guardians Address 1 matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateLocalGuardianAddr2Step2()'><b>validateLocalGuardianAddr2Step2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideSSCModeOfStudy()'><b>provideSSCModeOfStudy</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-635610193" onClick='toggleBox("Output-635610193", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-635610193" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-635610193">
+User has entered SSC Mode of Study value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideSSCPercentageValue()'><b>provideSSCPercentageValue</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 87<br/>
+<a href="#Output-848097505" onClick='toggleBox("Output-848097505", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-848097505" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-848097505">
+User has entered SSC Grade/Percentage value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideSSCRegNumber()'><b>provideSSCRegNumber</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br>Parameters: 136346533<br/>
+<a href="#Output-547923534" onClick='toggleBox("Output-547923534", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-547923534" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-547923534">
+User has entered SSC Registration Number value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideSSCSchoolName()'><b>provideSSCSchoolName</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
+<a href="#Output-1793899405" onClick='toggleBox("Output-1793899405", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1793899405" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1793899405">
+User has entered SSC School Name value successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
+<tr>
+<td title='whitefeather.xedge.testcases.FillUpApplicationForm.provideSSCYearOfPassing()'><b>provideSSCYearOfPassing</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
 <a href="#Output-1930837320" onClick='toggleBox("Output-1930837320", this, "Show output", "Hide output");'>Show output</a>
 
 <a href="#Output-1930837320" onClick="toggleAllBoxes();">Show all outputs</a>
 <div class='log' id="Output-1930837320">
-Provided Guardians Address 2 matches the value stored in database.<br/>
+User has entered SSC Year of Passing value successfully.<br/>
 </div>
 </td>
 <td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateLocalGuardianAddr3Step2()'><b>validateLocalGuardianAddr3Step2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1453606810" onClick='toggleBox("Output-1453606810", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1453606810" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1453606810">
-Provided Guardians Address 3 matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateLocalGuardianNameStep2()'><b>validateLocalGuardianNameStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1732663543" onClick='toggleBox("Output-1732663543", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1732663543" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1732663543">
-Provided Guardians Name matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateMothersEmailStep2()'><b>validateMothersEmailStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-376725601" onClick='toggleBox("Output-376725601", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-376725601" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-376725601">
-Provided Mothers Email matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateMothersMobileStep2()'><b>validateMothersMobileStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1828508781" onClick='toggleBox("Output-1828508781", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1828508781" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1828508781">
-Provided Mothers Mobile matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateMothersNameStep2()'><b>validateMothersNameStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-173791568" onClick='toggleBox("Output-173791568", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-173791568" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-173791568">
-Provided Mothers Name matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateMothersOccupationStep2()'><b>validateMothersOccupationStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-588449070" onClick='toggleBox("Output-588449070", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-588449070" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-588449070">
-Provided Mothers Occupation matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateMothersQualificationStep2()'><b>validateMothersQualificationStep2</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1966670937" onClick='toggleBox("Output-1966670937", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1966670937" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1966670937">
-Provided Mothers Qualification matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateNationalityInStep1()'><b>validateNationalityInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-79161706" onClick='toggleBox("Output-79161706", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-79161706" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-79161706">
-Provided Nationality matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validatePassportNumberInStep1()'><b>validatePassportNumberInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1888924788" onClick='toggleBox("Output-1888924788", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1888924788" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1888924788">
-Provided Passport Number matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validatePlaceOfBirthStep1()'><b>validatePlaceOfBirthStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-425015667" onClick='toggleBox("Output-425015667", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-425015667" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-425015667">
-Provided Place Of Birth matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validatePlaceOfIssueInStep1()'><b>validatePlaceOfIssueInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1016633682" onClick='toggleBox("Output-1016633682", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1016633682" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1016633682">
-Provided Place Of Issue matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validatePresentAddressCityInStep1()'><b>validatePresentAddressCityInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-751608431" onClick='toggleBox("Output-751608431", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-751608431" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-751608431">
-Provided Present Address City matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validatePresentAddressCountryInStep1()'><b>validatePresentAddressCountryInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1927963027" onClick='toggleBox("Output-1927963027", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1927963027" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1927963027">
-Provided Present Address Country matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validatePresentAddressInStep1()'><b>validatePresentAddressInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1429483328" onClick='toggleBox("Output-1429483328", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1429483328" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1429483328">
-Provided Present Address matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.FillUpApplicationForm.validateReligionInStep1()'><b>validateReligionInStep1</b><br>Test class: whitefeather.xedge.testcases.FillUpApplicationForm<br/>
-<a href="#Output-1470911015" onClick='toggleBox("Output-1470911015", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1470911015" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1470911015">
-Provided Religion matches the value stored in database.<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
+<td>0</td>
 <td>whitefeather.xedge.testcases.FillUpApplicationForm@7791a895</td></tr>
 </table><p>
 </body>

@@ -20,11 +20,13 @@
 				<include name="enterFullName"/>
 				<include name="enterMobileNumber"/>
 				<include name="enterEmailAddress"/>
+				<include name="provideEntity"/>
 				<include name="clickSubmitButton"/>
+				<!-- <include name = "validateLeadDetailsSuccessfulSumbission"/>
 				<include name = "validateLeadFirstName"/>
 				<include name = "validateLeadMobileNumber"/>
 				<include name = "validateLeadEmailAddress"/>
-				<include name = "validateLeadDetailsSuccessfulSumbission"/>
+				<include name = "validateEntityValue"/> -->
 				</methods>
 			</class>
 			
@@ -66,10 +68,10 @@
 				<include name="providePresentAddrCity"/>
 				<parameter name="pincode" value="416116"/>
 				<include name="providePresentAddrPincode"/>
-				<include name="providePresentAddrContactNumber"/>
+				<include name="providePresentAddrContactNumber"/> 
 				<include name="clickSameAddressCheckbox"/>
 				<include name="clickNextButtonStep1"/>
-				<include name="validateDoBStep1"/>
+				<!-- <include name="validateDoBStep1"/>
 				<include name="validatePlaceOfBirthStep1"/>
 				<include name="validateGenderValueInStep1"/>
 				<include name="validateBloodGroupInStep1"/>
@@ -87,7 +89,7 @@
 				<include name="validatePresentAddressInStep1"/>
 				<include name="validatePresentAddressCountryInStep1"/>
 				<include name="validatePresentAddressStateInStep1"/>
-				<include name="validatePresentAddressCityInStep1"/>
+				<include name="validatePresentAddressCityInStep1"/> -->
 				<parameter name="fathersName" value="FathersName"/>
 				<include name="provideFathersName"/>
 				<parameter name="fathersQual" value="B.E.I.T."/>
@@ -121,7 +123,7 @@
 				<include name="provideGuardiansRelation"/>
 				<include name="provideGuardiansContactNumber"/>
 				<include name="clickNextButtonStep2"/>
-				<include name="validateFathersNameStep2"/>
+			<!-- 	<include name="validateFathersNameStep2"/>
 				<include name="validateFathersQualificationStep2"/>
 				<include name="validateFathersOccupationStep2"/>
 				<include name="validateFathersAnnualIncomeStep2"/>
@@ -138,52 +140,76 @@
 				<include name="validateLocalGuardianAddr3Step2"/>
 				<include name="validateGrdnAddrPincodeStep2"/>
 				<include name="validateGuardianRelationStep2"/>
-				<include name="validateGuardianContactNumberStep2"/>
-			 		</methods>
-			</class>
-				
-			<!-- 	<include name="provideFathersName"/>
-				<include name="provideMothersName"/>
-				<include name="provideGuardiansName"/>
-				<include name="provideGuardiansAddress1"/>
-				<include name="provideGuardiansAddress2"/>
-				<include name="provideGuardiansContactNumber"/>
-				<include name="provideGuardiansRelation"/>
-				
-				
+				<include name="validateGuardianContactNumberStep2"/> -->
 				<include name="provideCourse"/>
 				<include name="provideSSCSchoolName"/>
-				<include name="provideSSCRegNumber"/>
+				<include name="provideSSCBoard"/>
 				<include name="provideSSCYearOfPassing"/>
-				<include name="provideSSCPercentageValue"/>
+				<parameter name="sscRegNumber" value="136346533"/>
+				<include name="provideSSCRegNumber"/>
 				<include name="provideSSCModeOfStudy"/>
+				<parameter name="sscGradePercent" value="87"/>
+				<include name="provideSSCPercentageValue"/>
+				<parameter name="hscSchoolName" value="HSCSchoolName"/>
 				<include name="provideHSCSchoolName"/>
-				<include name="provideHSCRegNumber"/>
+				<include name="provideHSCBoard"/>
+				<include name="provideModeOfStudyHSC"/>
 				<include name="provideHSCYearOfPassing"/>
-				<include name="provideHSCPercentageValue"/>
-				<include name="provideHSCModeOfStudy"/>
-				<include name="provideEntranceExamValue"/>
-				<include name="provideSubject1NameValue"/>
-				<include name="provideSubject1Marks1Value"/>
-				<include name="provideSubject1Percetage1Value"/>
-				<include name="provideSubject2NameValue"/>
-				<include name="provideSubject2Marks1Value"/>
-				<include name="provideSubject2Percetage2Value"/>
-				<include name="provideSubject3NameValue"/>
-				<include name="provideSubject3Marks3Value"/>
-				<include name="provideSubject3Percetage3Value"/>
-				<include name="attachAttachment1"/>
-				<include name="attachAttachment2"/>
-				<include name="attachAttachment3"/>
-				<include name="attachAttachment4"/>
-				<include name="attachAttachment5"/>
+				<parameter name="hscGradePercent" value="94.24"/>
+				<include name="provideHSCPercentageGradeType"/>
+				<parameter name="hscRegNumber" value="142187335"/>
+				<include name="provideHSCRegNumber"/>
+				<parameter name="numberOfSubjects" value="2"/>
+				<include name="provideHSCSubjectScoreDetails"/>
+				<parameter name="numberOfExams" value="3"/>
+				<include name="provideEntranceExamDetails"/>
+				<include name="provideDegreeOrDiplomaType"/>
+				<parameter name="degreeName" value="Automation of Web Applications"/>
+				<include name="provideDegreeOrDiplomaName"/>
+				<parameter name="degreeAOS" value="Advanced Java"/>
+				<include name="provideDegreeOrDiplomaAreaOfSpecialization"/>
+				<parameter name="degreeCollege" value="Sangli"/>
+				<include name="provideDegreeOrDiplomaCollegeName"/>
+				<parameter name="degreeUnivName" value="Kolhapur"/>
+				<include name="provideDegreeOrDiplomaUniversityName"/>
+				<include name="provideDegDiplomaExamType"/>
+				<include name="provideDegDiplomaYearOfCompletion"/>
+				<include name="provideDegDiplomaModeOfStudy"/>
+				<parameter name="gradYears" value="4"/>
+				<include name="provideGraduationYearwiseMarksDetails"/>
+				<include name="provideAttachment1"/>
+				<include name="provideAttachment2"/>
+				<include name="provideAttachment3"/>
+				<include name="provideAttachment4"/>
+				<include name="provideAttachment5"/>
+				<include name="provideAttachment6"/>
+				<include name="provideAttachment7"/>
+				<include name="provideAttachment8"/>
+				<include name="provideAttachment9"/>
+				<include name="provideAttachment10"/>
+				<include name="clickNextButtonStep3"/>
+				<!-- <include name="validateCourseStep3"/>
+				<include name="validateSSCSchoolNameStep3"/>
+				<include name="validateSSCBoardStep3"/>
+				<include name="validateSSCYoPStep3"/>
+				<include name="validateSSCRegNumberStep3"/>
+				<include name="validateSSCModeOfStudyStep3"/>
+				<include name="validateSSCPercentageStep3"/>
+				<include name="validateHSCSchoolNameStep3"/>
+				<include name="validateHSCBoardStep3"/>
+				<include name="validateHSCYoPStep3"/>
+				<include name="validateHSCRegNumberStep3"/>
+				<include name="validateHSCModeOfStudyStep3"/>
+				<include name="validateHSCPercentageStep3"/> -->
+			 	</methods>
+			</class>
+				<!-- 
 				<include name="clickNextButtonStep3"/>
 				<include name="providePaymentType"/>
 				<include name="providePaymentAmount"/>
 				<include name="clickSubmitButtonStep4"/> 
 				</methods>
-			</class>	
-		-->
+			</class> -->	
 		</classes>
 	</test>
 	

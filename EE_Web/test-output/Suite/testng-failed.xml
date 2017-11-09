@@ -8,59 +8,90 @@
       <class name="whitefeather.xedge.testcases.FillUpApplicationForm">
         <parameter name="annualIncome" value="2500000"/>
         <parameter name="fathersName" value="FathersName"/>
+        <parameter name="numberOfSubjects" value="2"/>
+        <parameter name="degreeCollege" value="Sangli"/>
+        <parameter name="numberOfExams" value="3"/>
         <parameter name="fathersQual" value="B.E.I.T."/>
         <parameter name="lgrelation" value="Brother-in-law"/>
         <parameter name="fathersOccpn" value="RAW_Agent"/>
         <parameter name="bloodGroup" value="O+"/>
         <parameter name="uid" value="252025100000"/>
         <parameter name="presentAddress" value="Present_Address_Step1_"/>
+        <parameter name="hscRegNumber" value="142187335"/>
         <parameter name="citizen" value="Kolhapur"/>
         <parameter name="pincode" value="416116"/>
         <parameter name="placeOfBirth" value="Kavathe_Mahaankaal"/>
         <parameter name="plOfIssue" value="Pune"/>
+        <parameter name="degreeAOS" value="Advanced Java"/>
         <parameter name="address3" value="Address3Field"/>
         <parameter name="address2" value="Address2Field"/>
         <parameter name="address1" value="Address1Field"/>
         <parameter name="MothersQual" value="M.E.I.T."/>
+        <parameter name="sscRegNumber" value="136346533"/>
+        <parameter name="degreeName" value="Automation of Web Applications"/>
         <parameter name="LocalGuardianName" value="LocalGuardianName"/>
+        <parameter name="gradYears" value="4"/>
         <parameter name="pNumber" value="A-2025100000"/>
         <parameter name="MothersName" value="MothersName"/>
         <parameter name="religion" value="Hindu"/>
+        <parameter name="sscGradePercent" value="87"/>
         <parameter name="MothersOccpn" value="College"/>
         <parameter name="nationality" value="Indian"/>
         <parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/>
+        <parameter name="hscGradePercent" value="94.24"/>
+        <parameter name="hscSchoolName" value="HSCSchoolName"/>
         <parameter name="lgpincode" value="416115"/>
+        <parameter name="degreeUnivName" value="Kolhapur"/>
         <methods>
-          <include name="validateBloodGroupInStep1"/>
-          <include name="validateExpiryDateInStep1"/>
-          <include name="validatePresentAddressStateInStep1"/>
+          <include name="provideHSCRegNumber" invocation-numbers="0"/>
+          <include name="provideFathersMobile"/>
+          <include name="provideFathersQualification" invocation-numbers="0"/>
+          <include name="provideFathersName" invocation-numbers="0"/>
+          <include name="provideAnnualIncome" invocation-numbers="0"/>
+          <include name="provideMothersOccupation" invocation-numbers="0"/>
+          <include name="provideFathersEmail"/>
+          <include name="provideMothersName" invocation-numbers="0"/>
+          <include name="provideMothersQualification" invocation-numbers="0"/>
+          <include name="provideFathersOccupation" invocation-numbers="0"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
       <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
         <parameter name="annualIncome" value="2500000"/>
         <parameter name="fathersName" value="FathersName"/>
+        <parameter name="numberOfSubjects" value="2"/>
+        <parameter name="degreeCollege" value="Sangli"/>
+        <parameter name="numberOfExams" value="3"/>
         <parameter name="fathersQual" value="B.E.I.T."/>
         <parameter name="lgrelation" value="Brother-in-law"/>
         <parameter name="fathersOccpn" value="RAW_Agent"/>
         <parameter name="bloodGroup" value="O+"/>
         <parameter name="uid" value="252025100000"/>
         <parameter name="presentAddress" value="Present_Address_Step1_"/>
+        <parameter name="hscRegNumber" value="142187335"/>
         <parameter name="citizen" value="Kolhapur"/>
         <parameter name="pincode" value="416116"/>
         <parameter name="placeOfBirth" value="Kavathe_Mahaankaal"/>
         <parameter name="plOfIssue" value="Pune"/>
+        <parameter name="degreeAOS" value="Advanced Java"/>
         <parameter name="address3" value="Address3Field"/>
         <parameter name="address2" value="Address2Field"/>
         <parameter name="address1" value="Address1Field"/>
         <parameter name="MothersQual" value="M.E.I.T."/>
+        <parameter name="sscRegNumber" value="136346533"/>
+        <parameter name="degreeName" value="Automation of Web Applications"/>
         <parameter name="LocalGuardianName" value="LocalGuardianName"/>
+        <parameter name="gradYears" value="4"/>
         <parameter name="pNumber" value="A-2025100000"/>
         <parameter name="MothersName" value="MothersName"/>
         <parameter name="religion" value="Hindu"/>
+        <parameter name="sscGradePercent" value="87"/>
         <parameter name="MothersOccpn" value="College"/>
         <parameter name="nationality" value="Indian"/>
         <parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/>
+        <parameter name="hscGradePercent" value="94.24"/>
+        <parameter name="hscSchoolName" value="HSCSchoolName"/>
         <parameter name="lgpincode" value="416115"/>
+        <parameter name="degreeUnivName" value="Kolhapur"/>
         <methods>
           <include name="selectBrowser"/>
         </methods>

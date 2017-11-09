@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import whitefeather.xedge.core.DataGenerator;
+import whitefeather.xedge.core.Page_DetailedApplicationForm;
 import whitefeather.xedge.core.Page_GenerateLeadApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
@@ -15,11 +15,12 @@ public class GenerateLeadForApplicationForm extends HelperHand
 	public static final String fullName=thirdPartyLeadFullName;
 	public static  final  String mobileNumber=thirdPartyLeadMobile;
 	public static final String emailAddress=thirdPartyLeadEmail;
-
+	public static String providedEntityValue;
 	
 	@Test	
 	public static void enterFullName() throws Exception
 	{
+		System.out.println("\n"+"*********************** Filling up Basic Information ***************************"+"\n");
 		try {
 			Page_GenerateLeadApplicationForm.displayFullNameInputField().sendKeys(fullName);
 			Reporter.log("User has entered Full Name successfully.",true);
@@ -58,6 +59,20 @@ public class GenerateLeadForApplicationForm extends HelperHand
 	}
 	
 
+	@Test
+	public static void provideEntity() throws Exception
+	{
+		try 
+		{
+			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByIndex(4);
+			providedEntityValue = Page_GenerateLeadApplicationForm.displayEntityDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered Entity value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Entity value.",true);
+		}
+	}
+	
 	@Test
 	public static void clickSubmitButton() throws Exception
 	{
@@ -101,7 +116,7 @@ public class GenerateLeadForApplicationForm extends HelperHand
 			System.out.println("--------------Validating Mobile Number--------------");
 			System.out.println("Provided Mobile Number: "+mobileNumber);
 			//Intentional Pause
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			String mobileN = extractDataFromDatabase("userMobile");
 			System.out.println("Mobile Number value frm DB: "+mobileN);
 			Assert.assertEquals(mobileNumber, mobileN);
@@ -120,7 +135,7 @@ public class GenerateLeadForApplicationForm extends HelperHand
 			System.out.println("--------------Validating Email Address--------------");
 			System.out.println("Provided Email Address: "+emailAddress);
 			//Intentional Pause
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			String email = extractDataFromDatabase("userEmail");
 			System.out.println("Email Address value frm DB: "+email);
 			Assert.assertEquals(emailAddress, email);
@@ -129,6 +144,25 @@ public class GenerateLeadForApplicationForm extends HelperHand
 			e.printStackTrace();
 			Assert.fail();
 			Reporter.log("Provided Email Address doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateEntityValue() throws SQLException, InterruptedException
+	{
+		try {
+			System.out.println("--------------Validating Entity Value--------------");
+			System.out.println("Provided Entity Value: "+providedEntityValue);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedEntity = extractDataFromDatabase("entityEntity");
+			System.out.println("Entity Value value frm DB: "+storedEntity);
+			Assert.assertEquals(providedEntityValue, storedEntity);
+			Reporter.log("Provided Entity Value matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Entity Value doesn't match the value stored in database.",true);
 		}
 	}
 	

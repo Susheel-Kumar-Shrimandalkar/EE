@@ -8,10 +8,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import whitefeather.xedge.appconfig.ConfigMethods;
 import whitefeather.xedge.appservices.DatabaseManager;
 import whitefeather.xedge.appservices.EmailerService;
@@ -41,6 +46,7 @@ public class HelperHand
 	public static final String thirdPartyGuardiansContact = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	
 	public static LinkedHashMap<String, String> dbValues = new LinkedHashMap<String, String>();
+	public static List<WebElement> hscSubjects = new LinkedList<WebElement>();
 	
 //	public static String globalSearch=AddNewLeadWithAllValues.prospectEmail;
 
