@@ -74,5 +74,10 @@
     <artifactId>mssql-jdbc</artifactId>
     <version>6.2.1.jre8</version>
 	</dependency>
+	<dependency>
+    <groupId>com.beust</groupId>
+    <artifactId>jcommander</artifactId>
+    <version>1.48</version>
+	</dependency>
   </dependencies>
 </project>

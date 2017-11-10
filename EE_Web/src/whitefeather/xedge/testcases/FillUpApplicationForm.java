@@ -528,7 +528,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			Page_DetailedApplicationForm.displayNextButtonStep1().click();
-			Thread.sleep(1000);
+			
 			Reporter.log("User has clicked Next button  on Step 1 successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -908,7 +908,7 @@ public class FillUpApplicationForm  extends HelperHand
 	@Parameters({"fathersName"})
 	public static void provideFathersName(String fathersName) throws Exception
 	{
-		Thread.sleep(1000);
+		Thread.sleep(4000);
 		System.out.println("\n"+"*********************** Filling up Step 2 Information ***************************"+"\n");
 
 		try 
@@ -1536,7 +1536,7 @@ public class FillUpApplicationForm  extends HelperHand
 	@Test
 	public static void provideCourse() throws Exception
 	{
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		System.out.println("\n"+"*********************** Filling up Step 3 Information ***************************"+"\n");
 		try 
 		{
@@ -2368,6 +2368,8 @@ public class FillUpApplicationForm  extends HelperHand
 	@Test
 	public static void providePaymentCourse() throws Exception
 	{
+		Thread.sleep(4000);
+
 		System.out.println("\n"+"*********************** Filling up Step 4 Information ***************************"+"\n");
 		try 
 		{

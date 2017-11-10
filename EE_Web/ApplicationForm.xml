@@ -203,6 +203,9 @@
 				<parameter name="paytmPaymentOTP" value="489871"/>
 				<include name="provideLoginOTPReceived"/>
 				<include name="clickLoginButtonPaytmLoginWindow"/>
+				<include name="validateAmountToBePaid"/>
+				<include name="clickPayNowButtonPaytmPaymentPage"/>
+				<include name="validateSuccessfulPayment"/>
 				</methods>
 				</class>
 		</classes>

@@ -63,7 +63,9 @@ public class GenerateLeadForApplicationForm extends HelperHand
 	{
 		try 
 		{
-			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByIndex(4);
+//			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByIndex(4);
+			//Temp value for test purpose. Use above line of code for actual execution
+			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("IP - MBA/MAF UWS");
 			providedEntityValue = Page_GenerateLeadApplicationForm.displayEntityDropDown().getFirstSelectedOption().getText();
 			System.out.println("reference---"+providedEntityValue);
 			Reporter.log("User has entered Entity value successfully.",true);

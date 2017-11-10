@@ -109,7 +109,11 @@ public class DatabaseManager extends HelperHand
 				"	@APPFORM_HSLCYOP NVARCHAR(10),\r\n" + 
 				"	@USER_UGPERCENT NVARCHAR(10),\r\n" + 
 				"	@APPFORM_MODEOFSTUDYHSC NVARCHAR(30),\r\n" + 
-				"	@APPFORM_ENTRNCEXAM NVARCHAR(80)\r\n" + 
+				"	@APPFORM_ENTRNCEXAM NVARCHAR(80),\r\n" + 
+				"	@PRICING_AMOUNT NVARCHAR(10),\r\n" + 
+				"	@PAYMENTDETAILS_AMOUNT NVARCHAR(10),\r\n" + 
+				"	@PAYMENTDETAILS_TRANSCNID NVARCHAR(15),\r\n" + 
+				"	@PAYMENTDETAILS_PAYMENTMODE NVARCHAR(20)\r\n" + 
 				"\r\n" + 
 				"	SET @USER_NAMETIME = (SELECT CONCAT ('AppFormLead_',(SELECT TOP 1 CONVERT(VARCHAR(10), GETDATE(), 105))))\r\n" + 
 				"	SET @USER_EMAIL = (SELECT TOP 1 EMAIL FROM USERS WHERE FIRSTNAME LIKE '%'+@USER_NAMETIME+'%' ORDER BY ID DESC)\r\n" + 
@@ -177,6 +181,10 @@ public class DatabaseManager extends HelperHand
 				"	SET @USER_UGPERCENT = (SELECT TOP 1 UNDERGRADUATEPERCENTAGE FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @APPFORM_MODEOFSTUDYHSC = (SELECT TOP 1 XIIMODEOFSTUDY FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"	SET @APPFORM_ENTRNCEXAM = (SELECT TOP 1 ENTRANCEEXAM FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
+				"	SET @PRICING_AMOUNT = (SELECT TOP 1 AMOUNT FROM PRICING WHERE ENTITYID = (SELECT ID FROM ENTITY2 WHERE NAME = @ENTITY2_ENTITY))\r\n" + 
+				"	SET @PAYMENTDETAILS_PAYMENTMODE = (SELECT TOP 1 PAYMENTMODE FROM PAYMENTDETAILS WHERE ENROLLEDLEADID = (SELECT TOP 1 ID FROM ENROLLEDLEADS WHERE LEADID = (SELECT TOP 1 ID FROM LEADS WHERE USERID=@USER_ID)))\r\n" + 
+				"	SET @PAYMENTDETAILS_TRANSCNID = (SELECT TOP 1 TRANSACTIONID FROM PAYMENTDETAILS WHERE ENROLLEDLEADID = (SELECT TOP 1 ID FROM ENROLLEDLEADS WHERE LEADID = (SELECT TOP 1 ID FROM LEADS WHERE USERID=@USER_ID)))\r\n" + 
+				"	SET @PAYMENTDETAILS_AMOUNT = (SELECT TOP 1 AMOUNTPAID FROM PAYMENTDETAILS WHERE ENROLLEDLEADID = (SELECT TOP 1 ID FROM ENROLLEDLEADS WHERE LEADID = (SELECT TOP 1 ID FROM LEADS WHERE USERID=@USER_ID)))\r\n" + 
 				"\r\n" + 
 				"	SELECT \r\n" + 
 				"	@USER_ID AS USERS_ID,\r\n" + 
@@ -235,7 +243,11 @@ public class DatabaseManager extends HelperHand
 				"	@APPFORM_HSLCYOP AS APPLFORM_HSLCYOP,\r\n" + 
 				"	@USER_UGPERCENT AS USERS_UGPERCENTG,\r\n" + 
 				"	@APPFORM_MODEOFSTUDYHSC AS APPLFORM_MODEOFSTUDYHSC,\r\n" + 
-				"	@APPFORM_ENTRNCEXAM AS APPLFORM_ENTRANCEEXAM";
+				"	@APPFORM_ENTRNCEXAM AS APPLFORM_ENTRANCEEXAM,\r\n" + 
+				"	@PRICING_AMOUNT AS PRICING_AMOUNT,\r\n" + 
+				"	@PAYMENTDETAILS_PAYMENTMODE AS PAYMENTDETAILS_PAYMENTMODE,\r\n" + 
+				"	@PAYMENTDETAILS_TRANSCNID AS PAYMENTDETAILS_TRANSCNID,\r\n" + 
+				"	@PAYMENTDETAILS_AMOUNT AS PAYMENTDETAILS_AMOUNT";
 		
 		 stmt = con.createStatement();  
          rs = stmt.executeQuery(SQL);  
@@ -251,7 +263,7 @@ public class DatabaseManager extends HelperHand
         	 dbValues.put("userEmail", rs.getString(2));
         	 dbValues.put("userName", rs.getString(3));
         	 dbValues.put("userMobile", rs.getString(4));
-        	 dbValues.put("entityEntity", rs.getString(5));
+        	 dbValues.put("entity2Entity", rs.getString(5));
         	 dbValues.put("userPRN", rs.getString(6));
         	 dbValues.put("userDOB", rs.getString(7));
         	 dbValues.put("userPlaceOfBirth", rs.getString(8));
@@ -296,17 +308,18 @@ public class DatabaseManager extends HelperHand
         	 dbValues.put("userHighSchoolNm", rs.getString(47));
         	 dbValues.put("appFormRegNum1", rs.getString(48));
         	 dbValues.put("appFormSSLCYop", rs.getString(49));
-        	 dbValues.put("appFormMoSSSC", rs.getString(50));
-        	 dbValues.put("userSecSchoolNm", rs.getString(51));
-        	 dbValues.put("appFormRegNum2", rs.getString(52));
-        	 dbValues.put("appFormHSLCYop", rs.getString(53));
-        	 dbValues.put("userUGPercent", rs.getString(54));
-        	 dbValues.put("appFormMoSHSC", rs.getString(55));
-        	 dbValues.put("appFormEntrncExm", rs.getString(56));
-
-
-
-
+        	 dbValues.put("userHighSchoolPercent", rs.getString(50));
+        	 dbValues.put("appFormMoSSSC", rs.getString(51));
+        	 dbValues.put("userSecSchoolNm", rs.getString(52));
+        	 dbValues.put("appFormRegNum2", rs.getString(53));
+        	 dbValues.put("appFormHSLCYop", rs.getString(54));
+        	 dbValues.put("userUGPercent", rs.getString(55));
+        	 dbValues.put("appFormMoSHSC", rs.getString(56));
+        	 dbValues.put("appFormEntrncExm", rs.getString(57));
+        	 dbValues.put("pricingAmount", rs.getString(58));
+        	 dbValues.put("pmntDetailsPmntMode", rs.getString(59));
+        	 dbValues.put("pmntDetailsTranscnID", rs.getString(60));
+        	 dbValues.put("pmntDetailsAmount", rs.getString(61));
 
 
 
