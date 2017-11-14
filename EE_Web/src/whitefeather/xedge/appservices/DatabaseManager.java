@@ -71,10 +71,18 @@ public class DatabaseManager extends HelperHand
 				"	@APPFORM_CASTE NVARCHAR(40),\r\n" + 
 				"	@APPFORM_DOMICILE NVARCHAR(40),\r\n" + 
 				"	@APPFORM_COMMUNITY NVARCHAR(40),\r\n" + 
-				"	@USER_ADDRESS NVARCHAR(100),\r\n" + 
-				"	@USER_COUNTRY NVARCHAR(40),\r\n" + 
-				"	@USER_STATE NVARCHAR(60),\r\n" + 
-				"	@USER_CITY NVARCHAR(80),\r\n" + 
+				"	@USER_PRESENTADDRADDRESS NVARCHAR(100),\r\n" + 
+				"	@USER_PRESENTADDRCOUNTRY NVARCHAR(40),\r\n" + 
+				"	@USER_PRESENTADDRSTATE NVARCHAR(60),\r\n" + 
+				"	@USER_PRESENTADDRCITY NVARCHAR(80),\r\n" + 
+				"	@USER_PRESENTADDRPINCODE NVARCHAR(10),\r\n" + 
+				"	@USER_PRESENTADDRCONTACTNUM NVARCHAR(15),\r\n" + 
+				"	@USERCOMM_PERMANENTADDRADDRESS1 NVARCHAR(100),\r\n" + 
+				"	@USERCOMM_PERMANENTADDRCOUNTRY NVARCHAR(40),\r\n" + 
+				"	@USERCOMM_PERMANENTADDRSTATE NVARCHAR(60),\r\n" + 
+				"	@USERCOMM_PERMANENTADDRCITY NVARCHAR(80),\r\n" + 
+				"	@USERCOMM_PERMANENTADDRPINCODE NVARCHAR(10),\r\n" + 
+				"	@USERCOMM_PERMANENTADDRCONTACTNUM NVARCHAR(15),\r\n" + 
 				"	@USER_FATHRNAME NVARCHAR(100), \r\n" + 
 				"	@APPFORM_FATHERQUALFCN NVARCHAR(60),\r\n" + 
 				"	@APPFORM_FATHEROCCUPN NVARCHAR(60),\r\n" + 
@@ -88,18 +96,15 @@ public class DatabaseManager extends HelperHand
 				"	@USER_MOTHERMOBILE NVARCHAR(40),\r\n" + 
 				"	@USER_LOCALGRDNNAME NVARCHAR(100),\r\n" + 
 				"	@USERCOMM_LCLADDRTYPE INT,\r\n" + 
+				"	@USER_EMERGNCYNAME NVARCHAR(100),\r\n" + 
 				"	@USERCOMMN_LCLADDR1 NVARCHAR(100),\r\n" + 
 				"	@USERCOMMN_LCLADDR2 NVARCHAR(100),\r\n" + 
 				"	@USERCOMMN_LCLADDR3 NVARCHAR(100),\r\n" + 
 				"	@USERCOMMN_PINCODE NVARCHAR(10),\r\n" + 
-				"	@USERCOMMN_GRDNCOTACTNUMBER NVARCHAR(40),\r\n" + 
-				"	@USER_EMERGNCYNAME NVARCHAR(100),\r\n" + 
-				"	@USERCOMM_PRMADDRTYPE INT,\r\n" + 
-				"	@USERCOMMN_PRMADDR1 NVARCHAR(100),\r\n" + 
-				"	@USERCOMMN_PRMADDR2 NVARCHAR(100),\r\n" + 
-				"	@USERCOMMN_PRMCONTACTNUM NVARCHAR(40),\r\n" + 
 				"	@USER_EMERGNCYRELN NVARCHAR(50),\r\n" + 
-				"	@USER_HIGHSCHOOLNM NVARCHAR(40),\r\n" + 
+				"	@USERCOMMN_GRDNCOTACTNUMBER NVARCHAR(40),\r\n" + 
+				"	@USERCOMM_PRMADDRTYPE INT,\r\n" + 
+				"	@USER_HIGHSCHOOLNM NVARCHAR(80),\r\n" + 
 				"	@APPFORM_REGNUM1 NVARCHAR(20),\r\n" + 
 				"	@APPFORM_SSLCYOP NVARCHAR(10),\r\n" + 
 				"	@USER_HSPERCENT NVARCHAR(10),\r\n" + 
@@ -118,6 +123,7 @@ public class DatabaseManager extends HelperHand
 				"	SET @USER_NAMETIME = (SELECT CONCAT ('AppFormLead_',(SELECT TOP 1 CONVERT(VARCHAR(10), GETDATE(), 105))))\r\n" + 
 				"	SET @USER_EMAIL = (SELECT TOP 1 EMAIL FROM USERS WHERE FIRSTNAME LIKE '%'+@USER_NAMETIME+'%' ORDER BY ID DESC)\r\n" + 
 				"	--SET @USER_EMAIL = '\"+thirdPartyLeadEmail+\"'\"+ \r\n" + 
+				"	--SET @USER_EMAIL = '38hlm0gbps@domain.in'\r\n" + 
 				"	SET @USER_NAME = (SELECT TOP 1 FIRSTNAME FROM USERS WHERE FIRSTNAME LIKE '%'+@USER_NAMETIME+'%' AND EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_MOBILE = (SELECT TOP 1 MOBILENUMBER FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_ID = (SELECT TOP 1 ID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
@@ -138,15 +144,25 @@ public class DatabaseManager extends HelperHand
 				"	SET @APPFORM_CASTE = (SELECT TOP 1 CASTE FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"	SET @APPFORM_DOMICILE = (SELECT TOP 1 DOMICILE FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"	SET @APPFORM_COMMUNITY = (SELECT TOP 1 CATEGORY FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
-				"	SET @USER_ADDRESS = (SELECT TOP 1 ADDRESS FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"	--SET @USER_COUNTRY = (SELECT TOP 1 COUNTRYID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"	SET @USER_COUNTRY =  (SELECT NAME FROM COUNTRIES WHERE ID = (SELECT COUNTRYID FROM USERS WHERE ID=@USER_ID))\r\n" + 
-				"	--SET @USER_STATE = (SELECT TOP 1 STATEID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"	SET @USER_STATE =  (SELECT NAME FROM STATES WHERE ID = (SELECT STATEID FROM USERS WHERE ID=@USER_ID))\r\n" + 
-				"	--SET @USER_CITY = (SELECT TOP 1 CITYID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"	SET @USER_CITY = (SELECT NAME FROM CITIES WHERE ID = (SELECT CITYID FROM USERS WHERE ID=@USER_ID))\r\n" + 
 				"	SET @USERCOMM_LCLADDRTYPE = (SELECT TOP 1 ID FROM COMMUNICATIONADDRESSINFO WHERE USERID=@USER_ID AND ADDRESS ='LocalAddress') --Using string 'LocalAddress' and 'PermanentAddress' just because I am not sure for this requirement.\r\n" + 
-				"	SET @USERCOMM_PRMADDRTYPE = (SELECT TOP 1 ID FROM COMMUNICATIONADDRESSINFO WHERE USERID=@USER_ID AND ADDRESS ='PermanentAddress') \r\n" + 
+				"	--@USERCOMM_LCLADDRTYPE - Step1 = LocalAddress field from UserCommunication Table\r\n" + 
+				"	SET @USER_PRESENTADDRADDRESS = (SELECT TOP 1 ADDRESS FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"	--SET @USER_COUNTRY = (SELECT TOP 1 COUNTRYID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"	SET @USER_PRESENTADDRCOUNTRY =  (SELECT TOP 1 NAME FROM COUNTRIES WHERE ID = (SELECT COUNTRYID FROM USERS WHERE ID=@USER_ID))\r\n" + 
+				"	--SET @USER_STATE = (SELECT TOP 1 STATEID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"	SET @USER_PRESENTADDRSTATE =  (SELECT TOP 1 NAME FROM STATES WHERE ID = (SELECT STATEID FROM USERS WHERE ID=@USER_ID))\r\n" + 
+				"	--SET @USER_CITY = (SELECT TOP 1 CITYID FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"	SET @USER_PRESENTADDRCITY = (SELECT TOP 1  NAME FROM CITIES WHERE ID = (SELECT CITYID FROM USERS WHERE ID=@USER_ID))\r\n" + 
+				"	SET @USER_PRESENTADDRPINCODE = (SELECT TOP 1 PINCODE FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"	SET @USER_PRESENTADDRCONTACTNUM = (SELECT TOP 1  ALTERNATEMOBILENUMBER FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"\r\n" + 
+				"	SET @USERCOMM_PERMANENTADDRADDRESS1 = (SELECT TOP 1 ADDRESS1 FROM USERCOMMUNICATION WHERE USERID=@USER_ID AND COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE ORDER BY ID DESC)\r\n" + 
+				"	SET @USERCOMM_PERMANENTADDRCOUNTRY =  (SELECT TOP 1  NAME FROM COUNTRIES WHERE ID = (SELECT TOP 1 COUNTRYID FROM USERCOMMUNICATION WHERE USERID=@USER_ID AND COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE))\r\n" + 
+				"	SET @USERCOMM_PERMANENTADDRSTATE =  (SELECT TOP 1  NAME FROM STATES WHERE ID = (SELECT TOP 1 STATEID FROM USERCOMMUNICATION WHERE USERID=@USER_ID AND COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE))\r\n" + 
+				"	SET @USERCOMM_PERMANENTADDRCITY = (SELECT TOP 1 NAME FROM CITIES WHERE ID = (SELECT TOP 1 CITYID FROM USERCOMMUNICATION WHERE USERID=@USER_ID AND COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE))\r\n" + 
+				"	SET @USERCOMM_PERMANENTADDRPINCODE = (SELECT TOP 1 PINCODE FROM USERCOMMUNICATION WHERE USERID=@USER_ID AND COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE ORDER BY ID DESC)\r\n" + 
+				"	SET @USERCOMM_PERMANENTADDRCONTACTNUM = (SELECT TOP 1 ALTERNATENUMBER FROM USERCOMMUNICATION WHERE USERID=@USER_ID AND COMMUNICATIONADDRESSINFOID=@USERCOMM_LCLADDRTYPE ORDER BY ID DESC)\r\n" + 
+				"\r\n" + 
 				"	SET @USER_FATHRNAME = (SELECT TOP 1 FATHERSNAME FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @APPFORM_FATHERQUALFCN = (SELECT TOP 1 FATHERQUALIFICATION FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"	SET @APPFORM_FATHEROCCUPN = (SELECT TOP 1 FATHEROCCUPATION FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
@@ -159,21 +175,20 @@ public class DatabaseManager extends HelperHand
 				"	SET @USER_MOTHEREMAIL = (SELECT TOP 1 MOTHERSEMAIL FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_MOTHERMOBILE = (SELECT TOP 1 MOTHERSMOBILE FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_LOCALGRDNNAME = (SELECT TOP 1 EMERGENCYCONTACTNAME FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"	--@USERCOMM_LCLADDRTYPE - Step1 = use in permanent address\r\n" + 
+				"\r\n" + 
+				"	SET @USERCOMM_PRMADDRTYPE = (SELECT TOP 1 ID FROM COMMUNICATIONADDRESSINFO WHERE USERID=@USER_ID AND ADDRESS ='PermanentAddress') 	\r\n" + 
 				"	SET @USERCOMMN_LCLADDR1 = (SELECT TOP 1 ADDRESS1 FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_PRMADDRTYPE ORDER BY ID DESC)\r\n" + 
 				"	SET @USERCOMMN_LCLADDR2 = (SELECT TOP 1 ADDRESS2 FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_PRMADDRTYPE ORDER BY ID DESC)\r\n" + 
 				"	SET @USERCOMMN_LCLADDR3 = (SELECT TOP 1 ADDRESS3 FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_PRMADDRTYPE ORDER BY ID DESC)\r\n" + 
-				"	SET @USERCOMMN_PINCODE = (SELECT TOP 1 PINCODE FROM USERCOMMUNICATION WHERE USERID=@USER_ID ORDER BY ID DESC)\r\n" + 
+				"	SET @USERCOMMN_PINCODE = (SELECT TOP 1 PINCODE FROM USERCOMMUNICATION WHERE USERID=@USER_ID AND COMMUNICATIONADDRESSINFOID=@USERCOMM_PRMADDRTYPE ORDER BY ID DESC)\r\n" + 
 				"	SET @USER_EMERGNCYRELN = (SELECT TOP 1 EMERGENCYRELATIONSHIP FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @USERCOMMN_GRDNCOTACTNUMBER = (SELECT TOP 1 EMERGENCYPHONENUMBER FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
-				"	--SET @USERCOMMN_PRMADDR1 = (SELECT TOP 1 ADDRESS1 FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_PRMADDRTYPE ORDER BY ID DESC)\r\n" + 
-				"	--SET @USERCOMMN_PRMADDR2 = (SELECT TOP 1 ADDRESS2 FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_PRMADDRTYPE ORDER BY ID DESC)\r\n" + 
-				"	--SET @USERCOMMN_PRMCONTACTNUM = (SELECT TOP 1 ALTERNATENUMBER FROM USERCOMMUNICATION WHERE COMMUNICATIONADDRESSINFOID=@USERCOMM_PRMADDRTYPE ORDER BY ID DESC)\r\n" + 
+				"\r\n" + 
 				"	--Skipping Entity1 validation as of now since its not implemented yet in Step 3.\r\n" + 
 				"	SET @USER_HIGHSCHOOLNM = (SELECT TOP 1 HIGHSCHOOLEXAMINATIONNAME FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @APPFORM_REGNUM1 = (SELECT TOP 1 REGISTRATIONNUMBER1 FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"	SET @APPFORM_SSLCYOP = (SELECT TOP 1 SSLCYEAROFPASSING FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
-				"	SET @USER_HSPERCENT = (SELECT TOP 1 HIGHSCHOOLEXAMINATIONNAME FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
+				"	SET @USER_HSPERCENT = (SELECT TOP 1 UNDERGRADUATEPERCENTAGE FROM USERS WHERE EMAIL = @USER_EMAIL ORDER BY ID DESC)\r\n" + 
 				"	SET @APPFORM_MODEOFSTUDYSSC = (SELECT TOP 1 MODEOFSTUDYSSLC FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
 				"	SET @USER_SECSCHOOLNM = (SELECT TOP 1 GRADUATIONINSTITUTENAME FROM APPLICATIONFORM WHERE USERID=@USER_ID ORDER BY ID DESC)\r\n" + 
 				"	SET @APPFORM_REGNUM2 = (SELECT TOP 1 REGISTRATIONNUMBER2 FROM APPLICATIONFORM WHERE USERID=@USER_ID)\r\n" + 
@@ -208,10 +223,18 @@ public class DatabaseManager extends HelperHand
 				"	@APPFORM_CASTE AS APPLFORM_CASTE,\r\n" + 
 				"	@APPFORM_DOMICILE AS APPLFORM_DOMICILE,\r\n" + 
 				"	@APPFORM_COMMUNITY AS APPLFORM_COMMUNITY,\r\n" + 
-				"	@USER_ADDRESS AS USERS_ADDRESS,\r\n" + 
-				"	@USER_COUNTRY AS USERS_COUNTRY,\r\n" + 
-				"	@USER_STATE AS USERS_STATE,\r\n" + 
-				"	@USER_CITY AS USERS_CITY,\r\n" + 
+				"	@USER_PRESENTADDRADDRESS AS USER_PRESENT_ADDRESS,\r\n" + 
+				"	@USER_PRESENTADDRCOUNTRY AS USER_PRESENT_COUNTRY,\r\n" + 
+				"	@USER_PRESENTADDRSTATE AS USER_PRESENT_STATE,\r\n" + 
+				"	@USER_PRESENTADDRCITY AS USER_PRESENT_CITY,\r\n" + 
+				"	@USER_PRESENTADDRPINCODE AS USER_PRESENTADDRPINCODE,\r\n" + 
+				"	@USER_PRESENTADDRCONTACTNUM AS USER_PRESENTADDRCONTACTNUM,\r\n" + 
+				"	@USERCOMM_PERMANENTADDRADDRESS1 AS USERCOMM_PERMANENT_ADDRESS,\r\n" + 
+				"	@USERCOMM_PERMANENTADDRCOUNTRY AS USERCOMM_PERMANENT_COUNTRY,\r\n" + 
+				"	@USERCOMM_PERMANENTADDRSTATE AS USERCOMM_PERMANENT_STATE,\r\n" + 
+				"	@USERCOMM_PERMANENTADDRCITY AS USERCOMM_PERMANENT_CITY,\r\n" + 
+				"	@USERCOMM_PERMANENTADDRPINCODE AS USERCOMM_PERMANENT_PINCODE,\r\n" + 
+				"	@USERCOMM_PERMANENTADDRCONTACTNUM AS USERCOMM_PERMANENT_CONTACTNUMBER,\r\n" + 
 				"	@USER_FATHRNAME AS USERS_FTHRNAME,\r\n" + 
 				"	@APPFORM_FATHERQUALFCN AS APPLFORM_FATHERQUALFCN,\r\n" + 
 				"	@APPFORM_FATHEROCCUPN AS APPLFORM_FATHEROCCUPN,\r\n" + 
@@ -224,15 +247,12 @@ public class DatabaseManager extends HelperHand
 				"	@USER_MOTHEREMAIL AS USERS_MOTHEREMAIL,\r\n" + 
 				"	@USER_MOTHERMOBILE AS USERS_MOTHERMOBILE,\r\n" + 
 				"	@USER_LOCALGRDNNAME AS USERS_LOCALGRDNNAME,\r\n" + 
-				"	@USERCOMMN_LCLADDR1 AS LOCAL_ADDRESS1,\r\n" + 
-				"	@USERCOMMN_LCLADDR2 AS LOCAL_ADDRESS2,\r\n" + 
-				"	@USERCOMMN_LCLADDR3 AS LOCAL_ADDRESS3,\r\n" + 
-				"	@USERCOMMN_PINCODE AS USERCOMMN_PINCODE,\r\n" + 
-				"	@USER_EMERGNCYRELN AS USERS_EMERGNCYRELATION,\r\n" + 
+				"	@USERCOMMN_LCLADDR1 AS LGADDR_USERCOMMN_ADDRESS1,\r\n" + 
+				"	@USERCOMMN_LCLADDR2 AS LGADDR_USERCOMMN_ADDRESS2,\r\n" + 
+				"	@USERCOMMN_LCLADDR3 AS LGADDR_USERCOMMN_ADDRESS3,\r\n" + 
+				"	@USERCOMMN_PINCODE AS LGADDR_USERCOMMN_PINCODE,\r\n" + 
+				"	@USER_EMERGNCYRELN AS LGADDR_USERS_EMERGNCYRELATION,\r\n" + 
 				"	@USERCOMMN_GRDNCOTACTNUMBER AS USERCOMM_GUARDIANCOTACTNUM,\r\n" + 
-				"	@USERCOMMN_PRMADDR1 AS USERCOMMN_PERMANENTADDR1,\r\n" + 
-				"	@USERCOMMN_PRMADDR2 AS USERCOMMN_PERMANENTADDR2,\r\n" + 
-				"	@USERCOMMN_PRMCONTACTNUM AS USERCOMMN_PERMANENTCONTACTNUM,\r\n" + 
 				"	@USER_HIGHSCHOOLNM AS USERS_HIGHSCHOOLNAME,\r\n" + 
 				"	@APPFORM_REGNUM1 AS APPLFORM_REGNUMBER,\r\n" + 
 				"	@APPFORM_SSLCYOP AS APPLFORM_SSLCYOP,\r\n" + 
@@ -284,46 +304,48 @@ public class DatabaseManager extends HelperHand
         	 dbValues.put("userPresentAddrCountry", rs.getString(23));
         	 dbValues.put("userPresentAddrState", rs.getString(24));
         	 dbValues.put("userPresentAddrCity", rs.getString(25));
-        	 dbValues.put("userFathersName", rs.getString(26));
-        	 dbValues.put("appFormFatherQualfcn", rs.getString(27));
-        	 dbValues.put("appFormFatherOccpn", rs.getString(28));
-        	 dbValues.put("appFormFatherIncome", rs.getString(29));
-        	 dbValues.put("userFthrEmail", rs.getString(30));
-        	 dbValues.put("userFthrMob", rs.getString(31));
-        	 dbValues.put("userMothersName", rs.getString(32));
-        	 dbValues.put("appFormMotherQualfcn", rs.getString(33));
-        	 dbValues.put("appFormMotherOccpn", rs.getString(34));
-        	 dbValues.put("userMthrEmail", rs.getString(35));
-        	 dbValues.put("userMthrMob", rs.getString(36));
-        	 dbValues.put("userLocalGrdnName", rs.getString(37));
-        	 dbValues.put("usercommLAddr1", rs.getString(38));
-        	 dbValues.put("usercommLAddr2", rs.getString(39));
-        	 dbValues.put("usercommLAddr3", rs.getString(40));
-        	 dbValues.put("usercommPincode", rs.getString(41));
-        	 dbValues.put("userEmrgncyRelatn", rs.getString(42));
-        	 dbValues.put("userGrdnContactNum", rs.getString(43));
-        	 dbValues.put("userCommPrimaryAddr1", rs.getString(44));
-        	 dbValues.put("userCommPrimaryAddr2", rs.getString(45));
-        	 dbValues.put("userCommPrimaryContactNum", rs.getString(46));
-        	 dbValues.put("userHighSchoolNm", rs.getString(47));
-        	 dbValues.put("appFormRegNum1", rs.getString(48));
-        	 dbValues.put("appFormSSLCYop", rs.getString(49));
-        	 dbValues.put("userHighSchoolPercent", rs.getString(50));
-        	 dbValues.put("appFormMoSSSC", rs.getString(51));
-        	 dbValues.put("userSecSchoolNm", rs.getString(52));
-        	 dbValues.put("appFormRegNum2", rs.getString(53));
-        	 dbValues.put("appFormHSLCYop", rs.getString(54));
-        	 dbValues.put("userUGPercent", rs.getString(55));
-        	 dbValues.put("appFormMoSHSC", rs.getString(56));
-        	 dbValues.put("appFormEntrncExm", rs.getString(57));
-        	 dbValues.put("pricingAmount", rs.getString(58));
-        	 dbValues.put("pmntDetailsPmntMode", rs.getString(59));
-        	 dbValues.put("pmntDetailsTranscnID", rs.getString(60));
-        	 dbValues.put("pmntDetailsAmount", rs.getString(61));
+        	 dbValues.put("userPresentAddrPincode", rs.getString(26));
+        	 dbValues.put("userPresentAddrContact", rs.getString(27));
+        	 dbValues.put("userPermanentAddress", rs.getString(28));
+        	 dbValues.put("userPermanentAddrCountry", rs.getString(29));
+        	 dbValues.put("userPermanentAddrState", rs.getString(30));
+        	 dbValues.put("userPermanentAddrCity", rs.getString(31));
+        	 dbValues.put("userPermanentAddrPincode", rs.getString(32));
+        	 dbValues.put("userPermanentAddrContact", rs.getString(33));
+        	 dbValues.put("userFathersName", rs.getString(34));
+        	 dbValues.put("appFormFatherQualfcn", rs.getString(35));
+        	 dbValues.put("appFormFatherOccpn", rs.getString(36));
+        	 dbValues.put("appFormFatherIncome", rs.getString(37));
+        	 dbValues.put("userFthrEmail", rs.getString(38));
+        	 dbValues.put("userFthrMob", rs.getString(39));
+        	 dbValues.put("userMothersName", rs.getString(40));
+        	 dbValues.put("appFormMotherQualfcn", rs.getString(41));
+        	 dbValues.put("appFormMotherOccpn", rs.getString(42));
+        	 dbValues.put("userMthrEmail", rs.getString(43));
+        	 dbValues.put("userMthrMob", rs.getString(44));
+        	 dbValues.put("userLocalGrdnName", rs.getString(45));
+        	 dbValues.put("usercommLAddr1", rs.getString(46));
+        	 dbValues.put("usercommLAddr2", rs.getString(47));
+        	 dbValues.put("usercommLAddr3", rs.getString(48));
+        	 dbValues.put("usercommPincode", rs.getString(49));
+        	 dbValues.put("userEmrgncyRelatn", rs.getString(50));
+        	 dbValues.put("userGrdnContactNum", rs.getString(51));
+        	 dbValues.put("userHighSchoolNm", rs.getString(52));
+        	 dbValues.put("appFormRegNum1", rs.getString(53));
+        	 dbValues.put("appFormSSLCYop", rs.getString(54));
+        	 dbValues.put("userHighSchoolPercent", rs.getString(55));
+        	 dbValues.put("appFormMoSSSC", rs.getString(56));
+        	 dbValues.put("userSecSchoolNm", rs.getString(57));
+        	 dbValues.put("appFormRegNum2", rs.getString(58));
+        	 dbValues.put("appFormHSLCYop", rs.getString(59));
+        	 dbValues.put("userUGPercent", rs.getString(60));
+        	 dbValues.put("appFormMoSHSC", rs.getString(61));
+        	 dbValues.put("appFormEntrncExm", rs.getString(62));
+        	 dbValues.put("pricingAmount", rs.getString(63));
+        	 dbValues.put("pmntDetailsPmntMode", rs.getString(64));
+        	 dbValues.put("pmntDetailsTranscnID", rs.getString(65));
+        	 dbValues.put("pmntDetailsAmount", rs.getString(66));
 
-
-
- 	 
          }  
          con.close();
 //         return userPRN;

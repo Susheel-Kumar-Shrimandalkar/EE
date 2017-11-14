@@ -8,6 +8,15 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 import whitefeather.xedge.appconfig.Constants;
 import whitefeather.xedge.appconfig.ObjectMapping;
 
@@ -15,28 +24,36 @@ public class APIDataProvider
 {
 	public static ObjectMapping properties = new ObjectMapping(Constants.URLs);
 	
-	/*public static void main(String[] args) throws IOException 
+	public static void main(String[] args) throws IOException, ParseException 
 	{
-		System.out.println("Recent New Tab Count1: "+getRecentNewTabCount());
-		System.out.println("Recent Online Tab Count: "+getRecentOnlineTabCount());
-		System.out.println("Upcming Followup Tab Count: "+getUpcomingFollowupTabCount());
-		System.out.println("Upcoming Walkin Tab Count: "+getUpcomingWalkinsTabCount());
-		System.out.println("High Priority Tab Count: "+getHighPriorityTabCount());
+//		APILogin();
+//		getAllMasterData();
+//		tempMethodToMapValues();
+		 
 		
-		System.out.println("leadList_All Count: "+getAllTabCount());
+//		System.out.println("Recent New Tab Count1: "+getRecentNewTabCount());
+//		System.out.println("Recent Online Tab Count: "+getRecentOnlineTabCount());
+//		System.out.println("Upcming Followup Tab Count: "+getUpcomingFollowupTabCount());
+//		System.out.println("Upcoming Walkin Tab Count: "+getUpcomingWalkinsTabCount());
+//		System.out.println("High Priority Tab Count: "+getHighPriorityTabCount());
+		getAllMasterData();
+		tempMethodToMapValues();
+		
+		/*System.out.println("leadList_All Count: "+getAllTabCount());
 		System.out.println("leadList_NewCount Count: "+leadList_NewCount);
 		System.out.println("leadList_CallBackCount: "+leadList_CallBackCount);
 		System.out.println("leadList_WalkinCount: "+leadList_WalkinCount);
 		System.out.println("leadList_EnrolledCount: "+leadList_EnrolledCount);
 		System.out.println("leadList_ClosedCount: "+leadList_ClosedCount);
 		System.out.println("leadList_OnlineCount: "+leadList_OnlineCount);
-		System.out.println("leadList_ReferredFromMeCount: "+leadList_ReferredFromMeCount);
-	}*/
+		System.out.println("leadList_ReferredFromMeCount: "+leadList_ReferredFromMeCount); */
+	}
 	
-	 static String accesstoken,	_dashboardCountJSONResponse,_leadListCountJSONResponse;
+	 static String accesstoken,	_dashboardCountJSONResponse,_leadListCountJSONResponse, getAllMasterJSONResp;
 	
 	private static HashMap<String,String > dashboardCountmap = new HashMap <String,String>();
 	private static HashMap<String,String > leadListCountmap = new HashMap <String,String>();
+	private static HashMap<String,String > getAllMasterMap = new HashMap <String,String>();
 	
 	public static String APILogin() throws IOException, MalformedURLException
 	{
@@ -241,45 +258,89 @@ public class APIDataProvider
 	}
 	
 	
-	/***************Get All Masters API*************************/
-	public static HashMap<String,String > getAllMasterData() throws IOException, MalformedURLException
+	/***************Get All Masters API
+	 * @throws ParseException *************************/
+	//HashMap<String,String >
+	public static void getAllMasterData() throws IOException, MalformedURLException, ParseException
 	{		
 		//Establish connection to Lead List Count API
-		URL _leadListAPI = new URL(properties.getLeadListCountAPIQAStaging());
-		HttpURLConnection connGet = (HttpURLConnection)_leadListAPI.openConnection();
+		URL getAllMasterAPI = new URL(properties.getAllMastersEEV2API());
+		HttpURLConnection connGet = (HttpURLConnection)getAllMasterAPI.openConnection();
 		connGet.setRequestMethod("GET");
-		connGet.setRequestProperty("Authorization", "bearer "+APILogin());
+//		connGet.setRequestProperty("Authorization", "bearer "+APILogin());
 		
 		//Get response code after hitting Lead List  Count API
 		int _respCode = connGet.getResponseCode();
-//		System.out.println("Response Code received is: "+_respCode);
+		System.out.println("Response Code received is: "+_respCode);
 		
 		if(_respCode==HttpURLConnection.HTTP_OK)
 		{
 			BufferedReader brGet = new BufferedReader(new InputStreamReader(connGet.getInputStream()));
 			String _getStream;
 			StringBuffer respGet = new StringBuffer();
-			
 			while((_getStream=brGet.readLine())!=null)
 			{
 				respGet.append(_getStream);
 			}
-			
+			System.out.println("JSON - without string: "+respGet);
 			//Store the Lead List Count API response in a String
-			_leadListCountJSONResponse = respGet.toString();
-//			System.out.println("Lead List Page Count JSON Response: "+_leadListCountJSONResponse);
+			getAllMasterJSONResp = respGet.toString();
+//			System.out.println("getAllMaster JSON Response: "+getAllMasterJSONResp);
+			System.out.println("JSON-in string: "+respGet);
 			brGet.close();
 		}
 		
+		// parsing JSON Response
+	    Object obj = new JSONParser().parse(getAllMasterJSONResp);
+	     
+	    // type casting object to JSONObject
+	    JSONObject jo = (JSONObject ) obj;
+	    
+	    // getting appFormFirstStepStatus 
+	    String appFormFirstStepStatus = (String) jo.get("appFormFirstStepStatus");
+	    
+	    System.out.println("appFormFirstStepStatus: "+appFormFirstStepStatus);
+	 // Now we try to take the data from "presentationSlides" array
+        JSONArray slideContent = (JSONArray) jo.get("leadStatuses");
+        Iterator i = slideContent.iterator();
+
+        String statuses[];
+        while (i.hasNext()) {
+            System.out.println(i.next());
+//            JSONObject slide = (JSONObject) i.next();
+//            String title = (String)slide.get("name");
+
+//Here I try to take the title element from my slide but it doesn't work!
+//            String title = (String) jo.get("title");
+//            System.out.println(title);
+        }
+        
+        
+		/*
 		//Parse JSON response and store it into Hashmap
-		_leadListCountJSONResponse = _leadListCountJSONResponse.replaceAll("\\{", "").replaceAll("\\}", "").replaceAll(":", ",").replaceAll("\"", "").toString();
-		String [] countData = _leadListCountJSONResponse.split(",");
+		getAllMasterJSONResp = getAllMasterJSONResp.replaceAll("\\{", "").replaceAll("\\}", "").replaceAll(":", ",").replaceAll("\"", "").toString();
+		String[] countData = getAllMasterJSONResp.split(",");
+		System.out.println("lengt is: "+countData.length);
 		for(int i=0;i<countData.length;i+=2)
 		{
-			leadListCountmap.put(countData[i], countData[i+1]);
+			getAllMasterMap.put(countData[i], countData[i+1]);
 		}	
-		
-		return leadListCountmap;	
+		*/
+//		return getAllMasterMap;	
 	}
+	
+	public static void tempMethodToMapValues()
+	{
+		Iterator<Entry<String, String>> trav=getAllMasterMap.entrySet().iterator();
+		   while(trav.hasNext())
+		   {
+		      @SuppressWarnings("rawtypes")
+			Map.Entry record=(Map.Entry)trav.next(); 
+		 
+		      System.out.println(record.getKey()+" : "+record.getValue());
+		   }
+	}
+	
+	
 }
 

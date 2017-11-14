@@ -14,9 +14,11 @@ public class FillUpApplicationForm  extends HelperHand
 {	
 	public static String providedDOB, providedBlGroup, providedGenderValue,providedCitizenship, providedNationality, 
 	providedUID, providedPlaceOfBirth, providedPassportN, providedPlOfIssue, providedDateOfIssue, providedExpiryDate,
-	providedReligion, providedCaste, providedDomicile,providedCommunnity, providedPresentAddressStep1, providedPresentAddrCountry,
-	providedPresentAddrState,providedPresentAddrCity, providedPresentAddrPincode, providedPresentAddrContactNumber,
-	providedFathersNm, proviedFatherQualfcn, providedFathersOccpn, providedFathersIncome, providedFathersEmail,
+	providedReligion, providedCaste, providedDomicile,providedCommunnity, providedPresentAddressStep1,
+	providedPresentAddrCountry,	providedPresentAddrState,providedPresentAddrCity, 
+	providedPresentAddrPincode, providedPresentAddrContactNumber, providedPermanentAddressStep1, providedPermanentAddrCountry, 
+	providedPermanentAddrState, providedPermanentAddrCity, providedPermanentAddrPincode,providedPermanentAddrContactNumber
+	,providedFathersNm, proviedFatherQualfcn,providedFathersOccpn, providedFathersIncome, providedFathersEmail,
 	providedFathersMobile, providedMothersNm, proviedMotherQualfcn, providedMothersOccpn, providedMothersEmail,
 	providedMothersMobile, providedLGuardianNm, providedAddress1Step2, providedAddress2Step2, providedAddress3Step2,
 	providedLGCountry, providedLGState, providedLGCity, providedLGPincode, providedLGRelation, providedLGContactNumber,
@@ -307,7 +309,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedReligion = religion;
 		try 
 		{
-			Page_DetailedApplicationForm.displayReligionDropDown().sendKeys(providedReligion);
+			Page_DetailedApplicationForm.displayReligionInputField().sendKeys(providedReligion);
 			Reporter.log("User has entered Religion value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -331,12 +333,19 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideCaste() throws Exception
+	@Parameters({"otherCasteValue"})
+	public static void provideCaste(String otherCasteValue) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(1);
+			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(2);
 			providedCaste = Page_DetailedApplicationForm.displayCasteDropDown().getFirstSelectedOption().getText();
+			if(providedCaste.equalsIgnoreCase("Other"))
+			{
+				Page_DetailedApplicationForm.displayOtherCasteInputField().sendKeys(otherCasteValue);
+				providedCaste = otherCasteValue;
+			}
+			
 			Reporter.log("User has entered Caste value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -345,12 +354,18 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideDomicile() throws Exception
+	@Parameters({"otherDomicileValue"})
+	public static void provideDomicile(String otherDomicileValue) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayDomicileDropDown().selectByIndex(1);
+			Page_DetailedApplicationForm.displayDomicileDropDown().selectByIndex(4);
 			providedDomicile = Page_DetailedApplicationForm.displayDomicileDropDown().getFirstSelectedOption().getText();
+			if(providedDomicile.equalsIgnoreCase("Other"))
+			{
+				Page_DetailedApplicationForm.displayOtherDomicileInputField().sendKeys(otherDomicileValue);
+				providedDomicile = otherDomicileValue;
+			}
 			Reporter.log("User has entered Domicile value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -359,12 +374,18 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideCommunity() throws Exception
+	@Parameters({"otherCommunityValue"})
+	public static void provideCommunity(String otherCommunityValue) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayCommunityDropDown().selectByIndex(1);
+			Page_DetailedApplicationForm.displayCommunityDropDown().selectByIndex(3);
 			providedCommunnity = Page_DetailedApplicationForm.displayCommunityDropDown().getFirstSelectedOption().getText();
+			if(providedCommunnity.equalsIgnoreCase("Other"))
+			{
+				Page_DetailedApplicationForm.displayOtherCommunityInputField().sendKeys(otherCommunityValue);
+				providedCommunnity = otherCommunityValue;
+			}
 			Reporter.log("User has entered Community value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -387,6 +408,7 @@ public class FillUpApplicationForm  extends HelperHand
 			Reporter.log("User has failed to provide Present Address value.",true);
 		}
 	}
+	
 	
 	
 	@Test
@@ -466,61 +488,105 @@ public class FillUpApplicationForm  extends HelperHand
 	@Test
 	public static void clickSameAddressCheckbox() throws Exception
 	{
-		Page_DetailedApplicationForm.displaySameAddressCheckboxStep1();
-		
-		/*
-		//Implement logic for permanent address later. As of now just validate check box
 		try 
 		{
-			Assert.assertTrue(Page_DetailedApplicationForm.displaySameAddressCheckboxStep1().isDisplayed());
-			Page_DetailedApplicationForm.displaySameAddressCheckboxStep1().click();
+			Page_DetailedApplicationForm.displaySameAddressCheckboxStep().click();;
 			Reporter.log("User has clicked Same Address checkbox successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
 			Assert.fail();
 			Reporter.log("User has failed to click Same Address Checkbox.",true);
-		}*/
-	}
-	
-	/*
-	@Test
-	public static void provideAlternateAddress1() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayAlternateAddress1InputField().sendKeys("Alternate Address 1 - Step 1");
-			Reporter.log("User has entered Alternate Address 1 value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Alternate Address 1 value.",true);
 		}
 	}
 	
 	@Test
-	public static void provideAlternateAddress2() throws Exception
+	@Parameters({"permanentAddress"})	
+	public static void providePermanentAddressAddress(String permanentAddress) throws Exception
 	{
+		providedPermanentAddressStep1 = permanentAddress;
 		try 
 		{
-			Page_DetailedApplicationForm.displayAlternateAddress2InputField().sendKeys("Alternate Address 2 - Step 1");
-			Reporter.log("User has entered Alternate Address 2 value successfully.",true);
+			Page_DetailedApplicationForm.displayPermanentAddressInputFieldStep1().sendKeys(providedPermanentAddressStep1);
+			Reporter.log("User has entered Permanent Address value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Alternate Address 2 value.",true);
+			Reporter.log("User has failed to provide Permanent Address value.",true);
 		}
 	}
 	
 	@Test
-	public static void provideAlternateContactNumber() throws Exception
+	public static void providePermanentAddrCountry() throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayAlternateContactNumberInputField().sendKeys(thirdPartyAlternateContact);
-			Reporter.log("User has entered Alternate Contact Number value successfully.",true);
+			Page_DetailedApplicationForm.displayPermanentAddrCountryDropDown().selectByIndex(3);
+			providedPermanentAddrCountry =  Page_DetailedApplicationForm.displayPermanentAddrCountryDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered Country value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
-			Reporter.log("User has failed to provide Alternate Contact Number value.",true);
+			Reporter.log("User has failed to provide Country value.",true);
 		}
-	}*/
+	}
+	
+	@Test
+	public static void providePermanentAddrState() throws Exception
+	{
+		try 
+		{
+			//Do later random selection logic once correct data is added to db
+			Page_DetailedApplicationForm.displayPermanentAddrStateDropDown().selectByIndex(2);
+			providedPermanentAddrState =  Page_DetailedApplicationForm.displayPermanentAddrStateDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered State value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to State Gender value.",true);
+		}
+	}
+	
+	@Test
+	public static void providePermanentAddrCity() throws Exception
+	{
+		try 
+		{
+			//Do later random selection logic once correct data is added to db
+			Page_DetailedApplicationForm.displayPermanentAddrCityDropDown().selectByIndex(1);
+			providedPermanentAddrCity =  Page_DetailedApplicationForm.displayPermanentAddrCityDropDown().getFirstSelectedOption().getText();
+			Reporter.log("User has entered City value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide City value.",true);
+		}
+	}
+	
+	@Test
+	@Parameters({"Perm_pincode"})	
+	public static void providePermanentAddrPincode(String Perm_pincode) throws Exception
+	{
+		providedPermanentAddrPincode = Perm_pincode;
+		try 
+		{
+			Page_DetailedApplicationForm.displayPermanentAddrPincodeInputField().sendKeys(providedPermanentAddrPincode);
+			Reporter.log("User has successfully entered Pincode value in Permanent Address section.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Pincode value in Permanent Address section.",true);
+		}
+	}
+	
+	@Test
+	public static void providePermanentAddrContactNumber() throws Exception
+	{
+		try 
+		{
+			Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().sendKeys(step1PermanentAddrContactNumber);
+			providedPermanentAddrContactNumber = Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().getText();
+			Reporter.log("User has entered Emergency Contact Number value successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+			Reporter.log("User has failed to provide Emergency Contact Number value.",true);
+		}
+	}
+	
 	
 	@Test
 	public static void clickNextButtonStep1() throws Exception
@@ -1607,12 +1673,18 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideSSCModeOfStudy() throws Exception
+	@Parameters({"otherSSCMode"})	
+	public static void provideSSCModeOfStudy(String otherSSCMode) throws Exception
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displaySSCModeOfStudyDropDown().selectByIndex(2);
+			Page_DetailedApplicationForm.displaySSCModeOfStudyDropDown().selectByIndex(1);
 			providedSSCModeOfStudy = Page_DetailedApplicationForm.displaySSCModeOfStudyDropDown().getFirstSelectedOption().getText();
+			if(providedSSCModeOfStudy.equalsIgnoreCase("Other"))
+			{
+				Page_DetailedApplicationForm.displayOtherSSCModeOfStudyInputField().sendKeys(otherSSCMode);
+				providedSSCModeOfStudy = otherSSCMode;
+			}
 			Reporter.log("User has entered SSC Mode of Study value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1666,14 +1738,20 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideModeOfStudyHSC() throws Exception
+	@Parameters({"otherHSCMode"})	
+	public static void provideModeOfStudyHSC(String otherHSCMode) throws Exception
 	{
 		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
 		{
 			try 
 			{
-				Page_DetailedApplicationForm.displayModeOfStudyHSCDropDown().selectByIndex(2);
+				Page_DetailedApplicationForm.displayModeOfStudyHSCDropDown().selectByIndex(1);
 				providedHSCModeOfStudy =  Page_DetailedApplicationForm.displayModeOfStudyHSCDropDown().getFirstSelectedOption().getText();
+				if(providedHSCModeOfStudy.equalsIgnoreCase("Other"))
+				{
+					Page_DetailedApplicationForm.displayOtherHSCModeOfStudyInputField().sendKeys(otherHSCMode);
+					providedHSCModeOfStudy = otherHSCMode;
+				}
 				Reporter.log("User has entered HSC Mode Of Study value successfully.",true);
 			}
 			catch (org.openqa.selenium.NoSuchElementException e) 
@@ -1927,12 +2005,18 @@ public class FillUpApplicationForm  extends HelperHand
 	}
 	
 	@Test
-	public static void provideDegDiplomaModeOfStudy() throws Exception
+	@Parameters({"otherDiplomaMode"})	
+	public static void provideDegDiplomaModeOfStudy(String otherDiplomaMode) throws Exception
 	{
 		try 
 		{
 			Page_DetailedApplicationForm.displayDegreeDiplomaModeOfStudyDropDown().selectByIndex(2);
 			providedDiplomaModeOfStudy =  Page_DetailedApplicationForm.displayDegreeDiplomaModeOfStudyDropDown().getFirstSelectedOption().getText();
+			if(providedDiplomaModeOfStudy.equalsIgnoreCase("Other"))
+			{
+				Page_DetailedApplicationForm.displayOtherDegreeDiplomaModeOfStudyInputField().sendKeys(otherDiplomaMode);
+				providedDiplomaModeOfStudy = otherDiplomaMode;
+			}
 			Reporter.log("User has entered Degree/Diploma Mode Of Study value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1950,11 +2034,11 @@ public class FillUpApplicationForm  extends HelperHand
 		{
 			gradMarksDetails[counter]="Year "+(i+1) +"Subject";		//Subject	**These values to be generated randomly later**
 			counter++;
-			gradMarksDetails[counter]="74";							//Max Marks
+			gradMarksDetails[counter]="7"+(i*2);							//Max Marks
 			counter++;
-			gradMarksDetails[counter]="77";							//Obtained Marks / Grade
+			gradMarksDetails[counter]="8"+(i*3);							//Obtained Marks / Grade
 			counter++;
-			gradMarksDetails[counter]="67";							//Percentage
+			gradMarksDetails[counter]="6"+(i*4);							//Percentage
 			counter++;
 		}
 		

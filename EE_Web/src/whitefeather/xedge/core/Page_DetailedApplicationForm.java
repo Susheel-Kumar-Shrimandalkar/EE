@@ -407,9 +407,35 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return Integer.toString(numericMonth);
 	}	
 	
+	public static WebElement displayReligionInputField() throws Exception
+	{
+		try {
+			element = (driver.findElement((properties.selectLocator("Step1_Religion"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
 	
+	public static Select displayCasteDropDown() throws Exception
+	{
+		try {
+			dropdown = new Select(driver.findElement((properties.selectLocator("Step1_Caste"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return dropdown;	
+	}
 	
-	
+	public static WebElement displayOtherCasteInputField() throws Exception
+	{
+		try {
+			element = (driver.findElement((properties.selectLocator("Step1_OtherCaste"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;		
+	}
 	
 	public static Select displayDomicileDropDown() throws Exception
 	{
@@ -421,15 +447,16 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return dropdown;	
 	}
 	
-	public static WebElement displayReligionDropDown() throws Exception
+	public static WebElement displayOtherDomicileInputField() throws Exception
 	{
 		try {
-			element = (driver.findElement((properties.selectLocator("Step1_Religion"))));
+			element = (driver.findElement((properties.selectLocator("Step1_OtherDomicile"))));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
-		return element;	
+		return element;		
 	}
+	
 
 	public static Select displayCommunityDropDown() throws Exception
 	{
@@ -441,14 +468,14 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return dropdown;	
 	}
 	
-	public static Select displayCasteDropDown() throws Exception
+	public static WebElement displayOtherCommunityInputField() throws Exception
 	{
 		try {
-			dropdown = new Select(driver.findElement((properties.selectLocator("Step1_Caste"))));
+			element = (driver.findElement((properties.selectLocator("Step1_OtherCommunity"))));
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
-		return dropdown;	
+		return element;		
 	}
 	
 	public static WebElement displayPresentAddressInputFieldStep1() throws Exception
@@ -511,7 +538,7 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return element;	
 	}
 	
-	/*public static WebElement displaySameAddressCheckboxStep1() throws Exception
+	public static WebElement displaySameAddressCheckboxStep() throws Exception
 	{
 		try {
 			element = driver.findElement(properties.selectLocator("Step1_SameAddressCheckbox"));
@@ -519,26 +546,67 @@ public class Page_DetailedApplicationForm extends HelperHand
 			e.printStackTrace();
 		}
 		return element;	
-	}*/
+	}
 	
-	public static void displaySameAddressCheckboxStep1() throws Exception
+	public static WebElement displayPermanentAddressInputFieldStep1() throws Exception
 	{
 		try {
-			driver.findElement(By.id("permanentAddr")).sendKeys("permanentAddr");;
-			Select dropdown1 = new Select(driver.findElement(By.id("permanentCountry")));
-			dropdown1.selectByIndex(1);
-			Select dropdown2 = new Select(driver.findElement(By.id("permanentState")));
-			dropdown2.selectByIndex(2);
-			Select dropdown3 = new Select(driver.findElement(By.id("permanentCity")));
-			dropdown3.selectByIndex(1);
-			driver.findElement(By.id("permanentPincode")).sendKeys("415875");;
-			driver.findElement(By.id("permanentNumber2")).sendKeys("1020587498");;
-		} catch (org.openqa.selenium.NoSuchElementException e) 
-		{
+			element = driver.findElement(properties.selectLocator("Step1_PermanentAddress"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 		}
+		return element;	
 	}
-		
+	
+	public static Select displayPermanentAddrCountryDropDown() throws Exception
+	{
+		try {
+			dropdown = new Select(driver.findElement((properties.selectLocator("Step1_PermanentCountry"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return dropdown;	
+	}
+	
+	public static Select displayPermanentAddrStateDropDown() throws Exception
+	{
+		try {
+			dropdown = new Select(driver.findElement((properties.selectLocator("Step1_PermanentState"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return dropdown;	
+	}
+	
+	public static Select displayPermanentAddrCityDropDown() throws Exception
+	{
+		try {
+			dropdown = new Select(driver.findElement((properties.selectLocator("Step1_PermanentCity"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return dropdown;	
+	}
+	
+	public static WebElement displayPermanentAddrPincodeInputField() throws Exception
+	{
+		try {
+			element = driver.findElement((properties.selectLocator("Step1_PermanentPincode")));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
+	public static WebElement displayPermanentAddrContactNumberInputField() throws Exception
+	{
+		try {
+			element = driver.findElement(properties.selectLocator("Step1_PermanentAddrContactNumber"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
 	
 	public static WebElement displayAlternateAddress1InputField() throws Exception
 	{
@@ -836,6 +904,16 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return dropdown;	
 	}
 	
+	public static WebElement displayOtherSSCModeOfStudyInputField() throws Exception
+	{
+		try {
+			element = (driver.findElement((properties.selectLocator("Step3_OtherModeOfStudySSC"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;		
+	}
+	
 	public static WebElement displaySSCPercentageInputField() throws Exception
 	{	
 		try {
@@ -901,6 +979,16 @@ public class Page_DetailedApplicationForm extends HelperHand
 			e.printStackTrace();
 		}
 		return dropdown;	
+	}
+	
+	public static WebElement displayOtherHSCModeOfStudyInputField() throws Exception
+	{
+		try {
+			element = (driver.findElement((properties.selectLocator("Step3_OtherModeOfStudyHSC"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;		
 	}
 	
 	public static Select displayHSCYearOfPassingDropDown() throws Exception
@@ -1104,8 +1192,29 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return dropdown;	
 	}
 	
+	public static WebElement displayOtherDegreeDiplomaModeOfStudyInputField() throws Exception
+	{
+		try {
+			element = (driver.findElement((properties.selectLocator("Step3_OtherModeOfStudyDiploma"))));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;		
+	}
+	
+	public static void addMoreGraduationYears(int n) throws Exception
+	{
+		for (int i = 1; i <= n; i++) 
+		{
+			driver.findElement(properties.selectLocator("Step3_AddMoreYearsButton")).click();
+		}
+	}
+	
 	public static void displayGraduationYearwiseMarksInputFields(int n) throws Exception
 	{
+		
+		addMoreGraduationYears(n-1);
+		
 		for (int i = 1; i < n+1; i++) 
 		{
 			hscSubjects.add(driver.findElement((By.id("degreeDiplomaYrSub"+i))));

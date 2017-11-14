@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="10" ignored="55" total="153" passed="88">
+<testng-results skipped="0" failed="0" ignored="56" total="159" passed="103">
   <reporter-output>
     <line>
       <![CDATA[Chrome Browser is opened]]>
@@ -35,6 +35,9 @@
       <![CDATA[User has provided Date of Birth successfully.]]>
     </line>
     <line>
+      <![CDATA[User has entered PlaceOfBirth value successfully.]]>
+    </line>
+    <line>
       <![CDATA[User has entered Gender value successfully.]]>
     </line>
     <line>
@@ -42,6 +45,30 @@
     </line>
     <line>
       <![CDATA[User has entered Nationality value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Aadhaar Number value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Passport Number value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Place Of Issue value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has opened date of issue calender successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has provided Date of Issue successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has opened Expiry Date calender successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has provided Expiry Date successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Religion value successfully.]]>
     </line>
     <line>
       <![CDATA[User has entered Citizenship value successfully.]]>
@@ -66,6 +93,27 @@
     </line>
     <line>
       <![CDATA[User has entered City value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has successfully entered Pincode value in Present Address section.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Emergency Contact Number value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Permanent Address value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered Country value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered State value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has entered City value successfully.]]>
+    </line>
+    <line>
+      <![CDATA[User has successfully entered Pincode value in Permanent Address section.]]>
     </line>
     <line>
       <![CDATA[User has entered Emergency Contact Number value successfully.]]>
@@ -269,40 +317,40 @@
       <![CDATA[All Details diplayed on Successful Payment Message are correct.]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="168197" started-at="2017-11-10T12:01:42Z" finished-at="2017-11-10T12:04:31Z">
+  <suite name="Suite" duration-ms="153204" started-at="2017-11-14T13:06:13Z" finished-at="2017-11-14T13:08:47Z">
     <groups>
     </groups>
-    <test name="Staging QA Application Form Test Validations" duration-ms="168197" started-at="2017-11-10T12:01:42Z" finished-at="2017-11-10T12:04:31Z">
+    <test name="Staging QA Application Form Test Validations" duration-ms="153204" started-at="2017-11-14T13:06:13Z" finished-at="2017-11-14T13:08:47Z">
       <class name="whitefeather.xedge.testcases.GenerateLeadForApplicationForm">
-        <test-method status="PASS" signature="enterFullName()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7791a895]" name="enterFullName" duration-ms="819" started-at="2017-11-10T17:31:53Z" finished-at="2017-11-10T17:31:54Z">
+        <test-method status="PASS" signature="enterFullName()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@65e2dbf3]" name="enterFullName" duration-ms="838" started-at="2017-11-14T18:36:23Z" finished-at="2017-11-14T18:36:24Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Full Name successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterFullName -->
-        <test-method status="PASS" signature="enterMobileNumber()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7791a895]" name="enterMobileNumber" duration-ms="172" started-at="2017-11-10T17:31:54Z" finished-at="2017-11-10T17:31:54Z">
+        <test-method status="PASS" signature="enterMobileNumber()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@65e2dbf3]" name="enterMobileNumber" duration-ms="154" started-at="2017-11-14T18:36:24Z" finished-at="2017-11-14T18:36:24Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Mobile successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterMobileNumber -->
-        <test-method status="PASS" signature="enterEmailAddress()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7791a895]" name="enterEmailAddress" duration-ms="277" started-at="2017-11-10T17:31:54Z" finished-at="2017-11-10T17:31:54Z">
+        <test-method status="PASS" signature="enterEmailAddress()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@65e2dbf3]" name="enterEmailAddress" duration-ms="263" started-at="2017-11-14T18:36:24Z" finished-at="2017-11-14T18:36:24Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Email Address successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- enterEmailAddress -->
-        <test-method status="PASS" signature="provideEntity()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7791a895]" name="provideEntity" duration-ms="418" started-at="2017-11-10T17:31:54Z" finished-at="2017-11-10T17:31:55Z">
+        <test-method status="PASS" signature="provideEntity()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@65e2dbf3]" name="provideEntity" duration-ms="389" started-at="2017-11-14T18:36:24Z" finished-at="2017-11-14T18:36:24Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Entity value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideEntity -->
-        <test-method status="PASS" signature="clickSubmitButton()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@7791a895]" name="clickSubmitButton" duration-ms="5186" started-at="2017-11-10T17:31:55Z" finished-at="2017-11-10T17:32:00Z">
+        <test-method status="PASS" signature="clickSubmitButton()[pri:0, instance:whitefeather.xedge.testcases.GenerateLeadForApplicationForm@65e2dbf3]" name="clickSubmitButton" duration-ms="5190" started-at="2017-11-14T18:36:24Z" finished-at="2017-11-14T18:36:30Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Submit button successfully.]]>
@@ -311,14 +359,14 @@
         </test-method> <!-- clickSubmitButton -->
       </class> <!-- whitefeather.xedge.testcases.GenerateLeadForApplicationForm -->
       <class name="whitefeather.xedge.testcases.DoPaymentInApplicationForm">
-        <test-method status="PASS" signature="clickLoginLinkForPaytmPayment()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@6325a3ee]" name="clickLoginLinkForPaytmPayment" duration-ms="3763" started-at="2017-11-10T17:33:38Z" finished-at="2017-11-10T17:33:41Z">
+        <test-method status="PASS" signature="clickLoginLinkForPaytmPayment()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@61f8bee4]" name="clickLoginLinkForPaytmPayment" duration-ms="3429" started-at="2017-11-14T18:38:04Z" finished-at="2017-11-14T18:38:07Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Login Link for Paytm Account successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickLoginLinkForPaytmPayment -->
-        <test-method status="PASS" signature="providePaytmAccoutUsername(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@6325a3ee]" name="providePaytmAccoutUsername" duration-ms="4526" started-at="2017-11-10T17:33:41Z" finished-at="2017-11-10T17:33:46Z">
+        <test-method status="PASS" signature="providePaytmAccoutUsername(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@61f8bee4]" name="providePaytmAccoutUsername" duration-ms="4569" started-at="2017-11-14T18:38:07Z" finished-at="2017-11-14T18:38:12Z">
           <params>
             <param index="0">
               <value>
@@ -332,14 +380,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- providePaytmAccoutUsername -->
-        <test-method status="PASS" signature="clickRequestOTPButtonForPaytmPayment()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@6325a3ee]" name="clickRequestOTPButtonForPaytmPayment" duration-ms="2174" started-at="2017-11-10T17:33:46Z" finished-at="2017-11-10T17:33:48Z">
+        <test-method status="PASS" signature="clickRequestOTPButtonForPaytmPayment()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@61f8bee4]" name="clickRequestOTPButtonForPaytmPayment" duration-ms="2168" started-at="2017-11-14T18:38:12Z" finished-at="2017-11-14T18:38:14Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Request OTP Button on Login window of Paytm Account successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickRequestOTPButtonForPaytmPayment -->
-        <test-method status="PASS" signature="provideLoginOTPReceived(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@6325a3ee]" name="provideLoginOTPReceived" duration-ms="3178" started-at="2017-11-10T17:33:48Z" finished-at="2017-11-10T17:33:51Z">
+        <test-method status="PASS" signature="provideLoginOTPReceived(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@61f8bee4]" name="provideLoginOTPReceived" duration-ms="3156" started-at="2017-11-14T18:38:14Z" finished-at="2017-11-14T18:38:17Z">
           <params>
             <param index="0">
               <value>
@@ -353,28 +401,28 @@
             </line>
           </reporter-output>
         </test-method> <!-- provideLoginOTPReceived -->
-        <test-method status="PASS" signature="clickLoginButtonPaytmLoginWindow()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@6325a3ee]" name="clickLoginButtonPaytmLoginWindow" duration-ms="3244" started-at="2017-11-10T17:33:51Z" finished-at="2017-11-10T17:33:54Z">
+        <test-method status="PASS" signature="clickLoginButtonPaytmLoginWindow()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@61f8bee4]" name="clickLoginButtonPaytmLoginWindow" duration-ms="3200" started-at="2017-11-14T18:38:17Z" finished-at="2017-11-14T18:38:20Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Login Button on Login window of Paytm Account successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickLoginButtonPaytmLoginWindow -->
-        <test-method status="PASS" signature="validateAmountToBePaid()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@6325a3ee]" name="validateAmountToBePaid" duration-ms="8795" started-at="2017-11-10T17:33:54Z" finished-at="2017-11-10T17:34:03Z">
+        <test-method status="PASS" signature="validateAmountToBePaid()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@61f8bee4]" name="validateAmountToBePaid" duration-ms="8740" started-at="2017-11-14T18:38:20Z" finished-at="2017-11-14T18:38:29Z">
           <reporter-output>
             <line>
               <![CDATA[Provided Amount To Be Paid matches the value stored in database.]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateAmountToBePaid -->
-        <test-method status="PASS" signature="clickPayNowButtonPaytmPaymentPage()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@6325a3ee]" name="clickPayNowButtonPaytmPaymentPage" duration-ms="3181" started-at="2017-11-10T17:34:03Z" finished-at="2017-11-10T17:34:06Z">
+        <test-method status="PASS" signature="clickPayNowButtonPaytmPaymentPage()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@61f8bee4]" name="clickPayNowButtonPaytmPaymentPage" duration-ms="3125" started-at="2017-11-14T18:38:29Z" finished-at="2017-11-14T18:38:32Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Pay Now Button on Payment window of Paytm Account successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickPayNowButtonPaytmPaymentPage -->
-        <test-method status="PASS" signature="validateSuccessfulPayment()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@6325a3ee]" name="validateSuccessfulPayment" duration-ms="24093" started-at="2017-11-10T17:34:06Z" finished-at="2017-11-10T17:34:31Z">
+        <test-method status="PASS" signature="validateSuccessfulPayment()[pri:0, instance:whitefeather.xedge.testcases.DoPaymentInApplicationForm@61f8bee4]" name="validateSuccessfulPayment" duration-ms="14332" started-at="2017-11-14T18:38:32Z" finished-at="2017-11-14T18:38:47Z">
           <reporter-output>
             <line>
               <![CDATA[All Details diplayed on Successful Payment Message are correct.]]>
@@ -383,7 +431,7 @@
         </test-method> <!-- validateSuccessfulPayment -->
       </class> <!-- whitefeather.xedge.testcases.DoPaymentInApplicationForm -->
       <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
-        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@7d907bac]" name="selectBrowser" is-config="true" duration-ms="21" started-at="2017-11-10T17:31:42Z" finished-at="2017-11-10T17:31:42Z">
+        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@2b9627bc]" name="selectBrowser" is-config="true" duration-ms="28" started-at="2017-11-14T18:36:13Z" finished-at="2017-11-14T18:36:13Z">
           <params>
             <param index="0">
               <value>
@@ -394,7 +442,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectBrowser -->
-        <test-method status="PASS" signature="openAppForm(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@7d907bac]" name="openAppForm" duration-ms="10411" started-at="2017-11-10T17:31:42Z" finished-at="2017-11-10T17:31:53Z">
+        <test-method status="PASS" signature="openAppForm(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.OpenApplicationFormLandingPage@2b9627bc]" name="openAppForm" duration-ms="9186" started-at="2017-11-14T18:36:14Z" finished-at="2017-11-14T18:36:23Z">
           <params>
             <param index="0">
               <value>
@@ -416,28 +464,28 @@
         </test-method> <!-- openAppForm -->
       </class> <!-- whitefeather.xedge.testcases.OpenApplicationFormLandingPage -->
       <class name="whitefeather.xedge.testcases.FillUpApplicationForm">
-        <test-method status="PASS" signature="openDetailedApplicationFormPage()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="openDetailedApplicationFormPage" duration-ms="2893" started-at="2017-11-10T17:32:00Z" finished-at="2017-11-10T17:32:03Z">
+        <test-method status="PASS" signature="openDetailedApplicationFormPage()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="openDetailedApplicationFormPage" duration-ms="3019" started-at="2017-11-14T18:36:30Z" finished-at="2017-11-14T18:36:33Z">
           <reporter-output>
             <line>
               <![CDATA[User has opened Application Form successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- openDetailedApplicationFormPage -->
-        <test-method status="PASS" signature="clickDateOfBirthInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="clickDateOfBirthInputField" duration-ms="1797" started-at="2017-11-10T17:32:03Z" finished-at="2017-11-10T17:32:04Z">
+        <test-method status="PASS" signature="clickDateOfBirthInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="clickDateOfBirthInputField" duration-ms="1449" started-at="2017-11-14T18:36:33Z" finished-at="2017-11-14T18:36:34Z">
           <reporter-output>
             <line>
               <![CDATA[User has opened calender successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickDateOfBirthInputField -->
-        <test-method status="PASS" signature="provideDateOfBirth()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDateOfBirth" duration-ms="4346" started-at="2017-11-10T17:32:04Z" finished-at="2017-11-10T17:32:09Z">
+        <test-method status="PASS" signature="provideDateOfBirth()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDateOfBirth" duration-ms="4041" started-at="2017-11-14T18:36:34Z" finished-at="2017-11-14T18:36:38Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Date of Birth successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDateOfBirth -->
-        <test-method status="FAIL" signature="providePlaceOfBirth(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePlaceOfBirth" duration-ms="127" started-at="2017-11-10T17:32:09Z" finished-at="2017-11-10T17:32:09Z">
+        <test-method status="PASS" signature="providePlaceOfBirth(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePlaceOfBirth" duration-ms="359" started-at="2017-11-14T18:36:38Z" finished-at="2017-11-14T18:36:38Z">
           <params>
             <param index="0">
               <value>
@@ -445,77 +493,20 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 76 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 76 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.providePlaceOfBirth(FillUpApplicationForm.java:107)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
+            <line>
+              <![CDATA[User has entered PlaceOfBirth value successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- providePlaceOfBirth -->
-        <test-method status="PASS" signature="provideGender()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGender" duration-ms="349" started-at="2017-11-10T17:32:09Z" finished-at="2017-11-10T17:32:09Z">
+        <test-method status="PASS" signature="provideGender()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGender" duration-ms="297" started-at="2017-11-14T18:36:38Z" finished-at="2017-11-14T18:36:39Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Gender value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGender -->
-        <test-method status="PASS" signature="provideBloodGroup(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideBloodGroup" duration-ms="137" started-at="2017-11-10T17:32:09Z" finished-at="2017-11-10T17:32:09Z">
+        <test-method status="PASS" signature="provideBloodGroup(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideBloodGroup" duration-ms="141" started-at="2017-11-14T18:36:39Z" finished-at="2017-11-14T18:36:39Z">
           <params>
             <param index="0">
               <value>
@@ -529,7 +520,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideBloodGroup -->
-        <test-method status="PASS" signature="provideNationality(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideNationality" duration-ms="208" started-at="2017-11-10T17:32:09Z" finished-at="2017-11-10T17:32:10Z">
+        <test-method status="PASS" signature="provideNationality(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideNationality" duration-ms="208" started-at="2017-11-14T18:36:39Z" finished-at="2017-11-14T18:36:39Z">
           <params>
             <param index="0">
               <value>
@@ -543,7 +534,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideNationality -->
-        <test-method status="FAIL" signature="provideAadharNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAadharNumber" duration-ms="82" started-at="2017-11-10T17:32:10Z" finished-at="2017-11-10T17:32:10Z">
+        <test-method status="PASS" signature="provideAadharNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAadharNumber" duration-ms="261" started-at="2017-11-14T18:36:39Z" finished-at="2017-11-14T18:36:39Z">
           <params>
             <param index="0">
               <value>
@@ -551,141 +542,27 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 46 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 46 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.provideAadharNumber(FillUpApplicationForm.java:167)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
+            <line>
+              <![CDATA[User has entered Aadhaar Number value successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- provideAadharNumber -->
-        <test-method status="FAIL" signature="providePassportNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePassportNumber" duration-ms="73" started-at="2017-11-10T17:32:10Z" finished-at="2017-11-10T17:32:10Z">
+        <test-method status="PASS" signature="providePassportNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePassportNumber" duration-ms="97" started-at="2017-11-14T18:36:39Z" finished-at="2017-11-14T18:36:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[A-2025100000]]>
+                <![CDATA[]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 40 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 40 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.providePassportNumber(FillUpApplicationForm.java:182)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
+            <line>
+              <![CDATA[User has entered Passport Number value successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- providePassportNumber -->
-        <test-method status="FAIL" signature="providePlaceOfIssue(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePlaceOfIssue" duration-ms="75" started-at="2017-11-10T17:32:10Z" finished-at="2017-11-10T17:32:10Z">
+        <test-method status="PASS" signature="providePlaceOfIssue(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePlaceOfIssue" duration-ms="189" started-at="2017-11-14T18:36:39Z" finished-at="2017-11-14T18:36:40Z">
           <params>
             <param index="0">
               <value>
@@ -693,284 +570,41 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 43 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 43 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.providePlaceOfIssue(FillUpApplicationForm.java:197)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
+            <line>
+              <![CDATA[User has entered Place Of Issue value successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- providePlaceOfIssue -->
-        <test-method status="FAIL" signature="clickDateOfIssueInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="clickDateOfIssueInputField" duration-ms="73" started-at="2017-11-10T17:32:10Z" finished-at="2017-11-10T17:32:10Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.clickDateOfIssueInputField(FillUpApplicationForm.java:215)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="clickDateOfIssueInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="clickDateOfIssueInputField" duration-ms="202" started-at="2017-11-14T18:36:40Z" finished-at="2017-11-14T18:36:40Z">
           <reporter-output>
+            <line>
+              <![CDATA[User has opened date of issue calender successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- clickDateOfIssueInputField -->
-        <test-method status="FAIL" signature="provideDateOfIssue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDateOfIssue" duration-ms="236" started-at="2017-11-10T17:32:10Z" finished-at="2017-11-10T17:32:10Z">
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible: Element is not currently visible and may not be manipulated
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 57 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible: Element is not currently visible and may not be manipulated
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 57 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:179)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.provideDateOfIssue(FillUpApplicationForm.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+        <test-method status="PASS" signature="provideDateOfIssue()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDateOfIssue" duration-ms="3819" started-at="2017-11-14T18:36:40Z" finished-at="2017-11-14T18:36:44Z">
           <reporter-output>
+            <line>
+              <![CDATA[User has provided Date of Issue successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- provideDateOfIssue -->
-        <test-method status="FAIL" signature="clickExpiryDateInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="clickExpiryDateInputField" duration-ms="86" started-at="2017-11-10T17:32:10Z" finished-at="2017-11-10T17:32:10Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.clickExpiryDateInputField(FillUpApplicationForm.java:263)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="clickExpiryDateInputField()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="clickExpiryDateInputField" duration-ms="210" started-at="2017-11-14T18:36:44Z" finished-at="2017-11-14T18:36:44Z">
           <reporter-output>
+            <line>
+              <![CDATA[User has opened Expiry Date calender successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- clickExpiryDateInputField -->
-        <test-method status="FAIL" signature="provideExpiryDate()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideExpiryDate" duration-ms="192" started-at="2017-11-10T17:32:10Z" finished-at="2017-11-10T17:32:10Z">
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible: Element is not currently visible and may not be manipulated
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 54 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible: Element is not currently visible and may not be manipulated
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 54 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:179)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.provideExpiryDate(FillUpApplicationForm.java:273)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+        <test-method status="PASS" signature="provideExpiryDate()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideExpiryDate" duration-ms="4046" started-at="2017-11-14T18:36:44Z" finished-at="2017-11-14T18:36:48Z">
           <reporter-output>
+            <line>
+              <![CDATA[User has provided Expiry Date successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- provideExpiryDate -->
-        <test-method status="FAIL" signature="provideReligion(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideReligion" duration-ms="87" started-at="2017-11-10T17:32:10Z" finished-at="2017-11-10T17:32:11Z">
+        <test-method status="PASS" signature="provideReligion(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideReligion" duration-ms="182" started-at="2017-11-14T18:36:48Z" finished-at="2017-11-14T18:36:48Z">
           <params>
             <param index="0">
               <value>
@@ -978,70 +612,13 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 45 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 45 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.provideReligion(FillUpApplicationForm.java:310)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
+            <line>
+              <![CDATA[User has entered Religion value successfully.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- provideReligion -->
-        <test-method status="PASS" signature="provideCitizenship(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideCitizenship" duration-ms="233" started-at="2017-11-10T17:32:11Z" finished-at="2017-11-10T17:32:11Z">
+        <test-method status="PASS" signature="provideCitizenship(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideCitizenship" duration-ms="212" started-at="2017-11-14T18:36:48Z" finished-at="2017-11-14T18:36:48Z">
           <params>
             <param index="0">
               <value>
@@ -1055,28 +632,49 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideCitizenship -->
-        <test-method status="PASS" signature="provideCaste()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideCaste" duration-ms="341" started-at="2017-11-10T17:32:11Z" finished-at="2017-11-10T17:32:11Z">
+        <test-method status="PASS" signature="provideCaste(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideCaste" duration-ms="632" started-at="2017-11-14T18:36:48Z" finished-at="2017-11-14T18:36:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OtherCasteName]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[User has entered Caste value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCaste -->
-        <test-method status="PASS" signature="provideDomicile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDomicile" duration-ms="306" started-at="2017-11-10T17:32:11Z" finished-at="2017-11-10T17:32:11Z">
+        <test-method status="PASS" signature="provideDomicile(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDomicile" duration-ms="881" started-at="2017-11-14T18:36:49Z" finished-at="2017-11-14T18:36:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OtherDomicileName]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[User has entered Domicile value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDomicile -->
-        <test-method status="PASS" signature="provideCommunity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideCommunity" duration-ms="312" started-at="2017-11-10T17:32:11Z" finished-at="2017-11-10T17:32:12Z">
+        <test-method status="PASS" signature="provideCommunity(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideCommunity" duration-ms="788" started-at="2017-11-14T18:36:50Z" finished-at="2017-11-14T18:36:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OtherCommunityName]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[User has entered Community value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCommunity -->
-        <test-method status="PASS" signature="providePresentAddress(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePresentAddress" duration-ms="286" started-at="2017-11-10T17:32:12Z" finished-at="2017-11-10T17:32:12Z">
+        <test-method status="PASS" signature="providePresentAddress(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePresentAddress" duration-ms="311" started-at="2017-11-14T18:36:51Z" finished-at="2017-11-14T18:36:51Z">
           <params>
             <param index="0">
               <value>
@@ -1090,117 +688,112 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddress -->
-        <test-method status="PASS" signature="providePresentAddrCountry()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePresentAddrCountry" duration-ms="391" started-at="2017-11-10T17:32:12Z" finished-at="2017-11-10T17:32:12Z">
+        <test-method status="PASS" signature="providePresentAddrCountry()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePresentAddrCountry" duration-ms="361" started-at="2017-11-14T18:36:51Z" finished-at="2017-11-14T18:36:51Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Country value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrCountry -->
-        <test-method status="PASS" signature="providePresentAddrState()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePresentAddrState" duration-ms="351" started-at="2017-11-10T17:32:12Z" finished-at="2017-11-10T17:32:13Z">
+        <test-method status="PASS" signature="providePresentAddrState()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePresentAddrState" duration-ms="319" started-at="2017-11-14T18:36:51Z" finished-at="2017-11-14T18:36:52Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered State value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrState -->
-        <test-method status="PASS" signature="providePresentAddrCity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePresentAddrCity" duration-ms="314" started-at="2017-11-10T17:32:13Z" finished-at="2017-11-10T17:32:13Z">
+        <test-method status="PASS" signature="providePresentAddrCity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePresentAddrCity" duration-ms="283" started-at="2017-11-14T18:36:52Z" finished-at="2017-11-14T18:36:52Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered City value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrCity -->
-        <test-method status="FAIL" signature="providePresentAddrPincode(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePresentAddrPincode" duration-ms="77" started-at="2017-11-10T17:32:13Z" finished-at="2017-11-10T17:32:13Z">
+        <test-method status="PASS" signature="providePresentAddrPincode(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePresentAddrPincode" duration-ms="189" started-at="2017-11-14T18:36:52Z" finished-at="2017-11-14T18:36:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[416116]]>
+                <![CDATA[216116]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 42 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 42 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-TMQM6DS', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\SHEKHA~1.DES\AppData\Local\Temp\scoped_dir25060_22754}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c7a09337ed53fde4954d7bd5f5655aac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at whitefeather.xedge.testcases.FillUpApplicationForm.providePresentAddrPincode(FillUpApplicationForm.java:444)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
+            <line>
+              <![CDATA[User has successfully entered Pincode value in Present Address section.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrPincode -->
-        <test-method status="PASS" signature="providePresentAddrContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePresentAddrContactNumber" duration-ms="305" started-at="2017-11-10T17:32:13Z" finished-at="2017-11-10T17:32:13Z">
+        <test-method status="PASS" signature="providePresentAddrContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePresentAddrContactNumber" duration-ms="280" started-at="2017-11-14T18:36:52Z" finished-at="2017-11-14T18:36:52Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Emergency Contact Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePresentAddrContactNumber -->
-        <test-method status="PASS" signature="clickSameAddressCheckbox()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="clickSameAddressCheckbox" duration-ms="1281" started-at="2017-11-10T17:32:13Z" finished-at="2017-11-10T17:32:15Z">
+        <test-method status="PASS" signature="providePermanentAddressAddress(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePermanentAddressAddress" duration-ms="287" started-at="2017-11-14T18:36:52Z" finished-at="2017-11-14T18:36:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Permanent_Address_Step1_]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[User has entered Permanent Address value successfully.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- clickSameAddressCheckbox -->
-        <test-method status="PASS" signature="clickNextButtonStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="clickNextButtonStep1" duration-ms="167" started-at="2017-11-10T17:32:15Z" finished-at="2017-11-10T17:32:15Z">
+        </test-method> <!-- providePermanentAddressAddress -->
+        <test-method status="PASS" signature="providePermanentAddrCountry()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePermanentAddrCountry" duration-ms="367" started-at="2017-11-14T18:36:53Z" finished-at="2017-11-14T18:36:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Country value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- providePermanentAddrCountry -->
+        <test-method status="PASS" signature="providePermanentAddrState()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePermanentAddrState" duration-ms="326" started-at="2017-11-14T18:36:53Z" finished-at="2017-11-14T18:36:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered State value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- providePermanentAddrState -->
+        <test-method status="PASS" signature="providePermanentAddrCity()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePermanentAddrCity" duration-ms="319" started-at="2017-11-14T18:36:53Z" finished-at="2017-11-14T18:36:54Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered City value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- providePermanentAddrCity -->
+        <test-method status="PASS" signature="providePermanentAddrPincode(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePermanentAddrPincode" duration-ms="190" started-at="2017-11-14T18:36:54Z" finished-at="2017-11-14T18:36:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[316126]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[User has successfully entered Pincode value in Permanent Address section.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- providePermanentAddrPincode -->
+        <test-method status="PASS" signature="providePermanentAddrContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePermanentAddrContactNumber" duration-ms="285" started-at="2017-11-14T18:36:54Z" finished-at="2017-11-14T18:36:54Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User has entered Emergency Contact Number value successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- providePermanentAddrContactNumber -->
+        <test-method status="PASS" signature="clickNextButtonStep1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="clickNextButtonStep1" duration-ms="160" started-at="2017-11-14T18:36:54Z" finished-at="2017-11-14T18:36:54Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Next button  on Step 1 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickNextButtonStep1 -->
-        <test-method status="PASS" signature="provideFathersName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideFathersName" duration-ms="4655" started-at="2017-11-10T17:32:15Z" finished-at="2017-11-10T17:32:20Z">
+        <test-method status="PASS" signature="provideFathersName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideFathersName" duration-ms="4403" started-at="2017-11-14T18:36:54Z" finished-at="2017-11-14T18:36:59Z">
           <params>
             <param index="0">
               <value>
@@ -1214,7 +807,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersName -->
-        <test-method status="PASS" signature="provideFathersQualification(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideFathersQualification" duration-ms="278" started-at="2017-11-10T17:32:20Z" finished-at="2017-11-10T17:32:20Z">
+        <test-method status="PASS" signature="provideFathersQualification(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideFathersQualification" duration-ms="214" started-at="2017-11-14T18:36:59Z" finished-at="2017-11-14T18:36:59Z">
           <params>
             <param index="0">
               <value>
@@ -1228,7 +821,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersQualification -->
-        <test-method status="PASS" signature="provideFathersOccupation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideFathersOccupation" duration-ms="299" started-at="2017-11-10T17:32:20Z" finished-at="2017-11-10T17:32:20Z">
+        <test-method status="PASS" signature="provideFathersOccupation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideFathersOccupation" duration-ms="230" started-at="2017-11-14T18:36:59Z" finished-at="2017-11-14T18:36:59Z">
           <params>
             <param index="0">
               <value>
@@ -1242,7 +835,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersOccupation -->
-        <test-method status="PASS" signature="provideAnnualIncome(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAnnualIncome" duration-ms="250" started-at="2017-11-10T17:32:20Z" finished-at="2017-11-10T17:32:20Z">
+        <test-method status="PASS" signature="provideAnnualIncome(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAnnualIncome" duration-ms="193" started-at="2017-11-14T18:36:59Z" finished-at="2017-11-14T18:36:59Z">
           <params>
             <param index="0">
               <value>
@@ -1256,21 +849,21 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideAnnualIncome -->
-        <test-method status="PASS" signature="provideFathersEmail()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideFathersEmail" duration-ms="516" started-at="2017-11-10T17:32:20Z" finished-at="2017-11-10T17:32:21Z">
+        <test-method status="PASS" signature="provideFathersEmail()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideFathersEmail" duration-ms="428" started-at="2017-11-14T18:36:59Z" finished-at="2017-11-14T18:37:00Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Fathers Email value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersEmail -->
-        <test-method status="PASS" signature="provideFathersMobile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideFathersMobile" duration-ms="332" started-at="2017-11-10T17:32:21Z" finished-at="2017-11-10T17:32:21Z">
+        <test-method status="PASS" signature="provideFathersMobile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideFathersMobile" duration-ms="265" started-at="2017-11-14T18:37:00Z" finished-at="2017-11-14T18:37:00Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Fathers Mobile value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideFathersMobile -->
-        <test-method status="PASS" signature="provideMothersName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideMothersName" duration-ms="478" started-at="2017-11-10T17:32:21Z" finished-at="2017-11-10T17:32:22Z">
+        <test-method status="PASS" signature="provideMothersName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideMothersName" duration-ms="387" started-at="2017-11-14T18:37:00Z" finished-at="2017-11-14T18:37:00Z">
           <params>
             <param index="0">
               <value>
@@ -1284,7 +877,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideMothersName -->
-        <test-method status="PASS" signature="provideMothersQualification(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideMothersQualification" duration-ms="264" started-at="2017-11-10T17:32:22Z" finished-at="2017-11-10T17:32:22Z">
+        <test-method status="PASS" signature="provideMothersQualification(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideMothersQualification" duration-ms="342" started-at="2017-11-14T18:37:00Z" finished-at="2017-11-14T18:37:01Z">
           <params>
             <param index="0">
               <value>
@@ -1298,7 +891,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideMothersQualification -->
-        <test-method status="PASS" signature="provideMothersOccupation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideMothersOccupation" duration-ms="304" started-at="2017-11-10T17:32:22Z" finished-at="2017-11-10T17:32:22Z">
+        <test-method status="PASS" signature="provideMothersOccupation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideMothersOccupation" duration-ms="365" started-at="2017-11-14T18:37:01Z" finished-at="2017-11-14T18:37:01Z">
           <params>
             <param index="0">
               <value>
@@ -1312,21 +905,21 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideMothersOccupation -->
-        <test-method status="PASS" signature="provideMothersEmail()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideMothersEmail" duration-ms="430" started-at="2017-11-10T17:32:22Z" finished-at="2017-11-10T17:32:23Z">
+        <test-method status="PASS" signature="provideMothersEmail()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideMothersEmail" duration-ms="392" started-at="2017-11-14T18:37:01Z" finished-at="2017-11-14T18:37:02Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Mothers Email value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideMothersEmail -->
-        <test-method status="PASS" signature="provideMothersMobile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideMothersMobile" duration-ms="328" started-at="2017-11-10T17:32:23Z" finished-at="2017-11-10T17:32:23Z">
+        <test-method status="PASS" signature="provideMothersMobile()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideMothersMobile" duration-ms="232" started-at="2017-11-14T18:37:02Z" finished-at="2017-11-14T18:37:02Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Mothers Mobile value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideMothersMobile -->
-        <test-method status="PASS" signature="provideGuardiansName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGuardiansName" duration-ms="568" started-at="2017-11-10T17:32:23Z" finished-at="2017-11-10T17:32:24Z">
+        <test-method status="PASS" signature="provideGuardiansName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGuardiansName" duration-ms="473" started-at="2017-11-14T18:37:02Z" finished-at="2017-11-14T18:37:02Z">
           <params>
             <param index="0">
               <value>
@@ -1340,7 +933,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansName -->
-        <test-method status="PASS" signature="provideGuardiansAddress1(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGuardiansAddress1" duration-ms="252" started-at="2017-11-10T17:32:24Z" finished-at="2017-11-10T17:32:24Z">
+        <test-method status="PASS" signature="provideGuardiansAddress1(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGuardiansAddress1" duration-ms="240" started-at="2017-11-14T18:37:02Z" finished-at="2017-11-14T18:37:03Z">
           <params>
             <param index="0">
               <value>
@@ -1354,7 +947,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansAddress1 -->
-        <test-method status="PASS" signature="provideGuardiansAddress2(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGuardiansAddress2" duration-ms="316" started-at="2017-11-10T17:32:24Z" finished-at="2017-11-10T17:32:24Z">
+        <test-method status="PASS" signature="provideGuardiansAddress2(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGuardiansAddress2" duration-ms="251" started-at="2017-11-14T18:37:03Z" finished-at="2017-11-14T18:37:03Z">
           <params>
             <param index="0">
               <value>
@@ -1368,7 +961,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansAddress2 -->
-        <test-method status="PASS" signature="provideGuardiansAddress3(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGuardiansAddress3" duration-ms="260" started-at="2017-11-10T17:32:24Z" finished-at="2017-11-10T17:32:24Z">
+        <test-method status="PASS" signature="provideGuardiansAddress3(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGuardiansAddress3" duration-ms="292" started-at="2017-11-14T18:37:03Z" finished-at="2017-11-14T18:37:03Z">
           <params>
             <param index="0">
               <value>
@@ -1382,11 +975,11 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansAddress3 -->
-        <test-method status="PASS" signature="provideGuardiansAddrPincode(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGuardiansAddrPincode" duration-ms="208" started-at="2017-11-10T17:32:24Z" finished-at="2017-11-10T17:32:25Z">
+        <test-method status="PASS" signature="provideGuardiansAddrPincode(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGuardiansAddrPincode" duration-ms="174" started-at="2017-11-14T18:37:03Z" finished-at="2017-11-14T18:37:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[416115]]>
+                <![CDATA[516115]]>
               </value>
             </param>
           </params>
@@ -1396,7 +989,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansAddrPincode -->
-        <test-method status="PASS" signature="provideGuardiansRelation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGuardiansRelation" duration-ms="401" started-at="2017-11-10T17:32:25Z" finished-at="2017-11-10T17:32:25Z">
+        <test-method status="PASS" signature="provideGuardiansRelation(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGuardiansRelation" duration-ms="285" started-at="2017-11-14T18:37:03Z" finished-at="2017-11-14T18:37:04Z">
           <params>
             <param index="0">
               <value>
@@ -1410,49 +1003,49 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansRelation -->
-        <test-method status="PASS" signature="provideGuardiansContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGuardiansContactNumber" duration-ms="292" started-at="2017-11-10T17:32:25Z" finished-at="2017-11-10T17:32:25Z">
+        <test-method status="PASS" signature="provideGuardiansContactNumber()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGuardiansContactNumber" duration-ms="233" started-at="2017-11-14T18:37:04Z" finished-at="2017-11-14T18:37:04Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Guardians Contact Number value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideGuardiansContactNumber -->
-        <test-method status="PASS" signature="clickNextButtonStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="clickNextButtonStep2" duration-ms="3177" started-at="2017-11-10T17:32:25Z" finished-at="2017-11-10T17:32:29Z">
+        <test-method status="PASS" signature="clickNextButtonStep2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="clickNextButtonStep2" duration-ms="3168" started-at="2017-11-14T18:37:04Z" finished-at="2017-11-14T18:37:07Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Next button on Step 2successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickNextButtonStep2 -->
-        <test-method status="PASS" signature="provideCourse()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideCourse" duration-ms="4382" started-at="2017-11-10T17:32:29Z" finished-at="2017-11-10T17:32:33Z">
+        <test-method status="PASS" signature="provideCourse()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideCourse" duration-ms="4319" started-at="2017-11-14T18:37:07Z" finished-at="2017-11-14T18:37:11Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Course value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideCourse -->
-        <test-method status="PASS" signature="provideSSCSchoolName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideSSCSchoolName" duration-ms="444" started-at="2017-11-10T17:32:33Z" finished-at="2017-11-10T17:32:33Z">
+        <test-method status="PASS" signature="provideSSCSchoolName()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideSSCSchoolName" duration-ms="496" started-at="2017-11-14T18:37:11Z" finished-at="2017-11-14T18:37:12Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered SSC School Name value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCSchoolName -->
-        <test-method status="PASS" signature="provideSSCBoard()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideSSCBoard" duration-ms="312" started-at="2017-11-10T17:32:33Z" finished-at="2017-11-10T17:32:34Z">
+        <test-method status="PASS" signature="provideSSCBoard()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideSSCBoard" duration-ms="359" started-at="2017-11-14T18:37:12Z" finished-at="2017-11-14T18:37:12Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered SSCBoard value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCBoard -->
-        <test-method status="PASS" signature="provideSSCYearOfPassing()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideSSCYearOfPassing" duration-ms="383" started-at="2017-11-10T17:32:34Z" finished-at="2017-11-10T17:32:34Z">
+        <test-method status="PASS" signature="provideSSCYearOfPassing()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideSSCYearOfPassing" duration-ms="423" started-at="2017-11-14T18:37:12Z" finished-at="2017-11-14T18:37:13Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered SSC Year of Passing value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCYearOfPassing -->
-        <test-method status="PASS" signature="provideSSCRegNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideSSCRegNumber" duration-ms="260" started-at="2017-11-10T17:32:34Z" finished-at="2017-11-10T17:32:34Z">
+        <test-method status="PASS" signature="provideSSCRegNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideSSCRegNumber" duration-ms="311" started-at="2017-11-14T18:37:13Z" finished-at="2017-11-14T18:37:13Z">
           <params>
             <param index="0">
               <value>
@@ -1466,14 +1059,21 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCRegNumber -->
-        <test-method status="PASS" signature="provideSSCModeOfStudy()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideSSCModeOfStudy" duration-ms="352" started-at="2017-11-10T17:32:34Z" finished-at="2017-11-10T17:32:35Z">
+        <test-method status="PASS" signature="provideSSCModeOfStudy(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideSSCModeOfStudy" duration-ms="710" started-at="2017-11-14T18:37:13Z" finished-at="2017-11-14T18:37:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[otherSSCModeName]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[User has entered SSC Mode of Study value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCModeOfStudy -->
-        <test-method status="PASS" signature="provideSSCPercentageValue(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideSSCPercentageValue" duration-ms="140" started-at="2017-11-10T17:32:35Z" finished-at="2017-11-10T17:32:35Z">
+        <test-method status="PASS" signature="provideSSCPercentageValue(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideSSCPercentageValue" duration-ms="121" started-at="2017-11-14T18:37:14Z" finished-at="2017-11-14T18:37:14Z">
           <params>
             <param index="0">
               <value>
@@ -1487,7 +1087,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideSSCPercentageValue -->
-        <test-method status="PASS" signature="provideHSCSchoolName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideHSCSchoolName" duration-ms="498" started-at="2017-11-10T17:32:35Z" finished-at="2017-11-10T17:32:35Z">
+        <test-method status="PASS" signature="provideHSCSchoolName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideHSCSchoolName" duration-ms="440" started-at="2017-11-14T18:37:14Z" finished-at="2017-11-14T18:37:14Z">
           <params>
             <param index="0">
               <value>
@@ -1501,28 +1101,35 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCSchoolName -->
-        <test-method status="PASS" signature="provideHSCBoard()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideHSCBoard" duration-ms="320" started-at="2017-11-10T17:32:35Z" finished-at="2017-11-10T17:32:36Z">
+        <test-method status="PASS" signature="provideHSCBoard()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideHSCBoard" duration-ms="381" started-at="2017-11-14T18:37:14Z" finished-at="2017-11-14T18:37:14Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered HSCBoard value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCBoard -->
-        <test-method status="PASS" signature="provideModeOfStudyHSC()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideModeOfStudyHSC" duration-ms="1721" started-at="2017-11-10T17:32:36Z" finished-at="2017-11-10T17:32:37Z">
+        <test-method status="PASS" signature="provideModeOfStudyHSC(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideModeOfStudyHSC" duration-ms="1913" started-at="2017-11-14T18:37:14Z" finished-at="2017-11-14T18:37:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[otherHSCModeName]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[User has entered HSC Mode Of Study value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideModeOfStudyHSC -->
-        <test-method status="PASS" signature="provideHSCYearOfPassing()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideHSCYearOfPassing" duration-ms="1693" started-at="2017-11-10T17:32:37Z" finished-at="2017-11-10T17:32:39Z">
+        <test-method status="PASS" signature="provideHSCYearOfPassing()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideHSCYearOfPassing" duration-ms="1394" started-at="2017-11-14T18:37:16Z" finished-at="2017-11-14T18:37:18Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered HSC Year Of Passing value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCYearOfPassing -->
-        <test-method status="PASS" signature="provideHSCPercentageGradeType(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideHSCPercentageGradeType" duration-ms="1747" started-at="2017-11-10T17:32:39Z" finished-at="2017-11-10T17:32:41Z">
+        <test-method status="PASS" signature="provideHSCPercentageGradeType(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideHSCPercentageGradeType" duration-ms="1401" started-at="2017-11-14T18:37:18Z" finished-at="2017-11-14T18:37:19Z">
           <params>
             <param index="0">
               <value>
@@ -1536,7 +1143,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCPercentageGradeType -->
-        <test-method status="PASS" signature="provideHSCRegNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideHSCRegNumber" duration-ms="270" started-at="2017-11-10T17:32:41Z" finished-at="2017-11-10T17:32:41Z">
+        <test-method status="PASS" signature="provideHSCRegNumber(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideHSCRegNumber" duration-ms="241" started-at="2017-11-14T18:37:19Z" finished-at="2017-11-14T18:37:19Z">
           <params>
             <param index="0">
               <value>
@@ -1550,7 +1157,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCRegNumber -->
-        <test-method status="PASS" signature="provideHSCSubjectScoreDetails(int)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideHSCSubjectScoreDetails" duration-ms="6532" started-at="2017-11-10T17:32:41Z" finished-at="2017-11-10T17:32:48Z">
+        <test-method status="PASS" signature="provideHSCSubjectScoreDetails(int)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideHSCSubjectScoreDetails" duration-ms="5608" started-at="2017-11-14T18:37:19Z" finished-at="2017-11-14T18:37:25Z">
           <params>
             <param index="0">
               <value>
@@ -1564,7 +1171,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideHSCSubjectScoreDetails -->
-        <test-method status="PASS" signature="provideEntranceExamDetails(int)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideEntranceExamDetails" duration-ms="5553" started-at="2017-11-10T17:32:48Z" finished-at="2017-11-10T17:32:53Z">
+        <test-method status="PASS" signature="provideEntranceExamDetails(int)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideEntranceExamDetails" duration-ms="5020" started-at="2017-11-14T18:37:25Z" finished-at="2017-11-14T18:37:30Z">
           <params>
             <param index="0">
               <value>
@@ -1578,14 +1185,14 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideEntranceExamDetails -->
-        <test-method status="PASS" signature="provideDegreeOrDiplomaType()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDegreeOrDiplomaType" duration-ms="457" started-at="2017-11-10T17:32:53Z" finished-at="2017-11-10T17:32:54Z">
+        <test-method status="PASS" signature="provideDegreeOrDiplomaType()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDegreeOrDiplomaType" duration-ms="320" started-at="2017-11-14T18:37:30Z" finished-at="2017-11-14T18:37:30Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Grad/Diploma Radio button successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDegreeOrDiplomaType -->
-        <test-method status="PASS" signature="provideDegreeOrDiplomaName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDegreeOrDiplomaName" duration-ms="780" started-at="2017-11-10T17:32:54Z" finished-at="2017-11-10T17:32:54Z">
+        <test-method status="PASS" signature="provideDegreeOrDiplomaName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDegreeOrDiplomaName" duration-ms="702" started-at="2017-11-14T18:37:30Z" finished-at="2017-11-14T18:37:31Z">
           <params>
             <param index="0">
               <value>
@@ -1599,7 +1206,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideDegreeOrDiplomaName -->
-        <test-method status="PASS" signature="provideDegreeOrDiplomaAreaOfSpecialization(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDegreeOrDiplomaAreaOfSpecialization" duration-ms="735" started-at="2017-11-10T17:32:54Z" finished-at="2017-11-10T17:32:55Z">
+        <test-method status="PASS" signature="provideDegreeOrDiplomaAreaOfSpecialization(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDegreeOrDiplomaAreaOfSpecialization" duration-ms="747" started-at="2017-11-14T18:37:31Z" finished-at="2017-11-14T18:37:32Z">
           <params>
             <param index="0">
               <value>
@@ -1613,7 +1220,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideDegreeOrDiplomaAreaOfSpecialization -->
-        <test-method status="PASS" signature="provideDegreeOrDiplomaCollegeName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDegreeOrDiplomaCollegeName" duration-ms="744" started-at="2017-11-10T17:32:55Z" finished-at="2017-11-10T17:32:56Z">
+        <test-method status="PASS" signature="provideDegreeOrDiplomaCollegeName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDegreeOrDiplomaCollegeName" duration-ms="738" started-at="2017-11-14T18:37:32Z" finished-at="2017-11-14T18:37:33Z">
           <params>
             <param index="0">
               <value>
@@ -1627,7 +1234,7 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideDegreeOrDiplomaCollegeName -->
-        <test-method status="PASS" signature="provideDegreeOrDiplomaUniversityName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDegreeOrDiplomaUniversityName" duration-ms="554" started-at="2017-11-10T17:32:56Z" finished-at="2017-11-10T17:32:56Z">
+        <test-method status="PASS" signature="provideDegreeOrDiplomaUniversityName(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDegreeOrDiplomaUniversityName" duration-ms="521" started-at="2017-11-14T18:37:33Z" finished-at="2017-11-14T18:37:33Z">
           <params>
             <param index="0">
               <value>
@@ -1641,32 +1248,39 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideDegreeOrDiplomaUniversityName -->
-        <test-method status="PASS" signature="provideDegDiplomaExamType()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDegDiplomaExamType" duration-ms="392" started-at="2017-11-10T17:32:56Z" finished-at="2017-11-10T17:32:57Z">
+        <test-method status="PASS" signature="provideDegDiplomaExamType()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDegDiplomaExamType" duration-ms="340" started-at="2017-11-14T18:37:33Z" finished-at="2017-11-14T18:37:33Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Degree/Diploma Exam Type value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDegDiplomaExamType -->
-        <test-method status="PASS" signature="provideDegDiplomaYearOfCompletion()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDegDiplomaYearOfCompletion" duration-ms="308" started-at="2017-11-10T17:32:57Z" finished-at="2017-11-10T17:32:57Z">
+        <test-method status="PASS" signature="provideDegDiplomaYearOfCompletion()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDegDiplomaYearOfCompletion" duration-ms="298" started-at="2017-11-14T18:37:33Z" finished-at="2017-11-14T18:37:34Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Degree/Diploma YoC value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDegDiplomaYearOfCompletion -->
-        <test-method status="PASS" signature="provideDegDiplomaModeOfStudy()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideDegDiplomaModeOfStudy" duration-ms="354" started-at="2017-11-10T17:32:57Z" finished-at="2017-11-10T17:32:58Z">
+        <test-method status="PASS" signature="provideDegDiplomaModeOfStudy(java.lang.String)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideDegDiplomaModeOfStudy" duration-ms="459" started-at="2017-11-14T18:37:34Z" finished-at="2017-11-14T18:37:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[otherDiplomaModeName]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[User has entered Degree/Diploma Mode Of Study value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideDegDiplomaModeOfStudy -->
-        <test-method status="PASS" signature="provideGraduationYearwiseMarksDetails(int)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideGraduationYearwiseMarksDetails" duration-ms="12995" started-at="2017-11-10T17:32:58Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideGraduationYearwiseMarksDetails(int)[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideGraduationYearwiseMarksDetails" duration-ms="8794" started-at="2017-11-14T18:37:34Z" finished-at="2017-11-14T18:37:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[4]]>
+                <![CDATA[3]]>
               </value>
             </param>
           </params>
@@ -1676,98 +1290,98 @@ Session ID: c7a09337ed53fde4954d7bd5f5655aac
             </line>
           </reporter-output>
         </test-method> <!-- provideGraduationYearwiseMarksDetails -->
-        <test-method status="PASS" signature="provideAttachment1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment1" duration-ms="93" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment1()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment1" duration-ms="95" started-at="2017-11-14T18:37:43Z" finished-at="2017-11-14T18:37:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement1 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment1 -->
-        <test-method status="PASS" signature="provideAttachment2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment2" duration-ms="88" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment2()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment2" duration-ms="69" started-at="2017-11-14T18:37:43Z" finished-at="2017-11-14T18:37:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement2 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment2 -->
-        <test-method status="PASS" signature="provideAttachment3()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment3" duration-ms="88" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment3()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment3" duration-ms="70" started-at="2017-11-14T18:37:43Z" finished-at="2017-11-14T18:37:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement3 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment3 -->
-        <test-method status="PASS" signature="provideAttachment4()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment4" duration-ms="92" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment4()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment4" duration-ms="65" started-at="2017-11-14T18:37:43Z" finished-at="2017-11-14T18:37:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement4 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment4 -->
-        <test-method status="PASS" signature="provideAttachment5()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment5" duration-ms="80" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment5()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment5" duration-ms="67" started-at="2017-11-14T18:37:43Z" finished-at="2017-11-14T18:37:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement5 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment5 -->
-        <test-method status="PASS" signature="provideAttachment6()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment6" duration-ms="72" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment6()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment6" duration-ms="67" started-at="2017-11-14T18:37:43Z" finished-at="2017-11-14T18:37:43Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement5 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment6 -->
-        <test-method status="PASS" signature="provideAttachment7()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment7" duration-ms="88" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment7()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment7" duration-ms="71" started-at="2017-11-14T18:37:43Z" finished-at="2017-11-14T18:37:44Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement7 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment7 -->
-        <test-method status="PASS" signature="provideAttachment8()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment8" duration-ms="92" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment8()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment8" duration-ms="83" started-at="2017-11-14T18:37:44Z" finished-at="2017-11-14T18:37:44Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement8 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment8 -->
-        <test-method status="PASS" signature="provideAttachment9()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment9" duration-ms="80" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment9()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment9" duration-ms="89" started-at="2017-11-14T18:37:44Z" finished-at="2017-11-14T18:37:44Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement9 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment9 -->
-        <test-method status="PASS" signature="provideAttachment10()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="provideAttachment10" duration-ms="80" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:11Z">
+        <test-method status="PASS" signature="provideAttachment10()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="provideAttachment10" duration-ms="104" started-at="2017-11-14T18:37:44Z" finished-at="2017-11-14T18:37:44Z">
           <reporter-output>
             <line>
               <![CDATA[User has provided Attachement10 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- provideAttachment10 -->
-        <test-method status="PASS" signature="clickNextButtonStep3()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="clickNextButtonStep3" duration-ms="10194" started-at="2017-11-10T17:33:11Z" finished-at="2017-11-10T17:33:22Z">
+        <test-method status="PASS" signature="clickNextButtonStep3()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="clickNextButtonStep3" duration-ms="10162" started-at="2017-11-14T18:37:44Z" finished-at="2017-11-14T18:37:54Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Next button on Step 3 successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickNextButtonStep3 -->
-        <test-method status="PASS" signature="providePaymentCourse()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePaymentCourse" duration-ms="4215" started-at="2017-11-10T17:33:22Z" finished-at="2017-11-10T17:33:26Z">
+        <test-method status="PASS" signature="providePaymentCourse()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePaymentCourse" duration-ms="4125" started-at="2017-11-14T18:37:54Z" finished-at="2017-11-14T18:37:58Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Payment Course value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePaymentCourse -->
-        <test-method status="PASS" signature="providePaymentType()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="providePaymentType" duration-ms="368" started-at="2017-11-10T17:33:26Z" finished-at="2017-11-10T17:33:26Z">
+        <test-method status="PASS" signature="providePaymentType()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="providePaymentType" duration-ms="185" started-at="2017-11-14T18:37:58Z" finished-at="2017-11-14T18:37:58Z">
           <reporter-output>
             <line>
               <![CDATA[User has entered Payment Type value successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- providePaymentType -->
-        <test-method status="PASS" signature="clickSubmitButtonStep4()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@3a5ed7a6]" name="clickSubmitButtonStep4" duration-ms="11398" started-at="2017-11-10T17:33:26Z" finished-at="2017-11-10T17:33:38Z">
+        <test-method status="PASS" signature="clickSubmitButtonStep4()[pri:0, instance:whitefeather.xedge.testcases.FillUpApplicationForm@4f970963]" name="clickSubmitButtonStep4" duration-ms="5616" started-at="2017-11-14T18:37:58Z" finished-at="2017-11-14T18:38:04Z">
           <reporter-output>
             <line>
               <![CDATA[User has clicked Submit button on Step 4 successfully.]]>

@@ -41,6 +41,7 @@ public class HelperHand
 	public static final String  thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	
 	public static final String step1PresentAddrContactNumber = Long.toString(DataGenerator.randomMobileNumberGenerator());
+	public static final String step1PermanentAddrContactNumber = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String thirdPartyEmergencyLeadEmail = DataGenerator.randomEmailGenerator();
 	public static final String thirdPartyAlternateContact = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String thirdPartyGuardiansContact = Long.toString(DataGenerator.randomMobileNumberGenerator());
@@ -100,5 +101,17 @@ public class HelperHand
 		DatabaseManager.getLeadDataFromDatabase();
 		return (String) dbValues.get(columnName);
 	}
+	
+	/*List<String> results = new ArrayList<String>();
+
+
+	File[] files = new File("/path/to/the/directory").listFiles();
+	//If this pathname does not denote a directory, then listFiles() returns null. 
+
+	for (File file : files) {
+	    if (file.isFile()) {
+	        results.add(file.getName());
+	    }
+	}*/
 }
 

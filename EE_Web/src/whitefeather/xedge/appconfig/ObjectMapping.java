@@ -122,6 +122,11 @@ public class ObjectMapping
 	{
 		return (String)properties.getProperty("LeadList_CountAPI");
 	}
+	
+	public String getAllMastersEEV2API()
+	{
+		return (String)properties.getProperty("GetAllMasters_API_EEV2");
+	}
 
 	/*public String getBCCEmailAddresses() 
 	{		

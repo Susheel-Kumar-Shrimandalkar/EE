@@ -46,7 +46,7 @@
 				<include name="provideNationality"/>
 				<parameter name="uid" value="252025100000"/>
 				<include name="provideAadharNumber"/>
-				<parameter name="pNumber" value="A-2025100000"/>
+				<parameter name="pNumber" value=""/>
 				<include name="providePassportNumber"/>
 				<parameter name="plOfIssue" value="Pune"/>
 				<include name="providePlaceOfIssue"/>
@@ -58,18 +58,29 @@
 				<include name="provideReligion"/>
 				<parameter name="citizen" value="Kolhapur"/>
 				<include name="provideCitizenship"/>
+				<parameter name="otherCasteValue" value="OtherCasteName"/>
 				<include name="provideCaste"/>
+				<parameter name="otherDomicileValue" value="OtherDomicileName"/>
 				<include name="provideDomicile"/>
+				<parameter name="otherCommunityValue" value="OtherCommunityName"/>
 				<include name="provideCommunity"/>
 				<parameter name="presentAddress" value="Present_Address_Step1_"/>
 				<include name="providePresentAddress"/>
 				<include name="providePresentAddrCountry"/>
 				<include name="providePresentAddrState"/>
 				<include name="providePresentAddrCity"/>
-				<parameter name="pincode" value="416116"/>
+				<parameter name="pincode" value="216116"/>
 				<include name="providePresentAddrPincode"/>
 				<include name="providePresentAddrContactNumber"/> 
-				<include name="clickSameAddressCheckbox"/>
+				<!-- <include name="clickSameAddressCheckbox"/> -->
+				<parameter name="permanentAddress" value="Permanent_Address_Step1_"/>
+				<include name="providePermanentAddressAddress"/>
+				<include name="providePermanentAddrCountry"/>
+				<include name="providePermanentAddrState"/>
+				<include name="providePermanentAddrCity"/>
+				<parameter name="Perm_pincode" value="316126"/>
+				<include name="providePermanentAddrPincode"/>
+				<include name="providePermanentAddrContactNumber"/> 
 				<include name="clickNextButtonStep1"/>
 				<!-- <include name="validateDoBStep1"/>
 				<include name="validatePlaceOfBirthStep1"/>
@@ -116,8 +127,7 @@
 				<include name="provideGuardiansAddress2"/>
 				<parameter name="address3" value="Address3Field"/>
 				<include name="provideGuardiansAddress3"/>
-				<parameter name="lgpincode" value="416115"/>
-				<include name="provideGuardiansAddress3"/>
+				<parameter name="lgpincode" value="516115"/>
 				<include name="provideGuardiansAddrPincode"/>
 				<parameter name="lgrelation" value="Brother-in-law"/>
 				<include name="provideGuardiansRelation"/>
@@ -147,12 +157,14 @@
 				<include name="provideSSCYearOfPassing"/>
 				<parameter name="sscRegNumber" value="136346533"/>
 				<include name="provideSSCRegNumber"/>
+				<parameter name="otherSSCMode" value="otherSSCModeName"/>
 				<include name="provideSSCModeOfStudy"/>
 				<parameter name="sscGradePercent" value="87"/>
 				<include name="provideSSCPercentageValue"/>
 				<parameter name="hscSchoolName" value="HSCSchoolName"/>
 				<include name="provideHSCSchoolName"/>
 				<include name="provideHSCBoard"/>
+				<parameter name="otherHSCMode" value="otherHSCModeName"/>
 				<include name="provideModeOfStudyHSC"/>
 				<include name="provideHSCYearOfPassing"/>
 				<parameter name="hscGradePercent" value="94.24"/>
@@ -174,8 +186,9 @@
 				<include name="provideDegreeOrDiplomaUniversityName"/>
 				<include name="provideDegDiplomaExamType"/>
 				<include name="provideDegDiplomaYearOfCompletion"/>
+				<parameter name="otherDiplomaMode" value="otherDiplomaModeName"/>
 				<include name="provideDegDiplomaModeOfStudy"/>
-				<parameter name="gradYears" value="4"/>
+				<parameter name="gradYears" value="3"/>
 				<include name="provideGraduationYearwiseMarksDetails"/>
 				<include name="provideAttachment1"/>
 				<include name="provideAttachment2"/>
