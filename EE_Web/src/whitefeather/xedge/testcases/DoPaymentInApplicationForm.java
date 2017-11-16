@@ -128,34 +128,93 @@ public class DoPaymentInApplicationForm extends HelperHand
 	}
 	
 	@Test
-	public static void validateSuccessfulPayment() throws Exception
+	public static void validatePaymentMode() throws Exception
 	{
-		try 
-		{
+		try {
+			System.out.println("--------------Validating Payment Mode--------------");
+			WebDriverWait wait4 = new WebDriverWait(driver, 30);
+			wait4.until(ExpectedConditions.visibilityOf(Page_AppFormPayment.displayPaymentModeSectionInSuccessMessage()));
 			Thread.sleep(3000);
-			Assert.assertTrue(Page_AppFormPayment.displaySuccessulPaymentMessage().isDisplayed());
-			Assert.assertTrue(Page_AppFormPayment.displayPaymentModeSectionInSuccessMessage().isDisplayed());
-			Assert.assertTrue(Page_AppFormPayment.displayTranscnIdSectionInSuccessMessage().isDisplayed());
-			Assert.assertTrue(Page_AppFormPayment.displayAmountSectionInSuccessMessage().isDisplayed());
-			
 			performedPaymentMode = Page_AppFormPayment.displayPaymentModeValueInSuccessMessage().getText();
-			displayedTransactionId = Page_AppFormPayment.displayTranscnIdValueInSuccessMessage().getText();
-			displayedAmount = Page_AppFormPayment.displayAmountValueInSuccessMessage().getText();
-			
-			//Validate Payment Mode
-			Assert.assertEquals(performedPaymentMode, extractDataFromDatabase("pmntDetailsPmntMode"));
-			
-			//Validate Transaction ID
-			Assert.assertEquals(displayedTransactionId, extractDataFromDatabase("pmntDetailsTranscnID"));
-			
-			//Validate Payment Amount
-			Assert.assertEquals(displayedAmount, extractDataFromDatabase("pmntDetailsAmount"));
-
-			
-			Reporter.log("All Details diplayed on Successful Payment Message are correct.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
+			System.out.println("Provided Payment Mode: "+performedPaymentMode);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedPmntMode = extractDataFromDatabase("pmntDetailsPmntMode");
+			System.out.println("Payment Mode value from DB: "+storedPmntMode);
+			Assert.assertEquals(performedPaymentMode, storedPmntMode);
+			Reporter.log("Provided Payment Mode matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
-			Reporter.log("Some or all details diplayed on Successful Payment Message are incocorrect",true);
+			Assert.fail();
+			Reporter.log("Provided Payment Mode doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateTransactionID() throws Exception
+	{
+		try {
+			System.out.println("--------------Validating Transaction Id--------------");
+			WebDriverWait wait4 = new WebDriverWait(driver, 30);
+			wait4.until(ExpectedConditions.visibilityOf(Page_AppFormPayment.displayTranscnIdSectionInSuccessMessage()));
+			Thread.sleep(3000);
+			displayedTransactionId = Page_AppFormPayment.displayTranscnIdSectionInSuccessMessage().getText();
+			System.out.println("Provided Transaction Id: "+displayedTransactionId);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedTrnscnId = extractDataFromDatabase("pmntDetailsTranscnID");
+			System.out.println("Transaction Id value from DB: "+storedTrnscnId);
+			Assert.assertEquals(displayedTransactionId, storedTrnscnId);
+			Reporter.log("Provided Transaction Id matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Transaction Id doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateAmountPaid() throws Exception
+	{
+		try {
+			System.out.println("--------------Validating Amount Paid--------------");
+			WebDriverWait wait4 = new WebDriverWait(driver, 30);
+			wait4.until(ExpectedConditions.visibilityOf(Page_AppFormPayment.displayAmountSectionInSuccessMessage()));
+			Thread.sleep(3000);
+			displayedAmount = Page_AppFormPayment.displayAmountSectionInSuccessMessage().getText();
+			System.out.println("Provided Amount Paid: "+displayedAmount);
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedPaidAmount = extractDataFromDatabase("pmntDetailsAmount");
+			System.out.println("Amount Paid value from DB: "+storedPaidAmount);
+			Assert.assertEquals(displayedAmount, storedPaidAmount);
+			Reporter.log("Provided Amount Paid matches the value stored in database.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Provided Amount Paid doesn't match the value stored in database.",true);
+		}
+	}
+	
+	@Test
+	public static void validateSuccessfulPDFGenerationAndSending() throws Exception
+	{
+		try {
+			System.out.println("--------------Validating PDF Generated and Sent Over Email--------------");
+			WebDriverWait wait4 = new WebDriverWait(driver, 30);
+			wait4.until(ExpectedConditions.visibilityOf(Page_AppFormPayment.displaySuccessulPaymentMessage()));
+			Thread.sleep(3000);
+			//Temp way to validate PDF is generated and sent to email successfully
+			String pdfSentConfirmation = "ApplicationFormEmailPdf";
+			//Intentional Pause
+			Thread.sleep(1000);
+			String storedPdfConfirmation = extractDataFromDatabase("pdfGeneratedAndSent");
+			Assert.assertEquals(pdfSentConfirmation, storedPdfConfirmation);
+			Reporter.log("PDF with all Lead Details and successful transaction details is generated and sent to lead's email address successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("Transaction is failed and hence to PDF is generated.",true);
 		}
 	}
 }

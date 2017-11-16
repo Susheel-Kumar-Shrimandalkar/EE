@@ -4,24 +4,19 @@ import java.sql.SQLException;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
-import whitefeather.xedge.core.Page_DetailedApplicationForm;
 import whitefeather.xedge.core.Page_GenerateLeadApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
 public class GenerateLeadForApplicationForm extends HelperHand 
 {
-	//Do later. Work upon 'final' keyword logic later.
-	public static final String fullName=thirdPartyLeadFullName;
-	public static  final  String mobileNumber=thirdPartyLeadMobile;
-	public static final String emailAddress=thirdPartyLeadEmail;
+	public static String fullName, mobileNumber, emailAddress;
 	
 	@Test	
 	public static void enterFullName() throws Exception
 	{
 		System.out.println("\n"+"*********************** Filling up Basic Information ***************************"+"\n");
 		try {
-			Page_GenerateLeadApplicationForm.displayFullNameInputField().sendKeys(fullName);
+			Page_GenerateLeadApplicationForm.displayFullNameInputField().sendKeys(getAppFormData().get("personName"));
 			Reporter.log("User has entered Full Name successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
@@ -33,8 +28,11 @@ public class GenerateLeadForApplicationForm extends HelperHand
 	@Test
 	public static void enterMobileNumber() throws Exception
 	{
+		fullName =Page_GenerateLeadApplicationForm.displayFullNameInputField().getAttribute("value");
+		System.out.println("Provided Lead Name is: "+fullName);
+		
 		try {
-			Page_GenerateLeadApplicationForm.displayMobileNumberInputField().sendKeys(mobileNumber);
+			Page_GenerateLeadApplicationForm.displayMobileNumberInputField().sendKeys(getAppFormData().get("personMobileNumber"));
 			Reporter.log("User has entered Mobile successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
@@ -46,9 +44,12 @@ public class GenerateLeadForApplicationForm extends HelperHand
 	@Test
 	public static void enterEmailAddress() throws Exception
 	{
+		mobileNumber =Page_GenerateLeadApplicationForm.displayMobileNumberInputField().getAttribute("value");
+		System.out.println("Provided Lead's Mobile Number is: "+mobileNumber);
+		
 		try {
-			Page_GenerateLeadApplicationForm.displayEmailInputField().sendKeys(emailAddress);
-			System.out.println("Entered Email is: "+emailAddress);
+			Page_GenerateLeadApplicationForm.displayEmailInputField().sendKeys(getAppFormData().get("personEmailAddress"));
+			Thread.sleep(1000);
 			Reporter.log("User has entered Email Address successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
@@ -57,15 +58,20 @@ public class GenerateLeadForApplicationForm extends HelperHand
 		}
 	}
 	
-
+	
+	
 	@Test
 	public static void provideEntity() throws Exception
 	{
+		emailAddress =Page_GenerateLeadApplicationForm.displayEmailInputField().getAttribute("value");
+		System.out.println("Provided Lead's Email Address is: "+emailAddress);
+		
 		try 
 		{
 //			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByIndex(4);
 			//Temp value for test purpose. Use above line of code for actual execution
-			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("IP - MBA/MAF UWS");
+			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("General Engineering");
+//			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("Not Known");
 			providedEntityValue = Page_GenerateLeadApplicationForm.displayEntityDropDown().getFirstSelectedOption().getText();
 			System.out.println("reference---"+providedEntityValue);
 			Reporter.log("User has entered Entity value successfully.",true);
@@ -157,7 +163,7 @@ public class GenerateLeadForApplicationForm extends HelperHand
 			System.out.println("Provided Entity Value: "+providedEntityValue);
 			//Intentional Pause
 			Thread.sleep(1000);
-			String storedEntity = extractDataFromDatabase("entityEntity");
+			String storedEntity = extractDataFromDatabase("entity2Entity");
 			System.out.println("Entity Value value frm DB: "+storedEntity);
 			Assert.assertEquals(providedEntityValue, storedEntity);
 			Reporter.log("Provided Entity Value matches the value stored in database.",true);

@@ -10,7 +10,9 @@
 			<class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
 				<methods>
 <!-- 				<parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/> -->
-				<parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/>
+<!-- 				<parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/> -->
+				<parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application?inst=1"/>
+				
 				<include name="openAppForm"/>
 				</methods>
 			</class>
@@ -22,11 +24,11 @@
 				<include name="enterEmailAddress"/>
 				<include name="provideEntity"/>
 				<include name="clickSubmitButton"/>
-				<!-- <include name = "validateLeadDetailsSuccessfulSumbission"/>
+				<include name = "validateLeadDetailsSuccessfulSumbission"/>
 				<include name = "validateLeadFirstName"/>
 				<include name = "validateLeadMobileNumber"/>
 				<include name = "validateLeadEmailAddress"/>
-				<include name = "validateEntityValue"/> -->
+				<include name = "validateEntityValue"/>
 				</methods>
 			</class>
 			
@@ -46,7 +48,7 @@
 				<include name="provideNationality"/>
 				<parameter name="uid" value="252025100000"/>
 				<include name="provideAadharNumber"/>
-				<parameter name="pNumber" value=""/>
+				<parameter name="pNumber" value="s25234500000"/>
 				<include name="providePassportNumber"/>
 				<parameter name="plOfIssue" value="Pune"/>
 				<include name="providePlaceOfIssue"/>
@@ -82,7 +84,7 @@
 				<include name="providePermanentAddrPincode"/>
 				<include name="providePermanentAddrContactNumber"/> 
 				<include name="clickNextButtonStep1"/>
-				<!-- <include name="validateDoBStep1"/>
+				<include name="validateDoBStep1"/>
 				<include name="validatePlaceOfBirthStep1"/>
 				<include name="validateGenderValueInStep1"/>
 				<include name="validateBloodGroupInStep1"/>
@@ -100,7 +102,7 @@
 				<include name="validatePresentAddressInStep1"/>
 				<include name="validatePresentAddressCountryInStep1"/>
 				<include name="validatePresentAddressStateInStep1"/>
-				<include name="validatePresentAddressCityInStep1"/> -->
+				<include name="validatePresentAddressCityInStep1"/>
 				<parameter name="fathersName" value="FathersName"/>
 				<include name="provideFathersName"/>
 				<parameter name="fathersQual" value="B.E.I.T."/>
@@ -133,7 +135,7 @@
 				<include name="provideGuardiansRelation"/>
 				<include name="provideGuardiansContactNumber"/>
 				<include name="clickNextButtonStep2"/>
-			<!-- 	<include name="validateFathersNameStep2"/>
+				<include name="validateFathersNameStep2"/>
 				<include name="validateFathersQualificationStep2"/>
 				<include name="validateFathersOccupationStep2"/>
 				<include name="validateFathersAnnualIncomeStep2"/>
@@ -150,7 +152,7 @@
 				<include name="validateLocalGuardianAddr3Step2"/>
 				<include name="validateGrdnAddrPincodeStep2"/>
 				<include name="validateGuardianRelationStep2"/>
-				<include name="validateGuardianContactNumberStep2"/> -->
+				<include name="validateGuardianContactNumberStep2"/>
 				<include name="provideCourse"/>
 				<include name="provideSSCSchoolName"/>
 				<include name="provideSSCBoard"/>
@@ -161,6 +163,7 @@
 				<include name="provideSSCModeOfStudy"/>
 				<parameter name="sscGradePercent" value="87"/>
 				<include name="provideSSCPercentageValue"/>
+				<include name="showHideHSCDetailsSection"/>
 				<parameter name="hscSchoolName" value="HSCSchoolName"/>
 				<include name="provideHSCSchoolName"/>
 				<include name="provideHSCBoard"/>
@@ -218,7 +221,11 @@
 				<include name="clickLoginButtonPaytmLoginWindow"/>
 				<include name="validateAmountToBePaid"/>
 				<include name="clickPayNowButtonPaytmPaymentPage"/>
-				<include name="validateSuccessfulPayment"/>
+				<include name="validatePaymentMode"/>
+				<include name="validateTransactionID"/>
+				<include name="validateAmountPaid"/>
+				<include name="validateSuccessfulPDFGenerationAndSending"/>
+				
 				</methods>
 				</class>
 		</classes>

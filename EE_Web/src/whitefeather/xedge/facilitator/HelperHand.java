@@ -3,9 +3,11 @@ package whitefeather.xedge.facilitator;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.SecureRandom;
 import java.sql.SQLException;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -36,10 +38,10 @@ public class HelperHand
 	public static String currectDate = DataGenerator.getDate();
 	public static String currectTime = DataGenerator.getTime();
 	
+	public static LinkedHashMap<String, String> appFormDataMap = new LinkedHashMap<String, String>();
 	public static final String thirdPartyLeadEmail = DataGenerator.randomEmailGenerator();
 	public static final String thirdPartyLeadFullName = DataGenerator.generateFirstName();
 	public static final String  thirdPartyLeadMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
-	
 	public static final String step1PresentAddrContactNumber = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String step1PermanentAddrContactNumber = Long.toString(DataGenerator.randomMobileNumberGenerator());
 	public static final String thirdPartyEmergencyLeadEmail = DataGenerator.randomEmailGenerator();
@@ -48,6 +50,15 @@ public class HelperHand
 	
 	public static LinkedHashMap<String, String> dbValues = new LinkedHashMap<String, String>();
 	public static List<WebElement> hscSubjects = new LinkedList<WebElement>();
+	
+	private static SecureRandom randomEmail = new SecureRandom();
+	protected static LinkedHashMap<String, String> getAppFormData()
+	{
+		appFormDataMap.put("personName", DataGenerator.generateFirstName());
+		appFormDataMap.put("personEmailAddress", (new BigInteger(50, randomEmail).toString(32)+"@domain.in"));
+		appFormDataMap.put("personMobileNumber", Long.toString(DataGenerator.randomMobileNumberGenerator()));
+		return appFormDataMap;
+	}
 	
 	//Later sort out logic for this
 	public static String providedEntityValue;

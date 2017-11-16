@@ -38,7 +38,7 @@ public class FillUpApplicationForm  extends HelperHand
 		System.out.println(Constants.APPLICATIONFORM+"?ref_no="+leadPrn);
 		try 
 		{
-			driver.get(Constants.APPLICATIONFORM+"?ref_no="+leadPrn);
+			driver.get(Constants.APPLICATIONFORM+"?ref_no="+leadPrn+"&inst=1");
 			Thread.sleep(500);
 			Assert.assertEquals(Constants.APPLICATIONFORM+"?ref_no="+leadPrn, driver.getCurrentUrl());
 			System.out.println("Assertion Successful");
@@ -171,7 +171,9 @@ public class FillUpApplicationForm  extends HelperHand
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
 			Reporter.log("User has failed to provide Aadhaar Number value.",true);
+			throw(e);
 		}
+		
 	}
 	
 	@Test
@@ -476,8 +478,8 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayPresentAddrContactNumberInputField().sendKeys(step1PresentAddrContactNumber);
-			providedPresentAddrContactNumber = Page_DetailedApplicationForm.displayPresentAddrContactNumberInputField().getText();
+			Page_DetailedApplicationForm.displayPresentAddrContactNumberInputField().sendKeys(getAppFormData().get("personMobileNumber"));
+			providedPresentAddrContactNumber = Page_DetailedApplicationForm.displayPresentAddrContactNumberInputField().getAttribute("value");
 			Reporter.log("User has entered Emergency Contact Number value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -578,8 +580,8 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().sendKeys(step1PermanentAddrContactNumber);
-			providedPermanentAddrContactNumber = Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().getText();
+			Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().sendKeys(getAppFormData().get("personMobileNumber"));
+			providedPermanentAddrContactNumber = Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().getAttribute("value");
 			Reporter.log("User has entered Emergency Contact Number value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1038,8 +1040,8 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			providedFathersEmail = DataGenerator.randomEmailGenerator();
-			Page_DetailedApplicationForm.displayFathersEmailInputField().sendKeys(providedFathersEmail);
+			Page_DetailedApplicationForm.displayFathersEmailInputField().sendKeys(getAppFormData().get("personEmailAddress"));
+			providedFathersEmail = Page_DetailedApplicationForm.displayFathersEmailInputField().getAttribute("value");
 			Reporter.log("User has entered Fathers Email value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1052,8 +1054,8 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			providedFathersMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
-			Page_DetailedApplicationForm.displayFathersMobileInputField().sendKeys(providedFathersMobile);
+			Page_DetailedApplicationForm.displayFathersMobileInputField().sendKeys(getAppFormData().get("personMobileNumber"));
+			providedFathersMobile = Page_DetailedApplicationForm.displayFathersMobileInputField().getAttribute("value");
 			Reporter.log("User has entered Fathers Mobile value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1111,8 +1113,8 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			providedMothersEmail = DataGenerator.randomEmailGenerator();
-			Page_DetailedApplicationForm.displayMothersEmailInputField().sendKeys(providedMothersEmail);
+			Page_DetailedApplicationForm.displayMothersEmailInputField().sendKeys(getAppFormData().get("personEmailAddress"));
+			providedMothersEmail = Page_DetailedApplicationForm.displayMothersEmailInputField().getAttribute("value");
 			Reporter.log("User has entered Mothers Email value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1125,8 +1127,8 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			providedMothersMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
-			Page_DetailedApplicationForm.displayMothersMobileInputField().sendKeys(providedMothersMobile);
+			Page_DetailedApplicationForm.displayMothersMobileInputField().sendKeys(getAppFormData().get("personMobileNumber"));
+			providedMothersMobile = Page_DetailedApplicationForm.displayMothersMobileInputField().getAttribute("value");
 			Reporter.log("User has entered Mothers Mobile value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1707,6 +1709,21 @@ public class FillUpApplicationForm  extends HelperHand
 		}
 	}
 	
+	@Test
+	public static void showHideHSCDetailsSection() throws Exception
+	{
+			try
+			{
+				//Do validation of provided value later
+				Page_DetailedApplicationForm.displayHSCDetailsSection();
+				Reporter.log("User has clicked HSC Results Out Radio button successfully.",true);
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) 
+			{
+				e.printStackTrace();
+				Reporter.log("User has failed to click HSC Results Out Radio button.",true);
+			}
+	}
 	
 	@Test
 	@Parameters({"hscSchoolName"})	
@@ -1741,9 +1758,7 @@ public class FillUpApplicationForm  extends HelperHand
 	@Parameters({"otherHSCMode"})	
 	public static void provideModeOfStudyHSC(String otherHSCMode) throws Exception
 	{
-		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
-		{
-			try 
+		try 
 			{
 				Page_DetailedApplicationForm.displayModeOfStudyHSCDropDown().selectByIndex(1);
 				providedHSCModeOfStudy =  Page_DetailedApplicationForm.displayModeOfStudyHSCDropDown().getFirstSelectedOption().getText();
@@ -1759,18 +1774,11 @@ public class FillUpApplicationForm  extends HelperHand
 				e.printStackTrace();
 				Reporter.log("User has failed to enter HSC Mode Of Study value.",true);
 			}
-		}
-		else
-		{
-			Reporter.log("HSC examination is still not completed.",true);
-		}
 	}
 	
 	@Test
 	public static void provideHSCYearOfPassing() throws Exception
 	{
-		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
-		{
 			try
 			{
 				Page_DetailedApplicationForm.displayHSCYearOfPassingDropDown().selectByIndex(1);
@@ -1782,20 +1790,14 @@ public class FillUpApplicationForm  extends HelperHand
 				e.printStackTrace();
 				Reporter.log("User has failed to enter HSC Mode Of Study value.",true);
 			}
-		}
-		else
-		{
-			Reporter.log("HSC examination is still not completed.",true);
-		}
+		
 	}
 	
 	@Test
 	@Parameters({"hscGradePercent"})
 	public static void provideHSCPercentageGradeType(String hscGradePercent) throws Exception
 	{
-		if(Page_DetailedApplicationForm.displayHSCDetailsSection())
-		{
-			try
+		try
 			{
 				providedHSCPerGrade = hscGradePercent;
 				Page_DetailedApplicationForm.displayHSCPercentageGradeRadioButton().click();
@@ -1807,11 +1809,7 @@ public class FillUpApplicationForm  extends HelperHand
 				e.printStackTrace();
 				Reporter.log("User has failed to enter HSC Percentage/Grade value.",true);
 			}
-		}
-		else
-		{
-			Reporter.log("HSC examination is still not completed.",true);
-		}
+		
 	}
 	
 	@Test
@@ -2477,19 +2475,6 @@ public class FillUpApplicationForm  extends HelperHand
 			Reporter.log("User has failed to provide Payment Type value.",true);
 		}
 	}
-	
-	/*@Test
-	public static void providePaymentAmount() throws Exception
-	{
-		try 
-		{
-			Page_DetailedApplicationForm.displayPaymentAmountField().sendKeys("100");
-			Reporter.log("User has entered Payment Amount value successfully.",true);
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			e.printStackTrace();
-			Reporter.log("User has failed to provide Payment Amount value.",true);
-		}
-	}*/
 	
 	@Test
 	public static void clickSubmitButtonStep4() throws Exception
