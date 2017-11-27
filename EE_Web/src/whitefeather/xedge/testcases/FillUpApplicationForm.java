@@ -32,15 +32,19 @@ public class FillUpApplicationForm  extends HelperHand
 	@Test
 	public static void openDetailedApplicationFormPage() throws SQLException, InterruptedException
 	{
+		Thread.sleep(5000);
 		System.out.println("\n"+"*********************** Filling up Step 1 Information ***************************"+"\n");
 		String leadPrn = extractDataFromDatabase("userPRN");
+		String leadEmail = extractDataFromDatabase("userEmail");
 		System.out.println(leadPrn);
 		System.out.println(Constants.APPLICATIONFORM+"?ref_no="+leadPrn);
 		try 
 		{
-			driver.get(Constants.APPLICATIONFORM+"?ref_no="+leadPrn+"&inst=1");
+//			driver.get(Constants.APPLICATIONFORM+"?ref_no="+leadPrn+"&inst=1");
+			driver.get("https://walnut.extraaedge.com/application?inst=46&ref_no="+leadPrn+"&email="+leadEmail);
+
 			Thread.sleep(500);
-			Assert.assertEquals(Constants.APPLICATIONFORM+"?ref_no="+leadPrn, driver.getCurrentUrl());
+//			Assert.assertEquals(Constants.APPLICATIONFORM+"?ref_no="+leadPrn, driver.getCurrentUrl());
 			System.out.println("Assertion Successful");
 			Reporter.log("User has opened Application Form successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {

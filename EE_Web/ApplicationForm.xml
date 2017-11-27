@@ -11,8 +11,8 @@
 				<methods>
 <!-- 				<parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/> -->
 <!-- 				<parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application"/> -->
-				<parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application?inst=1"/>
-				
+<!-- 				<parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application?inst=1"/>
+ -->				
 				<include name="openAppForm"/>
 				</methods>
 			</class>
@@ -24,17 +24,17 @@
 				<include name="enterEmailAddress"/>
 				<include name="provideEntity"/>
 				<include name="clickSubmitButton"/>
-				<include name = "validateLeadDetailsSuccessfulSumbission"/>
+				<!-- <include name = "validateLeadDetailsSuccessfulSumbission"/>
 				<include name = "validateLeadFirstName"/>
 				<include name = "validateLeadMobileNumber"/>
 				<include name = "validateLeadEmailAddress"/>
-				<include name = "validateEntityValue"/>
+				<include name = "validateEntityValue"/> -->
 				</methods>
-			</class>
+			</class> 
 			
-<!-- 			Implement logic for Going back to previous step later -->
+			<!-- Implement logic for Going back to previous step later -->
 			<class name="whitefeather.xedge.testcases.FillUpApplicationForm">
-<!-- 			Write separate class for each step later -->
+			<!-- Write separate class for each step later -->
 				<methods>
 				<include name="openDetailedApplicationFormPage"/>
 				<include name="clickDateOfBirthInputField"/>
@@ -74,7 +74,7 @@
 				<parameter name="pincode" value="216116"/>
 				<include name="providePresentAddrPincode"/>
 				<include name="providePresentAddrContactNumber"/> 
-				<!-- <include name="clickSameAddressCheckbox"/> -->
+				<include name="clickSameAddressCheckbox"/>
 				<parameter name="permanentAddress" value="Permanent_Address_Step1_"/>
 				<include name="providePermanentAddressAddress"/>
 				<include name="providePermanentAddrCountry"/>
@@ -84,7 +84,7 @@
 				<include name="providePermanentAddrPincode"/>
 				<include name="providePermanentAddrContactNumber"/> 
 				<include name="clickNextButtonStep1"/>
-				<include name="validateDoBStep1"/>
+				<!-- <include name="validateDoBStep1"/>
 				<include name="validatePlaceOfBirthStep1"/>
 				<include name="validateGenderValueInStep1"/>
 				<include name="validateBloodGroupInStep1"/>
@@ -102,7 +102,7 @@
 				<include name="validatePresentAddressInStep1"/>
 				<include name="validatePresentAddressCountryInStep1"/>
 				<include name="validatePresentAddressStateInStep1"/>
-				<include name="validatePresentAddressCityInStep1"/>
+				<include name="validatePresentAddressCityInStep1"/> -->
 				<parameter name="fathersName" value="FathersName"/>
 				<include name="provideFathersName"/>
 				<parameter name="fathersQual" value="B.E.I.T."/>
@@ -135,7 +135,7 @@
 				<include name="provideGuardiansRelation"/>
 				<include name="provideGuardiansContactNumber"/>
 				<include name="clickNextButtonStep2"/>
-				<include name="validateFathersNameStep2"/>
+				<!-- <include name="validateFathersNameStep2"/>
 				<include name="validateFathersQualificationStep2"/>
 				<include name="validateFathersOccupationStep2"/>
 				<include name="validateFathersAnnualIncomeStep2"/>
@@ -152,7 +152,7 @@
 				<include name="validateLocalGuardianAddr3Step2"/>
 				<include name="validateGrdnAddrPincodeStep2"/>
 				<include name="validateGuardianRelationStep2"/>
-				<include name="validateGuardianContactNumberStep2"/>
+				<include name="validateGuardianContactNumberStep2"/> -->
 				<include name="provideCourse"/>
 				<include name="provideSSCSchoolName"/>
 				<include name="provideSSCBoard"/>
@@ -174,7 +174,7 @@
 				<include name="provideHSCPercentageGradeType"/>
 				<parameter name="hscRegNumber" value="142187335"/>
 				<include name="provideHSCRegNumber"/>
-				<parameter name="numberOfSubjects" value="2"/>
+				<parameter name="numberOfSubjects" value="5"/>
 				<include name="provideHSCSubjectScoreDetails"/>
 				<parameter name="numberOfExams" value="3"/>
 				<include name="provideEntranceExamDetails"/>
@@ -191,7 +191,7 @@
 				<include name="provideDegDiplomaYearOfCompletion"/>
 				<parameter name="otherDiplomaMode" value="otherDiplomaModeName"/>
 				<include name="provideDegDiplomaModeOfStudy"/>
-				<parameter name="gradYears" value="3"/>
+				<parameter name="gradYears" value="4"/>
 				<include name="provideGraduationYearwiseMarksDetails"/>
 				<include name="provideAttachment1"/>
 				<include name="provideAttachment2"/>

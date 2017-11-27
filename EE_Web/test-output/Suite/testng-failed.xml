@@ -9,7 +9,7 @@
         <parameter name="otherDomicileValue" value="OtherDomicileName"/>
         <parameter name="annualIncome" value="2500000"/>
         <parameter name="fathersName" value="FathersName"/>
-        <parameter name="numberOfSubjects" value="2"/>
+        <parameter name="numberOfSubjects" value="5"/>
         <parameter name="otherDiplomaMode" value="otherDiplomaModeName"/>
         <parameter name="degreeCollege" value="Sangli"/>
         <parameter name="otherSSCMode" value="otherSSCModeName"/>
@@ -38,7 +38,7 @@
         <parameter name="sscRegNumber" value="136346533"/>
         <parameter name="degreeName" value="Automation of Web Applications"/>
         <parameter name="LocalGuardianName" value="LocalGuardianName"/>
-        <parameter name="gradYears" value="3"/>
+        <parameter name="gradYears" value="4"/>
         <parameter name="pNumber" value="s25234500000"/>
         <parameter name="MothersName" value="MothersName"/>
         <parameter name="religion" value="Hindu"/>
@@ -46,45 +46,26 @@
         <parameter name="otherHSCMode" value="otherHSCModeName"/>
         <parameter name="MothersOccpn" value="College"/>
         <parameter name="nationality" value="Indian"/>
-        <parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application?inst=1"/>
         <parameter name="hscGradePercent" value="94.24"/>
         <parameter name="hscSchoolName" value="HSCSchoolName"/>
         <parameter name="lgpincode" value="516115"/>
         <parameter name="degreeUnivName" value="Kolhapur"/>
         <parameter name="paytmUsername" value="7777777777"/>
         <methods>
-          <include name="provideDegreeOrDiplomaUniversityName" invocation-numbers="0"/>
-          <include name="provideNationality" invocation-numbers="0"/>
-          <include name="provideCitizenship" invocation-numbers="0"/>
-          <include name="provideDegreeOrDiplomaCollegeName" invocation-numbers="0"/>
-          <include name="provideMothersName" invocation-numbers="0"/>
-          <include name="provideDegDiplomaExamType"/>
-          <include name="provideGraduationYearwiseMarksDetails" invocation-numbers="0"/>
-          <include name="provideDegDiplomaModeOfStudy" invocation-numbers="0"/>
-          <include name="validatePresentAddressStateInStep1"/>
-          <include name="validateNationalityInStep1"/>
-          <include name="validateBloodGroupInStep1"/>
-          <include name="validateDoBStep1"/>
-          <include name="validateCitizenShipInStep1"/>
-          <include name="provideDegDiplomaYearOfCompletion"/>
-          <include name="provideGender"/>
-          <include name="provideDegreeOrDiplomaName" invocation-numbers="0"/>
-          <include name="openDetailedApplicationFormPage"/>
-          <include name="validatePlaceOfBirthStep1"/>
-          <include name="validateMothersNameStep2"/>
-          <include name="provideDegreeOrDiplomaAreaOfSpecialization" invocation-numbers="0"/>
-          <include name="validateFathersNameStep2"/>
-          <include name="provideFathersName" invocation-numbers="0"/>
-          <include name="validateGenderValueInStep1"/>
-          <include name="provideBloodGroup" invocation-numbers="0"/>
-          <include name="provideDegreeOrDiplomaType"/>
+          <include name="providePermanentAddrContactNumber"/>
+          <include name="providePermanentAddrCountry"/>
+          <include name="providePermanentAddrCity"/>
+          <include name="providePermanentAddressAddress" invocation-numbers="0"/>
+          <include name="provideAadharNumber" invocation-numbers="0"/>
+          <include name="providePermanentAddrPincode" invocation-numbers="0"/>
+          <include name="providePermanentAddrState"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
       <class name="whitefeather.xedge.testcases.DoPaymentInApplicationForm">
         <parameter name="otherDomicileValue" value="OtherDomicileName"/>
         <parameter name="annualIncome" value="2500000"/>
         <parameter name="fathersName" value="FathersName"/>
-        <parameter name="numberOfSubjects" value="2"/>
+        <parameter name="numberOfSubjects" value="5"/>
         <parameter name="otherDiplomaMode" value="otherDiplomaModeName"/>
         <parameter name="degreeCollege" value="Sangli"/>
         <parameter name="otherSSCMode" value="otherSSCModeName"/>
@@ -113,7 +94,7 @@
         <parameter name="sscRegNumber" value="136346533"/>
         <parameter name="degreeName" value="Automation of Web Applications"/>
         <parameter name="LocalGuardianName" value="LocalGuardianName"/>
-        <parameter name="gradYears" value="3"/>
+        <parameter name="gradYears" value="4"/>
         <parameter name="pNumber" value="s25234500000"/>
         <parameter name="MothersName" value="MothersName"/>
         <parameter name="religion" value="Hindu"/>
@@ -121,14 +102,12 @@
         <parameter name="otherHSCMode" value="otherHSCModeName"/>
         <parameter name="MothersOccpn" value="College"/>
         <parameter name="nationality" value="Indian"/>
-        <parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application?inst=1"/>
         <parameter name="hscGradePercent" value="94.24"/>
         <parameter name="hscSchoolName" value="HSCSchoolName"/>
         <parameter name="lgpincode" value="516115"/>
         <parameter name="degreeUnivName" value="Kolhapur"/>
         <parameter name="paytmUsername" value="7777777777"/>
         <methods>
-          <include name="validatePaymentMode"/>
           <include name="validateAmountPaid"/>
           <include name="validateTransactionID"/>
           <include name="validateSuccessfulPDFGenerationAndSending"/>
@@ -138,7 +117,7 @@
         <parameter name="otherDomicileValue" value="OtherDomicileName"/>
         <parameter name="annualIncome" value="2500000"/>
         <parameter name="fathersName" value="FathersName"/>
-        <parameter name="numberOfSubjects" value="2"/>
+        <parameter name="numberOfSubjects" value="5"/>
         <parameter name="otherDiplomaMode" value="otherDiplomaModeName"/>
         <parameter name="degreeCollege" value="Sangli"/>
         <parameter name="otherSSCMode" value="otherSSCModeName"/>
@@ -167,7 +146,7 @@
         <parameter name="sscRegNumber" value="136346533"/>
         <parameter name="degreeName" value="Automation of Web Applications"/>
         <parameter name="LocalGuardianName" value="LocalGuardianName"/>
-        <parameter name="gradYears" value="3"/>
+        <parameter name="gradYears" value="4"/>
         <parameter name="pNumber" value="s25234500000"/>
         <parameter name="MothersName" value="MothersName"/>
         <parameter name="religion" value="Hindu"/>
@@ -175,14 +154,12 @@
         <parameter name="otherHSCMode" value="otherHSCModeName"/>
         <parameter name="MothersOccpn" value="College"/>
         <parameter name="nationality" value="Indian"/>
-        <parameter name="appFormURL" value="http://extraaedgev2.azurewebsites.net/application?inst=1"/>
         <parameter name="hscGradePercent" value="94.24"/>
         <parameter name="hscSchoolName" value="HSCSchoolName"/>
         <parameter name="lgpincode" value="516115"/>
         <parameter name="degreeUnivName" value="Kolhapur"/>
         <parameter name="paytmUsername" value="7777777777"/>
         <methods>
-          <include name="openAppForm" invocation-numbers="0"/>
           <include name="selectBrowser"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.OpenApplicationFormLandingPage -->

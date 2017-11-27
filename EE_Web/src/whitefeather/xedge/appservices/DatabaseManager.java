@@ -16,8 +16,11 @@ import whitefeather.xedge.testcases.GenerateLeadForApplicationForm;
 public class DatabaseManager extends HelperHand
 {
 	//to be done later - secure connection
+	/*public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
+	         "databaseName=ExtraaEdgeV2_Version1;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; */
+	
 	public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
-	         "databaseName=ExtraaEdgeV2_Version1;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; 
+	         "databaseName=extraaEdge_walnut;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; 
 	
 	static Connection con = null;  
 	static Statement stmt = null;  

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Application Form Type Selection</title>
+</head>
+<body>
+<button id="selectType" name="selectAppFormType" onclick="invokeAppFormTypePopUp()">Select Application Form Type</button>
+<p id="customAppURL"></p>
+
+<script>
+var appURL = "";
+var defautTxt="";
+var providedType ="";
+function invokeAppFormTypePopUp() 
+{
+    providedType = prompt("Please select type of application form you want to run:\n1. Default Configuration\n2. Custom Configuration");
+    if (providedType == null || providedType == "") {
+    	defautTxt = "User has not provided any input.";
+    } 
+    else if (providedType == "1" || providedType == "Default Configuration") 
+    {
+    	appURL = prompt("Please provide domain name to proceed...");
+//     	defautTxt = "Executing application form with default configuration on "+appURL+"<br/>Redirecting to..."+"<br/>http://"+appURL+".azurewebsites.net/application?inst=1";
+//     	defautTxt = "http://"+appURL+".azurewebsites.net/application?inst=1";
+    	defautTxt = "https://walnut.extraaedge.com/application?inst=46";
+
+    	//https://walnut.extraaedge.com/application?inst=46
+//     	defaultTxt = "http://"+appURL+".azurewebsites.net/application";	//extraaedgev2
+    	confirm(defautTxt);
+    }
+    else if (providedType == "2" || providedType == "Custom Configuration") 
+    {
+    	
+    	defautTxt = "Custom Configuration is selected to run.";
+    	if(window.confirm(defautTxt))
+    		{
+    			appURL = prompt("Please provide Custom URL to proceed.");
+// 	    	    console.log("custURL",appURL);
+		    	if (appURL == null || appURL == "") 
+		    	{
+		    		custTxt = "User has not provided any input.";
+		    	} 
+	   		    else if (appURL != null) 
+	   		    {
+	   		    	custTxt = "Executing application form with custom configuration on "+appURL;
+	   		    	confirm(custTxt);
+	   		    	custTxt = appURL;
+	   		    	defautTxt = custTxt;
+	   		    }
+    		}
+    }
+    else if (providedType != "1" || providedType != "2" || providedType != "Default Configuration" || providedType != "Custom Configuration") 
+    {
+    	defautTxt = "Invalid input is provided.";
+    }
+    document.getElementById("customAppURL").innerHTML = defautTxt;
+    document.getElementById("selectType").style.display="none";
+}
+
+</script>
+</body>
+</html>

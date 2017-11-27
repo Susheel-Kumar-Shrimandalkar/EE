@@ -1037,6 +1037,7 @@ public class Page_DetailedApplicationForm extends HelperHand
 	{
 		for (int i = 1; i <= n; i++) 
 		{
+			Thread.sleep(1000);
 			driver.findElement(properties.selectLocator("Step3_AddMoreSubjectsButton")).click();
 		}
 	}

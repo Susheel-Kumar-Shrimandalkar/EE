@@ -68,9 +68,9 @@ public class GenerateLeadForApplicationForm extends HelperHand
 		
 		try 
 		{
-//			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByIndex(4);
+//			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByIndex(2);
 			//Temp value for test purpose. Use above line of code for actual execution
-			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("General Engineering");
+			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("Junior KG");
 //			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("Not Known");
 			providedEntityValue = Page_GenerateLeadApplicationForm.displayEntityDropDown().getFirstSelectedOption().getText();
 			System.out.println("reference---"+providedEntityValue);
