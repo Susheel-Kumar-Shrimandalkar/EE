@@ -56,6 +56,16 @@ public class Page_GenerateLeadApplicationForm extends HelperHand
 		return dropdown;
 	}
 	
+	public static WebElement displayEntityDropDown1() throws Exception
+	{
+		try {
+			element  = driver.findElement(properties.selectLocator("BasicInfo_EntityDropdown"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
 	public static WebElement displaySubmitButton() throws Exception
 	{
 		try {

@@ -10,6 +10,7 @@
 
 <script>
 var appURL = "";
+var entityId = "";
 var defautTxt="";
 var providedType ="";
 function invokeAppFormTypePopUp() 
@@ -21,13 +22,15 @@ function invokeAppFormTypePopUp()
     else if (providedType == "1" || providedType == "Default Configuration") 
     {
     	appURL = prompt("Please provide domain name to proceed...");
-//     	defautTxt = "Executing application form with default configuration on "+appURL+"<br/>Redirecting to..."+"<br/>http://"+appURL+".azurewebsites.net/application?inst=1";
-//     	defautTxt = "http://"+appURL+".azurewebsites.net/application?inst=1";
-    	defautTxt = "https://walnut.extraaedge.com/application?inst=46";
-
-    	//https://walnut.extraaedge.com/application?inst=46
-//     	defaultTxt = "http://"+appURL+".azurewebsites.net/application";	//extraaedgev2
-    	confirm(defautTxt);
+    	if(appURL=='extraaedgev2')
+    		{
+    			defautTxt = "http://"+appURL+".azurewebsites.net/application";
+    		}
+    	else
+    		{
+    			defautTxt = "https://"+appURL+".extraaedge.com/application";
+    		}
+    	confirm("Redirecting to >> "+defautTxt);
     }
     else if (providedType == "2" || providedType == "Custom Configuration") 
     {
@@ -35,17 +38,19 @@ function invokeAppFormTypePopUp()
     	defautTxt = "Custom Configuration is selected to run.";
     	if(window.confirm(defautTxt))
     		{
-    			appURL = prompt("Please provide Custom URL to proceed.");
-// 	    	    console.log("custURL",appURL);
+    			appURL = prompt("Please provide domain name to proceed...");
+	// 	    	    console.log("custURL",appURL);
 		    	if (appURL == null || appURL == "") 
 		    	{
 		    		custTxt = "User has not provided any input.";
 		    	} 
 	   		    else if (appURL != null) 
 	   		    {
-	   		    	custTxt = "Executing application form with custom configuration on "+appURL;
-	   		    	confirm(custTxt);
-	   		    	custTxt = appURL;
+	   		    	entityId = prompt("Please provide EntityId:");
+// 	   		    	custTxt = "https://"+appURL+".extraaedge.com/application?inst="+entityId;
+	   		    	custTxt = "https://"+appURL+".azurewebsites.net/application?inst="+entityId;
+
+	   		    	confirm("Redirecting to >> "+custTxt);
 	   		    	defautTxt = custTxt;
 	   		    }
     		}
@@ -57,7 +62,6 @@ function invokeAppFormTypePopUp()
     document.getElementById("customAppURL").innerHTML = defautTxt;
     document.getElementById("selectType").style.display="none";
 }
-
 </script>
 </body>
 </html>

@@ -1,8 +1,21 @@
 package whitefeather.xedge.appconfig;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import javax.script.Invocable;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -12,7 +25,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.io.Files;
+
 import whitefeather.xedge.facilitator.RootDriver;
 
 
@@ -75,4 +92,36 @@ public class ConfigMethods extends RootDriver
           //The below method will save the screen shot in d drive with name "screenshot.png"
              FileUtils.copyFile(scrFile, new File(".\\src\\whitefeather\\xedge\\testreports\\screenshot.png"));
      }
+	 
+	 /*public static void waitForElementToLoad(String locator)
+	 {
+		 WebDriverWait wait = new WebDriverWait(driver, 60);
+		 wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(locator)));
+	 }
+	 
+	 public static void ExecuteCustomJavascript() throws NoSuchMethodException, ScriptException, FileNotFoundException
+	 {
+		 try 
+		 {
+	        ScriptEngineManager manager = new ScriptEngineManager();
+	        ScriptEngine javascriptEngine = manager.getEngineByExtension("js");
+	         
+	        // Get script from JS File
+	        FileInputStream fileInputStream = new FileInputStream(".\\src\\whitefeather\\xedge\\appconfig\\CustomExecutionFunctions.js");
+	        if (fileInputStream != null)
+	        {
+	            BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
+	
+	            javascriptEngine.eval(reader);
+	            Invocable invocableEngine = (Invocable)javascriptEngine;    
+	            invocableEngine.invokeFunction("userProvidedDataType");
+//	            System.out.println("Result: " + object);    
+	        }
+	      }
+		    catch (Exception ex) 
+		 	{
+		        ex.printStackTrace();
+		    }		 
+	 }*/
+	 
 }

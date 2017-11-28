@@ -1,6 +1,11 @@
 package whitefeather.xedge.testcases;
 
 import java.sql.SQLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Parameters;
@@ -25,7 +30,7 @@ public class FillUpApplicationForm  extends HelperHand
 	providedCourseStep3, providedSSCSchoolName, providedSSCBoard, providedSSCYoP, providedSSCRegNumber, providedSSCModeOfStudy,
 	providedSSCGrade, providedHSCSchoolName, providedHSCBoard, providedHSCYoP, providedHSCRegNumber, providedHSCModeOfStudy,
 	providedHSCPerGrade,providedDegDiplomaName, providedDiplomaAOS, providedDiplomaCollegeName, providedUniversityNm, 
-	providedDiplomaExamType, providedDiplomaYoC, providedDiplomaModeOfStudy;
+	providedDiplomaExamType, providedDiplomaYoC, providedDiplomaModeOfStudy,providedCourseStep4;
 	
 	
 	/********************* STEP 1 *************************/
@@ -37,14 +42,13 @@ public class FillUpApplicationForm  extends HelperHand
 		String leadPrn = extractDataFromDatabase("userPRN");
 		String leadEmail = extractDataFromDatabase("userEmail");
 		System.out.println(leadPrn);
-		System.out.println(Constants.APPLICATIONFORM+"?ref_no="+leadPrn);
+		
 		try 
 		{
-//			driver.get(Constants.APPLICATIONFORM+"?ref_no="+leadPrn+"&inst=1");
-			driver.get("https://walnut.extraaedge.com/application?inst=46&ref_no="+leadPrn+"&email="+leadEmail);
-
+			String detailedFormURL = OpenApplicationFormLandingPage.appFormURL+"&ref_no="+leadPrn+"&email="+leadEmail;
+			driver.get(detailedFormURL);
 			Thread.sleep(500);
-//			Assert.assertEquals(Constants.APPLICATIONFORM+"?ref_no="+leadPrn, driver.getCurrentUrl());
+			Assert.assertEquals(detailedFormURL, driver.getCurrentUrl());
 			System.out.println("Assertion Successful");
 			Reporter.log("User has opened Application Form successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
@@ -110,6 +114,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedPlaceOfBirth = placeOfBirth;
 		try 
 		{
+			Page_DetailedApplicationForm.displayPlaceOfBirthInputField().clear();
 			Page_DetailedApplicationForm.displayPlaceOfBirthInputField().sendKeys(providedPlaceOfBirth);
 			Reporter.log("User has entered PlaceOfBirth value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -139,6 +144,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedBlGroup = bloodGroup;
 		try 
 		{
+			Page_DetailedApplicationForm.displayBloodGroupInputField().clear();
 			Page_DetailedApplicationForm.displayBloodGroupInputField().sendKeys(providedBlGroup);
 			Reporter.log("User has entered blood group value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -155,6 +161,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedNationality = nationality;
 		try 
 		{
+			Page_DetailedApplicationForm.displayNationalityInputField().clear();
 			Page_DetailedApplicationForm.displayNationalityInputField().sendKeys(providedNationality);
 			Reporter.log("User has entered Nationality value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -170,6 +177,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedUID = uid;
 		try 
 		{
+			Page_DetailedApplicationForm.displayAadhaarNumberInputField().clear();
 			Page_DetailedApplicationForm.displayAadhaarNumberInputField().sendKeys(providedUID);
 			Reporter.log("User has entered Aadhaar Number value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -187,6 +195,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedPassportN = pNumber;
 		try 
 		{
+			Page_DetailedApplicationForm.displayPassportNumberInputField().clear();
 			Page_DetailedApplicationForm.displayPassportNumberInputField().sendKeys(providedPassportN);
 			Reporter.log("User has entered Passport Number value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -202,6 +211,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedPlOfIssue = plOfIssue;
 		try 
 		{
+			Page_DetailedApplicationForm.displayPlaceOfIssueInputField().clear();
 			Page_DetailedApplicationForm.displayPlaceOfIssueInputField().sendKeys(providedPlOfIssue);
 			Reporter.log("User has entered Place Of Issue value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -315,6 +325,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedReligion = religion;
 		try 
 		{
+			Page_DetailedApplicationForm.displayReligionInputField().clear();
 			Page_DetailedApplicationForm.displayReligionInputField().sendKeys(providedReligion);
 			Reporter.log("User has entered Religion value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -330,6 +341,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedCitizenship = citizen;
 		try 
 		{
+			Page_DetailedApplicationForm.displayCitizenshipInputField().clear();
 			Page_DetailedApplicationForm.displayCitizenshipInputField().sendKeys(providedCitizenship);
 			Reporter.log("User has entered Citizenship value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -344,7 +356,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(2);
+			Page_DetailedApplicationForm.displayCasteDropDown().selectByIndex(1);
 			providedCaste = Page_DetailedApplicationForm.displayCasteDropDown().getFirstSelectedOption().getText();
 			if(providedCaste.equalsIgnoreCase("Other"))
 			{
@@ -365,7 +377,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayDomicileDropDown().selectByIndex(4);
+			Page_DetailedApplicationForm.displayDomicileDropDown().selectByIndex(1);
 			providedDomicile = Page_DetailedApplicationForm.displayDomicileDropDown().getFirstSelectedOption().getText();
 			if(providedDomicile.equalsIgnoreCase("Other"))
 			{
@@ -385,7 +397,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayCommunityDropDown().selectByIndex(3);
+			Page_DetailedApplicationForm.displayCommunityDropDown().selectByIndex(1);
 			providedCommunnity = Page_DetailedApplicationForm.displayCommunityDropDown().getFirstSelectedOption().getText();
 			if(providedCommunnity.equalsIgnoreCase("Other"))
 			{
@@ -407,6 +419,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedPresentAddressStep1 = presentAddress;
 		try 
 		{
+			Page_DetailedApplicationForm.displayPresentAddressInputFieldStep1().clear();
 			Page_DetailedApplicationForm.displayPresentAddressInputFieldStep1().sendKeys(providedPresentAddressStep1);
 			Reporter.log("User has entered Present Address value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -423,7 +436,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			//Do later random selection logic once correct data is added to db
-			Page_DetailedApplicationForm.displayPresentAddrCountryDropDown().selectByIndex(3);
+			Page_DetailedApplicationForm.displayPresentAddrCountryDropDown().selectByIndex(1);
 			providedPresentAddrCountry =  Page_DetailedApplicationForm.displayPresentAddrCountryDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered Country value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -438,7 +451,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			//Do later random selection logic once correct data is added to db
-			Page_DetailedApplicationForm.displayPresentAddrStateDropDown().selectByIndex(2);
+			Page_DetailedApplicationForm.displayPresentAddrStateDropDown().selectByIndex(1);
 			providedPresentAddrState =  Page_DetailedApplicationForm.displayPresentAddrStateDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered State value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -469,6 +482,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedPresentAddrPincode = pincode;
 		try 
 		{
+			Page_DetailedApplicationForm.displayPresentAddrPincodeInputField().clear();
 			Page_DetailedApplicationForm.displayPresentAddrPincodeInputField().sendKeys(providedPresentAddrPincode);
 			Reporter.log("User has successfully entered Pincode value in Present Address section.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -482,6 +496,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
+			Page_DetailedApplicationForm.displayPresentAddrContactNumberInputField().clear();
 			Page_DetailedApplicationForm.displayPresentAddrContactNumberInputField().sendKeys(getAppFormData().get("personMobileNumber"));
 			providedPresentAddrContactNumber = Page_DetailedApplicationForm.displayPresentAddrContactNumberInputField().getAttribute("value");
 			Reporter.log("User has entered Emergency Contact Number value successfully.",true);
@@ -512,6 +527,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedPermanentAddressStep1 = permanentAddress;
 		try 
 		{
+			Page_DetailedApplicationForm.displayPermanentAddressInputFieldStep1().clear();
 			Page_DetailedApplicationForm.displayPermanentAddressInputFieldStep1().sendKeys(providedPermanentAddressStep1);
 			Reporter.log("User has entered Permanent Address value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -525,7 +541,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
-			Page_DetailedApplicationForm.displayPermanentAddrCountryDropDown().selectByIndex(3);
+			Page_DetailedApplicationForm.displayPermanentAddrCountryDropDown().selectByIndex(1);
 			providedPermanentAddrCountry =  Page_DetailedApplicationForm.displayPermanentAddrCountryDropDown().getFirstSelectedOption().getText();
 			Reporter.log("User has entered Country value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -571,6 +587,7 @@ public class FillUpApplicationForm  extends HelperHand
 		providedPermanentAddrPincode = Perm_pincode;
 		try 
 		{
+			Page_DetailedApplicationForm.displayPermanentAddrPincodeInputField().clear();
 			Page_DetailedApplicationForm.displayPermanentAddrPincodeInputField().sendKeys(providedPermanentAddrPincode);
 			Reporter.log("User has successfully entered Pincode value in Permanent Address section.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -584,6 +601,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
+			Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().clear();
 			Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().sendKeys(getAppFormData().get("personMobileNumber"));
 			providedPermanentAddrContactNumber = Page_DetailedApplicationForm.displayPermanentAddrContactNumberInputField().getAttribute("value");
 			Reporter.log("User has entered Emergency Contact Number value successfully.",true);
@@ -986,6 +1004,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedFathersNm = fathersName+" in Step2";
+			Page_DetailedApplicationForm.displayFathersNameInputField().clear();
 			Page_DetailedApplicationForm.displayFathersNameInputField().sendKeys(providedFathersNm);
 			Reporter.log("User has entered Fathers Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1001,6 +1020,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			proviedFatherQualfcn = fathersQual;
+			Page_DetailedApplicationForm.displayFathersQualificationInputField().clear();
 			Page_DetailedApplicationForm.displayFathersQualificationInputField().sendKeys(proviedFatherQualfcn);
 			Reporter.log("User has entered Fathers Qualification value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1016,6 +1036,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedFathersOccpn = fathersOccpn;
+			Page_DetailedApplicationForm.displayFathersOccupationInputField().clear();
 			Page_DetailedApplicationForm.displayFathersOccupationInputField().sendKeys(providedFathersOccpn);
 			Reporter.log("User has entered Fathers Occupation value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1031,6 +1052,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedFathersIncome = annualIncome;
+			Page_DetailedApplicationForm.displayAnnualIncomeInputField().clear();
 			Page_DetailedApplicationForm.displayAnnualIncomeInputField().sendKeys(providedFathersIncome);
 			Reporter.log("User has entered Fathers Annual Income value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1044,6 +1066,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
+			Page_DetailedApplicationForm.displayFathersEmailInputField().clear();
 			Page_DetailedApplicationForm.displayFathersEmailInputField().sendKeys(getAppFormData().get("personEmailAddress"));
 			providedFathersEmail = Page_DetailedApplicationForm.displayFathersEmailInputField().getAttribute("value");
 			Reporter.log("User has entered Fathers Email value successfully.",true);
@@ -1058,6 +1081,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
+			Page_DetailedApplicationForm.displayFathersMobileInputField().clear();
 			Page_DetailedApplicationForm.displayFathersMobileInputField().sendKeys(getAppFormData().get("personMobileNumber"));
 			providedFathersMobile = Page_DetailedApplicationForm.displayFathersMobileInputField().getAttribute("value");
 			Reporter.log("User has entered Fathers Mobile value successfully.",true);
@@ -1074,6 +1098,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedMothersNm = MothersName+" in Step2";
+			Page_DetailedApplicationForm.displayMothersNameInputField().clear();
 			Page_DetailedApplicationForm.displayMothersNameInputField().sendKeys(providedMothersNm);
 			Reporter.log("User has entered Mothers Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1089,6 +1114,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			proviedMotherQualfcn = MothersQual;
+			Page_DetailedApplicationForm.displayMothersQualificationInputField().clear();
 			Page_DetailedApplicationForm.displayMothersQualificationInputField().sendKeys(proviedMotherQualfcn);
 			Reporter.log("User has entered Mothers Qualification value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1104,6 +1130,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedMothersOccpn = MothersOccpn+" Dean";
+			Page_DetailedApplicationForm.displayMothersOccupationInputField().clear();
 			Page_DetailedApplicationForm.displayMothersOccupationInputField().sendKeys(providedMothersOccpn);
 			Reporter.log("User has entered Mothers Occupation value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1117,6 +1144,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
+			Page_DetailedApplicationForm.displayMothersEmailInputField().clear();
 			Page_DetailedApplicationForm.displayMothersEmailInputField().sendKeys(getAppFormData().get("personEmailAddress"));
 			providedMothersEmail = Page_DetailedApplicationForm.displayMothersEmailInputField().getAttribute("value");
 			Reporter.log("User has entered Mothers Email value successfully.",true);
@@ -1131,6 +1159,7 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		try 
 		{
+			Page_DetailedApplicationForm.displayMothersMobileInputField().clear();
 			Page_DetailedApplicationForm.displayMothersMobileInputField().sendKeys(getAppFormData().get("personMobileNumber"));
 			providedMothersMobile = Page_DetailedApplicationForm.displayMothersMobileInputField().getAttribute("value");
 			Reporter.log("User has entered Mothers Mobile value successfully.",true);
@@ -1147,6 +1176,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedLGuardianNm = LocalGuardianName+" in Step2";
+			Page_DetailedApplicationForm.displayGuardiansNameInputField().clear();
 			Page_DetailedApplicationForm.displayGuardiansNameInputField().sendKeys(providedLGuardianNm);
 			Reporter.log("User has entered Guardians Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1162,6 +1192,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedAddress1Step2 = address1+" in Step2";
+			Page_DetailedApplicationForm.displayGuardiansAddress1InputField().clear();
 			Page_DetailedApplicationForm.displayGuardiansAddress1InputField().sendKeys(providedAddress1Step2);
 			Reporter.log("User has entered Guardians Address 1 value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1177,6 +1208,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedAddress2Step2 = address2+" in Step2";
+			Page_DetailedApplicationForm.displayGuardiansAddress2InputField().clear();
 			Page_DetailedApplicationForm.displayGuardiansAddress2InputField().sendKeys(providedAddress2Step2);
 			Reporter.log("User has entered Guardians Address 2 value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1192,6 +1224,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedAddress3Step2 = address3+" in Step2";
+			Page_DetailedApplicationForm.displayGuardiansAddress3InputField().clear();
 			Page_DetailedApplicationForm.displayGuardiansAddress3InputField().sendKeys(providedAddress3Step2);
 			Reporter.log("User has entered Guardians Address 3 value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1207,6 +1240,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedLGPincode = lgpincode;
+			Page_DetailedApplicationForm.displayGuardianAddrPincodeInputField().clear();
 			Page_DetailedApplicationForm.displayGuardianAddrPincodeInputField().sendKeys(providedLGPincode);
 			Reporter.log("User has entered Guardians Relation value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1222,6 +1256,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedLGRelation = lgrelation;
+			Page_DetailedApplicationForm.displayGuardianRelationInputField().clear();
 			Page_DetailedApplicationForm.displayGuardianRelationInputField().sendKeys(providedLGRelation);
 			Reporter.log("User has entered Guardians Relation value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1236,6 +1271,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedLGContactNumber = Long.toString(DataGenerator.randomMobileNumberGenerator());
+			Page_DetailedApplicationForm.displayGuardiansContactNumberInputField().clear();
 			Page_DetailedApplicationForm.displayGuardiansContactNumberInputField().sendKeys(providedLGContactNumber);
 			Reporter.log("User has entered Guardians Contact Number value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1612,8 +1648,18 @@ public class FillUpApplicationForm  extends HelperHand
 		System.out.println("\n"+"*********************** Filling up Step 3 Information ***************************"+"\n");
 		try 
 		{
-			Page_DetailedApplicationForm.displaySelectCourseDropDown().selectByVisibleText(GenerateLeadForApplicationForm.providedEntityValue);
-			providedCourseStep3 =  Page_DetailedApplicationForm.displaySelectCourseDropDown().getFirstSelectedOption().getText();
+			Actions builder = new Actions(driver);
+			Action seriesOfActions = builder
+		              .moveToElement(driver.findElement(By.cssSelector("#showCourse > span > span.selection > span")))
+		              .click()
+		              .sendKeys(Keys.RETURN)
+		              .build();
+			seriesOfActions.perform();
+//			Page_DetailedApplicationForm.displaySelectCourseDropDown().selectByVisibleText(GenerateLeadForApplicationForm.providedEntityValue);
+//			providedCourseStep3 =  Page_DetailedApplicationForm.displaySelectCourseDropDown().getFirstSelectedOption().getText();
+			providedCourseStep3 =  Page_DetailedApplicationForm.displaySelectCourseDropDown1().getText();
+			System.out.println("providedCourseStep3: "+providedCourseStep3);
+
 			Reporter.log("User has entered Course value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();
@@ -1627,6 +1673,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedSSCSchoolName = "School Name in Step 3";
+			Page_DetailedApplicationForm.displaySSCSchoolNameInputField().clear();
 			Page_DetailedApplicationForm.displaySSCSchoolNameInputField().sendKeys(providedSSCSchoolName);
 			Reporter.log("User has entered SSC School Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1670,6 +1717,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedSSCRegNumber = sscRegNumber;
+			Page_DetailedApplicationForm.displaySSCRegNumberInputField().clear();
 			Page_DetailedApplicationForm.displaySSCRegNumberInputField().sendKeys(providedSSCRegNumber);
 			Reporter.log("User has entered SSC Registration Number value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1705,6 +1753,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedSSCGrade = sscGradePercent;
+			Page_DetailedApplicationForm.displaySSCPercentageInputField().clear();
 			Page_DetailedApplicationForm.displaySSCPercentageInputField().sendKeys(providedSSCGrade);
 			Reporter.log("User has entered SSC Grade/Percentage value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1736,6 +1785,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try 
 		{
 			providedHSCSchoolName = hscSchoolName+" in step 3";
+			Page_DetailedApplicationForm.displayHSCSchoolNameInputField().clear();
 			Page_DetailedApplicationForm.displayHSCSchoolNameInputField().sendKeys(providedHSCSchoolName);
 			Reporter.log("User has entered HSC School Name value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
@@ -1805,6 +1855,7 @@ public class FillUpApplicationForm  extends HelperHand
 			{
 				providedHSCPerGrade = hscGradePercent;
 				Page_DetailedApplicationForm.displayHSCPercentageGradeRadioButton().click();
+				Page_DetailedApplicationForm.displayHSCPercentageInputField().clear();
 				Page_DetailedApplicationForm.displayHSCPercentageInputField().sendKeys(providedHSCPerGrade);
 				Reporter.log("User has entered HSC Percentage/Grade value successfully.",true);
 			}
@@ -1823,6 +1874,7 @@ public class FillUpApplicationForm  extends HelperHand
 		try
 			{
 				providedHSCRegNumber = hscRegNumber;
+				Page_DetailedApplicationForm.displayHSCRegNumberInputField().clear();
 				Page_DetailedApplicationForm.displayHSCRegNumberInputField().sendKeys(providedHSCRegNumber);
 				Reporter.log("User has entered HSC Registration Number value successfully.",true);
 			}
@@ -1916,6 +1968,7 @@ public class FillUpApplicationForm  extends HelperHand
 			try
 			{
 				providedDegDiplomaName = "Degree in "+degreeName;
+				Page_DetailedApplicationForm.displayDegreeDiplomaNameInputField().clear();
 				Page_DetailedApplicationForm.displayDegreeDiplomaNameInputField().sendKeys(providedDegDiplomaName);
 				Reporter.log("User has entered Degree Name value successfully.",true);
 			}
@@ -1933,6 +1986,7 @@ public class FillUpApplicationForm  extends HelperHand
 			try
 			{
 				providedDiplomaAOS = "Area of Specialization in "+degreeAOS;
+				Page_DetailedApplicationForm.displayDegreeDiplomaAoSInputField().clear();
 				Page_DetailedApplicationForm.displayDegreeDiplomaAoSInputField().sendKeys(providedDiplomaAOS);
 				Reporter.log("User has entered Degree AoS value successfully.",true);
 			}
@@ -1950,6 +2004,7 @@ public class FillUpApplicationForm  extends HelperHand
 			try
 			{
 				providedDiplomaCollegeName = "Walchand College of Engineering, "+degreeCollege;
+				Page_DetailedApplicationForm.displayDegreeDiplomaCollegeNameInputField().clear();
 				Page_DetailedApplicationForm.displayDegreeDiplomaCollegeNameInputField().sendKeys(providedDiplomaCollegeName);
 				Reporter.log("User has entered Degree College Name value successfully.",true);
 			}
@@ -1967,6 +2022,7 @@ public class FillUpApplicationForm  extends HelperHand
 			try
 			{
 				providedUniversityNm = "Shivaji University, "+degreeUnivName;
+				Page_DetailedApplicationForm.displayDegreeDiplomaUniversityNameInputField().clear();
 				Page_DetailedApplicationForm.displayDegreeDiplomaUniversityNameInputField().sendKeys(providedUniversityNm);
 				Reporter.log("User has entered Degree University Name value successfully.",true);
 			}
@@ -2454,12 +2510,24 @@ public class FillUpApplicationForm  extends HelperHand
 	@Test
 	public static void providePaymentCourse() throws Exception
 	{
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 
 		System.out.println("\n"+"*********************** Filling up Step 4 Information ***************************"+"\n");
 		try 
 		{
-			Page_DetailedApplicationForm.displayEntityDropdown().selectByVisibleText(GenerateLeadForApplicationForm.providedEntityValue);
+			Actions builder = new Actions(driver);
+			Action seriesOfActions = builder
+		              .moveToElement(driver.findElement(By.cssSelector("#showPaymentCourse > div > span > span.selection > span")))
+		              .click()
+		              .sendKeys(Keys.RETURN)
+		              .build();
+			seriesOfActions.perform();
+			
+//			Page_DetailedApplicationForm.displayEntityDropdown().selectByVisibleText(GenerateLeadForApplicationForm.providedEntityValue);
+			
+			providedCourseStep4 =  Page_DetailedApplicationForm.displayEntityDropdown1().getText();
+
+			System.out.println("providedCourseStep4: "+providedCourseStep4);
 			Reporter.log("User has entered Payment Course value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();

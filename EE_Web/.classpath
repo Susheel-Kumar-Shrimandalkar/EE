@@ -16,9 +16,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EESupport-WorkSpace/Samples/External_Physical_Bindings/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EESupport-WorkSpace/Samples/External_Physical_Bindings/json-20171018.jar"/>
-	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EE-WorkSpace/ExtraaEdge Web Platform/External_Physical_Bindings/json-20171018.jar"/>
-	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EE-WorkSpace/ExtraaEdge Web Platform/External_Physical_Bindings/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EE-WorkSpace/EE_Web/External_Physical_Bindings/json-20171018.jar"/>
+	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EE-WorkSpace/EE_Web/External_Physical_Bindings/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EE-WorkSpace/EE_Web/External_Physical_Bindings/mssql-jdbc-6.2.2.jre7.jar"/>
+	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EE-WorkSpace/EE_Web/External_Physical_Bindings/mssql-jdbc-6.2.2.jre8.jar"/>
+	<classpathentry kind="lib" path="F:/Users/Shekhar.DESKTOP-TMQM6DS/EE-WorkSpace/EE_Web/External_Physical_Bindings/NashornLib-1.9.4-1.8.77-1.3.1.8.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,22 +1,35 @@
 package whitefeather.xedge.testcases;
 
 import java.sql.SQLException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import whitefeather.xedge.core.Page_AddActivity;
 import whitefeather.xedge.core.Page_GenerateLeadApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
 public class GenerateLeadForApplicationForm extends HelperHand 
 {
 	public static String fullName, mobileNumber, emailAddress;
+	public static String [] splitEntityValues=null;
 	
 	@Test	
 	public static void enterFullName() throws Exception
 	{
 		System.out.println("\n"+"*********************** Filling up Basic Information ***************************"+"\n");
+		
 		try {
+			Page_GenerateLeadApplicationForm.displayFullNameInputField().clear();
 			Page_GenerateLeadApplicationForm.displayFullNameInputField().sendKeys(getAppFormData().get("personName"));
+			fullName =Page_GenerateLeadApplicationForm.displayFullNameInputField().getAttribute("value");
+			System.out.println("Provided Lead Name is: "+fullName);
 			Reporter.log("User has entered Full Name successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
@@ -25,14 +38,32 @@ public class GenerateLeadForApplicationForm extends HelperHand
 		}
 	}
 	
+	
+	
+	@Test
+	public static void enterEmailAddress() throws Exception
+	{
+		try {
+			Page_GenerateLeadApplicationForm.displayEmailInputField().clear();
+			Page_GenerateLeadApplicationForm.displayEmailInputField().sendKeys(getAppFormData().get("personEmailAddress"));
+			emailAddress =Page_GenerateLeadApplicationForm.displayEmailInputField().getAttribute("value");
+			System.out.println("Provided Lead's Email Address is: "+emailAddress);
+			Reporter.log("User has entered Email Address successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("User has failed to enter Email Addres.",true);
+		}
+	}
+	
 	@Test
 	public static void enterMobileNumber() throws Exception
 	{
-		fullName =Page_GenerateLeadApplicationForm.displayFullNameInputField().getAttribute("value");
-		System.out.println("Provided Lead Name is: "+fullName);
-		
 		try {
+			Page_GenerateLeadApplicationForm.displayMobileNumberInputField().clear();;
 			Page_GenerateLeadApplicationForm.displayMobileNumberInputField().sendKeys(getAppFormData().get("personMobileNumber"));
+			mobileNumber =Page_GenerateLeadApplicationForm.displayMobileNumberInputField().getAttribute("value");
+			System.out.println("Provided Lead's Mobile Number is: "+mobileNumber);
 			Reporter.log("User has entered Mobile successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
@@ -42,14 +73,13 @@ public class GenerateLeadForApplicationForm extends HelperHand
 	}
 	
 	@Test
-	public static void enterEmailAddress() throws Exception
+	@Parameters({"emailId"})
+	public static void enterEmailAddressManually(String emailId) throws Exception
 	{
-		mobileNumber =Page_GenerateLeadApplicationForm.displayMobileNumberInputField().getAttribute("value");
-		System.out.println("Provided Lead's Mobile Number is: "+mobileNumber);
-		
 		try {
-			Page_GenerateLeadApplicationForm.displayEmailInputField().sendKeys(getAppFormData().get("personEmailAddress"));
-			Thread.sleep(1000);
+			Page_GenerateLeadApplicationForm.displayEmailInputField().clear();
+			Page_GenerateLeadApplicationForm.displayEmailInputField().sendKeys(emailId);
+			emailAddress = emailId;
 			Reporter.log("User has entered Email Address successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
 			e.printStackTrace();
@@ -58,22 +88,59 @@ public class GenerateLeadForApplicationForm extends HelperHand
 		}
 	}
 	
-	
+	@Test
+	@Parameters({"mobileN"})
+	public static void enterMobileNumberManually(String mobileN) throws Exception
+	{
+		try {
+			Page_GenerateLeadApplicationForm.displayMobileNumberInputField().clear();;
+			Page_GenerateLeadApplicationForm.displayMobileNumberInputField().sendKeys(mobileN);
+			mobileNumber = mobileN;
+			Reporter.log("User has entered Mobile successfully.",true);
+		} catch (org.openqa.selenium.NoSuchElementException | AssertionError e) {
+			e.printStackTrace();
+			Assert.fail();
+			Reporter.log("User has failed to enter Mobile Number.",true);
+		}
+	}
 	
 	@Test
 	public static void provideEntity() throws Exception
 	{
-		emailAddress =Page_GenerateLeadApplicationForm.displayEmailInputField().getAttribute("value");
-		System.out.println("Provided Lead's Email Address is: "+emailAddress);
-		
 		try 
 		{
+			Actions builder = new Actions(driver);
+			Action seriesOfActions = builder
+		              .moveToElement(driver.findElement(By.cssSelector("#showEntity > span")))
+		              .click()
+		              .sendKeys(Keys.RETURN)
+		              /*.sendKeys(Keys.RETURN)
+		              .sendKeys(Keys.DOWN)
+		              .sendKeys(Keys.RETURN)
+		              .sendKeys(Keys.RETURN)
+		              .sendKeys(Keys.DOWN)
+		              .sendKeys(Keys.DOWN)
+		              .sendKeys(Keys.RETURN)*/
+		              .build();
+			seriesOfActions.perform();
+
 //			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByIndex(2);
 			//Temp value for test purpose. Use above line of code for actual execution
-			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("Junior KG");
-//			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("Not Known");
-			providedEntityValue = Page_GenerateLeadApplicationForm.displayEntityDropDown().getFirstSelectedOption().getText();
-			System.out.println("reference---"+providedEntityValue);
+//			Page_GenerateLeadApplicationForm.displayEntityDropDown().selectByVisibleText("Junior KG");
+
+//			providedEntityValue = Page_GenerateLeadApplicationForm.displayEntityDropDown().getFirstSelectedOption().getText();
+			providedEntityValue = Page_GenerateLeadApplicationForm.displayEntityDropDown1().getText();
+
+			System.out.println("old_providedEntityValue: "+providedEntityValue);
+			providedEntityValue = providedEntityValue.replaceAll("(\\r|\\n)", "");
+			System.out.println("New providedEntityValue: "+ providedEntityValue);
+			splitEntityValues = providedEntityValue.split("×");
+			
+			/*for (int i = 0 ; i<splitEntityValues.length; i++)
+			{
+		        	System.out.println("Value: "+splitEntityValues[i]);
+			}*/
+
 			Reporter.log("User has entered Entity value successfully.",true);
 		} catch (org.openqa.selenium.NoSuchElementException e) {
 			e.printStackTrace();

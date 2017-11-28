@@ -854,6 +854,17 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return dropdown;	
 	}
 	
+	//Temp method
+	public static WebElement displaySelectCourseDropDown1() throws Exception
+	{
+		try {
+			element =driver.findElement((properties.selectLocator("Step3_SelectCourse")));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
+	}
+	
 	public static WebElement displaySSCSchoolNameInputField() throws Exception
 	{	
 		try {
@@ -1336,7 +1347,7 @@ public class Page_DetailedApplicationForm extends HelperHand
 		return element;	
 	}
 	
-/********************* STEP 3 *************************/
+/********************* STEP 4 *************************/
 	
 	public static Select displayEntityDropdown() throws Exception
 	{
@@ -1346,6 +1357,17 @@ public class Page_DetailedApplicationForm extends HelperHand
 			e.printStackTrace();
 		}
 		return dropdown;	
+	}
+	
+	//temp method
+	public static WebElement displayEntityDropdown1() throws Exception
+	{	
+		try {
+			element = driver.findElement(properties.selectLocator("Step4_PaymentCourse"));
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		return element;	
 	}
 	
 	public static Select displayPaymentTypeDropdown() throws Exception
