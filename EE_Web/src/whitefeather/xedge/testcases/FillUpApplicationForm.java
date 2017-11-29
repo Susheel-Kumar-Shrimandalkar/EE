@@ -43,7 +43,7 @@ public class FillUpApplicationForm  extends HelperHand
 		
 		if(driver.getTitle().equalsIgnoreCase("Application Form"))
 		{
-			getDatabaseName(driver.getCurrentUrl());
+			decodeURLToGetDBName(driver.getCurrentUrl());
 		}
 		
 		String leadPrn = extractDataFromDatabase("userPRN");

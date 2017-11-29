@@ -9,7 +9,8 @@ public class Constants {
 	public static final String ZIPSRCLOCATION="F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\RealtimeReport";
 	public static final String PlatformURL = "http://extraaedgev2.azurewebsites.net/";
 	public static final String homePageURL = "https://extraaedgev2.azurewebsites.net/dashboard";
-	
+	public static final String DBJSON=".\\src\\whitefeather\\xedge\\appconfig\\DatabaseNames.json";
+
 	public static final String API_LOGIN_URL = "https://internalpoc.extraaedge.com/token/";
 	public static final String CRED="clientId=248CEB3C-5360-437A-831D-AA7E144DCC50&username=shekharb@theextraaedge.com&password=test";
 	

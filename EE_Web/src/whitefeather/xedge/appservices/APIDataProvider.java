@@ -37,7 +37,7 @@ public class APIDataProvider
 //		System.out.println("Upcoming Walkin Tab Count: "+getUpcomingWalkinsTabCount());
 //		System.out.println("High Priority Tab Count: "+getHighPriorityTabCount());
 		getAllMasterData();
-		tempMethodToMapValues();
+//		tempMethodToMapValues();
 		
 		/*System.out.println("leadList_All Count: "+getAllTabCount());
 		System.out.println("leadList_NewCount Count: "+leadList_NewCount);
@@ -282,51 +282,34 @@ public class APIDataProvider
 			{
 				respGet.append(_getStream);
 			}
-			System.out.println("JSON - without string: "+respGet);
+//			System.out.println("JSON - without string: "+respGet);
 			//Store the Lead List Count API response in a String
 			getAllMasterJSONResp = respGet.toString();
-//			System.out.println("getAllMaster JSON Response: "+getAllMasterJSONResp);
-			System.out.println("JSON-in string: "+respGet);
+			System.out.println("getAllMaster JSON Response: "+getAllMasterJSONResp);
+//			System.out.println("JSON-in string: "+respGet);
 			brGet.close();
 		}
 		
-		// parsing JSON Response
-	    Object obj = new JSONParser().parse(getAllMasterJSONResp);
-	     
-	    // type casting object to JSONObject
-	    JSONObject jo = (JSONObject ) obj;
-	    
-	    // getting appFormFirstStepStatus 
-	    String appFormFirstStepStatus = (String) jo.get("appFormFirstStepStatus");
-	    
-	    System.out.println("appFormFirstStepStatus: "+appFormFirstStepStatus);
-	 // Now we try to take the data from "presentationSlides" array
-        JSONArray slideContent = (JSONArray) jo.get("leadStatuses");
-        Iterator i = slideContent.iterator();
+		/*Object obj = new JSONParser().parse(getAllMasterJSONResp);
+        
+        // Type casting object to JSONObject
+        JSONObject jo = (JSONObject) obj;
+         
+        // getting array
+        System.out.println("Check1234: "+(jo.get("communicationTypes")));
+        
+     // First I take the global data
+//        String name = (String) jo.get("DBConnectionString");
 
-        String statuses[];
+        JSONArray slideContent1 = (JSONArray) jo.get("leadStatuses");
+        Iterator i = slideContent1.iterator();
+
         while (i.hasNext()) {
-            System.out.println(i.next());
-//            JSONObject slide = (JSONObject) i.next();
-//            String title = (String)slide.get("name");
-
-//Here I try to take the title element from my slide but it doesn't work!
-//            String title = (String) jo.get("title");
-//            System.out.println(title);
-        }
+            JSONObject slide = (JSONObject) i.next();
+            String title = (String)slide.get(0);
+            System.out.println(title);
+        }*/
         
-        
-		/*
-		//Parse JSON response and store it into Hashmap
-		getAllMasterJSONResp = getAllMasterJSONResp.replaceAll("\\{", "").replaceAll("\\}", "").replaceAll(":", ",").replaceAll("\"", "").toString();
-		String[] countData = getAllMasterJSONResp.split(",");
-		System.out.println("lengt is: "+countData.length);
-		for(int i=0;i<countData.length;i+=2)
-		{
-			getAllMasterMap.put(countData[i], countData[i+1]);
-		}	
-		*/
-//		return getAllMasterMap;	
 	}
 	
 	public static void tempMethodToMapValues()

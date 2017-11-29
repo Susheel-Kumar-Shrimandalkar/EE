@@ -51,10 +51,8 @@
         <parameter name="degreeUnivName" value="Kolhapur"/>
         <parameter name="paytmUsername" value="7777777777"/>
         <methods>
-          <include name="validatePaymentMode"/>
           <include name="validateAmountPaid"/>
           <include name="validateTransactionID"/>
-          <include name="validateAmountToBePaid"/>
           <include name="validateSuccessfulPDFGenerationAndSending"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.DoPaymentInApplicationForm -->
@@ -105,13 +103,19 @@
         <parameter name="degreeUnivName" value="Kolhapur"/>
         <parameter name="paytmUsername" value="7777777777"/>
         <methods>
+          <include name="provideFathersMobile"/>
+          <include name="provideFathersQualification" invocation-numbers="0"/>
+          <include name="providePermanentAddrCity"/>
+          <include name="provideAadharNumber" invocation-numbers="0"/>
           <include name="providePermanentAddrContactNumber"/>
           <include name="providePermanentAddrCountry"/>
-          <include name="providePermanentAddrCity"/>
+          <include name="provideFathersName" invocation-numbers="0"/>
           <include name="providePermanentAddressAddress" invocation-numbers="0"/>
-          <include name="provideAadharNumber" invocation-numbers="0"/>
+          <include name="provideAnnualIncome" invocation-numbers="0"/>
+          <include name="provideFathersEmail"/>
           <include name="providePermanentAddrPincode" invocation-numbers="0"/>
           <include name="providePermanentAddrState"/>
+          <include name="provideFathersOccupation" invocation-numbers="0"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.FillUpApplicationForm -->
       <class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">

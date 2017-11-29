@@ -34,7 +34,7 @@ public class HelperHand
 	
 	protected static  WebDriver driver = RootDriver.driver;
 	public static boolean visibleFlag;
-	public static String helperString="", dbUsername="", appFormURL="";
+	public static String helperString="", hostName="", appFormURL="",databaseName="",clientConfig="";;
 	
 	public static String prospectEmail = DataGenerator.randomEmailGenerator();
 	public static String prospectMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
@@ -132,53 +132,59 @@ public class HelperHand
 	    }
 	}*/
 	
-	public static String getDatabaseName(String formURL)
+	public static String decodeURLToGetDBName(String formURL)
 	{
-		dbUsername = formURL;
+		hostName = formURL;
 		try {
-			if(dbUsername ==null || dbUsername =="")
+			if(hostName ==null || hostName =="")
 			{
-				System.out.println("Failed to get database name. Forcefully stopping the execution.");
+				System.out.println("Failed to get hostname. Forcefully stopping the execution.");
 				System.exit(0);
 			}
 			else
 			{
 				System.out.println("\n >>> Establishing connection to database...");
 				
-				dbUsername  = dbUsername.substring(0, dbUsername.indexOf("="));
-
-				dbUsername  = dbUsername .replace("https://", "");
-				dbUsername  = dbUsername .replace(".extraaedge.com/application?inst", "");
+				//Decoding URL
+				hostName  = hostName.substring(0, hostName.indexOf("="));
+				hostName  = hostName .replace("https://", "");
+//				hostName  = hostName .replace(".extraaedge.com/application?inst", "");
+				hostName  = hostName .replace(".azurewebsites.net/application?inst", "");
 				
-				System.out.println("dbUsername: "+dbUsername);
-//				dbUsername  = dbUsername .replace(".azurewebsites.net/application?inst", "");
+				System.out.println("urlToBeDecoded: "+hostName);
 
-//				dbUsername  = dbUsername .replaceAll("\\d", "");	//In case when db names will not contains any numeric chars
+				//In case when db names will not contains any numeric chars
+//				dbUsername  = dbUsername .replaceAll("\\d", "");	
 				
-				if(dbUsername .equalsIgnoreCase("extraaedgev2"))
+				databaseName = JsonExtractor.getDatabaseName(hostName);
+				System.out.println("dbUsername: "+databaseName);
+				
+				if(databaseName==null || databaseName=="")
 				{
-					dbUsername = "ExtraaEdgeV2_Version1";
-					System.out.println("\n >>> Connecting to "+dbUsername+"\n");
-				}
-				else if(dbUsername .equalsIgnoreCase("cmr"))
-				{
-					dbUsername = "extraaedge_cmr";
-					System.out.println("\n >>> Connecting to "+dbUsername+"\n");
-				}
-				else if(dbUsername .equalsIgnoreCase("walnut"))
-				{
-					dbUsername = "extraaedge_walnut";
-					System.out.println("\n >>> Connecting to "+dbUsername+"\n");
-				}
-				else
-				{
+					System.out.println("Failed to get database name. Forcefully stopping the execution.");
 					System.exit(0);
 				}
+				
 			}
 		} catch (Exception e) {
 			System.out.println(e);	
 		}
-		return dbUsername;
+		return databaseName;
+	}
+	
+	public static void getClientConfig()
+	{
+		try {
+		      FileUtils.writeStringToFile(new File("F://Config.json"), DatabaseManager.getClientConfigDetails(), "UTF-8", true);
+		    }
+		    catch (IOException | SQLException e) {
+		      System.out.println(e);
+		    }  
+	}
+	
+	public static void main(String[] args) throws SQLException 
+	{
+		getClientConfig();
 	}
 }
 

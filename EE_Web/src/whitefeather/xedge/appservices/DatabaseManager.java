@@ -19,12 +19,6 @@ public class DatabaseManager extends HelperHand
 	/*public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
 	         "databaseName=ExtraaEdgeV2_Version1;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; */
 	
-	/*public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
-	         "databaseName="+dbUsername+";user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; */
-	
-	/*public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
-	         "databaseName=extraaedge_cmr;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; */
-	
 	static Connection con = null;  
 	static Statement stmt = null;  
 	static ResultSet rs = null;  
@@ -50,12 +44,9 @@ public class DatabaseManager extends HelperHand
 	{		
 		
 		String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
-		         "databaseName="+dbUsername+";user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; 
+		         "databaseName="+databaseName+";user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; 
 		
 		con = DriverManager.getConnection(connectionUrl); 
-		
-//		String SQL = "SELECT * FROM Users WHERE EMAIL LIKE '%"+HelperHand.thirdPartyLeadEmail+"%'";
-//		String SQL = "SELECT * FROM Users WHERE EMAIL LIKE '%"+"ausk245659@domain.in"+"%'";
 
 		//Find out lead based on provided Email or Mobile Number. Develop logic later.
 		String SQL ="DECLARE \r\n" + 
@@ -384,14 +375,45 @@ public class DatabaseManager extends HelperHand
 		      System.out.println(record.getKey()+" : "+record.getValue());
 		   }
 	}
+	
+	public static String getClientConfigDetails() throws SQLException
+	{
+		String configConnection = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
+		"databaseName=ExtraaedgeV2.ConfigDb;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs";
+		
+		try 
+		 {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		 }
+		 catch (ClassNotFoundException e) 
+		 {
+			e.printStackTrace();
+		 }  
+		
+		con = DriverManager.getConnection(configConnection); 
+		
+		String retrieveConfig = "SELECT CLIENTCONFIGURATION FROM CLIENTS WHERE CLIENTALIAS = "+"'"+"extraaedgev2"+"'";
+		stmt = con.createStatement();  
+        rs = stmt.executeQuery(retrieveConfig); 
+        while (rs.next()) 
+        {
+        	clientConfig = rs.getString(1);
+        }
+		return clientConfig;
+	}
 	public static void main(String[] args) throws SQLException {
 //		System.out.println("Check2---"+thirdPartyLeadEmail);
 //		System.out.println("Check3---"+getAppFormData().get("appFormLead"));
-		establishDatabaseConnection();
-		getLeadDataFromDatabase();
-		tempMethodToPrintDBValues();
+//		establishDatabaseConnection();
+//		getLeadDataFromDatabase();
+//		tempMethodToPrintDBValues();
 //		System.out.println(Arrays.asList(dbValues)); // method 1
 //	    System.out.println(Collections.singletonList(dbValues)); // method 2
+		
+		
+		System.out.println(getClientConfigDetails());
+		
+		
 	}
 
 }
