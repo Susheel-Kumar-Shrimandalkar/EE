@@ -12,8 +12,6 @@ import whitefeather.xedge.facilitator.HelperHand;
 
 public class OpenApplicationFormLandingPage extends HelperHand
 {
-
-	public static String appFormURL;
 	
 	@BeforeClass
 	@Parameters({"browser"})	
@@ -35,6 +33,8 @@ public class OpenApplicationFormLandingPage extends HelperHand
 		appFormURL = driver.findElement(By.id("customAppURL")).getText();
 		System.out.println(appFormURL);
 		driver.get(appFormURL);
+		Thread.sleep(500);
+
 		try 
 		{
 			Assert.assertEquals(appFormURL,driver.getCurrentUrl());

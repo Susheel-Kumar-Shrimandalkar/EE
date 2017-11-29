@@ -3,7 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Staging QA Application Form Test Validations(failed)">
     <parameter name="browser" value="Chrome"/>
-    <parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/>
     <classes>
       <class name="whitefeather.xedge.testcases.DoPaymentInApplicationForm">
         <parameter name="otherDomicileValue" value="OtherDomicileName"/>
@@ -52,6 +51,7 @@
         <parameter name="degreeUnivName" value="Kolhapur"/>
         <parameter name="paytmUsername" value="7777777777"/>
         <methods>
+          <include name="validatePaymentMode"/>
           <include name="validateAmountPaid"/>
           <include name="validateTransactionID"/>
           <include name="validateAmountToBePaid"/>

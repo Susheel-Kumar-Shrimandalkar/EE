@@ -39,6 +39,13 @@ public class FillUpApplicationForm  extends HelperHand
 	{
 		Thread.sleep(5000);
 		System.out.println("\n"+"*********************** Filling up Step 1 Information ***************************"+"\n");
+		
+		
+		if(driver.getTitle().equalsIgnoreCase("Application Form"))
+		{
+			getDatabaseName(driver.getCurrentUrl());
+		}
+		
 		String leadPrn = extractDataFromDatabase("userPRN");
 		String leadEmail = extractDataFromDatabase("userEmail");
 		System.out.println(leadPrn);

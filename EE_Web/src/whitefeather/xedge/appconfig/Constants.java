@@ -13,7 +13,7 @@ public class Constants {
 	public static final String API_LOGIN_URL = "https://internalpoc.extraaedge.com/token/";
 	public static final String CRED="clientId=248CEB3C-5360-437A-831D-AA7E144DCC50&username=shekharb@theextraaedge.com&password=test";
 	
-	public static final String TESTDATA_CONTAINER = ".\\src\\whitefeather\\xedge\\testdata\\TestData_Container.xlsx";
+	public static final String TESTDATA_CONTAINER = ".\\src\\whitefeather\\xedge\\testdata\\TestData.xlsx";
 //	public static final String TESTREPORT_CONTAINER = ".\\src\\whitefeather\\xedge\\testreports\\Test_Report_"+ActionListener.getDate()+".xlsx";
 
 //	public static final String APPLICATIONFORM = "https://extraaedge-stagingwebsite-qa.azurewebsites.net/application";

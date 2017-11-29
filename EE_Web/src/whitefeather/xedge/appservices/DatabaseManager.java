@@ -16,11 +16,11 @@ import whitefeather.xedge.testcases.GenerateLeadForApplicationForm;
 public class DatabaseManager extends HelperHand
 {
 	//to be done later - secure connection
-	public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
-	         "databaseName=ExtraaEdgeV2_Version1;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; 
+	/*public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
+	         "databaseName=ExtraaEdgeV2_Version1;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; */
 	
-/*	public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
-	         "databaseName=extraaedge_walnut;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; */
+	/*public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
+	         "databaseName="+dbUsername+";user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; */
 	
 	/*public static String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
 	         "databaseName=extraaedge_cmr;user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; */
@@ -48,6 +48,10 @@ public class DatabaseManager extends HelperHand
 	
 	public static void getLeadDataFromDatabase() throws SQLException
 	{		
+		
+		String connectionUrl = "jdbc:sqlserver://extraaedgedb.database.windows.net:1433;" +  
+		         "databaseName="+dbUsername+";user=theextradbuser;password=Dagies#g4D%7$3@f9723Sdgs"; 
+		
 		con = DriverManager.getConnection(connectionUrl); 
 		
 //		String SQL = "SELECT * FROM Users WHERE EMAIL LIKE '%"+HelperHand.thirdPartyLeadEmail+"%'";
@@ -360,7 +364,8 @@ public class DatabaseManager extends HelperHand
         	 dbValues.put("pmntDetailsPmntMode", rs.getString(64));
         	 dbValues.put("pmntDetailsTranscnID", rs.getString(65));
         	 dbValues.put("pmntDetailsAmount", rs.getString(66));
-        	 dbValues.put("pdfGeneratedAndSent", rs.getString(67));
+        	 dbValues.put("generatedPdfName", rs.getString(67));
+        	 dbValues.put("pdfGeneratedAndSent", rs.getString(68));
 
 
          }  

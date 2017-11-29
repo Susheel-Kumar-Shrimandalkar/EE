@@ -4,7 +4,7 @@
 
 	<test name="Staging QA Application Form Test Validations">
   	<parameter name="browser" value="Chrome"/>
-	<parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/>
+<!-- 	<parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/> -->
 		
 		<classes>
 			<class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">

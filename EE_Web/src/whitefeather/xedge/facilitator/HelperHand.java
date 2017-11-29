@@ -23,13 +23,18 @@ import whitefeather.xedge.appconfig.ConfigMethods;
 import whitefeather.xedge.appservices.DatabaseManager;
 import whitefeather.xedge.appservices.EmailerService;
 import whitefeather.xedge.core.DataGenerator;
+import whitefeather.xedge.testcases.OpenApplicationFormLandingPage;
 
 
 public class HelperHand
 {
+	
+	//Half of below static strings are handled in generic method. Half are remaining.
+	//To do: Create Generic methods in ExtraaEdge platform classes
+	
 	protected static  WebDriver driver = RootDriver.driver;
 	public static boolean visibleFlag;
-	public static String helperString="";
+	public static String helperString="", dbUsername="", appFormURL="";
 	
 	public static String prospectEmail = DataGenerator.randomEmailGenerator();
 	public static String prospectMobile = Long.toString(DataGenerator.randomMobileNumberGenerator());
@@ -113,6 +118,8 @@ public class HelperHand
 		return (String) dbValues.get(columnName);
 	}
 	
+	
+	//Write logic for listing file names in directory. This is specifically for attachments in Step3 of App Form
 	/*List<String> results = new ArrayList<String>();
 
 
@@ -124,5 +131,54 @@ public class HelperHand
 	        results.add(file.getName());
 	    }
 	}*/
+	
+	public static String getDatabaseName(String formURL)
+	{
+		dbUsername = formURL;
+		try {
+			if(dbUsername ==null || dbUsername =="")
+			{
+				System.out.println("Failed to get database name. Forcefully stopping the execution.");
+				System.exit(0);
+			}
+			else
+			{
+				System.out.println("\n >>> Establishing connection to database...");
+				
+				dbUsername  = dbUsername.substring(0, dbUsername.indexOf("="));
+
+				dbUsername  = dbUsername .replace("https://", "");
+				dbUsername  = dbUsername .replace(".extraaedge.com/application?inst", "");
+				
+				System.out.println("dbUsername: "+dbUsername);
+//				dbUsername  = dbUsername .replace(".azurewebsites.net/application?inst", "");
+
+//				dbUsername  = dbUsername .replaceAll("\\d", "");	//In case when db names will not contains any numeric chars
+				
+				if(dbUsername .equalsIgnoreCase("extraaedgev2"))
+				{
+					dbUsername = "ExtraaEdgeV2_Version1";
+					System.out.println("\n >>> Connecting to "+dbUsername+"\n");
+				}
+				else if(dbUsername .equalsIgnoreCase("cmr"))
+				{
+					dbUsername = "extraaedge_cmr";
+					System.out.println("\n >>> Connecting to "+dbUsername+"\n");
+				}
+				else if(dbUsername .equalsIgnoreCase("walnut"))
+				{
+					dbUsername = "extraaedge_walnut";
+					System.out.println("\n >>> Connecting to "+dbUsername+"\n");
+				}
+				else
+				{
+					System.exit(0);
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e);	
+		}
+		return dbUsername;
+	}
 }
 
