@@ -1,13 +1,11 @@
 package whitefeather.xedge.testcases;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import whitefeather.xedge.appconfig.Constants;
 import whitefeather.xedge.facilitator.HelperHand;
 
 public class OpenApplicationFormLandingPage extends HelperHand
@@ -20,18 +18,19 @@ public class OpenApplicationFormLandingPage extends HelperHand
 		setUpTestSuit(browser);
 	}
 	
-//	@Parameters({"appFormURL"})	
+	@Parameters({"appFormURL"})	
 	@Test
-	public void openAppForm() throws InterruptedException
+	public void openAppForm(String appFormURL) throws InterruptedException
 	{
-		driver = new ChromeDriver();
+//		driver = new ChromeDriver();
 		Reporter.log("Chrome Browser is opened",true);
-		driver.manage().window().maximize();
+//		driver.manage().window().maximize();
 		Reporter.log("Browser is maximized.",true);
-		driver.get(Constants.SELECT_APPLICATION_FORM_TYPE);
+		/*driver.get(Constants.SELECT_APPLICATION_FORM_TYPE);
+		driver.navigate().refresh();
 		Thread.sleep(20000);
 		appFormURL = driver.findElement(By.id("customAppURL")).getText();
-		System.out.println(appFormURL);
+		System.out.println(appFormURL);*/
 		driver.get(appFormURL);
 		Thread.sleep(500);
 
@@ -44,5 +43,7 @@ public class OpenApplicationFormLandingPage extends HelperHand
 			Reporter.log("User has opened incorrect Application Form page.",true);
 		}
 	}
+	
+	
 
 }

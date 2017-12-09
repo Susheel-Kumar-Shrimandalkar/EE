@@ -3,13 +3,10 @@
 <suite name="Suite" >
 
 	<test name="Staging QA Application Form Test Validations">
-  	<parameter name="browser" value="Chrome"/>
-<!-- 	<parameter name="loginPageUrl" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/"/> -->
-		
+  	<parameter name="browser" value="Chrome"/>		
 		<classes>
 			<class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
 				<methods>
-<!-- 				<parameter name="appFormURL" value="https://extraaedge-stagingwebsite-qa.azurewebsites.net/application"/> -->
 				<include name="openAppForm"/>
 				</methods>
 			</class>
@@ -41,9 +38,9 @@
 			
 			
 			
-<!-- 			Implement logic for Going back to previous step later -->
+			<!-- Implement logic for Going back to previous step later. Write separate class for each step later --> 
 			<class name="whitefeather.xedge.testcases.FillUpApplicationForm">
-<!-- 			Write separate class for each step later -->
+			
 				<methods>
 				<include name="openDetailedApplicationFormPage"/>
 				<include name="clickDateOfBirthInputField"/>
@@ -93,7 +90,7 @@
 				<include name="providePermanentAddrPincode"/>
 				<include name="providePermanentAddrContactNumber"/> 
 				<include name="clickNextButtonStep1"/>
-				<!-- <include name="validateDoBStep1"/>
+				<include name="validateDoBStep1"/>
 				<include name="validatePlaceOfBirthStep1"/>
 				<include name="validateGenderValueInStep1"/>
 				<include name="validateBloodGroupInStep1"/>
@@ -111,7 +108,7 @@
 				<include name="validatePresentAddressInStep1"/>
 				<include name="validatePresentAddressCountryInStep1"/>
 				<include name="validatePresentAddressStateInStep1"/>
-				<include name="validatePresentAddressCityInStep1"/> -->
+				<include name="validatePresentAddressCityInStep1"/>
 				<parameter name="fathersName" value="FathersName"/>
 				<include name="provideFathersName"/>
 				<parameter name="fathersQual" value="B.E.I.T."/>
@@ -144,7 +141,7 @@
 				<include name="provideGuardiansRelation"/>
 				<include name="provideGuardiansContactNumber"/>
 				<include name="clickNextButtonStep2"/>
-				<!-- <include name="validateFathersNameStep2"/>
+				<include name="validateFathersNameStep2"/>
 				<include name="validateFathersQualificationStep2"/>
 				<include name="validateFathersOccupationStep2"/>
 				<include name="validateFathersAnnualIncomeStep2"/>
@@ -161,7 +158,7 @@
 				<include name="validateLocalGuardianAddr3Step2"/>
 				<include name="validateGrdnAddrPincodeStep2"/>
 				<include name="validateGuardianRelationStep2"/>
-				<include name="validateGuardianContactNumberStep2"/> -->
+				<include name="validateGuardianContactNumberStep2"/>
 				<include name="provideCourse"/>
 				<include name="provideSSCSchoolName"/>
 				<include name="provideSSCBoard"/>
@@ -236,7 +233,7 @@
 				<include name="validateSuccessfulPDFGenerationAndSending"/>
 				
 				</methods>
-				</class> 
+				</class>  
 		</classes>
 	</test>
 	

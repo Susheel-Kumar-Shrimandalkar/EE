@@ -9,21 +9,19 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import whitefeather.xedge.appconfig.ConfigMethods;
+import whitefeather.xedge.appconfig.Constants;
 import whitefeather.xedge.appservices.DatabaseManager;
-import whitefeather.xedge.appservices.EmailerService;
 import whitefeather.xedge.core.DataGenerator;
-import whitefeather.xedge.testcases.OpenApplicationFormLandingPage;
 
 
 public class HelperHand
@@ -55,6 +53,8 @@ public class HelperHand
 	
 	public static LinkedHashMap<String, String> dbValues = new LinkedHashMap<String, String>();
 	public static List<WebElement> hscSubjects = new LinkedList<WebElement>();
+	DecimalFormat time = new DecimalFormat("#0.0000");
+	double starttime,endtime;
 	
 	private static SecureRandom randomEmail = new SecureRandom();
 	protected static LinkedHashMap<String, String> getAppFormData()
@@ -72,15 +72,21 @@ public class HelperHand
 
 	public void setUpTestSuit(String browser) 
 	{
-		if(driver==null)
-		driver=ConfigMethods.OpenBrowser(browser);
+		
+		starttime = System.currentTimeMillis();
+		System.out.println("Start: "+ starttime+"\n===========================================================");
+		driver = ConfigMethods.OpenBrowser(browser);
 	}
 	
 	public void setDownTestSuit() throws IOException, InterruptedException 
 	{
+		driver.quit();
+		endtime = System.currentTimeMillis();
+		System.out.println("\n===========================================================\nEnd: "+ endtime);
+		System.out.println("\nTotal: "+ time.format((endtime-starttime)/1000)+" seconds");
 		// close the browser
-//		driver.quit();
-		EmailerService.SendTestReport();
+		
+//		EmailerService.SendTestReport();
 	}
 	
 	public static String CreateReportDirectory() 

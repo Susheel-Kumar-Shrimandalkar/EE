@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Staging QA Test Validations</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>47/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 10 11:06:22 IST 2017</td>
+<td>Started on:</td><td>Sat Dec 09 18:59:30 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>70 seconds (70731 ms)</td>
+<tr><td>Total time:</td><td>56 seconds (56951 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,51 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='whitefeather.xedge.testcases.PerformLoginAction.clickLoginButton()'><b>clickLoginButton</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction</td>
+<td><div><pre>java.lang.AssertionError: null
+	at whitefeather.xedge.testcases.PerformLoginAction.clickLoginButton(PerformLoginAction.java:176)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace49299717", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace49299717'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.fail(Assert.java:101)
+	at whitefeather.xedge.testcases.PerformLoginAction.clickLoginButton(PerformLoginAction.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,571 +120,161 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.clickAddLeadButton()'><b>clickAddLeadButton</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1825984232" onClick='toggleBox("Output-1825984232", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1825984232" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1825984232">
-User has clicked on Add Lead button successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.clickAddLeadPlusIcon()'><b>clickAddLeadPlusIcon</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1942356772" onClick='toggleBox("Output-1942356772", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1942356772" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1942356772">
-User has clicked Add Lead icon.<br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.PerformLoginAction.clickLoginButton()'><b>clickLoginButton</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1061448687" onClick='toggleBox("Output-1061448687", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1061448687" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1061448687">
-User has clicked Login button and landed on correct homepage.<br/>
-</div>
-</td>
-<td></td>
-<td>3</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.closeRHSPanel()'><b>closeRHSPanel</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-402264886" onClick='toggleBox("Output-402264886", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-402264886" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-402264886">
-User has clicked Close(X) button on RHS panel.<br/>
-</div>
-</td>
-<td></td>
-<td>4</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.enterEmailAddress()'><b>enterEmailAddress</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-481553464" onClick='toggleBox("Output-481553464", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-481553464" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-481553464">
-User has entered Email Address successfully<br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.enterFirstName()'><b>enterFirstName</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-976358110" onClick='toggleBox("Output-976358110", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-976358110" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-976358110">
-User has entered First Name successfully<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.enterHighestQualification()'><b>enterHighestQualification</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-562561015" onClick='toggleBox("Output-562561015", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-562561015" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-562561015">
-User has entered Highest Qualification successfully<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.enterLastName()'><b>enterLastName</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1990421361" onClick='toggleBox("Output-1990421361", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1990421361" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1990421361">
-User has entered Last Name successfully<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.enterLeadComment()'><b>enterLeadComment</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-688722159" onClick='toggleBox("Output-688722159", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-688722159" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-688722159">
-User has provided City value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>19</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.enterLoginId()'><b>enterLoginId</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br>Parameters: counselorshekhar@gmail.com<br/>
-<a href="#Output-1972143064" onClick='toggleBox("Output-1972143064", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-351970188" onClick='toggleBox("Output-351970188", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1972143064" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1972143064">
+<a href="#Output-351970188" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-351970188">
 Username is entered successfully.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.enterLoginPassword()'><b>enterLoginPassword</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br>Parameters: test<br/>
-<a href="#Output-1865201235" onClick='toggleBox("Output-1865201235", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-332234405" onClick='toggleBox("Output-332234405", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1865201235" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1865201235">
+<a href="#Output-332234405" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-332234405">
 Password is entered successfully.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.enterMobileNumber()'><b>enterMobileNumber</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-559050604" onClick='toggleBox("Output-559050604", this, "Show output", "Hide output");'>Show output</a>
+<td title='whitefeather.xedge.testcases.OpenLoginPage.openLoginPage()'><b>openLoginPage</b><br>Test class: whitefeather.xedge.testcases.OpenLoginPage<br/>
+<a href="#Output-2139788441" onClick='toggleBox("Output-2139788441", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-559050604" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-559050604">
-User has entered Mobile Number successfully<br/>
-</div>
-</td>
-<td></td>
-<td>1</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.OpenLoginPage.openLoginPage()'><b>openLoginPage</b><br>Test class: whitefeather.xedge.testcases.OpenLoginPage<br>Parameters: https://extraaedge-stagingwebsite-qa.azurewebsites.net/<br/>
-<a href="#Output-2103569237" onClick='toggleBox("Output-2103569237", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2103569237" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2103569237">
-Chrome Browser is opened<br/>
-Browser is maximized.<br/>
+<a href="#Output-2139788441" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2139788441">
 User has opened correct login page.<br/>
 </div>
 </td>
 <td></td>
-<td>10</td>
-<td>whitefeather.xedge.testcases.OpenLoginPage@2b2948e2</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.provideActivityType()'><b>provideActivityType</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1011104118" onClick='toggleBox("Output-1011104118", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1011104118" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1011104118">
-User has failed to click Add Lead icon.<br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectBestCall()'><b>selectBestCall</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1985869725" onClick='toggleBox("Output-1985869725", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1985869725" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1985869725">
-User has provided Best Call value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectChannel()'><b>selectChannel</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-369901249" onClick='toggleBox("Output-369901249", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-369901249" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-369901249">
-User has provided Channel value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectCity()'><b>selectCity</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1778422985" onClick='toggleBox("Output-1778422985", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1778422985" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1778422985">
-User has provided City value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectCountry()'><b>selectCountry</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1960554990" onClick='toggleBox("Output-1960554990", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1960554990" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1960554990">
-User has provided Country value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectEntity1()'><b>selectEntity1</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-306674056" onClick='toggleBox("Output-306674056", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-306674056" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-306674056">
-User has provided Entity1 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectEntity2()'><b>selectEntity2</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-763236610" onClick='toggleBox("Output-763236610", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-763236610" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-763236610">
-User has provided Entity2 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectEntity3()'><b>selectEntity3</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-570422884" onClick='toggleBox("Output-570422884", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-570422884" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-570422884">
-User has provided Entity3 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectEntity4()'><b>selectEntity4</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1392271025" onClick='toggleBox("Output-1392271025", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1392271025" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1392271025">
-User has provided Entity4 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectField1()'><b>selectField1</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1643838324" onClick='toggleBox("Output-1643838324", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1643838324" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1643838324">
-User has provided Field1 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectField2()'><b>selectField2</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1997753864" onClick='toggleBox("Output-1997753864", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1997753864" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1997753864">
-User has provided Field2 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectField3()'><b>selectField3</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1995986600" onClick='toggleBox("Output-1995986600", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1995986600" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1995986600">
-User has provided Field3 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectField4()'><b>selectField4</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1159234226" onClick='toggleBox("Output-1159234226", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1159234226" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1159234226">
-User has provided Field4 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectField5()'><b>selectField5</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1983706553" onClick='toggleBox("Output-1983706553", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1983706553" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1983706553">
-User has provided Field5 value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectLeadContactable()'><b>selectLeadContactable</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-362432678" onClick='toggleBox("Output-362432678", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-362432678" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-362432678">
-User has provided Lead Contactable value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectLeadQualified()'><b>selectLeadQualified</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-773066329" onClick='toggleBox("Output-773066329", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-773066329" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-773066329">
-User has provided Lead Qualified value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectMobileVerified()'><b>selectMobileVerified</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-564555077" onClick='toggleBox("Output-564555077", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-564555077" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-564555077">
-User has provided Mobile Verified value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectPriority()'><b>selectPriority</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1723278948" onClick='toggleBox("Output-1723278948", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1723278948" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1723278948">
-User has provided Priority value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectReason()'><b>selectReason</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-896134613" onClick='toggleBox("Output-896134613", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-896134613" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-896134613">
-User has provided Reason value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectReferredTo()'><b>selectReferredTo</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-185203393" onClick='toggleBox("Output-185203393", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-185203393" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-185203393">
-User has provided ReferredTo value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>2</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectSeason()'><b>selectSeason</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-12139181" onClick='toggleBox("Output-12139181", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-12139181" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-12139181">
-User has provided Season value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectSource()'><b>selectSource</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1112758237" onClick='toggleBox("Output-1112758237", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1112758237" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1112758237">
-User has provided Source value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectState()'><b>selectState</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-314966354" onClick='toggleBox("Output-314966354", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-314966354" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-314966354">
-User has provided State value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
-<tr>
-<td title='whitefeather.xedge.testcases.AddNewLeadWithAllValues.selectStatus()'><b>selectStatus</b><br>Test class: whitefeather.xedge.testcases.AddNewLeadWithAllValues<br/>
-<a href="#Output-1971283804" onClick='toggleBox("Output-1971283804", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1971283804" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1971283804">
-User has provided Status value successfully.<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>whitefeather.xedge.testcases.AddNewLeadWithAllValues@57536d79</td></tr>
+<td>44</td>
+<td>whitefeather.xedge.testcases.OpenLoginPage@5ec0a365</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyClientAccountLogo()'><b>verifyClientAccountLogo</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1733022752" onClick='toggleBox("Output-1733022752", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1259639178" onClick='toggleBox("Output-1259639178", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1733022752" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1733022752">
+<a href="#Output-1259639178" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1259639178">
 Client Company Logo is displayed.<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyLoginButton()'><b>verifyLoginButton</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-737104370" onClick='toggleBox("Output-737104370", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1087440001" onClick='toggleBox("Output-1087440001", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-737104370" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-737104370">
+<a href="#Output-1087440001" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1087440001">
 Login Button is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyLoginPageBackground()'><b>verifyLoginPageBackground</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-806813022" onClick='toggleBox("Output-806813022", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1759482496" onClick='toggleBox("Output-1759482496", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-806813022" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-806813022">
+<a href="#Output-1759482496" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1759482496">
 Background Image on Login Page is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyPasswordInputField()'><b>verifyPasswordInputField</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1419332030" onClick='toggleBox("Output-1419332030", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-977650730" onClick='toggleBox("Output-977650730", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1419332030" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1419332030">
+<a href="#Output-977650730" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-977650730">
 'Password' input field is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyPasswordLabel()'><b>verifyPasswordLabel</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1805164661" onClick='toggleBox("Output-1805164661", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-890160158" onClick='toggleBox("Output-890160158", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1805164661" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1805164661">
+<a href="#Output-890160158" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-890160158">
 'Password' label is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyPasswordPlaceholder()'><b>verifyPasswordPlaceholder</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1677568775" onClick='toggleBox("Output-1677568775", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2137642385" onClick='toggleBox("Output-2137642385", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1677568775" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1677568775">
+<a href="#Output-2137642385" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2137642385">
 'Password' placeholder is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyPasswordWrapper()'><b>verifyPasswordWrapper</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-702500163" onClick='toggleBox("Output-702500163", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1082528716" onClick='toggleBox("Output-1082528716", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-702500163" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-702500163">
+<a href="#Output-1082528716" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1082528716">
 Password wrapper is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyUsernameInputField()'><b>verifyUsernameInputField</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-2018220300" onClick='toggleBox("Output-2018220300", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-443491171" onClick='toggleBox("Output-443491171", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2018220300" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2018220300">
+<a href="#Output-443491171" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-443491171">
 'Username' input field is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyUsernameLabel()'><b>verifyUsernameLabel</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1155769010" onClick='toggleBox("Output-1155769010", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1890266440" onClick='toggleBox("Output-1890266440", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1155769010" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1155769010">
+<a href="#Output-1890266440" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1890266440">
 'Username' label is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 <tr>
 <td title='whitefeather.xedge.testcases.PerformLoginAction.verifyUsernamePlaceholder()'><b>verifyUsernamePlaceholder</b><br>Test class: whitefeather.xedge.testcases.PerformLoginAction<br/>
-<a href="#Output-1544078442" onClick='toggleBox("Output-1544078442", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-632475595" onClick='toggleBox("Output-632475595", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1544078442" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1544078442">
+<a href="#Output-632475595" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-632475595">
 'Username' placeholder is displayed<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>whitefeather.xedge.testcases.PerformLoginAction@6ddf90b0</td></tr>
+<td>whitefeather.xedge.testcases.PerformLoginAction@4fe3c938</td></tr>
 </table><p>
 </body>
 </html>

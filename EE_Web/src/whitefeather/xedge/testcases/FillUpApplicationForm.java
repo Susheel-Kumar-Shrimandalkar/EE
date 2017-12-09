@@ -52,7 +52,8 @@ public class FillUpApplicationForm  extends HelperHand
 		
 		try 
 		{
-			String detailedFormURL = OpenApplicationFormLandingPage.appFormURL+"&ref_no="+leadPrn+"&email="+leadEmail;
+//			String detailedFormURL = OpenApplicationFormLandingPage.appFormURL+"&ref_no="+leadPrn+"&email="+leadEmail;
+			String detailedFormURL = "https://extraaedgev2.azurewebsites.net/application?inst=1"+"&ref_no="+leadPrn+"&email="+leadEmail;
 			driver.get(detailedFormURL);
 			Thread.sleep(500);
 			Assert.assertEquals(detailedFormURL, driver.getCurrentUrl());

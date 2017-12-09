@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+
+	<test name="Application Form on Microsoft Edge">
+  	<parameter name="browser" value="Edge"/>		
+		<classes>
+			<class name="whitefeather.xedge.testcases.OpenApplicationFormLandingPage">
+				<methods>
+				<parameter name="appFormURL" value="https://extraaedgev2.azurewebsites.net/application?inst=1"/>
+				<include name="openAppForm"/>
+				</methods>
+			</class>
+			
+			<class name="whitefeather.xedge.testcases.GenerateLeadForApplicationForm">
+				<methods>
+				<include name="enterFullName"/>
+				
+				<!-- For entering details, manually -->
+				<!-- <parameter name="mobileN" value="9130618820"/>
+				<include name="enterMobileNumberManually"/>
+				<parameter name="emailId" value="swatir@theextraaedge.com"/>
+				<include name="enterEmailAddressManually"/> -->
+				
+				<!-- For using Computer Generated Details -->
+				<include name="enterMobileNumber"/>
+				<include name="enterEmailAddress"/>
+				
+ 				<include name="provideEntity"/>
+				
+ 				<include name="clickSubmitButton"/>
+				<!-- <include name = "validateLeadDetailsSuccessfulSumbission"/>
+				<include name = "validateLeadFirstName"/>
+				<include name = "validateLeadMobileNumber"/>
+				<include name = "validateLeadEmailAddress"/>
+				<include name = "validateEntityValue"/> -->
+				</methods>
+			</class> 
+			
+		<!-- 	
+			
+			Implement logic for Going back to previous step later. Write separate class for each step later 
+			<class name="whitefeather.xedge.testcases.FillUpApplicationForm">
+			
+				<methods>
+				<include name="openDetailedApplicationFormPage"/>
+				<include name="clickDateOfBirthInputField"/>
+				<include name="provideDateOfBirth"/>
+				<parameter name="placeOfBirth" value="Kavathe_Mahaankaal"/>
+				<include name="providePlaceOfBirth"/>
+				<include name="provideGender"/>
+				<parameter name="bloodGroup" value="O+"/>
+				<include name="provideBloodGroup"/>
+				<parameter name="nationality" value="Indian"/>
+				<include name="provideNationality"/>
+				<parameter name="uid" value="252025100000"/>
+				<include name="provideAadharNumber"/>
+				<parameter name="pNumber" value="s25234500000"/>
+				<include name="providePassportNumber"/>
+				<parameter name="plOfIssue" value="Pune"/>
+				<include name="providePlaceOfIssue"/>
+				<include name="clickDateOfIssueInputField"/>
+				<include name="provideDateOfIssue"/>
+				<include name="clickExpiryDateInputField"/>
+				<include name="provideExpiryDate"/>
+				<parameter name="religion" value="Hindu"/>
+				<include name="provideReligion"/>
+				<parameter name="citizen" value="Kolhapur"/>
+				<include name="provideCitizenship"/>
+				<parameter name="otherCasteValue" value="OtherCasteName"/>
+				<include name="provideCaste"/>
+				<parameter name="otherDomicileValue" value="OtherDomicileName"/>
+				<include name="provideDomicile"/>
+				<parameter name="otherCommunityValue" value="OtherCommunityName"/>
+				<include name="provideCommunity"/>
+				<parameter name="presentAddress" value="Present_Address_Step1_"/>
+				<include name="providePresentAddress"/>
+				<include name="providePresentAddrCountry"/>
+				<include name="providePresentAddrState"/>
+				<include name="providePresentAddrCity"/>
+				<parameter name="pincode" value="216116"/>
+				<include name="providePresentAddrPincode"/>
+				<include name="providePresentAddrContactNumber"/> 
+				<include name="clickSameAddressCheckbox"/>
+				<parameter name="permanentAddress" value="Permanent_Address_Step1_"/>
+				<include name="providePermanentAddressAddress"/>
+				<include name="providePermanentAddrCountry"/>
+				<include name="providePermanentAddrState"/>
+				<include name="providePermanentAddrCity"/>
+				<parameter name="Perm_pincode" value="316126"/>
+				<include name="providePermanentAddrPincode"/>
+				<include name="providePermanentAddrContactNumber"/> 
+				<include name="clickNextButtonStep1"/>
+				<include name="validateDoBStep1"/>
+				<include name="validatePlaceOfBirthStep1"/>
+				<include name="validateGenderValueInStep1"/>
+				<include name="validateBloodGroupInStep1"/>
+				<include name="validateNationalityInStep1"/>
+				<include name="validateAadhaarNumberInStep1"/>
+				<include name="validatePassportNumberInStep1"/>
+				<include name="validatePlaceOfIssueInStep1"/>
+				<include name="validateDateOfIssueInStep1"/>
+				<include name="validateExpiryDateInStep1"/>
+				<include name="validateReligionInStep1"/>
+				<include name="validateCitizenShipInStep1"/>
+				<include name="validateCasteInStep1"/>
+				<include name="validateDomicileInStep1"/>
+				<include name="validateCommunityInStep1"/>
+				<include name="validatePresentAddressInStep1"/>
+				<include name="validatePresentAddressCountryInStep1"/>
+				<include name="validatePresentAddressStateInStep1"/>
+				<include name="validatePresentAddressCityInStep1"/>
+				<parameter name="fathersName" value="FathersName"/>
+				<include name="provideFathersName"/>
+				<parameter name="fathersQual" value="B.E.I.T."/>
+				<include name="provideFathersQualification"/>
+				<parameter name="fathersOccpn" value="RAW_Agent"/>
+				<include name="provideFathersOccupation"/>
+				<parameter name="annualIncome" value="2500000"/>
+				<include name="provideAnnualIncome"/>
+				<include name="provideFathersEmail"/>
+				<include name="provideFathersMobile"/>				
+				<parameter name="MothersName" value="MothersName"/>
+				<include name="provideMothersName"/>
+				<parameter name="MothersQual" value="M.E.I.T."/>
+				<include name="provideMothersQualification"/>
+				<parameter name="MothersOccpn" value="College"/>
+				<include name="provideMothersOccupation"/>
+				<include name="provideMothersEmail"/>
+				<include name="provideMothersMobile"/>
+				<parameter name="LocalGuardianName" value="LocalGuardianName"/>
+				<include name="provideGuardiansName"/>
+				<parameter name="address1" value="Address1Field"/>
+				<include name="provideGuardiansAddress1"/>
+				<parameter name="address2" value="Address2Field"/>
+				<include name="provideGuardiansAddress2"/>
+				<parameter name="address3" value="Address3Field"/>
+				<include name="provideGuardiansAddress3"/>
+				<parameter name="lgpincode" value="516115"/>
+				<include name="provideGuardiansAddrPincode"/>
+				<parameter name="lgrelation" value="Brother-in-law"/>
+				<include name="provideGuardiansRelation"/>
+				<include name="provideGuardiansContactNumber"/>
+				<include name="clickNextButtonStep2"/>
+				<include name="validateFathersNameStep2"/>
+				<include name="validateFathersQualificationStep2"/>
+				<include name="validateFathersOccupationStep2"/>
+				<include name="validateFathersAnnualIncomeStep2"/>
+				<include name="validateFathersEmailStep2"/>
+				<include name="validateFathersMobileStep2"/>
+				<include name="validateMothersNameStep2"/>
+				<include name="validateMothersQualificationStep2"/>
+				<include name="validateMothersOccupationStep2"/>
+				<include name="validateMothersEmailStep2"/>
+				<include name="validateMothersMobileStep2"/>
+				<include name="validateLocalGuardianNameStep2"/>
+				<include name="validateLocalGuardianAddr1Step2"/>
+				<include name="validateLocalGuardianAddr2Step2"/>
+				<include name="validateLocalGuardianAddr3Step2"/>
+				<include name="validateGrdnAddrPincodeStep2"/>
+				<include name="validateGuardianRelationStep2"/>
+				<include name="validateGuardianContactNumberStep2"/>
+				<include name="provideCourse"/>
+				<include name="provideSSCSchoolName"/>
+				<include name="provideSSCBoard"/>
+				<include name="provideSSCYearOfPassing"/>
+				<parameter name="sscRegNumber" value="136346533"/>
+				<include name="provideSSCRegNumber"/>
+				<parameter name="otherSSCMode" value="otherSSCModeName"/>
+				<include name="provideSSCModeOfStudy"/>
+				<parameter name="sscGradePercent" value="87"/>
+				<include name="provideSSCPercentageValue"/>
+				<include name="showHideHSCDetailsSection"/>
+				<parameter name="hscSchoolName" value="HSCSchoolName"/>
+				<include name="provideHSCSchoolName"/>
+				<include name="provideHSCBoard"/>
+				<parameter name="otherHSCMode" value="otherHSCModeName"/>
+				<include name="provideModeOfStudyHSC"/>
+				<include name="provideHSCYearOfPassing"/>
+				<parameter name="hscGradePercent" value="94.24"/>
+				<include name="provideHSCPercentageGradeType"/>
+				<parameter name="hscRegNumber" value="142187335"/>
+				<include name="provideHSCRegNumber"/>
+				<parameter name="numberOfSubjects" value="5"/>
+				<include name="provideHSCSubjectScoreDetails"/>
+				<parameter name="numberOfExams" value="3"/>
+				<include name="provideEntranceExamDetails"/>
+				<include name="provideDegreeOrDiplomaType"/>
+				<parameter name="degreeName" value="Automation of Web Applications"/>
+				<include name="provideDegreeOrDiplomaName"/>
+				<parameter name="degreeAOS" value="Advanced Java"/>
+				<include name="provideDegreeOrDiplomaAreaOfSpecialization"/>
+				<parameter name="degreeCollege" value="Sangli"/>
+				<include name="provideDegreeOrDiplomaCollegeName"/>
+				<parameter name="degreeUnivName" value="Kolhapur"/>
+				<include name="provideDegreeOrDiplomaUniversityName"/>
+				<include name="provideDegDiplomaExamType"/>
+				<include name="provideDegDiplomaYearOfCompletion"/>
+				<parameter name="otherDiplomaMode" value="otherDiplomaModeName"/>
+				<include name="provideDegDiplomaModeOfStudy"/>
+				<parameter name="gradYears" value="4"/>
+				<include name="provideGraduationYearwiseMarksDetails"/>
+				<include name="provideAttachment1"/>
+				<include name="provideAttachment2"/>
+				<include name="provideAttachment3"/>
+				<include name="provideAttachment4"/>
+				<include name="provideAttachment5"/>
+				<include name="provideAttachment6"/>
+				<include name="provideAttachment7"/>
+				<include name="provideAttachment8"/>
+				<include name="provideAttachment9"/>
+				<include name="provideAttachment10"/>
+				<include name="clickNextButtonStep3"/>
+				<include name="providePaymentCourse"/>
+				<include name="providePaymentType"/>
+				<include name="clickSubmitButtonStep4"/>
+			 	</methods>
+				</class>
+				
+				<class name="whitefeather.xedge.testcases.DoPaymentInApplicationForm">
+				<methods>
+				<include name="clickLoginLinkForPaytmPayment"/>
+				<parameter name="paytmUsername" value="7777777777"/>
+				<include name="providePaytmAccoutUsername"/>
+				<include name="clickRequestOTPButtonForPaytmPayment"/>
+				<parameter name="paytmPaymentOTP" value="489871"/>
+				<include name="provideLoginOTPReceived"/>
+				<include name="clickLoginButtonPaytmLoginWindow"/>
+				<include name="validateAmountToBePaid"/>
+				<include name="clickPayNowButtonPaytmPaymentPage"/>
+				<include name="validatePaymentMode"/>
+				<include name="validateTransactionID"/>
+				<include name="validateAmountPaid"/>
+				<include name="validateSuccessfulPDFGenerationAndSending"/>
+				</methods>
+				</class>   -->
+		</classes>
+	</test>
+</suite> 

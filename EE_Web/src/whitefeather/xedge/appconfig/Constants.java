@@ -20,8 +20,10 @@ public class Constants {
 //	public static final String APPLICATIONFORM = "https://extraaedge-stagingwebsite-qa.azurewebsites.net/application";
 //	public static final String APPLICATIONFORM = "http://extraaedgev2.azurewebsites.net/application";
 	
-	public static final String SELECT_APPLICATION_FORM_TYPE="file:///F:\\\\Users\\\\Shekhar.DESKTOP-TMQM6DS\\\\EE-WorkSpace\\\\EE_Web\\\\src\\\\whitefeather\\\\xedge\\\\appconfig\\\\AppFormTypeSelection.html";
+	public static final String SELECT_APPLICATION_FORM_TYPE="file:///F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\appconfig\\html\\AppFormTypeSelection.html";
+	public static final String SELECT_DOMAIN="file:///F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\appconfig\\html\\AUT_ExtraaEdgePlatform.html";
 	
+
 	public static final String APPFORM_ATTACHMENT1 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment1.png";
 	public static final String APPFORM_ATTACHMENT2 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment2.png";
 	public static final String APPFORM_ATTACHMENT3 = "F:\\Users\\Shekhar.DESKTOP-TMQM6DS\\EE-WorkSpace\\EE_Web\\src\\whitefeather\\xedge\\testdata\\Certificates\\Attachment3.png";

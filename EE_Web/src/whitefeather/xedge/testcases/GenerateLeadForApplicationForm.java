@@ -1,7 +1,6 @@
 package whitefeather.xedge.testcases;
 
 import java.sql.SQLException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Action;
@@ -10,8 +9,6 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import whitefeather.xedge.core.Page_AddActivity;
 import whitefeather.xedge.core.Page_GenerateLeadApplicationForm;
 import whitefeather.xedge.facilitator.HelperHand;
 
@@ -256,4 +253,9 @@ public class GenerateLeadForApplicationForm extends HelperHand
 		}
 	}
 
+	/*@AfterClass	
+	public void endTest() throws IOException, InterruptedException
+	{
+		setDownTestSuit();
+	}*/
 }

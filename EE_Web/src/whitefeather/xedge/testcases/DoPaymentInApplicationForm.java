@@ -1,9 +1,12 @@
 package whitefeather.xedge.testcases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import whitefeather.xedge.core.Page_AppFormPayment;
@@ -216,5 +219,11 @@ public class DoPaymentInApplicationForm extends HelperHand
 			Assert.fail();
 			Reporter.log("Transaction is failed and hence to PDF is generated.",true);
 		}
+	}
+	
+	@AfterClass	
+	public void endTest() throws  InterruptedException, IOException
+	{
+		setDownTestSuit();
 	}
 }

@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -23,33 +24,14 @@ import whitefeather.xedge.appconfig.ObjectMapping;
 public class APIDataProvider 
 {
 	public static ObjectMapping properties = new ObjectMapping(Constants.URLs);
-	
-	public static void main(String[] args) throws IOException, ParseException 
-	{
-//		APILogin();
-//		getAllMasterData();
-//		tempMethodToMapValues();
-		 
-		
-//		System.out.println("Recent New Tab Count1: "+getRecentNewTabCount());
-//		System.out.println("Recent Online Tab Count: "+getRecentOnlineTabCount());
-//		System.out.println("Upcming Followup Tab Count: "+getUpcomingFollowupTabCount());
-//		System.out.println("Upcoming Walkin Tab Count: "+getUpcomingWalkinsTabCount());
-//		System.out.println("High Priority Tab Count: "+getHighPriorityTabCount());
-		getAllMasterData();
-//		tempMethodToMapValues();
-		
-		/*System.out.println("leadList_All Count: "+getAllTabCount());
-		System.out.println("leadList_NewCount Count: "+leadList_NewCount);
-		System.out.println("leadList_CallBackCount: "+leadList_CallBackCount);
-		System.out.println("leadList_WalkinCount: "+leadList_WalkinCount);
-		System.out.println("leadList_EnrolledCount: "+leadList_EnrolledCount);
-		System.out.println("leadList_ClosedCount: "+leadList_ClosedCount);
-		System.out.println("leadList_OnlineCount: "+leadList_OnlineCount);
-		System.out.println("leadList_ReferredFromMeCount: "+leadList_ReferredFromMeCount); */
-	}
-	
-	 static String accesstoken,	_dashboardCountJSONResponse,_leadListCountJSONResponse, getAllMasterJSONResp;
+	static Object obj=null;
+	static JSONObject jObject1 = null, jObject2 = null, jObject3 = null;
+    
+	static JSONArray jArray = null;
+	static Iterator<?> jIterator = null;
+	static String [] keyNames=null;
+	static String standAloneKey=null;
+    static String accesstoken,_dashboardCountJSONResponse,_leadListCountJSONResponse, getAllMasterJSONResp, childValueArray;
 	
 	private static HashMap<String,String > dashboardCountmap = new HashMap <String,String>();
 	private static HashMap<String,String > leadListCountmap = new HashMap <String,String>();
@@ -261,7 +243,7 @@ public class APIDataProvider
 	/***************Get All Masters API
 	 * @throws ParseException *************************/
 	//HashMap<String,String >
-	public static void getAllMasterData() throws IOException, MalformedURLException, ParseException
+	public static String getAllMasterData() throws IOException, MalformedURLException, ParseException
 	{		
 		//Establish connection to Lead List Count API
 		URL getAllMasterAPI = new URL(properties.getAllMastersEEV2API());
@@ -288,28 +270,38 @@ public class APIDataProvider
 			System.out.println("getAllMaster JSON Response: "+getAllMasterJSONResp);
 //			System.out.println("JSON-in string: "+respGet);
 			brGet.close();
-		}
-		
-		/*Object obj = new JSONParser().parse(getAllMasterJSONResp);
+		}	
+		return getAllMasterJSONResp;
+	}
+	
+	public static void getJSONValuesFromArrays(String parent, String child) throws ParseException, MalformedURLException, IOException
+	{
+		// parsing file 
+		obj = new JSONParser().parse(getAllMasterData());
         
-        // Type casting object to JSONObject
-        JSONObject jo = (JSONObject) obj;
-         
-        // getting array
-        System.out.println("Check1234: "+(jo.get("communicationTypes")));
-        
-     // First I take the global data
-//        String name = (String) jo.get("DBConnectionString");
+		// Type casting object to JSONObject
+		jObject1 = (JSONObject) obj;
+		jArray = (JSONArray) jObject1.get(parent);
+		jIterator = jArray.iterator();
 
-        JSONArray slideContent1 = (JSONArray) jo.get("leadStatuses");
-        Iterator i = slideContent1.iterator();
-
-        while (i.hasNext()) {
-            JSONObject slide = (JSONObject) i.next();
-            String title = (String)slide.get(0);
-            System.out.println(title);
-        }*/
-        
+        while (jIterator.hasNext()) {
+        	jObject2 = (JSONObject) jIterator.next();
+            childValueArray = (String)jObject2.get(child);
+            keyNames = childValueArray.split(" ");
+            for (int i = 0; i < keyNames.length; i++) {
+				System.out.println("keyNames["+i+"]: "+keyNames[i]);
+			}
+        }
+	}
+	
+	public static String getStandAloneJSONValues(String key) throws ParseException, MalformedURLException, IOException
+	{
+		// parsing file 
+		obj = new JSONParser().parse(getAllMasterData());
+				
+		jObject3 = (JSONObject) obj;
+        standAloneKey = (String)jObject3.get(key);
+		return standAloneKey;
 	}
 	
 	public static void tempMethodToMapValues()
@@ -322,6 +314,22 @@ public class APIDataProvider
 		 
 		      System.out.println(record.getKey()+" : "+record.getValue());
 		   }
+	}
+	
+	public static void main(String[] args) {
+		try {
+			DecimalFormat time = new DecimalFormat("#0.0000");
+			double starttime = System.currentTimeMillis();
+			System.out.println("Start: "+ starttime+"\n===========================================================");
+//			getJSONValuesFromArrays("leadStatuses","name");
+			System.out.println(getStandAloneJSONValues("applicationFormCriteria"));
+			double endtime = System.currentTimeMillis();
+			System.out.println("\n===========================================================\nEnd: "+ endtime);
+    		System.out.println("\nTotal: "+ time.format((endtime-starttime)/1000)+" seconds");
+		} catch (ParseException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	

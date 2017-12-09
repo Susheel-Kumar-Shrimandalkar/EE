@@ -6,11 +6,10 @@
 	</listeners>
 	<test name="Staging QA Test Validations">
   		<parameter name="browser" value="Chrome"/>
-		<parameter name="loginPageUrl" value="https://extraaedgev2.azurewebsites.net/"/>
 		<classes>
 			<class name="whitefeather.xedge.testcases.OpenLoginPage">
 			<methods><include name="openLoginPage"></include></methods></class>
-			
+			<!-- 
 			<class name="whitefeather.xedge.testcases.ForgotPassword">
 			<methods>
 			<include name="openForgotPasswordWindow"/>
@@ -21,7 +20,7 @@
 			<include name="verifyLoginLink"/>
 			<parameter name="recoveryEmail" value="counselorshekhar@gmail.com"/>
 			<include name="enterRecoveryEmail"/>
-			</methods></class>
+			</methods></class> -->
 			
 			<class name="whitefeather.xedge.testcases.PerformLoginAction" >
 			<methods>
@@ -42,7 +41,7 @@
 			<include name="clickLoginButton"/>
 			</methods>
 			</class>
-			
+			<!-- 
 			<class name="whitefeather.xedge.testcases.VerifyGlobalIcons" >
 			<methods>
 			<include name="verifyCompanyLogoInHeader"/>
@@ -62,8 +61,8 @@
 			<include name="clickAddLeadPlusIcon"/>
 			<include name="enterEmailAddress"/>
 			<include name="enterMobileNumber"/>
-			<!-- <include name="selectActivityType"/>
-			<include name="addActivityComment"/> -->
+			<include name="selectActivityType"/>
+			<include name="addActivityComment"/>
 			<include name="clickAddLeadButton"/>
 			<include name="closeRHSPanel"/>
 			</methods></class>
@@ -184,7 +183,7 @@
 			</methods></class>
 			
 			<class name="whitefeather.xedge.testcases.EndTesting" >
-			<methods><include name="endTestSuite"></include></methods></class>
+			<methods><include name="endTestSuite"></include></methods></class> -->
 			
 		</classes>
 	</test>

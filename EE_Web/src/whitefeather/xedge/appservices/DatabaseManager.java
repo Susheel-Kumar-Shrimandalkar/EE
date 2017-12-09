@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.Map;
@@ -410,8 +411,15 @@ public class DatabaseManager extends HelperHand
 //		System.out.println(Arrays.asList(dbValues)); // method 1
 //	    System.out.println(Collections.singletonList(dbValues)); // method 2
 		
+		DecimalFormat time = new DecimalFormat("#0.0000");
+		double starttime = System.currentTimeMillis();
+		System.out.println("Start: "+ starttime+"\n===========================================================");
 		
 		System.out.println(getClientConfigDetails());
+		
+		double endtime = System.currentTimeMillis();
+		System.out.println("\n===========================================================\nEnd: "+ endtime);
+		System.out.println("\nTotal: "+ time.format((endtime-starttime)/1000)+" seconds");
 		
 		
 	}

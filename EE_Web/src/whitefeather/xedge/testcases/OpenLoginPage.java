@@ -1,6 +1,9 @@
 package whitefeather.xedge.testcases;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
@@ -21,19 +24,23 @@ public class OpenLoginPage extends HelperHand
 	{
 		setUpTestSuit(browser);
 	}
-	
-	@Parameters({"loginPageUrl"})	
+		
 	@Test
-	public void openLoginPage(String loginPageUrl) throws InterruptedException
+	public void openLoginPage() throws InterruptedException
 	{
-		driver = new ChromeDriver();
-		Reporter.log("Chrome Browser is opened",true);
-		driver.manage().window().maximize();
-		Reporter.log("Browser is maximized.",true);
+		String loginPageUrl = "";
+		driver.get(Constants.SELECT_DOMAIN);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("domainURL"))));
+		loginPageUrl = driver.findElement(By.id("domainURL")).getText();
+		System.out.println("loginPageUrl"+loginPageUrl);
+		
 		driver.get(loginPageUrl);
 		try {
 			Thread.sleep(1000);
-			Assert.assertEquals(properties.getLoginPlatformUrl(),driver.getCurrentUrl(), "Login Page URL is incorrect.");
+			driver.navigate().refresh();
+			System.out.println("getCurrentUrl"+driver.getCurrentUrl());
+			Assert.assertEquals(driver.getCurrentUrl(), loginPageUrl);
 				Reporter.log("User has opened correct login page.",true);
 		} catch (AssertionError e) {
 			Assert.fail();

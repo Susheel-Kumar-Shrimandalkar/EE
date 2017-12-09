@@ -4,16 +4,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import whitefeather.xedge.appconfig.Constants;
 import whitefeather.xedge.appservices.DatabaseManager;
 
@@ -49,6 +46,7 @@ public class JsonExtractor extends HelperHand
         
      // First I take the global data
         String name = (String) jo.get("DBConnectionString");
+        System.out.println(name);
 
         JSONArray slideContent1 = (JSONArray) jo.get("ReportDeviceConfig");
         Iterator<?> i = slideContent1.iterator();
@@ -74,6 +72,9 @@ public class JsonExtractor extends HelperHand
 	@SuppressWarnings("unlikely-arg-type")
 	public static void main(String[] args) throws SQLException  
 	{
+		DecimalFormat time = new DecimalFormat("#0.0000");
+		double starttime = System.currentTimeMillis();
+		System.out.println("Start: "+ starttime+"\n===========================================================");
 //			getClientConfig();
 			clientConfig = DatabaseManager.getClientConfigDetails();
 			// parsing file 
@@ -99,6 +100,10 @@ public class JsonExtractor extends HelperHand
             @SuppressWarnings("unchecked")
 			HashMap<HashMap<?, ?>, HashMap<?, ?>> NIMBUS = (HashMap<HashMap<?, ?>, HashMap<?, ?>>)jo.get("NIMBUS");
             System.out.println("NIMBUS: "+NIMBUS.get("requestMappings"));
-          
+            double endtime = System.currentTimeMillis();
+    		System.out.println("\n===========================================================\nEnd: "+ endtime);
+    		System.out.println("\nTotal: "+ time.format((endtime-starttime)/1000)+" seconds");
+
+
 	}
 }
