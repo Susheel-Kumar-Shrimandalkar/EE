@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.js"></script>
+<link rel="stylesheet" href="semantic.min.css">
+<script src="semantic.min.js"></script>
+<script src="select.js"></script>
+<style type="text/css">
+body { 
+		background-image: url("http://localhost/xedge/backgroundImage.jpg");
+		padding-top: 30px;
+	    display: table-cell;
+	    vertical-align: middle;
+	    background-size:cover; 
+}
+
+</style>
+</head>
+<body>
+<div id="displayPage">
+	<div id="pageContent">
+		<div id="logo">
+		<img alt="img" src="logo.png" style="max-width: 100%; max-height: 100%; display:block; margin:auto;">
+		</div>
+	
+		<div id="dropDown">
+		<fieldset>
+				<legend><strong>Please select domain to proceed:</strong></legend>
+		        <select class="ui search dropdown"> 
+		       	  <option value="" disabled selected>Select Domain</option>
+		        </select>
+		        <p id="domainURL" style="display:none"></p>
+		</fieldset>
+		</div>
+		</br>
+		<div id="submitDetails">
+		<button class="ui primary button"  style="width:340px; margin:0 auto;" onclick="fetchDetails()">Click To Proceed</button>
+		</div>
+	</div>
+	
+	
+		
+	<div id="redirectionMessage" style="display:none">
+		<div class="ui icon message">
+		  	<i class="notched circle loading icon"></i>
+		  	<div class="content">
+		   		<div class="header">
+		      	Just one second, we're redirecting you to
+		    	</div>
+		    	<span id="accountURL" style="display:none"></span>
+	  		</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
