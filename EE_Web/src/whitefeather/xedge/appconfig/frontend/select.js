@@ -6,7 +6,7 @@ var accountUrl;
 $(document).ready(function () {
 	
     // EXTRACT JSON DATA.
-    $.getJSON("http://localhost/xedge/domains.json", function (data) 
+    $.getJSON("EE_Web/src/whitefeather/xedge/appconfig/frontend/domains.json", function (data) 
     		{debugger;
         $.each(data, function (index, value) {
             // APPEND OR INSERT DATA TO SELECT ELEMENT.
