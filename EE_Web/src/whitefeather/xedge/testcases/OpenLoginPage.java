@@ -29,10 +29,10 @@ public class OpenLoginPage extends HelperHand
 	public void openLoginPage() throws InterruptedException
 	{
 		String loginPageUrl = "";
-		driver.get(Constants.SELECT_DOMAIN);
+		driver.get("http://bit.ly/2z1ulqG");
 		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("domainURL"))));
-		loginPageUrl = driver.findElement(By.id("domainURL")).getText();
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("accountURL"))));
+		loginPageUrl = driver.findElement(By.id("accountURL")).getText();
 		System.out.println("loginPageUrl"+loginPageUrl);
 		
 		driver.get(loginPageUrl);

@@ -18,6 +18,7 @@
         <parameter name="_password" value="test"/>
         <parameter name="_username" value="counselorshekhar@gmail.com"/>
         <methods>
+          <include name="openLoginPage"/>
           <include name="selectBrowser"/>
         </methods>
       </class> <!-- whitefeather.xedge.testcases.OpenLoginPage -->

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods, 1 failed,   13 passed</span>
+                    <span class="method-stats">14 methods, 2 failed,   12 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.PerformLoginAction" hash-for-method="clickLoginButton">clickLoginButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.OpenLoginPage" hash-for-method="openLoginPage">openLoginPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -122,11 +127,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.PerformLoginAction" hash-for-method="enterLoginPassword(test)">enterLoginPassword(test)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="whitefeather.xedge.testcases.OpenLoginPage" hash-for-method="openLoginPage">openLoginPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -204,6 +204,25 @@
                   <span class="method-name">clickLoginButton</span>
                   <div class="stack-trace">java.lang.AssertionError: null
 	at whitefeather.xedge.testcases.PerformLoginAction.clickLoginButton(PerformLoginAction.java:176)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">whitefeather.xedge.testcases.OpenLoginPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="openLoginPage">
+                  </a> <!-- openLoginPage -->
+                  <span class="method-name">openLoginPage</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at whitefeather.xedge.testcases.OpenLoginPage.openLoginPage(OpenLoginPage.java:46)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -304,21 +323,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">whitefeather.xedge.testcases.OpenLoginPage</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="openLoginPage">
-                  </a> <!-- openLoginPage -->
-                  <span class="method-name">openLoginPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -402,64 +406,64 @@ data.addRows(14);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'openLoginPage')
 data.setCell(0, 2, 'whitefeather.xedge.testcases.OpenLoginPage')
-data.setCell(0, 3, 32574);
+data.setCell(0, 3, 52681);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'clickLoginButton')
 data.setCell(1, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(1, 3, 3265);
+data.setCell(1, 3, 3261);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyLoginPageBackground')
 data.setCell(2, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(2, 3, 1140);
+data.setCell(2, 3, 1167);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'enterLoginId')
 data.setCell(3, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(3, 3, 384);
+data.setCell(3, 3, 376);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyUsernamePlaceholder')
+data.setCell(4, 1, 'verifyPasswordPlaceholder')
 data.setCell(4, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(4, 3, 242);
+data.setCell(4, 3, 212);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'enterLoginPassword')
+data.setCell(5, 1, 'verifyUsernamePlaceholder')
 data.setCell(5, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(5, 3, 173);
+data.setCell(5, 3, 206);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyPasswordLabel')
+data.setCell(6, 1, 'enterLoginPassword')
 data.setCell(6, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(6, 3, 165);
+data.setCell(6, 3, 140);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyLoginButton')
 data.setCell(7, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(7, 3, 122);
+data.setCell(7, 3, 137);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyClientAccountLogo')
+data.setCell(8, 1, 'verifyUsernameLabel')
 data.setCell(8, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(8, 3, 111);
+data.setCell(8, 3, 118);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyPasswordInputField')
+data.setCell(9, 1, 'verifyPasswordLabel')
 data.setCell(9, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(9, 3, 93);
+data.setCell(9, 3, 114);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyPasswordPlaceholder')
+data.setCell(10, 1, 'verifyClientAccountLogo')
 data.setCell(10, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(10, 3, 91);
+data.setCell(10, 3, 105);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyUsernameLabel')
+data.setCell(11, 1, 'verifyPasswordWrapper')
 data.setCell(11, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(11, 3, 83);
+data.setCell(11, 3, 74);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyPasswordWrapper')
+data.setCell(12, 1, 'verifyUsernameInputField')
 data.setCell(12, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(12, 3, 79);
+data.setCell(12, 3, 68);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'verifyUsernameInputField')
+data.setCell(13, 1, 'verifyPasswordInputField')
 data.setCell(13, 2, 'whitefeather.xedge.testcases.PerformLoginAction')
-data.setCell(13, 3, 75);
+data.setCell(13, 3, 65);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 58 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -477,9 +481,9 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyClientAccountLogo</span>
+              <span class="reporter-method-name">verifyLoginPageBackground</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Client Company Logo is displayed.</span>
+                <span class="reporter-method-output">Background Image on Login Page is displayed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -489,9 +493,15 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">openLoginPage</span>
+              <span class="reporter-method-name">verifyClientAccountLogo</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">User has opened correct login page.</span>
+                <span class="reporter-method-output">Client Company Logo is displayed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyUsernameLabel</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Username' label is displayed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -504,6 +514,18 @@ return data;
               <span class="reporter-method-name">verifyPasswordInputField</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">'Password' input field is displayed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">enterLoginPassword(test)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Password is entered successfully.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyPasswordLabel</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">'Password' label is displayed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -522,30 +544,6 @@ return data;
               <span class="reporter-method-name">verifyPasswordPlaceholder</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">'Password' placeholder is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">enterLoginPassword(test)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Password is entered successfully.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUsernameLabel</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">'Username' label is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyLoginPageBackground</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Background Image on Login Page is displayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyPasswordLabel</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">'Password' label is displayed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -569,65 +567,67 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">openLoginPage</span>
-                <span class="method-start">6548 ms</span>
+                <span class="method-start">5314 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">whitefeather.xedge.testcases.PerformLoginAction</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageBackground</span>
-                <span class="method-start">39841 ms</span>
+                <span class="method-start">58488 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyClientAccountLogo</span>
-                <span class="method-start">41299 ms</span>
+                <span class="method-start">59850 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUsernameLabel</span>
-                <span class="method-start">41615 ms</span>
+                <span class="method-start">60104 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUsernamePlaceholder</span>
-                <span class="method-start">41826 ms</span>
+                <span class="method-start">60393 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordLabel</span>
-                <span class="method-start">42349 ms</span>
+                <span class="method-start">60732 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordPlaceholder</span>
-                <span class="method-start">42628 ms</span>
+                <span class="method-start">60967 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUsernameInputField</span>
-                <span class="method-start">42827 ms</span>
+                <span class="method-start">61286 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordInputField</span>
-                <span class="method-start">43054 ms</span>
+                <span class="method-start">61452 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordWrapper</span>
-                <span class="method-start">43235 ms</span>
+                <span class="method-start">61604 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterLoginId(counselorshekhar@gmail.com)</span>
-                <span class="method-start">43400 ms</span>
+                <span class="method-start">61763 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterLoginPassword(test)</span>
-                <span class="method-start">43962 ms</span>
+                <span class="method-start">62231 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginButton</span>
-                <span class="method-start">44313 ms</span>
+                <span class="method-start">62560 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">clickLoginButton</span>
-                <span class="method-start">44570 ms</span>
+                <span class="method-start">62803 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
